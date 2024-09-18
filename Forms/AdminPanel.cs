@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,29 @@ namespace GameServer_Management.Forms
 {
     public partial class AdminPanel : Form
     {
+        private KryptonCheckButton cb = new KryptonCheckButton();
+        //for more btn...
         public AdminPanel()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            cb = btnHome;
+            cb.Checked = true;
+        }
+        public void LoadForm(object Form)
+        {
+            if (this.mainpanel.Controls.Count > 0)
+            {
+                this.mainpanel.Controls.RemoveAt(0);
+            }
+            
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Visible = true;
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -28,6 +49,10 @@ namespace GameServer_Management.Forms
         {
             Application.Exit();
         }
+        private void Buttons(KryptonCheckBox button)
+        {
+
+        }
 
         private void sliderShowTimer_Tick(object sender, EventArgs e)
         {
@@ -40,7 +65,7 @@ namespace GameServer_Management.Forms
                 {
                     i = targetWidth - slidePanel.Size.Width;
                 }
-                int x = slidePanel.Size.Width + i;  ////increment dynamically
+                int x = slidePanel.Size.Width + i;  //increment dynamically
                 int y = slidePanel.Size.Height;
                 slidePanel.Size = new Size(x, y);
 
@@ -100,6 +125,30 @@ namespace GameServer_Management.Forms
                     sliderShowTimer.Start();
                 }
             }
+        }
+
+        private void AdminPanel_Load(object sender, EventArgs e)
+        {
+            LoadForm(home);
+            this.Opacity = 0;
+            faddingTimer.Start();
+        }
+
+        private void faddingTimer_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity < 1)
+            {
+                this.Opacity += 0.05;
+            }
+            else
+            {
+                faddingTimer.Stop();
+            }
+        }
+        private void Button(KryptonCheckButton button)
+        {
+            cb.Checked = false;
+            cb = button;
         }
     }
 }

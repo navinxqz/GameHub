@@ -44,6 +44,7 @@
             this.GameDBbtn = new Krypton.Toolkit.KryptonCheckButton();
             this.sliderShowTimer = new System.Windows.Forms.Timer(this.components);
             this.sliderHideTimer = new System.Windows.Forms.Timer(this.components);
+            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -568,6 +569,11 @@
             this.sliderHideTimer.Interval = 2;
             this.sliderHideTimer.Tick += new System.EventHandler(this.sliderHideTimer_Tick);
             // 
+            // faddingTimer
+            // 
+            this.faddingTimer.Interval = 10;
+            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -581,6 +587,7 @@
             this.Name = "AdminPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPanel";
+            this.Load += new System.EventHandler(this.AdminPanel_Load);
             this.slidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
@@ -605,5 +612,6 @@
         private Krypton.Toolkit.KryptonCheckButton userDBbtn;
         private System.Windows.Forms.Timer sliderShowTimer;
         private System.Windows.Forms.Timer sliderHideTimer;
+        private System.Windows.Forms.Timer faddingTimer;
     }
 }
