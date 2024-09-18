@@ -14,7 +14,7 @@ namespace GameServer_Management.Forms
     public partial class AdminPanel : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
-        //for more btn...
+        //for btn form connect cls...
         public AdminPanel()
         {
             InitializeComponent();
@@ -129,9 +129,9 @@ namespace GameServer_Management.Forms
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
-            LoadForm(home);
-            this.Opacity = 0;
-            faddingTimer.Start();
+            //LoadForm(home);
+            //this.Opacity = 0;
+            //faddingTimer.Start();
         }
 
         private void faddingTimer_Tick(object sender, EventArgs e)
@@ -158,7 +158,7 @@ namespace GameServer_Management.Forms
                 btnHome.Checked = true;
                 return;
             }
-            LoadForm(home);
+            //LoadForm(home);
             Button(btnHome);
         }
 
@@ -169,7 +169,7 @@ namespace GameServer_Management.Forms
                 userDBbtn.Checked = true;
                 return;
             }
-            LoadForm(userDB);
+            //LoadForm(userDB);
             Button(userDBbtn);
         }
 
@@ -180,7 +180,7 @@ namespace GameServer_Management.Forms
                 adminDBbtn.Checked = true;
                 return;
             }
-            LoadForm(adminDB);
+           // LoadForm(adminDB);
             Button(adminDBbtn);
         }
 
@@ -191,7 +191,7 @@ namespace GameServer_Management.Forms
                 GameDBbtn.Checked = true;
                 return;
             }
-            LoadForm(gameDB);
+            //LoadForm(gameDB);
             Button(GameDBbtn);
         }
     }
