@@ -38,5 +38,24 @@ namespace GameServer_Management.Forms
             }
             else { MessageBox.Show("Login Successful"); }
         }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HidePassBtn_Click(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = false;
+            showPassBtn.Visible = true;
+            txtpass.PasswordChar = '*';
+        }
+
+        private void showPassBtn_Click(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = true;
+            showPassBtn.Visible = false;
+            txtpass.PasswordChar = '\0';
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace GameServer_Management.Class
         public static bool IsValidAdmin(string username, string password)
         {
             bool isValid = false;
-            string query = @"select * from admintbl where username = @username and upass = @password";
+            string query = @"select username, upass from admintbl where username = @username and upass = @password";
             using(SqlConnection con =  new SqlConnection(cs))
             {
                 try
