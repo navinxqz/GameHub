@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameServer_Management.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,15 @@ namespace GameServer_Management.Forms
         private void cuiButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (DBconnect.IsValidAdmin(txtUsername.Text,txtpass.Text) == false)
+            {
+                MessageBox.Show("Invalid Username or password");
+            }
+            else { MessageBox.Show("Login Successful"); }
         }
     }
 }

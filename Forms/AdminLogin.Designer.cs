@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
-            this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
+            this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.btnLogin = new CuoreUI.Controls.cuiButton();
             this.Logoutbtn = new System.Windows.Forms.Button();
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
@@ -104,23 +104,23 @@
             this.txtUsername.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.TabIndex = 17;
             // 
-            // kryptonTextBox1
+            // txtpass
             // 
-            this.kryptonTextBox1.CornerRoundingRadius = 30F;
-            this.kryptonTextBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(816, 344);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(333, 51);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.txtpass.CornerRoundingRadius = 30F;
+            this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtpass.Location = new System.Drawing.Point(816, 344);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(333, 51);
+            this.txtpass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | Krypton.Toolkit.PaletteDrawBorders.Left) 
             | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 30F;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 18;
+            this.txtpass.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtpass.StateCommon.Border.Rounding = 30F;
+            this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.TabIndex = 18;
             // 
             // btnLogin
             // 
@@ -153,6 +153,7 @@
             this.btnLogin.Size = new System.Drawing.Size(333, 50);
             this.btnLogin.TabIndex = 19;
             this.btnLogin.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Logoutbtn
             // 
@@ -217,7 +218,7 @@
             this.Controls.Add(this.cuiButton1);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -239,7 +240,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Krypton.Toolkit.KryptonTextBox txtUsername;
-        private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private Krypton.Toolkit.KryptonTextBox txtpass;
         private CuoreUI.Controls.cuiButton btnLogin;
         private System.Windows.Forms.Button Logoutbtn;
         private CuoreUI.Controls.cuiButton cuiButton1;
