@@ -36,7 +36,12 @@ namespace GameServer_Management.Forms
             {
                 MessageBox.Show("Invalid Username or password");
             }
-            else { MessageBox.Show("Login Successful"); }
+            else { 
+                //MessageBox.Show("Login Successful");
+                AdminPanel adminPanel = new AdminPanel();
+                adminPanel.Show();
+                this.Hide();
+            }
         }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
