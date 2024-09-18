@@ -10,33 +10,23 @@ using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
 {
-    public partial class Login : Form
+    public partial class AdminLogin : Form
     {
-        public Login()
+        public AdminLogin()
         {
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void Logoutbtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
-            this.Hide();
         }
     }
 }

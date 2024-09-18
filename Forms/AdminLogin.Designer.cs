@@ -1,6 +1,6 @@
 ﻿namespace GameServer_Management.Forms
 {
-    partial class Login
+    partial class AdminLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,50 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox1 = new Krypton.Toolkit.KryptonTextBox();
             this.btnLogin = new CuoreUI.Controls.cuiButton();
-            this.btnAdmin = new System.Windows.Forms.Button();
+            this.Logoutbtn = new System.Windows.Forms.Button();
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(88, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(337, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Please enter your username and password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(85, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 38);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Welcome 👋";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label4.Location = new System.Drawing.Point(113, 351);
+            this.label4.Location = new System.Drawing.Point(1046, 305);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 23);
-            this.label4.TabIndex = 7;
+            this.label4.TabIndex = 16;
             this.label4.Text = "Password";
             // 
             // label3
@@ -79,17 +56,41 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label3.Location = new System.Drawing.Point(113, 237);
+            this.label3.Location = new System.Drawing.Point(1039, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 23);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(812, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(337, 21);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Please enter your username and password";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(865, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(284, 38);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Welcome Admin!";
             // 
             // txtUsername
             // 
             this.txtUsername.CornerRoundingRadius = 30F;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtUsername.Location = new System.Drawing.Point(92, 276);
+            this.txtUsername.Location = new System.Drawing.Point(816, 239);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(333, 51);
             this.txtUsername.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -101,13 +102,13 @@
             this.txtUsername.StateCommon.Border.Rounding = 30F;
             this.txtUsername.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtUsername.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.TabIndex = 8;
+            this.txtUsername.TabIndex = 17;
             // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.CornerRoundingRadius = 30F;
             this.kryptonTextBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(92, 389);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(816, 344);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(333, 51);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -119,7 +120,7 @@
             this.kryptonTextBox1.StateCommon.Border.Rounding = 30F;
             this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.TabIndex = 9;
+            this.kryptonTextBox1.TabIndex = 18;
             // 
             // btnLogin
             // 
@@ -140,7 +141,7 @@
             this.btnLogin.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnLogin.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnLogin.ImageTint = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(92, 474);
+            this.btnLogin.Location = new System.Drawing.Point(816, 429);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnLogin.NormalOutline = System.Drawing.Color.Transparent;
@@ -150,26 +151,26 @@
             this.btnLogin.PressedOutline = System.Drawing.Color.Empty;
             this.btnLogin.Rounding = new System.Windows.Forms.Padding(20);
             this.btnLogin.Size = new System.Drawing.Size(333, 50);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 19;
             this.btnLogin.TextOffset = new System.Drawing.Point(0, 0);
             // 
-            // btnAdmin
+            // Logoutbtn
             // 
-            this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
-            this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(1013, 592);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnAdmin.Size = new System.Drawing.Size(156, 61);
-            this.btnAdmin.TabIndex = 14;
-            this.btnAdmin.Text = "       Admin Login";
-            this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            this.Logoutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Logoutbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Logoutbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutbtn.ForeColor = System.Drawing.Color.MediumPurple;
+            this.Logoutbtn.Image = ((System.Drawing.Image)(resources.GetObject("Logoutbtn.Image")));
+            this.Logoutbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logoutbtn.Location = new System.Drawing.Point(872, 496);
+            this.Logoutbtn.Name = "Logoutbtn";
+            this.Logoutbtn.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.Logoutbtn.Size = new System.Drawing.Size(228, 76);
+            this.Logoutbtn.TabIndex = 20;
+            this.Logoutbtn.Text = "        Back to previous";
+            this.Logoutbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Logoutbtn.UseVisualStyleBackColor = true;
+            this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
             // 
             // cuiButton1
             // 
@@ -192,7 +193,7 @@
             this.cuiButton1.ImageExpand = new System.Drawing.Point(5, 5);
             this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageTint = System.Drawing.Color.White;
-            this.cuiButton1.Location = new System.Drawing.Point(1138, 1);
+            this.cuiButton1.Location = new System.Drawing.Point(1142, -1);
             this.cuiButton1.Name = "cuiButton1";
             this.cuiButton1.NormalBackground = System.Drawing.Color.Transparent;
             this.cuiButton1.NormalOutline = System.Drawing.Color.Transparent;
@@ -202,11 +203,11 @@
             this.cuiButton1.PressedOutline = System.Drawing.Color.Coral;
             this.cuiButton1.Rounding = new System.Windows.Forms.Padding(20);
             this.cuiButton1.Size = new System.Drawing.Size(40, 36);
-            this.cuiButton1.TabIndex = 15;
+            this.cuiButton1.TabIndex = 21;
             this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.Click += new System.EventHandler(this.cuiButton1_Click);
             // 
-            // Login
+            // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +215,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1181, 665);
             this.Controls.Add(this.cuiButton1);
-            this.Controls.Add(this.btnAdmin);
+            this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.txtUsername);
@@ -223,10 +224,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "AdminLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
+            this.Text = "AdminLogin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,14 +234,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private Krypton.Toolkit.KryptonTextBox txtUsername;
         private Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
         private CuoreUI.Controls.cuiButton btnLogin;
-        private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button Logoutbtn;
         private CuoreUI.Controls.cuiButton cuiButton1;
     }
 }
