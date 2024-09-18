@@ -21,5 +21,15 @@ namespace GameServer_Management.Forms
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cuiButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
