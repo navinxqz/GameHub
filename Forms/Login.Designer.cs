@@ -177,7 +177,7 @@
             this.cuiButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cuiButton1.CheckButton = false;
             this.cuiButton1.Checked = false;
-            this.cuiButton1.CheckedBackground = System.Drawing.Color.Red;
+            this.cuiButton1.CheckedBackground = System.Drawing.Color.Transparent;
             this.cuiButton1.CheckedImageTint = System.Drawing.Color.Transparent;
             this.cuiButton1.CheckedOutline = System.Drawing.Color.Brown;
             this.cuiButton1.Content = "";
@@ -188,10 +188,10 @@
             this.cuiButton1.HoverOutline = System.Drawing.Color.White;
             this.cuiButton1.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton1.Image")));
             this.cuiButton1.ImageAutoCenter = true;
-            this.cuiButton1.ImageExpand = new System.Drawing.Point(10, 10);
+            this.cuiButton1.ImageExpand = new System.Drawing.Point(5, 5);
             this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageTint = System.Drawing.Color.White;
-            this.cuiButton1.Location = new System.Drawing.Point(1135, 1);
+            this.cuiButton1.Location = new System.Drawing.Point(1138, 1);
             this.cuiButton1.Name = "cuiButton1";
             this.cuiButton1.NormalBackground = System.Drawing.Color.Transparent;
             this.cuiButton1.NormalOutline = System.Drawing.Color.Transparent;
@@ -199,8 +199,8 @@
             this.cuiButton1.PressedBackground = System.Drawing.Color.Cornsilk;
             this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
             this.cuiButton1.PressedOutline = System.Drawing.Color.Coral;
-            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(8);
-            this.cuiButton1.Size = new System.Drawing.Size(43, 47);
+            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(20);
+            this.cuiButton1.Size = new System.Drawing.Size(40, 36);
             this.cuiButton1.TabIndex = 15;
             this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.Click += new System.EventHandler(this.cuiButton1_Click);
