@@ -150,5 +150,49 @@ namespace GameServer_Management.Forms
             cb.Checked = false;
             cb = button;
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            if (!btnHome.Checked)
+            {
+                btnHome.Checked = true;
+                return;
+            }
+            LoadForm(home);
+            Button(btnHome);
+        }
+
+        private void userDBbtn_Click(object sender, EventArgs e)
+        {
+            if (!userDBbtn.Checked)
+            {
+                userDBbtn.Checked = true;
+                return;
+            }
+            LoadForm(userDB);
+            Button(userDBbtn);
+        }
+
+        private void adminDBbtn_Click(object sender, EventArgs e)
+        {
+            if (!adminDBbtn.Checked)
+            {
+                adminDBbtn.Checked = true;
+                return;
+            }
+            LoadForm(adminDB);
+            Button(adminDBbtn);
+        }
+
+        private void GameDBbtn_Click(object sender, EventArgs e)
+        {
+            if (!GameDBbtn.Checked)
+            {
+                GameDBbtn.Checked = true;
+                return;
+            }
+            LoadForm(gameDB);
+            Button(GameDBbtn);
+        }
     }
 }

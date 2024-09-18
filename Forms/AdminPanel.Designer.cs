@@ -288,6 +288,7 @@
             this.btnHome.TabIndex = 1;
             this.btnHome.Values.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Values.Image")));
             this.btnHome.Values.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // userDBbtn
             // 
@@ -378,6 +379,7 @@
             this.userDBbtn.TabIndex = 2;
             this.userDBbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image")));
             this.userDBbtn.Values.Text = "User Database";
+            this.userDBbtn.Click += new System.EventHandler(this.userDBbtn_Click);
             // 
             // adminDBbtn
             // 
@@ -468,6 +470,7 @@
             this.adminDBbtn.TabIndex = 3;
             this.adminDBbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton2.Values.Image")));
             this.adminDBbtn.Values.Text = "Admin Database";
+            this.adminDBbtn.Click += new System.EventHandler(this.adminDBbtn_Click);
             // 
             // GameDBbtn
             // 
@@ -558,6 +561,7 @@
             this.GameDBbtn.TabIndex = 4;
             this.GameDBbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton3.Values.Image")));
             this.GameDBbtn.Values.Text = "Game Database";
+            this.GameDBbtn.Click += new System.EventHandler(this.GameDBbtn_Click);
             // 
             // sliderShowTimer
             // 
