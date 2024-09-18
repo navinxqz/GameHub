@@ -33,7 +33,7 @@
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.slidePanel = new System.Windows.Forms.Panel();
             this.logoutBtn = new CuoreUI.Controls.cuiButton();
-            this.cuiButton2 = new CuoreUI.Controls.cuiButton();
+            this.menubtn = new CuoreUI.Controls.cuiButton();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -42,6 +42,8 @@
             this.userDBbtn = new Krypton.Toolkit.KryptonCheckButton();
             this.adminDBbtn = new Krypton.Toolkit.KryptonCheckButton();
             this.GameDBbtn = new Krypton.Toolkit.KryptonCheckButton();
+            this.sliderShowTimer = new System.Windows.Forms.Timer(this.components);
+            this.sliderHideTimer = new System.Windows.Forms.Timer(this.components);
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -86,7 +88,7 @@
             // 
             this.slidePanel.Controls.Add(this.kryptonPanel1);
             this.slidePanel.Controls.Add(this.logoutBtn);
-            this.slidePanel.Controls.Add(this.cuiButton2);
+            this.slidePanel.Controls.Add(this.menubtn);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.Location = new System.Drawing.Point(0, 0);
             this.slidePanel.Margin = new System.Windows.Forms.Padding(1);
@@ -127,38 +129,39 @@
             this.logoutBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
-            // cuiButton2
+            // menubtn
             // 
-            this.cuiButton2.CheckButton = false;
-            this.cuiButton2.Checked = false;
-            this.cuiButton2.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.cuiButton2.CheckedImageTint = System.Drawing.Color.White;
-            this.cuiButton2.CheckedOutline = System.Drawing.Color.Transparent;
-            this.cuiButton2.Content = "";
-            this.cuiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cuiButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cuiButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.cuiButton2.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.cuiButton2.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton2.HoverOutline = System.Drawing.Color.Transparent;
-            this.cuiButton2.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton2.Image")));
-            this.cuiButton2.ImageAutoCenter = true;
-            this.cuiButton2.ImageExpand = new System.Drawing.Point(5, 5);
-            this.cuiButton2.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton2.ImageTint = System.Drawing.Color.White;
-            this.cuiButton2.Location = new System.Drawing.Point(12, 12);
-            this.cuiButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.cuiButton2.Name = "cuiButton2";
-            this.cuiButton2.NormalBackground = System.Drawing.Color.Transparent;
-            this.cuiButton2.NormalOutline = System.Drawing.Color.Transparent;
-            this.cuiButton2.OutlineThickness = 1.6F;
-            this.cuiButton2.PressedBackground = System.Drawing.Color.Transparent;
-            this.cuiButton2.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton2.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.cuiButton2.Rounding = new System.Windows.Forms.Padding(10);
-            this.cuiButton2.Size = new System.Drawing.Size(40, 40);
-            this.cuiButton2.TabIndex = 1;
-            this.cuiButton2.TextOffset = new System.Drawing.Point(0, 0);
+            this.menubtn.CheckButton = false;
+            this.menubtn.Checked = false;
+            this.menubtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.menubtn.CheckedImageTint = System.Drawing.Color.White;
+            this.menubtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.menubtn.Content = "";
+            this.menubtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menubtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.menubtn.ForeColor = System.Drawing.Color.Transparent;
+            this.menubtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.menubtn.HoveredImageTint = System.Drawing.Color.White;
+            this.menubtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.menubtn.Image = ((System.Drawing.Image)(resources.GetObject("menubtn.Image")));
+            this.menubtn.ImageAutoCenter = true;
+            this.menubtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.menubtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.menubtn.ImageTint = System.Drawing.Color.White;
+            this.menubtn.Location = new System.Drawing.Point(12, 12);
+            this.menubtn.Margin = new System.Windows.Forms.Padding(2);
+            this.menubtn.Name = "menubtn";
+            this.menubtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.menubtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.menubtn.OutlineThickness = 1.6F;
+            this.menubtn.PressedBackground = System.Drawing.Color.Transparent;
+            this.menubtn.PressedImageTint = System.Drawing.Color.White;
+            this.menubtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.menubtn.Rounding = new System.Windows.Forms.Padding(10);
+            this.menubtn.Size = new System.Drawing.Size(40, 40);
+            this.menubtn.TabIndex = 1;
+            this.menubtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.menubtn.Click += new System.EventHandler(this.menubtn_Click);
             // 
             // mainpanel
             // 
@@ -192,7 +195,7 @@
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabLowProfile;
-            this.kryptonPanel1.Size = new System.Drawing.Size(242, 260);
+            this.kryptonPanel1.Size = new System.Drawing.Size(68, 260);
             this.kryptonPanel1.TabIndex = 0;
             // 
             // btnHome
@@ -205,7 +208,7 @@
             this.btnHome.Name = "btnHome";
             this.btnHome.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.btnHome.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.btnHome.Size = new System.Drawing.Size(255, 53);
+            this.btnHome.Size = new System.Drawing.Size(81, 53);
             this.btnHome.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnHome.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.btnHome.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -295,7 +298,7 @@
             this.userDBbtn.Name = "userDBbtn";
             this.userDBbtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.userDBbtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.userDBbtn.Size = new System.Drawing.Size(255, 53);
+            this.userDBbtn.Size = new System.Drawing.Size(81, 53);
             this.userDBbtn.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.userDBbtn.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.userDBbtn.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -385,7 +388,7 @@
             this.adminDBbtn.Name = "adminDBbtn";
             this.adminDBbtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.adminDBbtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.adminDBbtn.Size = new System.Drawing.Size(255, 53);
+            this.adminDBbtn.Size = new System.Drawing.Size(81, 53);
             this.adminDBbtn.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.adminDBbtn.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.adminDBbtn.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -475,7 +478,7 @@
             this.GameDBbtn.Name = "GameDBbtn";
             this.GameDBbtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.GameDBbtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.GameDBbtn.Size = new System.Drawing.Size(255, 53);
+            this.GameDBbtn.Size = new System.Drawing.Size(81, 53);
             this.GameDBbtn.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.GameDBbtn.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
             this.GameDBbtn.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
@@ -555,6 +558,16 @@
             this.GameDBbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton3.Values.Image")));
             this.GameDBbtn.Values.Text = "Game Database";
             // 
+            // sliderShowTimer
+            // 
+            this.sliderShowTimer.Interval = 1;
+            this.sliderShowTimer.Tick += new System.EventHandler(this.sliderShowTimer_Tick);
+            // 
+            // sliderHideTimer
+            // 
+            this.sliderHideTimer.Interval = 2;
+            this.sliderHideTimer.Tick += new System.EventHandler(this.sliderHideTimer_Tick);
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -581,7 +594,7 @@
         private CuoreUI.Controls.cuiButton cuiButton1;
         private System.Windows.Forms.Panel slidePanel;
         private CuoreUI.Controls.cuiButton logoutBtn;
-        private CuoreUI.Controls.cuiButton cuiButton2;
+        private CuoreUI.Controls.cuiButton menubtn;
         private System.Windows.Forms.Panel mainpanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
@@ -590,5 +603,7 @@
         private Krypton.Toolkit.KryptonCheckButton GameDBbtn;
         private Krypton.Toolkit.KryptonCheckButton adminDBbtn;
         private Krypton.Toolkit.KryptonCheckButton userDBbtn;
+        private System.Windows.Forms.Timer sliderShowTimer;
+        private System.Windows.Forms.Timer sliderHideTimer;
     }
 }
