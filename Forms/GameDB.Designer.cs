@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDB));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
@@ -245,9 +245,9 @@
             // 
             // dgvRelDate
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRelDate.HeaderText = "Release Date";
             this.dgvRelDate.Name = "dgvRelDate";
             this.dgvRelDate.ReadOnly = true;

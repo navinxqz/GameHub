@@ -170,6 +170,7 @@
             this.DateSelect.Name = "DateSelect";
             this.DateSelect.Size = new System.Drawing.Size(18, 20);
             this.DateSelect.TabIndex = 69;
+            this.DateSelect.ValueChanged += new System.EventHandler(this.DateSelect_ValueChanged);
             // 
             // label5
             // 
@@ -188,7 +189,9 @@
             this.txtRelDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtRelDate.Location = new System.Drawing.Point(43, 573);
             this.txtRelDate.Name = "txtRelDate";
+            this.txtRelDate.ReadOnly = true;
             this.txtRelDate.Size = new System.Drawing.Size(337, 51);
+            this.txtRelDate.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRelDate.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.txtRelDate.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.txtRelDate.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -198,6 +201,13 @@
             this.txtRelDate.StateCommon.Border.Rounding = 30F;
             this.txtRelDate.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtRelDate.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRelDate.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.txtRelDate.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.txtRelDate.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.txtRelDate.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtRelDate.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRelDate.TabIndex = 67;
             // 
             // pictureBox1
@@ -301,6 +311,7 @@
             this.cbCat.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCat.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.cbCat.TabIndex = 70;
+            this.cbCat.SelectedIndexChanged += new System.EventHandler(this.cbCat_SelectedIndexChanged);
             // 
             // AddGames
             // 
@@ -352,6 +363,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public Krypton.Toolkit.KryptonTextBox txtDesc;
-        private Krypton.Toolkit.KryptonComboBox cbCat;
+        public Krypton.Toolkit.KryptonComboBox cbCat;
     }
 }

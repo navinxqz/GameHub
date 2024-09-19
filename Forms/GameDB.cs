@@ -54,7 +54,11 @@ namespace GameServer_Management.Forms
             {
                 AddGames c = new AddGames();
                 c.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
-                c.txtCat.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
+                c.txtName.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
+                c.txtDesc.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvDesc"].Value);
+                c.txtPrice.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvPrice"].Value);
+                c.cbCat.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvCat"].Value);
+                c.txtRelDate.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvRelDate"].Value);
 
                 DBconnect.BlurBg(c);
                 GetData();

@@ -159,18 +159,8 @@ namespace GameServer_Management.Class
                 Bg.Dispose();
             }
         }
-        public static void CBFill(string query,ComboBox cb) 
+        public static void CBFill(string query,Krypton.Toolkit.KryptonComboBox cb) 
         {
-            //SqlCommand cmd = new SqlCommand(query,con);
-            //cmd.CommandType = CommandType.Text;
-            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //adapter.Fill(dt);
-
-            //cb.DisplayMember = "name";
-            //cb.ValueMember = "id";
-            //cb.DataSource = dt;
-            //cb.SelectedIndex = -1;
             using (SqlConnection con = new SqlConnection(cs))
             {
                 try
