@@ -90,6 +90,7 @@ namespace GameServer_Management.Class
         //load Data
         public static void LoadData(string query, DataGridView g,ListBox l)
         {
+            g.CellFormatting += new DataGridViewCellFormattingEventHandler(g_CellFormatting);
             using (SqlConnection con = new SqlConnection(cs)) 
             {
                 try
@@ -126,6 +127,16 @@ namespace GameServer_Management.Class
                     }
                 }
                 catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
+            }
+        }
+        private static void g_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            DataGridView g = (DataGridView)sender;
+            int count = 0;
+            foreach (DataGridViewRow row in g.Rows)
+            {
+                count++;
+                row.Cells[0].Value = count;
             }
         }
     }

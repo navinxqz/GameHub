@@ -40,6 +40,8 @@
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.HidePassBtn = new CuoreUI.Controls.cuiButton();
             this.showPassBtn = new CuoreUI.Controls.cuiButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -277,12 +279,21 @@
             this.showPassBtn.TextOffset = new System.Drawing.Point(0, 0);
             this.showPassBtn.Click += new System.EventHandler(this.showPassBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1181, 665);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1181, 665);
             this.Controls.Add(this.HidePassBtn);
             this.Controls.Add(this.showPassBtn);
@@ -295,10 +306,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminLogin";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +330,6 @@
         private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiButton HidePassBtn;
         private CuoreUI.Controls.cuiButton showPassBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
