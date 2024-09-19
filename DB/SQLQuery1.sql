@@ -71,3 +71,27 @@ begin
 delete from gamestbl where gameID = @gameID
 end
 go
+-----------------------------------------------------
+create table categorytbl
+(
+catID int identity(1,1) primary key,
+catName varchar(50)
+)
+-----------------------------------------------------
+create procedure sp_LoadCategory
+as
+begin
+select catID, catName from categorytbl
+end
+go
+-----------------------------------------------------
+
+create procedure sp_AddCategory
+(
+@catName varchar(50)
+)
+as
+begin
+insert into categorytbl(catName) values(@catName)
+end
+go

@@ -1,6 +1,6 @@
 ﻿namespace GameServer_Management.Forms
 {
-    partial class GameView
+    partial class GameCatView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameCatView));
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
             this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
@@ -39,7 +39,6 @@
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.catbtn = new CuoreUI.Controls.cuiButton();
             this.panelView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +62,7 @@
             this.btnAdd.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageTint = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(231, 11);
+            this.btnAdd.Location = new System.Drawing.Point(429, 16);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnAdd.NormalOutline = System.Drawing.Color.Transparent;
@@ -75,6 +74,7 @@
             this.btnAdd.Size = new System.Drawing.Size(149, 54);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -83,15 +83,15 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 61);
+            this.label1.Size = new System.Drawing.Size(411, 61);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Games";
+            this.label1.Text = "Game Category";
             // 
             // searchtxtbox
             // 
             this.searchtxtbox.CornerRoundingRadius = 30F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchtxtbox.Location = new System.Drawing.Point(551, 11);
+            this.searchtxtbox.Location = new System.Drawing.Point(597, 14);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.Size = new System.Drawing.Size(307, 56);
             this.searchtxtbox.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
@@ -183,54 +183,21 @@
             this.dgvDelete.Name = "dgvDelete";
             this.dgvDelete.ToolTipText = "Click to delete";
             // 
-            // catbtn
-            // 
-            this.catbtn.CheckButton = false;
-            this.catbtn.Checked = false;
-            this.catbtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
-            this.catbtn.CheckedImageTint = System.Drawing.Color.White;
-            this.catbtn.CheckedOutline = System.Drawing.Color.White;
-            this.catbtn.Content = "Category";
-            this.catbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.catbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.catbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.catbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.catbtn.HoveredImageTint = System.Drawing.Color.White;
-            this.catbtn.HoverOutline = System.Drawing.Color.Transparent;
-            this.catbtn.Image = null;
-            this.catbtn.ImageAutoCenter = true;
-            this.catbtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.catbtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.catbtn.ImageTint = System.Drawing.Color.White;
-            this.catbtn.Location = new System.Drawing.Point(386, 13);
-            this.catbtn.Name = "catbtn";
-            this.catbtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
-            this.catbtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.catbtn.OutlineThickness = 1.6F;
-            this.catbtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
-            this.catbtn.PressedImageTint = System.Drawing.Color.White;
-            this.catbtn.PressedOutline = System.Drawing.Color.White;
-            this.catbtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.catbtn.Size = new System.Drawing.Size(149, 54);
-            this.catbtn.TabIndex = 14;
-            this.catbtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.catbtn.Click += new System.EventHandler(this.catbtn_Click);
-            // 
-            // GameView
+            // GameCatView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
-            this.Controls.Add(this.catbtn);
             this.Controls.Add(this.panelView);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GameView";
+            this.Name = "GameCatView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameView";
+            this.Load += new System.EventHandler(this.GameCatView_Load);
             this.panelView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -249,6 +216,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
-        private CuoreUI.Controls.cuiButton catbtn;
     }
 }

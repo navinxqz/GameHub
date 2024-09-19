@@ -14,7 +14,7 @@ namespace GameServer_Management.Forms
     public partial class AdminPanel : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
-        private GameView gameView;
+        private GameCatView catView = new GameCatView();
         //for btn form connect cls...
         public AdminPanel()
         {
@@ -24,20 +24,26 @@ namespace GameServer_Management.Forms
             cb = btnHome;
             cb.Checked = true;
         }
-        public void LoadForm(object Form)
+        public void LoadForm(Form f)
         {
+            if (f == null)
+            {
+                MessageBox.Show("The form to load is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (this.mainpanel.Controls.Count > 0)
             {
                 this.mainpanel.Controls.RemoveAt(0);
             }
-            
-            Form f = Form as Form;
+
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Visible = true;
         }
+
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
@@ -194,13 +200,18 @@ namespace GameServer_Management.Forms
 
         private void gameBtn_Click(object sender, EventArgs e)
         {
-            if (!gameBtn.Checked)
+
+        }
+
+        private void categoryBtn_Click(object sender, EventArgs e)
+        {
+            if (!categoryBtn.Checked)
             {
-                gameBtn.Checked = true;
+                categoryBtn.Checked = true;
                 return;
             }
-            LoadForm(gameView);
-            Button(gameBtn);
+            LoadForm(catView);
+            Button(categoryBtn);
         }
     }
 }
