@@ -28,6 +28,8 @@ gameImage image,
 releaseDate date
 )
 
+select * from gamestbl
+----------------------------------------------------
 create proc sp_addGame
 (
 @gameID int = 0,
@@ -103,8 +105,6 @@ END
 GO
 
 -----------------------------------------------------
-
------------------------------------------------------
 create procedure sp_UpdateCategory
 (
 @catID int = 0,
@@ -115,3 +115,9 @@ begin
 update categorytbl set catName = @catName where catID = @catID
 end
 go
+
+-----------------------------------------------------
+create table gamestbl
+(
+
+)

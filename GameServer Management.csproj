@@ -63,11 +63,11 @@
     <Compile Include="Forms\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddGame.cs">
+    <Compile Include="Forms\AddGames.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddGame.Designer.cs">
-      <DependentUpon>AddGame.cs</DependentUpon>
+    <Compile Include="Forms\AddGames.Designer.cs">
+      <DependentUpon>AddGames.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminLogin.cs">
       <SubType>Form</SubType>
@@ -87,6 +87,12 @@
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GameDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameDB.Designer.cs">
+      <DependentUpon>GameDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\GameView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <EmbeddedResource Include="Forms\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddGames.resx">
+      <DependentUpon>AddGames.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameDB.resx">
+      <DependentUpon>GameDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameView.resx">
       <DependentUpon>GameView.cs</DependentUpon>

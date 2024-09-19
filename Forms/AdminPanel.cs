@@ -15,6 +15,7 @@ namespace GameServer_Management.Forms
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
         private GameCatView catView = new GameCatView();
+        private GameDB gameDB = new GameDB();
         //for btn form connect cls...
         public AdminPanel()
         {
@@ -23,6 +24,17 @@ namespace GameServer_Management.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
             cb = btnHome;
             cb.Checked = true;
+        }
+
+        static AdminPanel obj;
+        public static AdminPanel Instance
+        {
+            get { 
+                if (obj == null) 
+                { 
+                    obj = new AdminPanel();
+                } return obj; 
+            }
         }
         public void LoadForm(Form f)
         {
@@ -135,6 +147,7 @@ namespace GameServer_Management.Forms
             //LoadForm(home);
             //this.Opacity = 0;
             //faddingTimer.Start();
+            obj = this;
         }
 
         private void faddingTimer_Tick(object sender, EventArgs e)
@@ -194,7 +207,7 @@ namespace GameServer_Management.Forms
                 GameDBbtn.Checked = true;
                 return;
             }
-            //LoadForm(gameDB);
+            LoadForm(gameDB);
             Button(GameDBbtn);
         }
 

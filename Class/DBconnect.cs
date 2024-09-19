@@ -8,6 +8,7 @@ using System.Data;
 using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
+using GameServer_Management.Forms;
 
 namespace GameServer_Management.Class
 {
@@ -137,6 +138,64 @@ namespace GameServer_Management.Class
             {
                 count++;
                 row.Cells[0].Value = count;
+            }
+        }
+
+        public static void BlurBg(Form f)
+        {
+            Form Bg = new Form();
+            using (f)
+            {
+                Bg.StartPosition = FormStartPosition.Manual;
+                Bg.FormBorderStyle = FormBorderStyle.None;
+                Bg.Opacity = 0.5d;
+                Bg.BackColor = Color.Black;
+                Bg.Size = AdminPanel.Instance.Size;
+                Bg.Location = AdminPanel.Instance.Location;
+                Bg.ShowInTaskbar = false;
+                Bg.Show();
+                f.Owner = Bg;
+                f.ShowDialog(Bg);
+                Bg.Dispose();
+            }
+        }
+        public static void CBFill(string query,ComboBox cb) 
+        {
+            //SqlCommand cmd = new SqlCommand(query,con);
+            //cmd.CommandType = CommandType.Text;
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //adapter.Fill(dt);
+
+            //cb.DisplayMember = "name";
+            //cb.ValueMember = "id";
+            //cb.DataSource = dt;
+            //cb.SelectedIndex = -1;
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            cb.DisplayMember = "name";
+                            cb.ValueMember = "id";
+                            cb.DataSource = dt;
+                            cb.SelectedIndex = -1;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error! {ex.Message}");
+                }
             }
         }
     }
