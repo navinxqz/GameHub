@@ -357,12 +357,12 @@
         private System.Windows.Forms.DateTimePicker DateSelect;
         private System.Windows.Forms.Label label5;
         public Krypton.Toolkit.KryptonTextBox txtRelDate;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         public Krypton.Toolkit.KryptonTextBox txtPrice;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public Krypton.Toolkit.KryptonTextBox txtDesc;
         public Krypton.Toolkit.KryptonComboBox cbCat;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }

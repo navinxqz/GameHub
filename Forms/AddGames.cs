@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -34,15 +35,8 @@ namespace GameServer_Management.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string query = "";
-            if (id == 0)
-            {
-                query = "sp_addGame"; //insert
-            }
-            else
-            {
-                query = "sp_updateGame"; //update
-            }
+            string query = id == 0 ? "sp_addGame" : "sp_updateGame";
+
             //for img upload
             Image temp = new Bitmap(pictureBox1.Image);
             MemoryStream ms = new MemoryStream();
@@ -50,24 +44,40 @@ namespace GameServer_Management.Forms
             imgByte = ms.ToArray();
 
             Hashtable h = new Hashtable();
-            h.Add("@gameID", id);
+            if (id != 0) h.Add("@gameID", id);
             h.Add("@gameName", txtName.Text);
             h.Add("@gameDesc", txtDesc.Text);
-            h.Add("@gameCatID", Convert.ToInt32(cbCat.SelectedValue));
+            h.Add("@categoryID", Convert.ToInt32(cbCat.SelectedValue));
             h.Add("@gameprice", Convert.ToDouble(txtPrice.Text));
-            h.Add("@releaseDate", txtRelDate.Text);
-            h.Add("@gameImage", imgByte);   //later
+            //h.Add("@releaseDate", txtRelDate.Text);
+            DateTime releaseDate;
+            if (DateTime.TryParseExact(txtRelDate.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out releaseDate))
+            {
+                h.Add("@releaseDate", releaseDate.ToString("yyyy-MM-dd")); // Convert to SQL-recognized format
+            }
+            else
+            {
+                MessageBox.Show("Invalid date format! Please enter a valid date in dd-MM-yyyy format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            h.Add("@gameImage", imgByte);
 
             if (DBconnect.SQL(query, h) > 0)
             {
                 MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 id = 0;
+                catID = 0;
                 txtName.Clear();
                 txtPrice.Clear();
                 txtDesc.Clear();
                 txtRelDate.Clear();
                 cbCat.SelectedIndex = -1;
+                pictureBox1.Image = null;
                 txtName.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Error saving the game. Please check your inputs and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -77,7 +87,7 @@ namespace GameServer_Management.Forms
         {
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Choose an image";
-            op.Filter = "Images(.jpeg,.jpg,.png)|*.jpeg;*.jpg;*.png";
+            op.Filter = "Images(.jpeg, .jpg, .png)|*.jpeg;*.jpg;*.png";
 
             if(op.ShowDialog() == DialogResult.OK)
             {
@@ -95,6 +105,10 @@ namespace GameServer_Management.Forms
             {
                 cbCat.SelectedValue = catID;
             }
+            if(id > 0)
+            {
+                UpdateLoadData();
+            }
         }
 
         private void cbCat_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,6 +120,61 @@ namespace GameServer_Management.Forms
         {
             txtRelDate.ForeColor = Color.White;
             txtRelDate.Text = DateSelect.Value.ToString("dd-MM-yyyy");
+        }
+        private void UpdateLoadData()
+        {
+            string query = "SELECT * FROM gamestbl WHERE gameID = @gameID";
+            Hashtable parameters = new Hashtable{ { "@gameID", id } };
+
+            //SqlCommand cmd = new SqlCommand("select * from gamestbl where gameID="+id+"", DBconnect.con);
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(DBconnect.cs))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@gameID", id);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dt);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error! {ex.Message}");
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open)
+                    {
+                        con.Close();
+                    }
+                }
+            }
+                
+            if(dt.Rows.Count > 0)
+            {
+                txtName.Text = dt.Rows[0]["gameName"].ToString();
+                txtDesc.Text = dt.Rows[0]["gameDesc"].ToString();
+                txtPrice.Text = dt.Rows[0]["gamePrice"].ToString();
+                txtRelDate.Text = Convert.ToDateTime(dt.Rows[0]["releaseDate"]).ToString("dd-MM-yyyy");
+
+                Byte[] imgArray = (byte[])(dt.Rows[0]["gameImage"]);
+                //Byte[] imgByteAry = imgArray;
+                //pictureBox1.Image = Image.FromStream(new MemoryStream(imgArray));
+                if (imgArray != null)
+                {
+                    using (MemoryStream ms = new MemoryStream(imgArray))
+                    {
+                        pictureBox1.Image = Image.FromStream(ms);
+                    }
+                }
+            }
         }
     }
 }

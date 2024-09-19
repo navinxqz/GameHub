@@ -32,7 +32,6 @@ select * from gamestbl
 ----------------------------------------------------
 create proc sp_addGame
 (
-@gameID int = 0,
 @gameName varchar(200),
 @gameDesc varchar(200),
 @gameprice float,
@@ -42,10 +41,11 @@ create proc sp_addGame
 )
 as
 begin
-insert into gamestbl(gameID,gameName,gameDesc,gameprice,categoryID,gameImage,releaseDate) values(@gameID,@gameName,@gameDesc,@gameprice,@categoryID,@gameImage,@releaseDate)
+insert into gamestbl(gameName,gameDesc,gameprice,categoryID,gameImage,releaseDate) values(@gameName,@gameDesc,@gameprice,@categoryID,@gameImage,@releaseDate)
 end
 go
 
+select g.gameID, g.gameName, g.gameDesc, g.gameprice, g.categoryID, g.gameImage, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName
 -----------------------------------------------------
 
 create proc sp_updateGame
@@ -117,7 +117,32 @@ end
 go
 
 -----------------------------------------------------
-create table gamestbl
+create procedure sp_LoadCategory
 (
-
+@catName varchar(50)
 )
+as
+begin
+select catID as id, catName as name from categorytbl where catName like '%' + @catName + '%'
+end
+go
+---------------------------------------------------------
+INSERT INTO gamestbl
+(
+    gameName,
+    gameDesc,
+    gameprice,
+    categoryID,
+    gameImage,
+    releaseDate
+)
+VALUES
+(
+    'Test Game',
+    'Test Description',
+    19.99,
+    1,
+    NULL,
+    '2024-09-20'
+);
+Select * from gamestbl

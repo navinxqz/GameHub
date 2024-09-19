@@ -20,7 +20,7 @@ namespace GameServer_Management.Forms
         }
         public void GetData()
         {
-            string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice, g.categoryID, g.gameImage, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName";
+            string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice,g.category, g.categoryID, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName like '%" + searchtxtbox.Text + "%' ";
             ListBox l = new ListBox();
             l.Items.Add(dgvId);
             l.Items.Add(dgvName);
