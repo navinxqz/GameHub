@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelName = new System.Windows.Forms.Label();
             this.txtCat = new Krypton.Toolkit.KryptonTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.SuspendLayout();
             // 
             // labelName
@@ -40,7 +42,7 @@
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(11, -2);
+            this.labelName.Location = new System.Drawing.Point(227, 42);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(348, 61);
@@ -51,7 +53,7 @@
             // 
             this.txtCat.CornerRoundingRadius = 30F;
             this.txtCat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtCat.Location = new System.Drawing.Point(26, 143);
+            this.txtCat.Location = new System.Drawing.Point(157, 165);
             this.txtCat.Name = "txtCat";
             this.txtCat.Size = new System.Drawing.Size(475, 51);
             this.txtCat.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -64,13 +66,14 @@
             this.txtCat.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtCat.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCat.TabIndex = 18;
+            this.txtCat.TextChanged += new System.EventHandler(this.txtCat_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label3.Location = new System.Drawing.Point(323, 117);
+            this.label3.Location = new System.Drawing.Point(323, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 19;
@@ -95,7 +98,7 @@
             this.cancelbtn.ImageExpand = new System.Drawing.Point(0, 0);
             this.cancelbtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.cancelbtn.ImageTint = System.Drawing.Color.White;
-            this.cancelbtn.Location = new System.Drawing.Point(262, 220);
+            this.cancelbtn.Location = new System.Drawing.Point(401, 242);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.NormalBackground = System.Drawing.Color.Transparent;
             this.cancelbtn.NormalOutline = System.Drawing.Color.White;
@@ -107,6 +110,7 @@
             this.cancelbtn.Size = new System.Drawing.Size(147, 54);
             this.cancelbtn.TabIndex = 44;
             this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // btnAdd
             // 
@@ -126,7 +130,7 @@
             this.btnAdd.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.ImageTint = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(119, 220);
+            this.btnAdd.Location = new System.Drawing.Point(258, 242);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnAdd.NormalOutline = System.Drawing.Color.Transparent;
@@ -138,6 +142,12 @@
             this.btnAdd.Size = new System.Drawing.Size(137, 54);
             this.btnAdd.TabIndex = 43;
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // AddCategory
             // 
@@ -167,5 +177,6 @@
         private System.Windows.Forms.Label label3;
         private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton btnAdd;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

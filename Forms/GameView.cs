@@ -19,7 +19,7 @@ namespace GameServer_Management.Forms
         }
         public void GetData() 
         {
-            string query = "sp_LoadCategory";
+            string query = "select catID, catName from categorytbl where catName like '%"+searchtxtbox.Text+"%' ";
             ListBox l = new ListBox();
             l.Items.Add(dgvId);
             l.Items.Add(dgvName);
@@ -47,6 +47,30 @@ namespace GameServer_Management.Forms
             AddCategory c = new AddCategory();
             c.ShowDialog();
             GetData();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void searchtxtbox_TextChanged(object sender, EventArgs e)
+        {
+            GetData();
+        }
+
+        private void searchtxtbox_Enter(object sender, EventArgs e)
+        {
+            if (searchtxtbox.Text == "Search")
+            {
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(255, 115, 115);
+                searchtxtbox.Text = String.Empty;
+            }
+        }
+
+        private void searchtxtbox_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

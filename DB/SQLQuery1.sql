@@ -77,6 +77,9 @@ create table categorytbl
 catID int identity(1,1) primary key,
 catName varchar(50)
 )
+
+insert into categorytbl(catName) values('Racing')
+select * from categorytbl
 -----------------------------------------------------
 create procedure sp_LoadCategory
 as
@@ -85,13 +88,27 @@ select catID, catName from categorytbl
 end
 go
 -----------------------------------------------------
-
-create procedure sp_AddCategory
+CREATE PROCEDURE sp_AddCategory
 (
-@catName varchar(50)
+    @catID INT = 0,
+    @catName VARCHAR(50)
+)
+AS
+BEGIN
+    INSERT INTO categorytbl(catName) VALUES(@catName);
+END
+GO
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+create procedure sp_UpdateCategory
+(
+@catID int = 0,
+@catName varchar(50) = null
 )
 as
 begin
-insert into categorytbl(catName) values(@catName)
+update categorytbl set catName = @catName where catID = @catID
 end
 go
