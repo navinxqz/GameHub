@@ -14,6 +14,7 @@ namespace GameServer_Management.Forms
     public partial class AdminPanel : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
+        private GameView gameView;
         //for btn form connect cls...
         public AdminPanel()
         {
@@ -49,11 +50,7 @@ namespace GameServer_Management.Forms
         {
             Application.Exit();
         }
-        private void Buttons(KryptonCheckBox button)
-        {
-
-        }
-
+       
         private void sliderShowTimer_Tick(object sender, EventArgs e)
         {
             if (slidePanel.Size.Width < 222)
@@ -193,6 +190,17 @@ namespace GameServer_Management.Forms
             }
             //LoadForm(gameDB);
             Button(GameDBbtn);
+        }
+
+        private void gameBtn_Click(object sender, EventArgs e)
+        {
+            if (!gameBtn.Checked)
+            {
+                gameBtn.Checked = true;
+                return;
+            }
+            LoadForm(gameView);
+            Button(gameBtn);
         }
     }
 }
