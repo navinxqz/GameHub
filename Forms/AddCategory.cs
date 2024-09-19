@@ -10,19 +10,20 @@ using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
 {
-    public partial class GameView : Form
+    public partial class AddCategory : Form
     {
-        public GameView()
+        public AddCategory()
         {
             InitializeComponent();
         }
+        public int id = 0;
 
-        private void searchBtn_Click(object sender, EventArgs e)
+        private void AddCategory_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void catbtn_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
 {
-    public partial class GameView : Form
+    public partial class AddGame : Form
     {
-        public GameView()
+        public AddGame()
         {
             InitializeComponent();
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void catbtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
