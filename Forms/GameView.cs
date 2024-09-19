@@ -1,5 +1,6 @@
 ﻿using GameServer_Management.Class;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,6 +72,38 @@ namespace GameServer_Management.Forms
         private void searchtxtbox_Leave(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit") {
+                AddCategory c = new AddCategory();
+                c.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
+                c.txtCat.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
+                c.ShowDialog();
+                GetData();
+            }
+            if (dataGridView1.CurrentCell?.OwningColumn?.Name == "dgvDelete") 
+            {
+                if(DialogResult.Yes == MessageBox.Show("Do you want to delete?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
+                    string query = "sp_DeleteCategory";
+                    Hashtable h = new Hashtable();
+                    h.Add("@catID", id);
+
+                    //DBconnect.SQL(query, h);
+                    if (DBconnect.SQL(query, h) > 0)
+                    {
+                        MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

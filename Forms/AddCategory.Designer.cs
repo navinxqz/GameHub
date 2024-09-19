@@ -173,10 +173,10 @@
         #endregion
 
         private System.Windows.Forms.Label labelName;
-        private Krypton.Toolkit.KryptonTextBox txtCat;
         private System.Windows.Forms.Label label3;
         private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton btnAdd;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public Krypton.Toolkit.KryptonTextBox txtCat;
     }
 }

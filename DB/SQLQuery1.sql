@@ -81,10 +81,13 @@ catName varchar(50)
 insert into categorytbl(catName) values('Racing')
 select * from categorytbl
 -----------------------------------------------------
-create procedure sp_LoadCategory
+create procedure sp_DeleteCategory
+(
+@catID int
+)
 as
 begin
-select catID, catName from categorytbl
+delete from categorytbl where catID = @catID
 end
 go
 -----------------------------------------------------
