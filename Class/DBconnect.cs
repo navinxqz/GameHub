@@ -86,5 +86,47 @@ namespace GameServer_Management.Class
             }
             return result;
         }
+
+        //load Data
+        public static void LoadData(string query, DataGridView g,ListBox l)
+        {
+            using (SqlConnection con = new SqlConnection(cs)) 
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using(SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            if (l.Items.Count != dt.Columns.Count)
+                            {
+                                MessageBox.Show("Column count does not match with the ListBox items.");
+                                return;
+                            }
+                            for (int i = 0; i < l.Items.Count; i++)
+                            {
+                                if (l.Items[i] is DataGridViewColumn col)
+                                {
+                                    string colName = col.Name;
+                                    g.Columns[colName].DataPropertyName = dt.Columns[i].ColumnName;
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"Item at index {i} is not a DataGridViewColumn.");
+                                    return;
+                                }
+                            }
+                            g.DataSource = dt;
+                        }
+                    }
+                }
+                catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
+            }
+        }
     }
 }
