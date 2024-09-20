@@ -1,4 +1,5 @@
 ﻿using GameServer_Management.Class;
+using GameServer_Management.Controller;
 using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,8 @@ namespace GameServer_Management.Forms
         private void AdminHome_Load(object sender, EventArgs e)
         {
             AddCat();
+            listPanel.Controls.Clear();
+            LoadItems();
         }
         private void AddCat()
         {
@@ -48,11 +52,6 @@ namespace GameServer_Management.Forms
                         {
                             foreach (DataRow row in dt.Rows)
                             {
-                                if (row["catName"] == DBNull.Value || row["catName"] == null)
-                                {
-                                    MessageBox.Show("catName column is missing or has null value.");
-                                    continue;
-                                }
                                 /*Button b = new Button();
                                 b.BackColor = Color.FromArgb(23, 23, 26);
                                 b.Size = new Size(263, 53);
@@ -129,14 +128,53 @@ namespace GameServer_Management.Forms
                         }
                     }
                 }catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
-                /*finally
-                {
-                    if (con.State == ConnectionState.Open) { con.Close(); }
-                }   */
             }
-                
-            //SqlCommand cmd = new SqlCommand(query,DBconnect.con);
             
+        }
+        private void AddItems(string id, string name, string cat,string price, Image img)
+        {
+            var v = new GameDesc
+            {
+                GName = name,
+                Price = price,
+                Category = cat,
+                Pic = img,
+                id = Convert.ToInt32(id)
+            };
+            listPanel.Controls.Add(v);
+            v.onSelect += (ss, ee) =>
+            {
+                //no need
+            };
+        }
+        private void LoadItems()
+        {
+            string query = "select * from gamestbl t1 inner join categorytbl t2 on t2.catID = t1.categoryID";
+            using (SqlConnection con = DBconnect.GetConnection())
+            {
+                if (con == null)
+                {
+                    MessageBox.Show("Database connection is not established.");
+                    return;
+                }
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        foreach (DataRow item in dt.Rows) 
+                        {
+                            Byte[] imgAry = (byte[])item["gameImage"];
+                            byte[] imgbyte = imgAry;
+                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), Image.FromStream(new MemoryStream(imgAry)));
+                        }
+                    }
+                }catch(Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
