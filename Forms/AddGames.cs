@@ -6,8 +6,6 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
@@ -36,24 +34,33 @@ namespace GameServer_Management.Forms
             string query = id == 0 ? "sp_addGame" : "sp_updateGame";
 
             //for img upload
-            if (pictureBox1.Image == null)
+            if (id ==0 && pictureBox1.Image == null)
             {
                 MessageBox.Show("Please upload an image.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            Image temp = new Bitmap(pictureBox1.Image);
-            using (MemoryStream ms = new MemoryStream())
+            if (pictureBox1.Image != null)
             {
-                temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                imgByte = ms.ToArray();
-            }
+                Image temp = new Bitmap(pictureBox1.Image);
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    imgByte = ms.ToArray();
+                }
+            } else { imgByte = null; }
+
+            //Image temp = new Bitmap(pictureBox1.Image);
+            //using (MemoryStream ms = new MemoryStream())
+            //{
+            //    temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            //    imgByte = ms.ToArray();
+            //}
             //MemoryStream ms = new MemoryStream();
             //temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             //imgByte = ms.ToArray();
 
             Hashtable h = new Hashtable();
-            if (id != 0) h.Add("@gameID", id);
+            if (id != 0) { h.Add("@gameID", id); }
 
             h.Add("@gameName", txtName.Text);
             h.Add("@gameDesc", txtDesc.Text);
@@ -71,7 +78,9 @@ namespace GameServer_Management.Forms
                 MessageBox.Show("Invalid date format! Please enter a valid date in dd-MM-yyyy format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            h.Add("@gameImage", imgByte);
+            //h.Add("@gameImage", imgByte);
+            h.Add("@gameImage", imgByte != null ? (object)imgByte : DBNull.Value);
+
 
             if (DBconnect.SQL(query, h) > 0)
             {
@@ -117,10 +126,10 @@ namespace GameServer_Management.Forms
             string query = "select catID as id, catName as name from categorytbl";
             DBconnect.CBFill(query,cbCat);
 
-            /*if(catID > 0)
+            if(catID > 0)
             {
                 cbCat.SelectedValue = catID;
-            }   */
+            }
             if(id > 0)
             {
                 UpdateLoadData();
@@ -163,6 +172,7 @@ namespace GameServer_Management.Forms
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error! {ex.Message}");
+                    return;
                 }
                 /*finally
                 {
@@ -177,7 +187,22 @@ namespace GameServer_Management.Forms
                 txtPrice.Text = dt.Rows[0]["gamePrice"].ToString();
                 txtRelDate.Text = Convert.ToDateTime(dt.Rows[0]["releaseDate"]).ToString("dd-MM-yyyy");
 
-                Byte[] imgArray = (byte[])(dt.Rows[0]["gameImage"]);
+                if (dt.Rows[0]["gameImage"] != DBNull.Value)
+                {
+                    Byte[] imgArray = (byte[])dt.Rows[0]["gameImage"];
+
+                    using (MemoryStream ms = new MemoryStream(imgArray))
+                    {
+                        pictureBox1.Image = Image.FromStream(ms);
+                    }
+                }
+                else
+                {
+                    pictureBox1.Image = null;   // Set to null for no img
+                }
+
+                /*Byte[] imgArray = (byte[])(dt.Rows[0]["gameImage"]);
+
                 //Byte[] imgByteAry = imgArray;
                 //pictureBox1.Image = Image.FromStream(new MemoryStream(imgArray));
                 if (imgArray != null)
@@ -186,7 +211,7 @@ namespace GameServer_Management.Forms
                     {
                         pictureBox1.Image = Image.FromStream(ms);
                     }
-                }
+                }   */
             }
         }
     }

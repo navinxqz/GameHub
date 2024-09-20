@@ -295,6 +295,7 @@
             // 
             this.cbCat.CornerRoundingRadius = 30F;
             this.cbCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbCat.DropButtonStyle = Krypton.Toolkit.ButtonStyle.LowProfile;
             this.cbCat.DropDownWidth = 317;
             this.cbCat.IntegralHeight = false;
             this.cbCat.Location = new System.Drawing.Point(43, 369);
