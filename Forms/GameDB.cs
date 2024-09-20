@@ -22,14 +22,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                string query = @"SELECT g.gameID, g.gameName, g.gameDesc, g.gameprice, c.catName AS category, g.categoryID, g.releaseDate 
-                                 FROM gamestbl g INNER JOIN categorytbl c ON c.catID = g.categoryID 
-                                 WHERE g.gameName LIKE @search";
-
-                Hashtable parameters = new Hashtable
-                {
-                    { "@search", "%" + searchtxtbox.Text + "%" }
-                };
+                string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice,c.catName AS category, g.categoryID, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName like '%" + searchtxtbox.Text + "%' ";
 
                 ListBox l = new ListBox();
                 l.Items.Add(dgvId);
