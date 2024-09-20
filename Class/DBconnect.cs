@@ -16,6 +16,11 @@ namespace GameServer_Management.Class
     {
         public static readonly string cs = @"Data Source=NAVINNAWSHIN\SQLEXPRESS;Initial Catalog=GameServerDB;Integrated Security=True";
 
+        public static SqlConnection GetConnection()
+        {
+            return new SqlConnection(cs);
+        }
+
         public static bool IsValidAdmin(string username, string password)
         {
             bool isValid = false;
