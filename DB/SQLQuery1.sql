@@ -13,7 +13,7 @@ fullname varchar(50)
 select * from admintbl
 
 INSERT INTO admintbl (username, upass, fullname) 
-VALUES ('navin98', '123', 'Nawshin Navin');
+VALUES ('admin', '123', 'Nawshin Navin');
 
 -----------------------------------------------------
 
@@ -81,6 +81,7 @@ catName varchar(50)
 )
 
 insert into categorytbl(catName) values('Racing')
+
 select * from categorytbl
 -----------------------------------------------------
 create procedure sp_DeleteCategory
@@ -138,11 +139,14 @@ INSERT INTO gamestbl
 )
 VALUES
 (
-    'Test Game',
+    'Test',
     'Test Description',
-    19.99,
-    1,
+    99.99,
+    3,
     NULL,
-    '2024-09-20'
+    '2021-06-2'
 );
 Select * from gamestbl
+
+------------------------------------------
+
