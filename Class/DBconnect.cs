@@ -68,7 +68,6 @@ namespace GameServer_Management.Class
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        //SqlCommand cmd = new SqlCommand(query,con);
                         cmd.CommandType = CommandType.StoredProcedure;
                         foreach (DictionaryEntry item in h)
                         {
@@ -99,7 +98,7 @@ namespace GameServer_Management.Class
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.CommandType = CommandType.Text;
+                        //cmd.CommandType = CommandType.Text;
                         using(SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
                             DataTable dt = new DataTable();
@@ -127,7 +126,11 @@ namespace GameServer_Management.Class
                         }
                     }
                 }
-                catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
+                catch (Exception ex) { MessageBox.Show($"Error loading data! {ex.Message}"); }
+                finally
+                {
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
             }
         }
         private static void g_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -168,7 +171,7 @@ namespace GameServer_Management.Class
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        cmd.CommandType = CommandType.Text;
+                        //cmd.CommandType = CommandType.Text;
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
@@ -185,6 +188,10 @@ namespace GameServer_Management.Class
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Error! {ex.Message}");
+                }
+                finally
+                {
+                    if (con.State == ConnectionState.Open) { con.Close(); }
                 }
             }
         }

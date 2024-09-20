@@ -20,27 +20,49 @@ namespace GameServer_Management.Forms
         }
         public void GetData()
         {
-            string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice,g.category, g.categoryID, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName like '%" + searchtxtbox.Text + "%' ";
-            ListBox l = new ListBox();
-            l.Items.Add(dgvId);
-            l.Items.Add(dgvName);
-            l.Items.Add(dgvDesc);
-            l.Items.Add(dgvPrice);
-            l.Items.Add(dgvCatID);
-            l.Items.Add(dgvCat);
-            l.Items.Add(dgvRelDate);
+            try
+            {
+                string query = @"SELECT g.gameID, g.gameName, g.gameDesc, g.gameprice, c.catName AS category, g.categoryID, g.releaseDate 
+                                 FROM gamestbl g INNER JOIN categorytbl c ON c.catID = g.categoryID 
+                                 WHERE g.gameName LIKE @search";
 
-            DBconnect.LoadData(query, dataGridView1, l);
+                Hashtable parameters = new Hashtable
+                {
+                    { "@search", "%" + searchtxtbox.Text + "%" }
+                };
+
+                ListBox l = new ListBox();
+                l.Items.Add(dgvId);
+                l.Items.Add(dgvName);
+                l.Items.Add(dgvDesc);
+                l.Items.Add(dgvPrice);
+                l.Items.Add(dgvCatID);
+                l.Items.Add(dgvCat);
+                l.Items.Add(dgvRelDate);
+
+                DBconnect.LoadData(query, dataGridView1, l);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load data! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void GameDB_Load(object sender, EventArgs e)
         {
-
+            GetData();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DBconnect.BlurBg(new AddGames());
-            GetData();
+            try
+            {
+                DBconnect.BlurBg(new AddGames());
+                GetData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to add game! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void searchtxtbox_TextChanged(object sender, EventArgs e)
@@ -69,8 +91,13 @@ namespace GameServer_Management.Forms
                 {
                     int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
                     string query = "sp_deleteGame";
-                    Hashtable h = new Hashtable();
-                    h.Add("@gameID", id);
+
+                    Hashtable h = new Hashtable
+                    {
+                         { "@gameID", id }
+                    };
+                    //Hashtable h = new Hashtable();
+                    //h.Add("@gameID", id);
 
                     //DBconnect.SQL(query, h);
                     if (DBconnect.SQL(query, h) > 0)

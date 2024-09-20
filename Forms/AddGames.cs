@@ -1,8 +1,6 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -38,19 +36,32 @@ namespace GameServer_Management.Forms
             string query = id == 0 ? "sp_addGame" : "sp_updateGame";
 
             //for img upload
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("Please upload an image.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Image temp = new Bitmap(pictureBox1.Image);
-            MemoryStream ms = new MemoryStream();
-            temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            imgByte = ms.ToArray();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                imgByte = ms.ToArray();
+            }
+            //MemoryStream ms = new MemoryStream();
+            //temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            //imgByte = ms.ToArray();
 
             Hashtable h = new Hashtable();
             if (id != 0) h.Add("@gameID", id);
+
             h.Add("@gameName", txtName.Text);
             h.Add("@gameDesc", txtDesc.Text);
             h.Add("@categoryID", Convert.ToInt32(cbCat.SelectedValue));
             h.Add("@gameprice", Convert.ToDouble(txtPrice.Text));
             //h.Add("@releaseDate", txtRelDate.Text);
-            DateTime releaseDate;
+
+            DateTime releaseDate;   //issue here!!!
             if (DateTime.TryParseExact(txtRelDate.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out releaseDate))
             {
                 h.Add("@releaseDate", releaseDate.ToString("yyyy-MM-dd")); // Convert to SQL-recognized format
@@ -65,24 +76,29 @@ namespace GameServer_Management.Forms
             if (DBconnect.SQL(query, h) > 0)
             {
                 MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                id = 0;
-                catID = 0;
-                txtName.Clear();
-                txtPrice.Clear();
-                txtDesc.Clear();
-                txtRelDate.Clear();
-                cbCat.SelectedIndex = -1;
-                pictureBox1.Image = null;
-                txtName.Focus();
+                ClearForm();
             }
             else
             {
                 MessageBox.Show("Error saving the game. Please check your inputs and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ClearForm()
+        {
+            id = 0;
+            catID = 0;
+            txtName.Clear();
+            txtPrice.Clear();
+            txtDesc.Clear();
+            txtRelDate.Clear();
+            cbCat.SelectedIndex = -1;
+            pictureBox1.Image = null;
+            txtName.Focus();
+        }
 
         string filePath;
         Byte[] imgByte;
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
@@ -101,10 +117,10 @@ namespace GameServer_Management.Forms
             string query = "select catID as id, catName as name from categorytbl";
             DBconnect.CBFill(query,cbCat);
 
-            if(catID > 0)
+            /*if(catID > 0)
             {
                 cbCat.SelectedValue = catID;
-            }
+            }   */
             if(id > 0)
             {
                 UpdateLoadData();
@@ -148,13 +164,10 @@ namespace GameServer_Management.Forms
                 {
                     MessageBox.Show($"Error! {ex.Message}");
                 }
-                finally
+                /*finally
                 {
-                    if (con.State == ConnectionState.Open)
-                    {
-                        con.Close();
-                    }
-                }
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }   */
             }
                 
             if(dt.Rows.Count > 0)
