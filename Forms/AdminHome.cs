@@ -22,7 +22,7 @@ namespace GameServer_Management.Forms
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-            //AddCat();
+            AddCat();
         }
         private void AddCat()
         {
@@ -53,6 +53,13 @@ namespace GameServer_Management.Forms
                                     MessageBox.Show("catName column is missing or has null value.");
                                     continue;
                                 }
+                                /*Button b = new Button();
+                                b.BackColor = Color.FromArgb(23, 23, 26);
+                                b.Size = new Size(263, 53);
+                                b.Text = row["catName"].ToString();
+                                b.Padding = new Padding(19, -1, 0, -1);
+                                b.Font = new Font(b.Font.FontFamily, 16);
+                                b.ForeColor = Color.White;  */
 
                                 KryptonCheckButton b = new KryptonCheckButton();
                                 b.ButtonStyle = ButtonStyle.LowProfile;
@@ -71,11 +78,6 @@ namespace GameServer_Management.Forms
                                 b.StateCheckedNormal.Content.AdjacentGap = 20;
                                 b.StateCheckedNormal.Content.ShortText.Color1 = Color.FromArgb(115, 120, 255);
                                 b.StateCheckedNormal.Content.ShortText.Color2 = Color.FromArgb(115, 120, 255);
-                                b.StateCheckedNormal.Content.Padding = new Padding(19, -1, 0, -1);
-                                b.StateCheckedNormal.Content.ShortText.Font = new Font(b.StateCheckedNormal.Content.ShortText.Font.FontFamily, 16);
-                                b.StateCheckedNormal.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StateCheckedNormal.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StateCheckedNormal.Content.ShortText.Trim = PaletteTextTrim.Character;
 
                                 b.StateCheckedPressed.Back.Color1 = Color.FromArgb(60, 115, 120, 255);
                                 b.StateCheckedPressed.Back.Color2 = Color.FromArgb(60, 115, 120, 255);
@@ -83,13 +85,8 @@ namespace GameServer_Management.Forms
                                 b.StateCheckedPressed.Border.Color1 = Color.Transparent;
                                 b.StateCheckedPressed.Border.Color2 = Color.Transparent;
                                 b.StateCheckedPressed.Content.AdjacentGap = 20;
-                                b.StateCheckedPressed.Content.Padding = new Padding(19, -1, 0, -1);
                                 b.StateCheckedPressed.Content.ShortText.Color1 = Color.FromArgb(115, 120, 255);
                                 b.StateCheckedPressed.Content.ShortText.Color2 = Color.FromArgb(115, 120, 255);
-                                b.StateCheckedPressed.Content.ShortText.Font = new Font(b.StateCheckedPressed.Content.ShortText.Font.FontFamily, 16);
-                                b.StateCheckedPressed.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StateCheckedPressed.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StateCheckedPressed.Content.ShortText.Trim = PaletteTextTrim.Word;
 
                                 b.StateCheckedTracking.Back.Color1 = Color.FromArgb(40, 115, 120, 255);
                                 b.StateCheckedTracking.Back.Color2 = Color.FromArgb(40, 115, 120, 255);
@@ -97,13 +94,8 @@ namespace GameServer_Management.Forms
                                 b.StateCheckedTracking.Border.Color2 = Color.Transparent;
                                 b.StateCheckedTracking.Back.ColorStyle = PaletteColorStyle.Solid;
                                 b.StateCheckedTracking.Content.AdjacentGap = 20;
-                                b.StateCheckedTracking.Content.Padding = new Padding(19, -1, 0, -1);
                                 b.StateCheckedTracking.Content.ShortText.Color1 = Color.FromArgb(115, 120, 255);
                                 b.StateCheckedTracking.Content.ShortText.Color2 = Color.FromArgb(115, 120, 255);
-                                b.StateCheckedTracking.Content.ShortText.Font = new Font(b.StateCheckedTracking.Content.ShortText.Font.FontFamily, 16);
-                                b.StateCheckedTracking.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StateCheckedTracking.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StateCheckedTracking.Content.ShortText.Trim = PaletteTextTrim.Word;
 
                                 b.StateNormal.Back.Color1 = Color.FromArgb(23, 23, 26);
                                 b.StateNormal.Back.Color2 = Color.FromArgb(23, 23, 26);
@@ -113,11 +105,6 @@ namespace GameServer_Management.Forms
                                 b.StateNormal.Content.AdjacentGap = 20;
                                 b.StateNormal.Content.ShortText.Color1 = Color.White;
                                 b.StateNormal.Content.ShortText.Color2 = Color.White;
-                                b.StateNormal.Content.Padding = new Padding(19, -1, 0, -1);
-                                b.StateNormal.Content.ShortText.Font = new Font(b.StateCheckedTracking.Content.ShortText.Font.FontFamily, 16);
-                                b.StateNormal.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StateNormal.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StateNormal.Content.ShortText.Trim = PaletteTextTrim.Word;
 
                                 b.StatePressed.Back.Color1 = Color.FromArgb(60, 115, 120, 255);
                                 b.StatePressed.Back.Color2 = Color.FromArgb(60, 115, 120, 255);
@@ -127,11 +114,6 @@ namespace GameServer_Management.Forms
                                 b.StatePressed.Content.AdjacentGap = 20;
                                 b.StatePressed.Content.ShortText.Color1 = Color.FromArgb(115, 120, 255);
                                 b.StatePressed.Content.ShortText.Color2 = Color.FromArgb(115, 120, 255);
-                                b.StatePressed.Content.Padding = new Padding(19, -1, 0, -1);
-                                b.StatePressed.Content.ShortText.Font = new Font(b.StateCheckedTracking.Content.ShortText.Font.FontFamily, 16);
-                                b.StatePressed.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StatePressed.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StatePressed.Content.ShortText.Trim = PaletteTextTrim.Word;
 
                                 b.StateTracking.Back.Color1 = Color.DimGray;
                                 b.StateTracking.Back.Color2 = Color.DimGray;
@@ -141,11 +123,6 @@ namespace GameServer_Management.Forms
                                 b.StateTracking.Content.AdjacentGap = 20;
                                 b.StateTracking.Content.ShortText.Color1 = Color.White;
                                 b.StateTracking.Content.ShortText.Color2 = Color.White;
-                                b.StateTracking.Content.Padding = new Padding(19, -1, 0, -1);
-                                b.StateTracking.Content.ShortText.Font = new Font(b.StateCheckedTracking.Content.ShortText.Font.FontFamily, 16);
-                                b.StateTracking.Content.ShortText.TextH = PaletteRelativeAlign.Near;
-                                b.StateTracking.Content.ShortText.TextV = PaletteRelativeAlign.Center;
-                                b.StateTracking.Content.ShortText.Trim = PaletteTextTrim.Word;
 
                                 CategoryPanel.Controls.Add(b);
                             }
