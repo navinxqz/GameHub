@@ -38,6 +38,8 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -47,9 +49,9 @@
             // 
             this.GameImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.GameImg.Image = ((System.Drawing.Image)(resources.GetObject("GameImg.Image")));
-            this.GameImg.Location = new System.Drawing.Point(0, -1);
+            this.GameImg.Location = new System.Drawing.Point(-22, -8);
             this.GameImg.Name = "GameImg";
-            this.GameImg.Size = new System.Drawing.Size(212, 281);
+            this.GameImg.Size = new System.Drawing.Size(258, 320);
             this.GameImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GameImg.TabIndex = 0;
             this.GameImg.TabStop = false;
@@ -121,6 +123,16 @@
             this.panel3.Size = new System.Drawing.Size(68, 38);
             this.panel3.TabIndex = 3;
             // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 40;
+            this.bunifuElipse2.TargetControl = this.panel2;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 40;
+            this.bunifuElipse3.TargetControl = this;
+            // 
             // GameDesc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -146,5 +158,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
     }
 }
