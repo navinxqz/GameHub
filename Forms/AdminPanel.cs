@@ -16,6 +16,7 @@ namespace GameServer_Management.Forms
         private KryptonCheckButton cb = new KryptonCheckButton();
         private GameCatView catView = new GameCatView();
         private GameDB gameDB = new GameDB();
+        private AdminHome home = new AdminHome();
         //for btn form connect cls...
         public AdminPanel()
         {
@@ -144,9 +145,9 @@ namespace GameServer_Management.Forms
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
-            //LoadForm(home);
-            //this.Opacity = 0;
-            //faddingTimer.Start();
+            LoadForm(home);
+            this.Opacity = 0;
+            faddingTimer.Start();
             obj = this;
         }
 
@@ -174,7 +175,7 @@ namespace GameServer_Management.Forms
                 btnHome.Checked = true;
                 return;
             }
-            //LoadForm(home);
+            LoadForm(home);
             Button(btnHome);
         }
 

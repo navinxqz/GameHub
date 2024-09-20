@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\DBconnect.cs" />
+    <Compile Include="Controller\GameDesc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\GameDesc.Designer.cs">
+      <DependentUpon>GameDesc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,12 @@
     </Compile>
     <Compile Include="Forms\AddGames.Designer.cs">
       <DependentUpon>AddGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AdminLogin.cs">
       <SubType>Form</SubType>
@@ -107,11 +119,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controller\GameDesc.resx">
+      <DependentUpon>GameDesc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddGames.resx">
       <DependentUpon>AddGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
