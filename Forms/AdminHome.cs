@@ -123,6 +123,7 @@ namespace GameServer_Management.Forms
                                 b.StateTracking.Content.ShortText.Color1 = Color.White;
                                 b.StateTracking.Content.ShortText.Color2 = Color.White;
 
+                                b.Click += new EventHandler(_Click);
                                 CategoryPanel.Controls.Add(b);
                             }
                         }
@@ -131,6 +132,17 @@ namespace GameServer_Management.Forms
             }
             
         }
+
+        private void _Click(object sender, EventArgs e)
+        {
+            KryptonCheckButton b = (KryptonCheckButton)sender;
+            foreach (var item in listPanel.Controls)
+            {
+                var g = (GameDesc)item;
+                g.Visible = g.Category.ToLower().Contains(b.Text.Trim().ToLower());
+            }
+        }
+
         private void AddItems(string id, string name, string cat,string price, Image img)
         {
             var v = new GameDesc
@@ -180,6 +192,15 @@ namespace GameServer_Management.Forms
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchtxtbox_TextChanged(object sender, EventArgs e)
+        {
+            foreach(var item in listPanel.Controls)
+            {
+                var g = (GameDesc)item;
+                g.Visible = g.GName.ToLower().Contains(searchtxtbox.Text.Trim().ToLower());
+            }
         }
     }
 }
