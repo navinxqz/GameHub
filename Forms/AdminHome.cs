@@ -27,6 +27,7 @@ namespace GameServer_Management.Forms
         private void AdminHome_Load(object sender, EventArgs e)
         {
             AddCat();
+            //loadingPanel.Visible = false;
             listPanel.Controls.Clear();
             LoadItems();
         }
@@ -201,6 +202,14 @@ namespace GameServer_Management.Forms
                 var g = (GameDesc)item;
                 g.Visible = g.GName.ToLower().Contains(searchtxtbox.Text.Trim().ToLower());
             }
+        }
+
+        private void AdminHome_Click(object sender, EventArgs e)
+        {
+            cb.Checked = false;
+            listPanel.Controls.Clear();
+            LoadItems();
+            AddCat();
         }
     }
 }

@@ -38,5 +38,29 @@ namespace GameServer_Management.Forms
             adminLogin.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showPassBtn_Click(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = true;
+            showPassBtn.Visible = false;
+            txtpass.PasswordChar = '\0';
+        }
+
+        private void HidePassBtn_Click(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = false;
+            showPassBtn.Visible = true;
+            txtpass.PasswordChar = '*';
+        }
     }
 }
