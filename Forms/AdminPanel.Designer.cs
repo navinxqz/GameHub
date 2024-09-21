@@ -72,7 +72,7 @@
             this.cuiButton1.ImageExpand = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
             this.cuiButton1.ImageTint = System.Drawing.Color.White;
-            this.cuiButton1.Location = new System.Drawing.Point(1274, 8);
+            this.cuiButton1.Location = new System.Drawing.Point(1268, 8);
             this.cuiButton1.Name = "cuiButton1";
             this.cuiButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(69)))));
             this.cuiButton1.NormalOutline = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(54)))), ((int)(((byte)(69)))));
@@ -653,7 +653,7 @@
             // 
             // bunifuElipse2
             // 
-            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.ElipseRadius = 30;
             this.bunifuElipse2.TargetControl = this;
             // 
             // sliderShowTimer
