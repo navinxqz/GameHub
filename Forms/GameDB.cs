@@ -22,7 +22,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice, g.categoryID, c.catName AS category, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName like '%" + searchtxtbox.Text + "%' ";
+                string query = @"select g.gameID, g.gameName, g.gameDesc, g.gameprice, g.categoryID, c.catName AS category, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName like '%" + searchBox.Text + "%' ";
 
                 ListBox l = new ListBox();
                 l.Items.Add(dgvId);
@@ -60,7 +60,7 @@ namespace GameServer_Management.Forms
 
         private void searchtxtbox_TextChanged(object sender, EventArgs e)
         {
-            GetData();
+            
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -105,6 +105,11 @@ namespace GameServer_Management.Forms
                     }
                 }
             }
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            GetData();
         }
     }
 }

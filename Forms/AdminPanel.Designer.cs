@@ -188,8 +188,8 @@
             this.GameDBbtn.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.GameDBbtn.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.GameDBbtn.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
-            this.GameDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.GameDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.GameDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.GameDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
             this.GameDBbtn.StateTracking.Content.AdjacentGap = 20;
             this.GameDBbtn.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.GameDBbtn.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -279,8 +279,8 @@
             this.categoryBtn.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.categoryBtn.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.categoryBtn.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
-            this.categoryBtn.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.categoryBtn.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.categoryBtn.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.categoryBtn.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
             this.categoryBtn.StateTracking.Content.AdjacentGap = 20;
             this.categoryBtn.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.categoryBtn.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -370,8 +370,8 @@
             this.btnHome.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.btnHome.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.btnHome.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
-            this.btnHome.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.btnHome.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.btnHome.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.btnHome.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
             this.btnHome.StateTracking.Content.AdjacentGap = 20;
             this.btnHome.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.btnHome.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -461,8 +461,8 @@
             this.adminDBbtn.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.adminDBbtn.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.adminDBbtn.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
-            this.adminDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.adminDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.adminDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.adminDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
             this.adminDBbtn.StateTracking.Content.AdjacentGap = 20;
             this.adminDBbtn.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.adminDBbtn.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
@@ -552,8 +552,8 @@
             this.userDBbtn.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.userDBbtn.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.userDBbtn.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
-            this.userDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.White;
-            this.userDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.White;
+            this.userDBbtn.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.userDBbtn.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
             this.userDBbtn.StateTracking.Content.AdjacentGap = 20;
             this.userDBbtn.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.userDBbtn.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;

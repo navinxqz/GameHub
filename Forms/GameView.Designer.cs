@@ -32,16 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameCatView));
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.searchBtn = new CuoreUI.Controls.cuiButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -87,37 +88,6 @@
             this.label1.Size = new System.Drawing.Size(411, 61);
             this.label1.TabIndex = 9;
             this.label1.Text = "Game Category";
-            // 
-            // searchtxtbox
-            // 
-            this.searchtxtbox.CornerRoundingRadius = 30F;
-            this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchtxtbox.Location = new System.Drawing.Point(597, 14);
-            this.searchtxtbox.Name = "searchtxtbox";
-            this.searchtxtbox.Size = new System.Drawing.Size(307, 55);
-            this.searchtxtbox.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.searchtxtbox.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
-            this.searchtxtbox.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
-            this.searchtxtbox.StateActive.Border.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Local;
-            this.searchtxtbox.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.searchtxtbox.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.searchtxtbox.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchtxtbox.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.searchtxtbox.StateCommon.Border.Rounding = 30F;
-            this.searchtxtbox.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.searchtxtbox.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
-            this.searchtxtbox.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
-            this.searchtxtbox.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.searchtxtbox.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
-            this.searchtxtbox.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchtxtbox.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.searchtxtbox.TabIndex = 12;
             // 
             // dataGridView1
             // 
@@ -190,42 +160,59 @@
             this.dgvDelete.ReadOnly = true;
             this.dgvDelete.ToolTipText = "Click to delete";
             // 
-            // searchBtn
-            // 
-            this.searchBtn.CheckButton = false;
-            this.searchBtn.Checked = false;
-            this.searchBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.searchBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.searchBtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.searchBtn.Content = "";
-            this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.searchBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.searchBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.searchBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.searchBtn.HoverOutline = System.Drawing.Color.White;
-            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.ImageAutoCenter = true;
-            this.searchBtn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.searchBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.searchBtn.ImageTint = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(920, 16);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
-            this.searchBtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.searchBtn.OutlineThickness = 1.6F;
-            this.searchBtn.PressedBackground = System.Drawing.Color.Transparent;
-            this.searchBtn.PressedImageTint = System.Drawing.Color.White;
-            this.searchBtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.searchBtn.Rounding = new System.Windows.Forms.Padding(20);
-            this.searchBtn.Size = new System.Drawing.Size(48, 51);
-            this.searchBtn.TabIndex = 13;
-            this.searchBtn.TextOffset = new System.Drawing.Point(0, 0);
-            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this.dataGridView1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(856, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            // 
+            // searchtxtbox
+            // 
+            this.searchtxtbox.CornerRoundingRadius = 20F;
+            this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.searchtxtbox.Location = new System.Drawing.Point(601, 21);
+            this.searchtxtbox.Name = "searchtxtbox";
+            this.searchtxtbox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.searchtxtbox.Size = new System.Drawing.Size(291, 47);
+            this.searchtxtbox.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateActive.Border.ColorAlign = Krypton.Toolkit.PaletteRectangleAlign.Local;
+            this.searchtxtbox.StateActive.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.searchtxtbox.StateActive.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.searchtxtbox.StateActive.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtxtbox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.searchtxtbox.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.searchtxtbox.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.searchtxtbox.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.searchtxtbox.StateCommon.Border.Rounding = 20F;
+            this.searchtxtbox.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.searchtxtbox.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtxtbox.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.StateDisabled.Border.Color1 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateDisabled.Border.Color2 = System.Drawing.Color.Transparent;
+            this.searchtxtbox.StateDisabled.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.searchtxtbox.StateDisabled.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(71)))), ((int)(((byte)(78)))));
+            this.searchtxtbox.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtxtbox.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.searchtxtbox.TabIndex = 20;
+            this.searchtxtbox.TextChanged += new System.EventHandler(this.searchtxtbox_TextChanged_1);
             // 
             // GameCatView
             // 
@@ -233,9 +220,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
-            this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchtxtbox);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -244,6 +231,7 @@
             this.Text = "GameView";
             this.Load += new System.EventHandler(this.GameCatView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,14 +240,14 @@
         #endregion
         private CuoreUI.Controls.cuiButton btnAdd;
         private System.Windows.Forms.Label label1;
-        private Krypton.Toolkit.KryptonTextBox searchtxtbox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CuoreUI.Controls.cuiButton searchBtn;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSerial;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public Krypton.Toolkit.KryptonTextBox searchtxtbox;
     }
 }

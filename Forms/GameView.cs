@@ -94,5 +94,10 @@ namespace GameServer_Management.Forms
                 }
             }
         }
+
+        private void searchtxtbox_TextChanged_1(object sender, EventArgs e)
+        {
+            GetData();
+        }
     }
 }

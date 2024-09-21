@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(14, 29);
+            this.label1.Location = new System.Drawing.Point(76, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 31);
             this.label1.TabIndex = 1;
@@ -67,9 +67,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listPanel.AutoScroll = true;
-            this.listPanel.Location = new System.Drawing.Point(20, 80);
+            this.listPanel.Location = new System.Drawing.Point(82, 109);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1072, 553);
+            this.listPanel.Size = new System.Drawing.Size(1010, 548);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -86,7 +86,7 @@
             // 
             this.searchtxtbox.CornerRoundingRadius = 20F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchtxtbox.Location = new System.Drawing.Point(507, 20);
+            this.searchtxtbox.Location = new System.Drawing.Point(651, 21);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.searchtxtbox.Size = new System.Drawing.Size(291, 47);
@@ -124,7 +124,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(762, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(906, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
