@@ -17,6 +17,8 @@ namespace GameServer_Management.Forms
 {
     public partial class AdminHome : Form
     {
+        private KryptonCheckButton cb = new KryptonCheckButton();
+
         public AdminHome()
         {
             InitializeComponent();
@@ -27,6 +29,11 @@ namespace GameServer_Management.Forms
             AddCat();
             listPanel.Controls.Clear();
             LoadItems();
+        }
+        private void Button(KryptonCheckButton button)
+        {
+            cb.Checked = false;
+            cb = button;
         }
         private void AddCat()
         {
@@ -130,9 +137,7 @@ namespace GameServer_Management.Forms
                     }
                 }catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
             }
-            
         }
-
         private void _Click(object sender, EventArgs e)
         {
             KryptonCheckButton b = (KryptonCheckButton)sender;
@@ -140,7 +145,7 @@ namespace GameServer_Management.Forms
             {
                 var g = (GameDesc)item;
                 g.Visible = g.Category.ToLower().Contains(b.Text.Trim().ToLower());
-            }
+            }Button(b);
         }
 
         private void AddItems(string id, string name, string cat,string price, Image img)
@@ -189,14 +194,9 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchtxtbox_TextChanged(object sender, EventArgs e)
         {
-            foreach(var item in listPanel.Controls)
+            foreach (var item in listPanel.Controls)
             {
                 var g = (GameDesc)item;
                 g.Visible = g.GName.ToLower().Contains(searchtxtbox.Text.Trim().ToLower());
