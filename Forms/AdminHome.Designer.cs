@@ -51,10 +51,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1054, 29);
+            this.label2.Location = new System.Drawing.Point(1113, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 31);
             this.label2.TabIndex = 6;
@@ -84,6 +85,7 @@
             // 
             // searchtxtbox
             // 
+            this.searchtxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchtxtbox.CornerRoundingRadius = 20F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchtxtbox.Location = new System.Drawing.Point(651, 21);
@@ -122,6 +124,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(906, 21);

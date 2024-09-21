@@ -116,6 +116,7 @@
             this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtpass.Location = new System.Drawing.Point(816, 344);
             this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(333, 51);
             this.txtpass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.txtpass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -234,7 +235,7 @@
             this.HidePassBtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.HidePassBtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.HidePassBtn.ImageTint = System.Drawing.Color.White;
-            this.HidePassBtn.Location = new System.Drawing.Point(1103, 350);
+            this.HidePassBtn.Location = new System.Drawing.Point(1103, 351);
             this.HidePassBtn.Name = "HidePassBtn";
             this.HidePassBtn.NormalBackground = System.Drawing.Color.Transparent;
             this.HidePassBtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -267,7 +268,7 @@
             this.showPassBtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.showPassBtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.showPassBtn.ImageTint = System.Drawing.Color.White;
-            this.showPassBtn.Location = new System.Drawing.Point(1103, 350);
+            this.showPassBtn.Location = new System.Drawing.Point(1103, 351);
             this.showPassBtn.Name = "showPassBtn";
             this.showPassBtn.NormalBackground = System.Drawing.Color.Transparent;
             this.showPassBtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -302,8 +303,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1181, 665);
-            this.Controls.Add(this.HidePassBtn);
             this.Controls.Add(this.showPassBtn);
+            this.Controls.Add(this.HidePassBtn);
             this.Controls.Add(this.cuiButton1);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.btnLogin);
