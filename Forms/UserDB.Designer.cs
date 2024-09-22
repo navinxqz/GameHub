@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDB));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvGender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -67,6 +68,7 @@
             this.dgvId,
             this.dgvName,
             this.dgvGender,
+            this.dgvEmail,
             this.dgvusername,
             this.dgvDOB,
             this.dgvDelete});
@@ -80,6 +82,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1293, 641);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -129,6 +132,7 @@
             this.searchBox.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBox.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.searchBox.TabIndex = 21;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // pictureBox1
             // 
@@ -182,6 +186,12 @@
             this.dgvGender.Name = "dgvGender";
             this.dgvGender.ReadOnly = true;
             // 
+            // dgvEmail
+            // 
+            this.dgvEmail.HeaderText = "Email";
+            this.dgvEmail.Name = "dgvEmail";
+            this.dgvEmail.ReadOnly = true;
+            // 
             // dgvusername
             // 
             this.dgvusername.HeaderText = "Username";
@@ -190,9 +200,9 @@
             // 
             // dgvDOB
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvDOB.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Format = "d";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dgvDOB.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDOB.HeaderText = "Date of Birth";
             this.dgvDOB.Name = "dgvDOB";
             this.dgvDOB.ReadOnly = true;
@@ -222,6 +232,7 @@
             this.Name = "UserDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserDB";
+            this.Load += new System.EventHandler(this.UserDB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -242,6 +253,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvGender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvusername;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvDOB;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;

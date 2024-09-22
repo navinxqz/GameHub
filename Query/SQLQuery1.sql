@@ -150,3 +150,22 @@ Select * from gamestbl
 
 ------------------------------------------
 
+create table usertbl
+(
+userid int identity(1,1) primary key,
+firstname varchar(50),
+lastname varchar(50),
+gender varchar(50),
+email varchar(50),
+username varchar(50),
+upass varchar(50),
+dob date
+)
+
+select * from usertbl
+---------------------------------------------
+insert into usertbl (firstname, lastname, gender, email, username, upass, dob)
+values ('Hero', 'Alom', 'Male', 'hero.alom@example.com', 'admin', '123', '1999-07-23')
+
+
+select userid, CONCAT(firstname, ' ', lastname), gender, email, username, upass, dob from usertbl where username like '%' + @searchText + '%'
