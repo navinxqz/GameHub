@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDB));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -135,9 +135,9 @@
             // 
             // dgvRelDate
             // 
-            dataGridViewCellStyle6.Format = "d";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Format = "d";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvRelDate.HeaderText = "Release Date";
             this.dgvRelDate.Name = "dgvRelDate";
             this.dgvRelDate.ReadOnly = true;
@@ -213,9 +213,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(741, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(1191, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -224,9 +225,10 @@
             // 
             // searchBox
             // 
+            this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBox.CornerRoundingRadius = 20F;
             this.searchBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBox.Location = new System.Drawing.Point(486, 23);
+            this.searchBox.Location = new System.Drawing.Point(939, 23);
             this.searchBox.Name = "searchBox";
             this.searchBox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.searchBox.Size = new System.Drawing.Size(291, 47);
