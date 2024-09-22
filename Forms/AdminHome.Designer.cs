@@ -138,6 +138,7 @@
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // AdminHome
             // 
@@ -152,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHome";
