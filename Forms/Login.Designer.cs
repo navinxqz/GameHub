@@ -43,6 +43,7 @@
             this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.showPassBtn = new CuoreUI.Controls.cuiButton();
             this.HidePassBtn = new CuoreUI.Controls.cuiButton();
+            this.createbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +129,7 @@
             this.btnLogin.ImageExpand = new System.Drawing.Point(0, 0);
             this.btnLogin.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnLogin.ImageTint = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(92, 474);
+            this.btnLogin.Location = new System.Drawing.Point(92, 468);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnLogin.NormalOutline = System.Drawing.Color.Transparent;
@@ -295,12 +296,31 @@
             this.HidePassBtn.TabIndex = 25;
             this.HidePassBtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // createbtn
+            // 
+            this.createbtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.createbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createbtn.ForeColor = System.Drawing.Color.MediumPurple;
+            this.createbtn.Image = ((System.Drawing.Image)(resources.GetObject("createbtn.Image")));
+            this.createbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.createbtn.Location = new System.Drawing.Point(150, 532);
+            this.createbtn.Name = "createbtn";
+            this.createbtn.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.createbtn.Size = new System.Drawing.Size(206, 41);
+            this.createbtn.TabIndex = 26;
+            this.createbtn.Text = "Create an account";
+            this.createbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.createbtn.UseVisualStyleBackColor = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1181, 665);
+            this.Controls.Add(this.createbtn);
             this.Controls.Add(this.showPassBtn);
             this.Controls.Add(this.HidePassBtn);
             this.Controls.Add(this.txtpass);
@@ -340,5 +360,6 @@
         private Krypton.Toolkit.KryptonTextBox txtpass;
         private CuoreUI.Controls.cuiButton showPassBtn;
         private CuoreUI.Controls.cuiButton HidePassBtn;
+        private System.Windows.Forms.Button createbtn;
     }
 }

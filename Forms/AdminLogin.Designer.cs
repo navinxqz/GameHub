@@ -174,7 +174,7 @@
             this.Logoutbtn.Location = new System.Drawing.Point(872, 496);
             this.Logoutbtn.Name = "Logoutbtn";
             this.Logoutbtn.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.Logoutbtn.Size = new System.Drawing.Size(228, 76);
+            this.Logoutbtn.Size = new System.Drawing.Size(228, 41);
             this.Logoutbtn.TabIndex = 20;
             this.Logoutbtn.Text = "        Back to previous";
             this.Logoutbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
