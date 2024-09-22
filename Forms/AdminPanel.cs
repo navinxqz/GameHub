@@ -17,6 +17,7 @@ namespace GameServer_Management.Forms
         private GameCatView catView = new GameCatView();
         private GameDB gameDB = new GameDB();
         private AdminHome home = new AdminHome();
+        private UserDB userDB = new UserDB();
         //for btn form connect cls...
         public AdminPanel()
         {
@@ -186,7 +187,7 @@ namespace GameServer_Management.Forms
                 userDBbtn.Checked = true;
                 return;
             }
-            //LoadForm(userDB);
+            LoadForm(userDB);
             Button(userDBbtn);
         }
 
