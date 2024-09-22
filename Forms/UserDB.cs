@@ -1,5 +1,6 @@
 ﻿using GameServer_Management.Class;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,7 +22,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                string query = @"select userid, CONCAT(firstname, ' ', lastname), gender, email, username, upass, dob from usertbl where username like '%"+ searchBox.Text+"%'";
+                string query = @"select userid, concat(firstname, ' ', lastname), gender, email, username, dob from usertbl where username like '%"+ searchBox.Text+ "%' or firstname like '%"+ searchBox.Text+"%'";
 
                 ListBox l = new ListBox();
                 l.Items.Add(dgvId);
@@ -51,7 +52,27 @@ namespace GameServer_Management.Forms
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dataGridView1.CurrentCell?.OwningColumn?.Name == "dgvDelete")
+            {
+                if (DialogResult.Yes == MessageBox.Show("Do you want to delete?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                {
+                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
+                    string query = "sp_DeleteUser";
+                    Hashtable h = new Hashtable();
+                    h.Add("@userid", id);
 
+                    //DBconnect.SQL(query, h);
+                    if (DBconnect.SQL(query, h) > 0)
+                    {
+                        MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

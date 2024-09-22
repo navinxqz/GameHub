@@ -168,4 +168,12 @@ insert into usertbl (firstname, lastname, gender, email, username, upass, dob)
 values ('Hero', 'Alom', 'Male', 'hero.alom@example.com', 'admin', '123', '1999-07-23')
 
 
-select userid, CONCAT(firstname, ' ', lastname), gender, email, username, upass, dob from usertbl where username like '%' + @searchText + '%'
+create procedure sp_DeleteUser
+(
+@userid int
+)
+as
+begin
+delete from usertbl where userid = @userid
+end
+go
