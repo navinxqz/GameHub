@@ -177,3 +177,14 @@ begin
 delete from usertbl where userid = @userid
 end
 go
+-------------------------------------------------
+
+create procedure sp_DeleteAdmin
+(
+@userid int
+)
+as
+begin
+delete from admintbl where userid = @userid
+end
+go

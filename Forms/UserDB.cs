@@ -61,7 +61,6 @@ namespace GameServer_Management.Forms
                     Hashtable h = new Hashtable();
                     h.Add("@userid", id);
 
-                    //DBconnect.SQL(query, h);
                     if (DBconnect.SQL(query, h) > 0)
                     {
                         MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
