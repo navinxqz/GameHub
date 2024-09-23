@@ -26,7 +26,7 @@ namespace GameServer_Management.Forms
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

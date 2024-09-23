@@ -1,15 +1,7 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace GameServer_Management.Forms
 {
@@ -23,7 +15,7 @@ namespace GameServer_Management.Forms
 
         private void cancelbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
