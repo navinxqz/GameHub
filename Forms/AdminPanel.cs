@@ -18,7 +18,8 @@ namespace GameServer_Management.Forms
         private GameDB gameDB = new GameDB();
         private AdminHome home = new AdminHome();
         private UserDB userDB = new UserDB();
-        //for btn form connect cls...
+        private AdminDB adminDB = new AdminDB();
+
         public AdminPanel()
         {
             InitializeComponent();
@@ -198,7 +199,7 @@ namespace GameServer_Management.Forms
                 adminDBbtn.Checked = true;
                 return;
             }
-           // LoadForm(adminDB);
+            LoadForm(adminDB);
             Button(adminDBbtn);
         }
 
