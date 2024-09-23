@@ -151,9 +151,6 @@ namespace GameServer_Management.Forms
             string query = "SELECT * FROM gamestbl WHERE gameID = @gameID";
             Hashtable parameters = new Hashtable{ { "@gameID", id } };
 
-            //SqlCommand cmd = new SqlCommand("select * from gamestbl where gameID="+id+"", DBconnect.con);
-            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(DBconnect.cs))
             {
@@ -200,18 +197,6 @@ namespace GameServer_Management.Forms
                 {
                     pictureBox1.Image = null;   // Set to null for no img
                 }
-
-                /*Byte[] imgArray = (byte[])(dt.Rows[0]["gameImage"]);
-
-                //Byte[] imgByteAry = imgArray;
-                //pictureBox1.Image = Image.FromStream(new MemoryStream(imgArray));
-                if (imgArray != null)
-                {
-                    using (MemoryStream ms = new MemoryStream(imgArray))
-                    {
-                        pictureBox1.Image = Image.FromStream(ms);
-                    }
-                }   */
             }
         }
     }
