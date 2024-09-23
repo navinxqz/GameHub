@@ -78,7 +78,6 @@
             this.label3.Size = new System.Drawing.Size(160, 23);
             this.label3.TabIndex = 19;
             this.label3.Text = "Category Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // cancelbtn
             // 
@@ -164,7 +163,6 @@
             this.Name = "AddCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCategory";
-            this.Load += new System.EventHandler(this.AddCategory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

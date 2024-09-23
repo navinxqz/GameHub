@@ -78,6 +78,7 @@
             this.btnAdd.Size = new System.Drawing.Size(149, 54);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 

@@ -70,5 +70,18 @@ namespace GameServer_Management.Forms
                 }
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DBconnect.BlurBg(new AddAdmin());
+                GetData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to add the admin! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

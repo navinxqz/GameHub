@@ -20,16 +20,6 @@ namespace GameServer_Management.Forms
         }
         public int id = 0;
 
-        private void AddCategory_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtCat_TextChanged(object sender, EventArgs e)
         {
 

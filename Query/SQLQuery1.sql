@@ -188,3 +188,15 @@ begin
 delete from admintbl where userid = @userid
 end
 go
+-------------------------------------------
+CREATE PROCEDURE sp_AddAdmin
+(
+    @username varchar(50),
+	@upass varchar(50),
+	@fullname varchar(50)
+)
+AS
+BEGIN
+    INSERT INTO admintbl(username,upass,fullname) VALUES(@username,@upass,@fullname)
+END
+GO
