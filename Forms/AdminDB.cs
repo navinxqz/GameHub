@@ -21,7 +21,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                string query = @"select userid, fullname, username, username from admintbl where username like '%" + searchBox.Text + "%' or fullname like '%" + searchBox.Text + "%'";
+                string query = @"select userid, fullname, username from admintbl where username like '%" + searchBox.Text + "%' or fullname like '%" + searchBox.Text + "%'";
 
                 ListBox l = new ListBox();
                 l.Items.Add(dgvId);
