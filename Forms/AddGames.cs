@@ -102,6 +102,26 @@ namespace GameServer_Management.Forms
             txtRelDate.Clear();
             cbCat.SelectedIndex = -1;
             pictureBox1.Image = null;
+            
+            try
+            {   //for image load with relative file path
+                string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string relativeImgPath = Path.Combine(projectDir, "asset", "photo-256.png");
+
+                if (File.Exists(relativeImgPath))
+                {
+                    pictureBox1.Image = Image.FromFile(relativeImgPath);
+                }
+                else
+                {
+                    MessageBox.Show("Image not found: " + relativeImgPath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading image: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             txtName.Focus();
         }
 
