@@ -38,11 +38,11 @@
             this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.btnLogin = new CuoreUI.Controls.cuiButton();
             this.Logoutbtn = new System.Windows.Forms.Button();
-            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.HidePassBtn = new CuoreUI.Controls.cuiButton();
             this.showPassBtn = new CuoreUI.Controls.cuiButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.exitbtn = new CuoreUI.Controls.cuiButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,41 +181,6 @@
             this.Logoutbtn.UseVisualStyleBackColor = true;
             this.Logoutbtn.Click += new System.EventHandler(this.Logoutbtn_Click);
             // 
-            // cuiButton1
-            // 
-            this.cuiButton1.AutoSize = true;
-            this.cuiButton1.BackColor = System.Drawing.Color.Transparent;
-            this.cuiButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cuiButton1.CheckButton = false;
-            this.cuiButton1.Checked = false;
-            this.cuiButton1.CheckedBackground = System.Drawing.Color.Transparent;
-            this.cuiButton1.CheckedImageTint = System.Drawing.Color.Transparent;
-            this.cuiButton1.CheckedOutline = System.Drawing.Color.Brown;
-            this.cuiButton1.Content = "";
-            this.cuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.cuiButton1.ForeColor = System.Drawing.Color.White;
-            this.cuiButton1.HoverBackground = System.Drawing.Color.Red;
-            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
-            this.cuiButton1.HoverOutline = System.Drawing.Color.White;
-            this.cuiButton1.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton1.Image")));
-            this.cuiButton1.ImageAutoCenter = true;
-            this.cuiButton1.ImageExpand = new System.Drawing.Point(5, 5);
-            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton1.ImageTint = System.Drawing.Color.White;
-            this.cuiButton1.Location = new System.Drawing.Point(1138, 1);
-            this.cuiButton1.Name = "cuiButton1";
-            this.cuiButton1.NormalBackground = System.Drawing.Color.Transparent;
-            this.cuiButton1.NormalOutline = System.Drawing.Color.Transparent;
-            this.cuiButton1.OutlineThickness = 0F;
-            this.cuiButton1.PressedBackground = System.Drawing.Color.Cornsilk;
-            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
-            this.cuiButton1.PressedOutline = System.Drawing.Color.Coral;
-            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(20);
-            this.cuiButton1.Size = new System.Drawing.Size(40, 36);
-            this.cuiButton1.TabIndex = 21;
-            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
-            this.cuiButton1.Click += new System.EventHandler(this.cuiButton1_Click);
-            // 
             // HidePassBtn
             // 
             this.HidePassBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -291,11 +256,48 @@
             this.pictureBox1.Size = new System.Drawing.Size(1181, 665);
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 30;
             this.bunifuElipse1.TargetControl = this;
+            // 
+            // exitbtn
+            // 
+            this.exitbtn.AutoSize = true;
+            this.exitbtn.BackColor = System.Drawing.Color.Transparent;
+            this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitbtn.CheckButton = false;
+            this.exitbtn.Checked = false;
+            this.exitbtn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.CheckedImageTint = System.Drawing.Color.Transparent;
+            this.exitbtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Content = "";
+            this.exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.exitbtn.ForeColor = System.Drawing.Color.Transparent;
+            this.exitbtn.HoverBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.exitbtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Image = ((System.Drawing.Image)(resources.GetObject("exitbtn.Image")));
+            this.exitbtn.ImageAutoCenter = true;
+            this.exitbtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.exitbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.exitbtn.ImageTint = System.Drawing.Color.White;
+            this.exitbtn.Location = new System.Drawing.Point(1134, 6);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.OutlineThickness = 0F;
+            this.exitbtn.PressedBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.PressedImageTint = System.Drawing.Color.White;
+            this.exitbtn.PressedOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Rounding = new System.Windows.Forms.Padding(20);
+            this.exitbtn.Size = new System.Drawing.Size(40, 36);
+            this.exitbtn.TabIndex = 25;
+            this.exitbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            this.exitbtn.MouseHover += new System.EventHandler(this.exitbtn_MouseHover);
             // 
             // AdminLogin
             // 
@@ -303,9 +305,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1181, 665);
+            this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.showPassBtn);
             this.Controls.Add(this.HidePassBtn);
-            this.Controls.Add(this.cuiButton1);
             this.Controls.Add(this.Logoutbtn);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtpass);
@@ -336,10 +338,10 @@
         private Krypton.Toolkit.KryptonTextBox txtpass;
         private CuoreUI.Controls.cuiButton btnLogin;
         private System.Windows.Forms.Button Logoutbtn;
-        private CuoreUI.Controls.cuiButton cuiButton1;
         private CuoreUI.Controls.cuiButton HidePassBtn;
         private CuoreUI.Controls.cuiButton showPassBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private CuoreUI.Controls.cuiButton exitbtn;
     }
 }

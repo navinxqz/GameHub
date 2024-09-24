@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,10 +63,31 @@ namespace GameServer_Management.Forms
 
         private void Enter_Key(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Return) 
+            if (e.KeyChar == (char)Keys.Return)     //Enter key press in action
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void exitbtn_MouseHover(object sender, EventArgs e)
+        {
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string imgPath = Path.Combine(projectDir, "asset", "x_red(39).png");
+
+            exitbtn.Image = Image.FromFile(imgPath);
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
+
+            exitbtn.Image = Image.FromFile(imgPath);
         }
     }
 }
