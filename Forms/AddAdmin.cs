@@ -1,6 +1,7 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
@@ -11,6 +12,8 @@ namespace GameServer_Management.Forms
         public AddAdmin()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void cancelbtn_Click(object sender, EventArgs e)

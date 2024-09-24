@@ -16,6 +16,8 @@ namespace GameServer_Management.Forms
         public AdminLogin()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void Logoutbtn_Click(object sender, EventArgs e)

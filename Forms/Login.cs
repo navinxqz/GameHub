@@ -15,6 +15,8 @@ namespace GameServer_Management.Forms
         public Login()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void Login_Load(object sender, EventArgs e)

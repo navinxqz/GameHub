@@ -22,6 +22,8 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void AdminHome_Load(object sender, EventArgs e)

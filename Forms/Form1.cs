@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using GameServer_Management.Forms;
 
@@ -9,6 +10,8 @@ namespace GameServer_Management
         public LoadingForm()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
         private void LoadingForm_Load(object sender, EventArgs e)

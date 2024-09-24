@@ -17,6 +17,8 @@ namespace GameServer_Management.Forms
         public AddCategory()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
         public int id = 0;
 

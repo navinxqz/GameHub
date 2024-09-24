@@ -15,6 +15,8 @@ namespace GameServer_Management.Forms
         public AddGames()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
         public int id = 0;
         public int catID = 0;
@@ -71,7 +73,7 @@ namespace GameServer_Management.Forms
             DateTime releaseDate;   //issue here!!!
             if (DateTime.TryParseExact(txtRelDate.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out releaseDate))
             {
-                h.Add("@releaseDate", releaseDate.ToString("yyyy-MM-dd")); // Convert to SQL-recognized format
+                h.Add("@releaseDate", releaseDate.ToString("yyyy-MM-dd")); // converted to sql recognized format
             }
             else
             {
@@ -79,7 +81,7 @@ namespace GameServer_Management.Forms
                 return;
             }
             //h.Add("@gameImage", imgByte);
-            h.Add("@gameImage", imgByte != null ? (object)imgByte : DBNull.Value);
+            h.Add("@gameImage", imgByte != null ? (object)imgByte : DBNull.Value);  //method for the DBNUll approch
 
 
             if (DBconnect.SQL(query, h) > 0)
@@ -215,7 +217,7 @@ namespace GameServer_Management.Forms
                 }
                 else
                 {
-                    pictureBox1.Image = null;   // Set to null for no img
+                    pictureBox1.Image = null;   // set to null for no img
                 }
             }
         }

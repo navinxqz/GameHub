@@ -17,6 +17,8 @@ namespace GameServer_Management.Forms
         public GameCatView()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
         public void GetData() 
         {
