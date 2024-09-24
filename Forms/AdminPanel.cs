@@ -64,7 +64,7 @@ namespace GameServer_Management.Forms
         {
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void cuiButton1_Click(object sender, EventArgs e)
