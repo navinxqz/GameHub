@@ -46,11 +46,6 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void txtpass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void HidePassBtn_Click(object sender, EventArgs e)
         {
             HidePassBtn.Visible = false;
@@ -63,6 +58,14 @@ namespace GameServer_Management.Forms
             HidePassBtn.Visible = true;
             showPassBtn.Visible = false;
             txtpass.PasswordChar = '\0';
+        }
+
+        private void Enter_Key(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return) 
+            {
+                btnLogin_Click(sender, e);
+            }
         }
     }
 }

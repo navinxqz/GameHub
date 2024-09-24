@@ -128,7 +128,7 @@
             this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.TabIndex = 18;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter_Key);
             // 
             // btnLogin
             // 
