@@ -76,18 +76,16 @@ namespace GameServer_Management.Forms
 
         private void exitbtn_MouseHover(object sender, EventArgs e)
         {
-            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            /*string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             string imgPath = Path.Combine(projectDir, "asset", "x_red(39).png");
+            exitbtn.Image = Image.FromFile(imgPath);    */
 
-            exitbtn.Image = Image.FromFile(imgPath);
+            exitbtn.Image = Image.FromFile("img\\x_red.png");
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
-
-            exitbtn.Image = Image.FromFile(imgPath);
+            exitbtn.Image = Image.FromFile("img\\x.png");
         }
     }
 }
