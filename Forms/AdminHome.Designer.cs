@@ -37,7 +37,13 @@
             this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.laodingpanel = new System.Windows.Forms.Panel();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.laodingpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,12 +146,42 @@
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // timer
+            // 
+            this.timer.Interval = 2000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // laodingpanel
+            // 
+            this.laodingpanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.laodingpanel.Controls.Add(this.pictureBox2);
+            this.laodingpanel.Location = new System.Drawing.Point(496, 256);
+            this.laodingpanel.Name = "laodingpanel";
+            this.laodingpanel.Size = new System.Drawing.Size(221, 144);
+            this.laodingpanel.TabIndex = 20;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 50;
+            this.bunifuElipse2.TargetControl = this.laodingpanel;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(222, 145);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.laodingpanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.CategoryPanel);
@@ -160,6 +196,8 @@
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.Click += new System.EventHandler(this.AdminHome_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.laodingpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +211,9 @@
         public Krypton.Toolkit.KryptonTextBox searchtxtbox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Panel laodingpanel;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

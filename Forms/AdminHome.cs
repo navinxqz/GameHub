@@ -22,17 +22,8 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
-            this.AutoScaleDimensions = new SizeF(96F, 96F);
-            this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
-        private void AdminHome_Load(object sender, EventArgs e)
-        {
-            AddCat();
-            //loadingPanel.Visible = false;
-            listPanel.Controls.Clear();
-            LoadItems();
-        }
         private void Button(KryptonCheckButton button)
         {
             cb.Checked = false;
@@ -162,10 +153,6 @@ namespace GameServer_Management.Forms
                 id = Convert.ToInt32(id)
             };
             listPanel.Controls.Add(v);
-            v.onSelect += (ss, ee) =>
-            {
-                //no need
-            };
         }
         private void LoadItems()
         {
@@ -212,6 +199,22 @@ namespace GameServer_Management.Forms
             listPanel.Controls.Clear();
             LoadItems();
             AddCat();
+            laodingpanel.Visible = true;
+            timer.Start();
+        }
+
+        private void AdminHome_Load(object sender, EventArgs e)
+        {
+            laodingpanel.Visible = false;
+            AddCat();
+            listPanel.Controls.Clear();
+            LoadItems();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            laodingpanel.Visible = false;
+            //timer.Stop();
         }
     }
 }

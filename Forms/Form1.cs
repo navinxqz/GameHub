@@ -14,11 +14,6 @@ namespace GameServer_Management
             this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
-        private void LoadingForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             LoadPanel.Width += 3;
