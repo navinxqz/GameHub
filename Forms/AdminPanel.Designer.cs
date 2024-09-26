@@ -38,7 +38,6 @@
             this.btnHome = new Krypton.Toolkit.KryptonCheckButton();
             this.adminDBbtn = new Krypton.Toolkit.KryptonCheckButton();
             this.userDBbtn = new Krypton.Toolkit.KryptonCheckButton();
-            this.logoutBtn = new CuoreUI.Controls.cuiButton();
             this.menubtn = new CuoreUI.Controls.cuiButton();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -46,6 +45,7 @@
             this.sliderShowTimer = new System.Windows.Forms.Timer(this.components);
             this.sliderHideTimer = new System.Windows.Forms.Timer(this.components);
             this.faddingTimer = new System.Windows.Forms.Timer(this.components);
+            this.logout = new Krypton.Toolkit.KryptonCheckButton();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -88,8 +88,8 @@
             // 
             // slidePanel
             // 
+            this.slidePanel.Controls.Add(this.logout);
             this.slidePanel.Controls.Add(this.kryptonPanel1);
-            this.slidePanel.Controls.Add(this.logoutBtn);
             this.slidePanel.Controls.Add(this.menubtn);
             this.slidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.slidePanel.Location = new System.Drawing.Point(0, 0);
@@ -569,39 +569,6 @@
             this.userDBbtn.Values.Text = "User Database";
             this.userDBbtn.Click += new System.EventHandler(this.userDBbtn_Click);
             // 
-            // logoutBtn
-            // 
-            this.logoutBtn.CheckButton = false;
-            this.logoutBtn.Checked = false;
-            this.logoutBtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.logoutBtn.CheckedImageTint = System.Drawing.Color.White;
-            this.logoutBtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.logoutBtn.Content = "";
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.logoutBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
-            this.logoutBtn.HoveredImageTint = System.Drawing.Color.White;
-            this.logoutBtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
-            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
-            this.logoutBtn.ImageAutoCenter = true;
-            this.logoutBtn.ImageExpand = new System.Drawing.Point(8, 8);
-            this.logoutBtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.logoutBtn.ImageTint = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(12, 675);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.logoutBtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.logoutBtn.OutlineThickness = 1.6F;
-            this.logoutBtn.PressedBackground = System.Drawing.Color.Transparent;
-            this.logoutBtn.PressedImageTint = System.Drawing.Color.White;
-            this.logoutBtn.PressedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.logoutBtn.Rounding = new System.Windows.Forms.Padding(10);
-            this.logoutBtn.Size = new System.Drawing.Size(40, 40);
-            this.logoutBtn.TabIndex = 4;
-            this.logoutBtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
             // menubtn
             // 
             this.menubtn.CheckButton = false;
@@ -671,6 +638,107 @@
             this.faddingTimer.Interval = 10;
             this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
             // 
+            // logout
+            // 
+            this.logout.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.logout.ButtonStyle = Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout.Location = new System.Drawing.Point(1, 670);
+            this.logout.Name = "logout";
+            this.logout.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logout.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logout.Size = new System.Drawing.Size(63, 53);
+            this.logout.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.logout.StateCheckedNormal.Content.AdjacentGap = 20;
+            this.logout.StateCheckedNormal.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedNormal.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StateCheckedNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StateCheckedNormal.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedNormal.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedNormal.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Character;
+            this.logout.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.logout.StateCheckedPressed.Content.AdjacentGap = 20;
+            this.logout.StateCheckedPressed.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedPressed.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedPressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StateCheckedPressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedPressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedPressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StateCheckedPressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedPressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedPressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.logout.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.logout.StateCheckedTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+            this.logout.StateCheckedTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+            this.logout.StateCheckedTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.logout.StateCheckedTracking.Content.AdjacentGap = 20;
+            this.logout.StateCheckedTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StateCheckedTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StateCheckedTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StateCheckedTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateCheckedTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateCheckedTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.logout.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logout.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.logout.StateNormal.Content.AdjacentGap = 20;
+            this.logout.StateNormal.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateNormal.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.logout.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.logout.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StateNormal.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateNormal.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateNormal.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.logout.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StatePressed.Content.AdjacentGap = 20;
+            this.logout.StatePressed.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StatePressed.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StatePressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.logout.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.logout.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.logout.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
+            this.logout.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+            this.logout.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(29)))), ((int)(((byte)(58)))));
+            this.logout.StateTracking.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.logout.StateTracking.Content.AdjacentGap = 20;
+            this.logout.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.logout.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.logout.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.logout.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.logout.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.logout.StateTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.logout.TabIndex = 6;
+            this.logout.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image")));
+            this.logout.Values.Text = "Log Out";
+            this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
             // AdminPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -698,7 +766,6 @@
 
         private CuoreUI.Controls.cuiButton cuiButton1;
         private System.Windows.Forms.Panel slidePanel;
-        private CuoreUI.Controls.cuiButton logoutBtn;
         private CuoreUI.Controls.cuiButton menubtn;
         private System.Windows.Forms.Panel mainpanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
@@ -712,5 +779,6 @@
         private System.Windows.Forms.Timer sliderHideTimer;
         private System.Windows.Forms.Timer faddingTimer;
         private Krypton.Toolkit.KryptonCheckButton categoryBtn;
+        private Krypton.Toolkit.KryptonCheckButton logout;
     }
 }

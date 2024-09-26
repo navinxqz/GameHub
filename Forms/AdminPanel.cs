@@ -59,14 +59,6 @@ namespace GameServer_Management.Forms
             f.Visible = true;
         }
 
-
-        private void logoutBtn_Click(object sender, EventArgs e)
-        {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
-            this.Close();
-        }
-
         private void cuiButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -228,6 +220,13 @@ namespace GameServer_Management.Forms
             }
             LoadForm(catView);
             Button(categoryBtn);
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            adminLogin.Show();
+            this.Close();
         }
     }
 }

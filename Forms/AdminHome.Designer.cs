@@ -50,9 +50,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(76, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 31);
+            this.label1.Size = new System.Drawing.Size(261, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Recently Uploaded >";
+            this.label1.Text = "Recently Uploaded";
             // 
             // label2
             // 
@@ -146,6 +146,7 @@
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 50;
+            this.bunifuElipse2.TargetControl = this;
             // 
             // loadingtimer
             // 

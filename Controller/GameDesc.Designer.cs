@@ -170,6 +170,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(0, 0, 20, 10);
             this.Name = "GameDesc";
             this.Size = new System.Drawing.Size(211, 366);
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).EndInit();
