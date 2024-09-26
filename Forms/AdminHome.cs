@@ -202,7 +202,6 @@ namespace GameServer_Management.Forms
             await Task.Delay(1000);
 
             cb.Checked = false;
-            //listPanel.Controls.Clear();
             LoadItems();
             AddCat();
             //laodingpanel.Visible = true;
@@ -219,17 +218,11 @@ namespace GameServer_Management.Forms
             LoadItems();
         }
 
-
         private void loadingtimer_Tick(object sender, EventArgs e)
         {
             loadingtimer.Stop();
             loadingtimer.Interval = 1000;
             loading.Visible = false;
-        }
-
-        private void loading_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

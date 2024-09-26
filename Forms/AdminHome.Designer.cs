@@ -160,7 +160,6 @@
             this.loading.Name = "loading";
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
-            this.loading.Load += new System.EventHandler(this.loading_Load);
             // 
             // AdminHome
             // 
