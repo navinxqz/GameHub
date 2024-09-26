@@ -17,14 +17,19 @@ namespace GameServer_Management
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            LoadPanel.Width += 2;
-            if(LoadPanel.Width >= 630)
+            LoadPanel.Width += 3;
+            if(LoadPanel.Width >= 870)
             {
                 timer1.Stop();
                 Login login = new Login();
                 login.Show();
                 this.Hide();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
