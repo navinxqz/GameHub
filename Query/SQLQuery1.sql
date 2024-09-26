@@ -200,3 +200,20 @@ BEGIN
     INSERT INTO admintbl(username,upass,fullname) VALUES(@username,@upass,@fullname)
 END
 GO
+--------------------------------------------
+
+CREATE PROCEDURE AddUser
+(
+@firstname varchar(50),
+@lastname varchar(50),
+@gender varchar(50),
+@email varchar(50),
+@username varchar(50),
+@upass varchar(50),
+@dob date
+)
+AS
+BEGIN
+    INSERT INTO usertbl(firstname, lastname, gender, email, username, upass, dob) VALUES(@firstname,@lastname,@gender,@email,@username,@upass,@dob)
+END
+GO
