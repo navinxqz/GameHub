@@ -19,7 +19,6 @@ namespace GameServer_Management.Controller
         public event EventHandler onSelect = null;
 
         public int id { get;set; }
-        public string Category { get; set; }
         public string GName 
         {
             get { return gameName.Text; }
@@ -34,6 +33,11 @@ namespace GameServer_Management.Controller
         {
             get { return GameImg.Image; }
             set { GameImg.Image = value; }
+        }
+        public string Category 
+        {
+            get { return catName.Text; }
+            set { catName.Text = value; }
         }
 
         private void GameImg_Click(object sender, EventArgs e)

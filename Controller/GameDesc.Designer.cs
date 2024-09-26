@@ -32,17 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDesc));
             this.GameImg = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pricelbl = new System.Windows.Forms.Label();
             this.gameName = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panelcat = new System.Windows.Forms.Panel();
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.catName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelcat.SuspendLayout();
             this.SuspendLayout();
             // 
             // GameImg
@@ -59,6 +63,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelcat);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pricelbl);
             this.panel1.Controls.Add(this.gameName);
@@ -69,12 +74,23 @@
             this.panel1.Size = new System.Drawing.Size(211, 105);
             this.panel1.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(10, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 28);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "$";
+            // 
             // pricelbl
             // 
             this.pricelbl.BackColor = System.Drawing.Color.Transparent;
             this.pricelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pricelbl.ForeColor = System.Drawing.Color.White;
-            this.pricelbl.Location = new System.Drawing.Point(25, 77);
+            this.pricelbl.Location = new System.Drawing.Point(25, 67);
             this.pricelbl.Name = "pricelbl";
             this.pricelbl.Size = new System.Drawing.Size(60, 29);
             this.pricelbl.TabIndex = 1;
@@ -82,13 +98,21 @@
             // 
             // gameName
             // 
-            this.gameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameName.ForeColor = System.Drawing.Color.White;
             this.gameName.Location = new System.Drawing.Point(3, 9);
             this.gameName.Name = "gameName";
-            this.gameName.Size = new System.Drawing.Size(205, 68);
+            this.gameName.Size = new System.Drawing.Size(205, 58);
             this.gameName.TabIndex = 0;
             this.gameName.Text = "Game Name";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Teal;
+            this.panel3.Location = new System.Drawing.Point(7, 52);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(68, 38);
+            this.panel3.TabIndex = 3;
             // 
             // panel2
             // 
@@ -104,25 +128,6 @@
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this.GameImg;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 28);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "$";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Teal;
-            this.panel3.Location = new System.Drawing.Point(7, 68);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(68, 38);
-            this.panel3.TabIndex = 3;
-            // 
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 40;
@@ -133,10 +138,36 @@
             this.bunifuElipse3.ElipseRadius = 40;
             this.bunifuElipse3.TargetControl = this;
             // 
+            // panelcat
+            // 
+            this.panelcat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.panelcat.Controls.Add(this.catName);
+            this.panelcat.Location = new System.Drawing.Point(92, 62);
+            this.panelcat.Name = "panelcat";
+            this.panelcat.Size = new System.Drawing.Size(110, 32);
+            this.panelcat.TabIndex = 4;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 20;
+            this.bunifuElipse4.TargetControl = this.panelcat;
+            // 
+            // catName
+            // 
+            this.catName.BackColor = System.Drawing.Color.Transparent;
+            this.catName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(171)))), ((int)(((byte)(174)))));
+            this.catName.Location = new System.Drawing.Point(0, 2);
+            this.catName.Name = "catName";
+            this.catName.Size = new System.Drawing.Size(114, 27);
+            this.catName.TabIndex = 2;
+            this.catName.Text = "category";
+            this.catName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameDesc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "GameDesc";
@@ -144,6 +175,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panelcat.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,5 +192,8 @@
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private System.Windows.Forms.Panel panelcat;
+        private System.Windows.Forms.Label catName;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
     }
 }
