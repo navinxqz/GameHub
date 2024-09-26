@@ -63,11 +63,11 @@
     <Compile Include="Controller\GameDesc.Designer.cs">
       <DependentUpon>GameDesc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controller\LoadingIndicator.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Controller\Loading.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controller\LoadingIndicator.Designer.cs">
-      <DependentUpon>LoadingIndicator.cs</DependentUpon>
+    <Compile Include="Controller\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddAdmin.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="Controller\GameDesc.resx">
       <DependentUpon>GameDesc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controller\LoadingIndicator.resx">
-      <DependentUpon>LoadingIndicator.cs</DependentUpon>
+    <EmbeddedResource Include="Controller\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddAdmin.resx">
       <DependentUpon>AddAdmin.cs</DependentUpon>

@@ -22,6 +22,7 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
+            loading.Visible = true;
         }
 
         private void Button(KryptonCheckButton button)
@@ -193,28 +194,42 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void AdminHome_Click(object sender, EventArgs e)
+        private async void AdminHome_Click(object sender, EventArgs e)
         {
-            cb.Checked = false;
+            loading.Visible = true;
+            loadingtimer.Start();
             listPanel.Controls.Clear();
+            await Task.Delay(1000);
+
+            cb.Checked = false;
+            //listPanel.Controls.Clear();
             LoadItems();
             AddCat();
-            laodingpanel.Visible = true;
-            timer.Start();
+            //laodingpanel.Visible = true;
+            //timer.Start();
         }
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-            laodingpanel.Visible = false;
+            //laodingpanel.Visible = false;
+            loading.Visible = true;
+            loadingtimer.Start();
             AddCat();
             listPanel.Controls.Clear();
             LoadItems();
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+
+        private void loadingtimer_Tick(object sender, EventArgs e)
         {
-            laodingpanel.Visible = false;
-            //timer.Stop();
+            loadingtimer.Stop();
+            loadingtimer.Interval = 1000;
+            loading.Visible = false;
+        }
+
+        private void loading_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

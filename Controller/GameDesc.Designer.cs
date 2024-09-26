@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDesc));
             this.GameImg = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelcat = new System.Windows.Forms.Panel();
+            this.catName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pricelbl = new System.Windows.Forms.Label();
             this.gameName = new System.Windows.Forms.Label();
@@ -40,13 +42,11 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panelcat = new System.Windows.Forms.Panel();
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.catName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panelcat.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // GameImg
@@ -73,6 +73,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 105);
             this.panel1.TabIndex = 3;
+            // 
+            // panelcat
+            // 
+            this.panelcat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
+            this.panelcat.Controls.Add(this.catName);
+            this.panelcat.Location = new System.Drawing.Point(92, 62);
+            this.panelcat.Name = "panelcat";
+            this.panelcat.Size = new System.Drawing.Size(110, 32);
+            this.panelcat.TabIndex = 4;
+            // 
+            // catName
+            // 
+            this.catName.BackColor = System.Drawing.Color.Transparent;
+            this.catName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(171)))), ((int)(((byte)(174)))));
+            this.catName.Location = new System.Drawing.Point(0, 2);
+            this.catName.Name = "catName";
+            this.catName.Size = new System.Drawing.Size(114, 27);
+            this.catName.TabIndex = 2;
+            this.catName.Text = "category";
+            this.catName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -138,31 +159,10 @@
             this.bunifuElipse3.ElipseRadius = 40;
             this.bunifuElipse3.TargetControl = this;
             // 
-            // panelcat
-            // 
-            this.panelcat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
-            this.panelcat.Controls.Add(this.catName);
-            this.panelcat.Location = new System.Drawing.Point(92, 62);
-            this.panelcat.Name = "panelcat";
-            this.panelcat.Size = new System.Drawing.Size(110, 32);
-            this.panelcat.TabIndex = 4;
-            // 
             // bunifuElipse4
             // 
             this.bunifuElipse4.ElipseRadius = 20;
             this.bunifuElipse4.TargetControl = this.panelcat;
-            // 
-            // catName
-            // 
-            this.catName.BackColor = System.Drawing.Color.Transparent;
-            this.catName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.catName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(171)))), ((int)(((byte)(174)))));
-            this.catName.Location = new System.Drawing.Point(0, 2);
-            this.catName.Name = "catName";
-            this.catName.Size = new System.Drawing.Size(114, 27);
-            this.catName.TabIndex = 2;
-            this.catName.Text = "category";
-            this.catName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameDesc
             // 
@@ -174,8 +174,8 @@
             this.Size = new System.Drawing.Size(211, 366);
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panelcat.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
