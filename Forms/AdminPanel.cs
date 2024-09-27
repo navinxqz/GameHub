@@ -147,6 +147,7 @@ namespace GameServer_Management.Forms
             faddingTimer.Start();
             obj = this;
             downloadbtn.Visible = false;
+            userbtn.Visible = false;
 
             if (!isAdmin)
             {
@@ -154,6 +155,7 @@ namespace GameServer_Management.Forms
                 GameDBbtn.Visible = false;
                 adminDBbtn.Visible = false;
                 userDBbtn.Visible = false;
+                userbtn.Visible = true;
                 downloadbtn.Visible = true;
                 kryptonPanel1.Location = new Point(0, 318);
                 downloadbtn.Location = new Point(3, 62);
@@ -248,6 +250,17 @@ namespace GameServer_Management.Forms
             }
             LoadForm(download);
             Button(downloadbtn);
+        }
+
+        private void userbtn_Click(object sender, EventArgs e)
+        {
+            if (!userbtn.Checked)
+            {
+                userbtn.Checked = true;
+                return;
+            }
+            LoadForm(download);
+            Button(userbtn);
         }
     }
 }

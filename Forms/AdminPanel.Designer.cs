@@ -47,6 +47,7 @@
             this.sliderHideTimer = new System.Windows.Forms.Timer(this.components);
             this.faddingTimer = new System.Windows.Forms.Timer(this.components);
             this.downloadbtn = new Krypton.Toolkit.KryptonCheckButton();
+            this.userbtn = new Krypton.Toolkit.KryptonCheckButton();
             this.slidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             // slidePanel
             // 
+            this.slidePanel.Controls.Add(this.userbtn);
             this.slidePanel.Controls.Add(this.logout);
             this.slidePanel.Controls.Add(this.kryptonPanel1);
             this.slidePanel.Controls.Add(this.menubtn);
@@ -828,9 +830,100 @@
             this.downloadbtn.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.downloadbtn.StateTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
             this.downloadbtn.TabIndex = 6;
-            this.downloadbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image")));
+            this.downloadbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image1")));
             this.downloadbtn.Values.Text = "Category";
             this.downloadbtn.Click += new System.EventHandler(this.downloadbtn_Click);
+            // 
+            // userbtn
+            // 
+            this.userbtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userbtn.ButtonStyle = Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.userbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userbtn.Location = new System.Drawing.Point(0, 611);
+            this.userbtn.Name = "userbtn";
+            this.userbtn.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.userbtn.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.userbtn.Size = new System.Drawing.Size(64, 53);
+            this.userbtn.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedNormal.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.userbtn.StateCheckedNormal.Content.AdjacentGap = 20;
+            this.userbtn.StateCheckedNormal.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedNormal.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StateCheckedNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedNormal.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StateCheckedNormal.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedNormal.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedNormal.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Character;
+            this.userbtn.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedPressed.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.userbtn.StateCheckedPressed.Content.AdjacentGap = 20;
+            this.userbtn.StateCheckedPressed.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedPressed.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedPressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StateCheckedPressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedPressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedPressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StateCheckedPressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedPressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedPressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.userbtn.StateCheckedTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedTracking.Back.ColorStyle = Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.userbtn.StateCheckedTracking.Content.AdjacentGap = 20;
+            this.userbtn.StateCheckedTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StateCheckedTracking.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedTracking.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StateCheckedTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StateCheckedTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateCheckedTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateCheckedTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.userbtn.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.userbtn.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
+            this.userbtn.StateNormal.Content.AdjacentGap = 20;
+            this.userbtn.StateNormal.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateNormal.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateNormal.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.userbtn.StateNormal.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.userbtn.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StateNormal.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateNormal.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateNormal.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.userbtn.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StatePressed.Content.AdjacentGap = 20;
+            this.userbtn.StatePressed.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StatePressed.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StatePressed.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(120)))), ((int)(((byte)(255)))));
+            this.userbtn.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StatePressed.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StatePressed.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StatePressed.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.userbtn.StateTracking.Back.Color1 = System.Drawing.Color.DimGray;
+            this.userbtn.StateTracking.Back.Color2 = System.Drawing.Color.DimGray;
+            this.userbtn.StateTracking.Content.AdjacentGap = 20;
+            this.userbtn.StateTracking.Content.Image.ImageH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateTracking.Content.Image.ImageV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateTracking.Content.Padding = new System.Windows.Forms.Padding(19, -1, 0, -1);
+            this.userbtn.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.userbtn.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.userbtn.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userbtn.StateTracking.Content.ShortText.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.userbtn.StateTracking.Content.ShortText.TextV = Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.userbtn.StateTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
+            this.userbtn.TabIndex = 6;
+            this.userbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonCheckButton1.Values.Image")));
+            this.userbtn.Values.Text = "Username";
+            this.userbtn.Click += new System.EventHandler(this.userbtn_Click);
             // 
             // AdminPanel
             // 
@@ -874,5 +967,6 @@
         private System.Windows.Forms.Panel mainpanel;
         private Krypton.Toolkit.KryptonCheckButton btnHome;
         private Krypton.Toolkit.KryptonCheckButton downloadbtn;
+        private Krypton.Toolkit.KryptonCheckButton userbtn;
     }
 }
