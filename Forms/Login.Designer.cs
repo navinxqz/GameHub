@@ -277,6 +277,7 @@
             this.createbtn.Text = "Create an account";
             this.createbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createbtn.UseVisualStyleBackColor = true;
+            this.createbtn.Click += new System.EventHandler(this.createbtn_Click);
             // 
             // exitbtn
             // 

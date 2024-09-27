@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameServer_Management.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,18 @@ namespace GameServer_Management.Forms
             AdminPanel ap = new AdminPanel(false);
             ap.Show();
             this.Hide();
+        }
+
+        private void createbtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DBconnect.BlurBg(new SignUp());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to signup! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
