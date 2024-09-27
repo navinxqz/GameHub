@@ -156,6 +156,7 @@ namespace GameServer_Management.Forms
                 userDBbtn.Visible = false;
                 downloadbtn.Visible = true;
                 kryptonPanel1.Location = new Point(0, 318);
+                downloadbtn.Location = new Point(3, 62);
             }
         }
 
@@ -220,11 +221,6 @@ namespace GameServer_Management.Forms
             Button(GameDBbtn);
         }
 
-        private void gameBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void categoryBtn_Click(object sender, EventArgs e)
         {
             if (!categoryBtn.Checked)
@@ -241,14 +237,6 @@ namespace GameServer_Management.Forms
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
             this.Close();
-        }
-
-        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            if (!isAdmin)
-            {
-                //kryptonPanel1.Location = new Point(0, 318);
-            }
         }
 
         private void downloadbtn_Click(object sender, EventArgs e)

@@ -216,7 +216,6 @@
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabLowProfile;
             this.kryptonPanel1.Size = new System.Drawing.Size(68, 358);
             this.kryptonPanel1.TabIndex = 0;
-            this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
             // 
             // GameDBbtn
             // 
