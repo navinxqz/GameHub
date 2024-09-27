@@ -217,6 +217,9 @@ namespace GameServer_Management.Forms
         private async void AdminHome_Click(object sender, EventArgs e)
         {
             loading.Visible = true;
+            //panel2.Controls.Clear();
+            panel1.Visible = false;
+            panel3.Visible = false;
             loadingtimer.Start();
             listPanel.Controls.Clear();
             await Task.Delay(1000);
@@ -224,8 +227,8 @@ namespace GameServer_Management.Forms
             cb.Checked = false;
             LoadItems();
             AddCat();
-            //laodingpanel.Visible = true;
-            //timer.Start();
+            panel1.Visible = true;
+            panel3.Visible = true;
         }
 
         private void AdminHome_Load(object sender, EventArgs e)

@@ -398,7 +398,7 @@
             this.downloadbtn.StateTracking.Content.ShortText.Trim = Krypton.Toolkit.PaletteTextTrim.Word;
             this.downloadbtn.TabIndex = 6;
             this.downloadbtn.Values.Image = ((System.Drawing.Image)(resources.GetObject("downloadbtn.Values.Image")));
-            this.downloadbtn.Values.Text = "Category";
+            this.downloadbtn.Values.Text = "Downloads";
             this.downloadbtn.Click += new System.EventHandler(this.downloadbtn_Click);
             // 
             // GameDBbtn
