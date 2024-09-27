@@ -217,3 +217,5 @@ BEGIN
     INSERT INTO usertbl(firstname, lastname, gender, email, username, upass, dob) VALUES(@firstname,@lastname,@gender,@email,@username,@upass,@dob)
 END
 GO
+
+select * from usertbl

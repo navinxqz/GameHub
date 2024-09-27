@@ -239,6 +239,13 @@ namespace GameServer_Management.Forms
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
             this.Close();
+
+            if (!isAdmin)
+            {
+                Login l = new Login();
+                l.Show();
+                this.Close();
+            }
         }
 
         private void downloadbtn_Click(object sender, EventArgs e)

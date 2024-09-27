@@ -74,7 +74,7 @@ namespace GameServer_Management.Forms
             if (DBconnect.SQL(query, h) > 0)
             {
                 MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //this.Close();
+                this.Close();
             }
             else
             {
