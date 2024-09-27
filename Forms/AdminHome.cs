@@ -18,7 +18,8 @@ namespace GameServer_Management.Forms
     public partial class AdminHome : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
-        List<string> imageAddress = new List<string>();
+        //List<string> imageAddress = new List<string>();
+        List<(string imageAddress, string description)> imageData = new List<(string, string)>();
         int countDown = 0;
 
         public AdminHome()
@@ -176,15 +177,24 @@ namespace GameServer_Management.Forms
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
-                        imageAddress.Clear();   // reset address
+                        imageData.Clear();   // reset address
 
                         foreach (DataRow item in dt.Rows) 
                         {
                             Byte[] imgAry = (byte[])item["gameImage"];
-                            //byte[] imgbyte = imgAry;
-                            imageAddress.Add(Convert.ToBase64String(imgAry)); //
+
+                            string imgBase64 = Convert.ToBase64String(imgAry);
+                            string description = item["gameName"].ToString();
+                            imageData.Add((imgBase64, description));
+
+                            //imageData.Add((imgBase64, item["gameName"].ToString()));  // Store image and description
                             Image img = Image.FromStream(new MemoryStream(imgAry)); //
                             AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img);  //Image.FromStream(new MemoryStream(imgAry)));
+
+                            /*byte[] imgbyte = imgAry;
+                            imageAddress.Add(Convert.ToBase64String(imgAry)); //
+                            Image img = Image.FromStream(new MemoryStream(imgAry)); //
+                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img);  //Image.FromStream(new MemoryStream(imgAry)));    */
                         }
                         countDown = 0; // Reset counter
                         slideImgTimer.Start(); // Start the timer after images are loaded
@@ -235,19 +245,26 @@ namespace GameServer_Management.Forms
 
         private void slideImgTimer_Tick(object sender, EventArgs e)
         {
-            if (countDown < imageAddress.Count)
+            if (countDown < imageData.Count)
             {
-                byte[] imgBytes = Convert.FromBase64String(imageAddress[countDown]);
+                //byte[] imgBytes = Convert.FromBase64String(imageData[countDown]);
+                byte[] imgBytes = Convert.FromBase64String(imageData[countDown].imageAddress);
                 using (MemoryStream ms = new MemoryStream(imgBytes))
                 {
                     slideImageBox.Image = Image.FromStream(ms);
                 }
+                nameLabel.Text = imageData[countDown].description;
                 countDown++;
             }
             else
             {
                 countDown = 0;
             }
+        }
+
+        private void kryptonLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

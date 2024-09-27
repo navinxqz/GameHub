@@ -41,11 +41,13 @@
             this.loadingtimer = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.slideImageBox = new System.Windows.Forms.PictureBox();
             this.slideImgTimer = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.slideImageBox = new System.Windows.Forms.PictureBox();
             this.loading = new GameServer_Management.Controller.Loading();
+            this.gameDesc = new CuoreUI.Controls.cuiLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -178,26 +180,30 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.BackColor = System.Drawing.Color.DimGray;
+            this.panel2.Controls.Add(this.gameDesc);
             this.panel2.Controls.Add(this.slideImageBox);
+            this.panel2.Controls.Add(this.nameLabel);
             this.panel2.Location = new System.Drawing.Point(24, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(631, 175);
+            this.panel2.Size = new System.Drawing.Size(641, 175);
             this.panel2.TabIndex = 10;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.ForeColor = System.Drawing.Color.White;
+            this.nameLabel.Location = new System.Drawing.Point(198, 16);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(311, 31);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Red Dead Redemption 2";
             // 
             // bunifuElipse3
             // 
             this.bunifuElipse3.ElipseRadius = 50;
             this.bunifuElipse3.TargetControl = this.panel2;
-            // 
-            // slideImageBox
-            // 
-            this.slideImageBox.Location = new System.Drawing.Point(24, 0);
-            this.slideImageBox.Name = "slideImageBox";
-            this.slideImageBox.Size = new System.Drawing.Size(171, 175);
-            this.slideImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.slideImageBox.TabIndex = 0;
-            this.slideImageBox.TabStop = false;
             // 
             // slideImgTimer
             // 
@@ -211,6 +217,16 @@
             this.imageList1.ImageSize = new System.Drawing.Size(171, 175);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // slideImageBox
+            // 
+            this.slideImageBox.Image = ((System.Drawing.Image)(resources.GetObject("slideImageBox.Image")));
+            this.slideImageBox.Location = new System.Drawing.Point(41, -23);
+            this.slideImageBox.Name = "slideImageBox";
+            this.slideImageBox.Size = new System.Drawing.Size(148, 234);
+            this.slideImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slideImageBox.TabIndex = 2;
+            this.slideImageBox.TabStop = false;
+            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -218,6 +234,17 @@
             this.loading.Name = "loading";
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
+            // 
+            // gameDesc
+            // 
+            this.gameDesc.Content = resources.GetString("gameDesc.Content");
+            this.gameDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameDesc.ForeColor = System.Drawing.Color.White;
+            this.gameDesc.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
+            this.gameDesc.Location = new System.Drawing.Point(237, 61);
+            this.gameDesc.Name = "gameDesc";
+            this.gameDesc.Size = new System.Drawing.Size(365, 57);
+            this.gameDesc.TabIndex = 12;
             // 
             // AdminHome
             // 
@@ -242,6 +269,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,8 +290,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
-        private System.Windows.Forms.PictureBox slideImageBox;
         private System.Windows.Forms.Timer slideImgTimer;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.PictureBox slideImageBox;
+        private CuoreUI.Controls.cuiLabel gameDesc;
     }
 }
