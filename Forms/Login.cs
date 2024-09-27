@@ -63,9 +63,17 @@ namespace GameServer_Management.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            AdminPanel ap = new AdminPanel(false);
-            ap.Show();
-            this.Hide();
+            if (DBconnect.IsValidUser(txtUsername.Text, txtpass.Text) == false)
+            {
+                MessageBox.Show("Invalid Username or password");
+            }
+            else
+            {
+                //MessageBox.Show("Login Successful");
+                AdminPanel ap = new AdminPanel(false);
+                ap.Show();
+                this.Hide();
+            }
         }
 
         private void createbtn_Click(object sender, EventArgs e)

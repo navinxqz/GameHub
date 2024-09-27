@@ -56,6 +56,42 @@ namespace GameServer_Management.Class
             }
             return isValid;
         }
+        public static bool IsValidUser(string username, string password)
+        {
+            bool isValid = false;
+            string query = @"select username, upass from usertbl where username = @username and upass = @password";
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            adapter.Fill(dt);
+
+                            if (dt.Rows.Count > 0)
+                            {
+                                isValid = true;
+                                USER = dt.Rows[0]["username"].ToString();
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
+                finally
+                {
+                    if (con.State == ConnectionState.Open) { con.Close(); }
+                }
+            }
+            return isValid;
+        }
+
         public static string user;
         public static string USER
         {
