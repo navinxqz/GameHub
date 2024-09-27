@@ -46,8 +46,8 @@
             this.slideImgTimer = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.slideImageBox = new System.Windows.Forms.PictureBox();
-            this.loading = new GameServer_Management.Controller.Loading();
             this.gameDesc = new CuoreUI.Controls.cuiLabel();
+            this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -227,14 +227,6 @@
             this.slideImageBox.TabIndex = 2;
             this.slideImageBox.TabStop = false;
             // 
-            // loading
-            // 
-            this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.loading.Location = new System.Drawing.Point(517, 317);
-            this.loading.Name = "loading";
-            this.loading.Size = new System.Drawing.Size(221, 140);
-            this.loading.TabIndex = 21;
-            // 
             // gameDesc
             // 
             this.gameDesc.Content = resources.GetString("gameDesc.Content");
@@ -243,8 +235,16 @@
             this.gameDesc.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
             this.gameDesc.Location = new System.Drawing.Point(237, 61);
             this.gameDesc.Name = "gameDesc";
-            this.gameDesc.Size = new System.Drawing.Size(365, 57);
+            this.gameDesc.Size = new System.Drawing.Size(365, 62);
             this.gameDesc.TabIndex = 12;
+            // 
+            // loading
+            // 
+            this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.loading.Location = new System.Drawing.Point(517, 317);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(221, 140);
+            this.loading.TabIndex = 21;
             // 
             // AdminHome
             // 

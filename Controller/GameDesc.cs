@@ -19,6 +19,11 @@ namespace GameServer_Management.Controller
         public event EventHandler onSelect = null;
 
         public int id { get;set; }
+        public string desc 
+        {
+            get { return desclbl.Text; }
+            set { desclbl.Text = value; }
+        }
         public string GName 
         {
             get { return gameName.Text; }

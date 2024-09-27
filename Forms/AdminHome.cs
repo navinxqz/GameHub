@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,7 @@ namespace GameServer_Management.Forms
     public partial class AdminHome : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
-        //List<string> imageAddress = new List<string>();
-        List<(string imageAddress, string description)> imageData = new List<(string, string)>();
+        List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
         int countDown = 0;
 
         public AdminHome()
@@ -146,7 +146,7 @@ namespace GameServer_Management.Forms
             }Button(b);
         }
 
-        private void AddItems(string id, string name, string cat,string price, Image img)
+        private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
         {
             var v = new GameDesc
             {
@@ -154,7 +154,8 @@ namespace GameServer_Management.Forms
                 Price = price,
                 Category = cat,
                 Pic = img,
-                id = Convert.ToInt32(id)
+                id = Convert.ToInt32(id),
+                desc = gameDescription
             };
             listPanel.Controls.Add(v);
         }
@@ -184,12 +185,13 @@ namespace GameServer_Management.Forms
                             Byte[] imgAry = (byte[])item["gameImage"];
 
                             string imgBase64 = Convert.ToBase64String(imgAry);
-                            string description = item["gameName"].ToString();
-                            imageData.Add((imgBase64, description));
+                            string gamename = item["gameName"].ToString();
+                            string gamedescription = item["gameDesc"].ToString();
+                            imageData.Add((imgBase64, gamename, gamedescription));
 
                             //imageData.Add((imgBase64, item["gameName"].ToString()));  // Store image and description
                             Image img = Image.FromStream(new MemoryStream(imgAry)); //
-                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img);  //Image.FromStream(new MemoryStream(imgAry)));
+                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, gamedescription);
 
                             /*byte[] imgbyte = imgAry;
                             imageAddress.Add(Convert.ToBase64String(imgAry)); //
@@ -253,7 +255,8 @@ namespace GameServer_Management.Forms
                 {
                     slideImageBox.Image = Image.FromStream(ms);
                 }
-                nameLabel.Text = imageData[countDown].description;
+                nameLabel.Text = imageData[countDown].gameName;
+                gameDesc.Content = imageData[countDown].gameDescription;
                 countDown++;
             }
             else
