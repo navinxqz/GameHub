@@ -39,8 +39,17 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.loadingtimer = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.slideImageBox = new System.Windows.Forms.PictureBox();
+            this.slideImgTimer = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(89, 37);
+            this.label1.Location = new System.Drawing.Point(33, 193);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 31);
             this.label1.TabIndex = 1;
@@ -72,9 +81,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listPanel.AutoScroll = true;
-            this.listPanel.Location = new System.Drawing.Point(82, 91);
+            this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1010, 560);
+            this.listPanel.Size = new System.Drawing.Size(1024, 391);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -82,9 +91,9 @@
             this.CategoryPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoryPanel.AutoScroll = true;
-            this.CategoryPanel.Location = new System.Drawing.Point(1060, 80);
+            this.CategoryPanel.Location = new System.Drawing.Point(1072, 80);
             this.CategoryPanel.Name = "CategoryPanel";
-            this.CategoryPanel.Size = new System.Drawing.Size(272, 635);
+            this.CategoryPanel.Size = new System.Drawing.Size(260, 635);
             this.CategoryPanel.TabIndex = 10;
             // 
             // searchtxtbox
@@ -92,7 +101,7 @@
             this.searchtxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchtxtbox.CornerRoundingRadius = 20F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchtxtbox.Location = new System.Drawing.Point(651, 21);
+            this.searchtxtbox.Location = new System.Drawing.Point(703, 13);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.searchtxtbox.Size = new System.Drawing.Size(291, 47);
@@ -131,7 +140,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(906, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(958, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -154,6 +163,54 @@
             this.loadingtimer.Interval = 2000;
             this.loadingtimer.Tick += new System.EventHandler(this.loadingtimer_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.listPanel);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(54, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1053, 720);
+            this.panel1.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Controls.Add(this.slideImageBox);
+            this.panel2.Location = new System.Drawing.Point(24, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(631, 175);
+            this.panel2.TabIndex = 10;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 50;
+            this.bunifuElipse3.TargetControl = this.panel2;
+            // 
+            // slideImageBox
+            // 
+            this.slideImageBox.Location = new System.Drawing.Point(24, 0);
+            this.slideImageBox.Name = "slideImageBox";
+            this.slideImageBox.Size = new System.Drawing.Size(171, 175);
+            this.slideImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slideImageBox.TabIndex = 0;
+            this.slideImageBox.TabStop = false;
+            // 
+            // slideImgTimer
+            // 
+            this.slideImgTimer.Enabled = true;
+            this.slideImgTimer.Interval = 5000;
+            this.slideImgTimer.Tick += new System.EventHandler(this.slideImgTimer_Tick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(171, 175);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -172,9 +229,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.CategoryPanel);
-            this.Controls.Add(this.listPanel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminHome";
@@ -183,6 +239,10 @@
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.Click += new System.EventHandler(this.AdminHome_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,5 +259,11 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Controller.Loading loading;
         private System.Windows.Forms.Timer loadingtimer;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private System.Windows.Forms.PictureBox slideImageBox;
+        private System.Windows.Forms.Timer slideImgTimer;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

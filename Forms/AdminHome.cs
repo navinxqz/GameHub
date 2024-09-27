@@ -18,6 +18,8 @@ namespace GameServer_Management.Forms
     public partial class AdminHome : Form
     {
         private KryptonCheckButton cb = new KryptonCheckButton();
+        List<string> imageAddress = new List<string>();
+        int countDown = 0;
 
         public AdminHome()
         {
@@ -174,12 +176,18 @@ namespace GameServer_Management.Forms
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
+                        imageAddress.Clear();   // reset address
+
                         foreach (DataRow item in dt.Rows) 
                         {
                             Byte[] imgAry = (byte[])item["gameImage"];
-                            byte[] imgbyte = imgAry;
-                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), Image.FromStream(new MemoryStream(imgAry)));
+                            //byte[] imgbyte = imgAry;
+                            imageAddress.Add(Convert.ToBase64String(imgAry)); //
+                            Image img = Image.FromStream(new MemoryStream(imgAry)); //
+                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img);  //Image.FromStream(new MemoryStream(imgAry)));
                         }
+                        countDown = 0; // Reset counter
+                        slideImgTimer.Start(); // Start the timer after images are loaded
                     }
                 }catch(Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
             }
@@ -223,6 +231,23 @@ namespace GameServer_Management.Forms
             loadingtimer.Stop();
             loadingtimer.Interval = 1000;
             loading.Visible = false;
+        }
+
+        private void slideImgTimer_Tick(object sender, EventArgs e)
+        {
+            if (countDown < imageAddress.Count)
+            {
+                byte[] imgBytes = Convert.FromBase64String(imageAddress[countDown]);
+                using (MemoryStream ms = new MemoryStream(imgBytes))
+                {
+                    slideImageBox.Image = Image.FromStream(ms);
+                }
+                countDown++;
+            }
+            else
+            {
+                countDown = 0;
+            }
         }
     }
 }

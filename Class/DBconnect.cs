@@ -56,6 +56,7 @@ namespace GameServer_Management.Class
             }
             return isValid;
         }
+
         public static bool IsValidUser(string username, string password)
         {
             bool isValid = false;
