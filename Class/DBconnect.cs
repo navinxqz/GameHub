@@ -158,8 +158,8 @@ namespace GameServer_Management.Class
                 Bg.FormBorderStyle = FormBorderStyle.None;
                 Bg.Opacity = 0.5d;
                 Bg.BackColor = Color.Black;
-                Bg.Size = AdminPanel.Instance.Size;
-                Bg.Location = AdminPanel.Instance.Location;
+                Bg.Size = AdminPanel.Instance(true).Size;
+                Bg.Location = AdminPanel.Instance(true).Location;
                 Bg.ShowInTaskbar = false;
                 Bg.Show();
                 f.Owner = Bg;

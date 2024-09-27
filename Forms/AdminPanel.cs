@@ -19,25 +19,28 @@ namespace GameServer_Management.Forms
         private AdminHome home = new AdminHome();
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
+        private Download download = new Download();
 
-        public AdminPanel()
+        private bool isAdmin;
+
+        public AdminPanel(bool isAdmin)
         {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
             cb = btnHome;
             cb.Checked = true;
+            this.isAdmin = isAdmin;
         }
 
         static AdminPanel obj;
-        public static AdminPanel Instance
+        public static AdminPanel Instance(bool isAdmin)
         {
-            get { 
-                if (obj == null) 
-                { 
-                    obj = new AdminPanel();
-                } return obj; 
+            if (obj == null)
+            {
+                obj = new AdminPanel(isAdmin);
             }
+            return obj;
         }
         public void LoadForm(Form f)
         {
@@ -143,6 +146,17 @@ namespace GameServer_Management.Forms
             this.Opacity = 0;
             faddingTimer.Start();
             obj = this;
+            downloadbtn.Visible = false;
+
+            if (!isAdmin)
+            {
+                categoryBtn.Visible = false;
+                GameDBbtn.Visible = false;
+                adminDBbtn.Visible = false;
+                userDBbtn.Visible = false;
+                downloadbtn.Visible = true;
+                kryptonPanel1.Location = new Point(0, 318);
+            }
         }
 
         private void faddingTimer_Tick(object sender, EventArgs e)
@@ -227,6 +241,25 @@ namespace GameServer_Management.Forms
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
             this.Close();
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            if (!isAdmin)
+            {
+                //kryptonPanel1.Location = new Point(0, 318);
+            }
+        }
+
+        private void downloadbtn_Click(object sender, EventArgs e)
+        {
+            if (!downloadbtn.Checked)
+            {
+                downloadbtn.Checked = true;
+                return;
+            }
+            LoadForm(download);
+            Button(downloadbtn);
         }
     }
 }

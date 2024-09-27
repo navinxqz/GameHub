@@ -41,7 +41,7 @@ namespace GameServer_Management.Forms
             }
             else { 
                 //MessageBox.Show("Login Successful");
-                AdminPanel adminPanel = new AdminPanel();
+                AdminPanel adminPanel = new AdminPanel(true);
                 adminPanel.Show();
                 this.Hide();
             }

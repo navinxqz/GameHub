@@ -57,7 +57,6 @@
             this.label2.Size = new System.Drawing.Size(337, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Please enter your username and password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -141,6 +140,7 @@
             this.btnLogin.Size = new System.Drawing.Size(333, 50);
             this.btnLogin.TabIndex = 10;
             this.btnLogin.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnAdmin
             // 
@@ -169,7 +169,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(1181, 665);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // bunifuElipse1
@@ -339,7 +338,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

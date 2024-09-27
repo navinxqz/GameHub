@@ -20,31 +20,11 @@ namespace GameServer_Management.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             AdminLogin adminLogin = new AdminLogin();
             adminLogin.Show();
             this.Hide();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void showPassBtn_Click(object sender, EventArgs e)
@@ -78,6 +58,13 @@ namespace GameServer_Management.Forms
             string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
             exitbtn.Image = Image.FromFile(imgPath);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            AdminPanel ap = new AdminPanel(false);
+            ap.Show();
+            this.Hide();
         }
     }
 }
