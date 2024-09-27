@@ -57,7 +57,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
-            this.faddingTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showpassbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.show_pass_btn)).BeginInit();
@@ -502,11 +501,6 @@
             this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // faddingTimer
-            // 
-            this.faddingTimer.Interval = 10;
-            this.faddingTimer.Tick += new System.EventHandler(this.faddingTimer_Tick);
-            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,7 +514,6 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
-            this.Load += new System.EventHandler(this.SignUp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showpassbtn)).EndInit();
@@ -562,6 +555,5 @@
         private System.Windows.Forms.PictureBox showpassbtn;
         private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton btnAdd;
-        private System.Windows.Forms.Timer faddingTimer;
     }
 }

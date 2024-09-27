@@ -29,16 +29,11 @@ namespace GameServer_Management.Forms
             if (maleRB.Checked) { Gender = "Male"; }
             else if (femaleRB.Checked) { Gender = "Female"; }
         }
-        private bool EmailValid(string email)
+        /*private bool EmailValid(string email)
         {
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
-        }
-
-        private void kryptonTextBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }   */
 
         private void femaleRB_CheckedChanged(object sender, EventArgs e)
         {
@@ -60,10 +55,10 @@ namespace GameServer_Management.Forms
             h.Add("@username", txtUsername.Text);
             h.Add("@upass", txtpass.Text);
             
-            DateTime birthday;   //issue here!!!
+            DateTime birthday;
             if (DateTime.TryParseExact(txtDob.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out birthday))
             {
-                h.Add("@dob", birthday.ToString("yyyy-MM-dd")); // converted to sql recognized format
+                h.Add("@dob", birthday.ToString("yyyy-MM-dd")); // sql recognized format
             }
             else
             {
@@ -101,27 +96,8 @@ namespace GameServer_Management.Forms
             GetGender();
         }
 
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-            //faddingTimer.Start();
-        }
-
-        private void faddingTimer_Tick(object sender, EventArgs e)
-        {
-            if (this.Opacity > 0.0)
-            {
-                this.Opacity -= 0.05;
-            }
-            else
-            {
-                faddingTimer.Stop();
-                this.Close();
-            }
-        }
-
         private void cancelbtn_Click(object sender, EventArgs e)
         {
-            //faddingTimer.Start();
             this.Close();
         }
 
