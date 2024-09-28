@@ -236,14 +236,16 @@ namespace GameServer_Management.Forms
 
         private void logout_Click(object sender, EventArgs e)
         {
-            AdminLogin adminLogin = new AdminLogin();
-            adminLogin.Show();
-            this.Close();
-
             if (!isAdmin)
             {
                 Login l = new Login();
                 l.Show();
+                this.Close();
+            }
+            else
+            {
+                AdminLogin adminLogin = new AdminLogin();
+                adminLogin.Show();
                 this.Close();
             }
         }
