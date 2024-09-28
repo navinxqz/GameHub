@@ -154,7 +154,7 @@
             this.btnLogin.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnLogin.NormalOutline = System.Drawing.Color.Transparent;
             this.btnLogin.OutlineThickness = 1.6F;
-            this.btnLogin.PressedBackground = System.Drawing.Color.Coral;
+            this.btnLogin.PressedBackground = System.Drawing.Color.SlateGray;
             this.btnLogin.PressedImageTint = System.Drawing.Color.White;
             this.btnLogin.PressedOutline = System.Drawing.Color.Empty;
             this.btnLogin.Rounding = new System.Windows.Forms.Padding(20);

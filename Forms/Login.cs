@@ -30,20 +30,6 @@ namespace GameServer_Management.Forms
             this.Hide();
         }
 
-        private void showPassBtn_Click(object sender, EventArgs e)
-        {
-            HidePassBtn.Visible = true;
-            showPassBtn.Visible = false;
-            txtpass.PasswordChar = '\0';
-        }
-
-        private void HidePassBtn_Click(object sender, EventArgs e)
-        {
-            HidePassBtn.Visible = false;
-            showPassBtn.Visible = true;
-            txtpass.PasswordChar = '*';
-        }
-
         private void exitbtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -88,6 +74,28 @@ namespace GameServer_Management.Forms
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to signup! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void showPassBtn_Click_1(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = true;
+            showPassBtn.Visible = false;
+            txtpass.PasswordChar = '\0';
+        }
+
+        private void HidePassBtn_Click_1(object sender, EventArgs e)
+        {
+            HidePassBtn.Visible = false;
+            showPassBtn.Visible = true;
+            txtpass.PasswordChar = '*';
+        }
+
+        private void Enter_Key(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                btnLogin_Click(sender, e);
             }
         }
     }
