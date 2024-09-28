@@ -48,6 +48,7 @@
             this.cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gameDesc = new CuoreUI.Controls.cuiLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.slideImageBox = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -56,7 +57,6 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,8 +66,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +89,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 427);
+            this.listPanel.Size = new System.Drawing.Size(1106, 501);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -107,9 +107,10 @@
             this.searchtxtbox.CornerRoundingRadius = 20F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchtxtbox.Location = new System.Drawing.Point(976, 13);
+            this.searchtxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.searchtxtbox.Size = new System.Drawing.Size(291, 47);
+            this.searchtxtbox.Size = new System.Drawing.Size(291, 48);
             this.searchtxtbox.StateActive.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.searchtxtbox.StateActive.Border.Color1 = System.Drawing.Color.Transparent;
             this.searchtxtbox.StateActive.Border.Color2 = System.Drawing.Color.Transparent;
@@ -138,16 +139,19 @@
             this.searchtxtbox.StateDisabled.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchtxtbox.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.searchtxtbox.TabIndex = 18;
+            this.searchtxtbox.Text = "Search Here...";
             this.searchtxtbox.TextChanged += new System.EventHandler(this.searchtxtbox_TextChanged);
+            this.searchtxtbox.Enter += new System.EventHandler(this.searchtxtbox_Enter);
+            this.searchtxtbox.Leave += new System.EventHandler(this.searchtxtbox_Leave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(103)))), ((int)(((byte)(122)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1218, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(1224, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 47);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -288,6 +292,16 @@
             this.gameDesc.Size = new System.Drawing.Size(365, 62);
             this.gameDesc.TabIndex = 12;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(274, 80);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(196, 147);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 13;
+            this.pictureBox5.TabStop = false;
+            // 
             // slideImageBox
             // 
             this.slideImageBox.Image = ((System.Drawing.Image)(resources.GetObject("slideImageBox.Image")));
@@ -341,16 +355,6 @@
             this.bunifuElipse5.ElipseRadius = 50;
             this.bunifuElipse5.TargetControl = this.panel4;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(274, 80);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(196, 147);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -388,8 +392,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

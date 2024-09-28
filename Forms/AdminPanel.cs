@@ -20,6 +20,7 @@ namespace GameServer_Management.Forms
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
+        private SignUp signUp = new SignUp();
 
         private bool isAdmin;
 
@@ -268,7 +269,7 @@ namespace GameServer_Management.Forms
                 userbtn.Checked = true;
                 return;
             }
-            LoadForm(download);
+            LoadForm(signUp);
             Button(userbtn);
         }
     }

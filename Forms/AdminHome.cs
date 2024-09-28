@@ -220,6 +220,13 @@ namespace GameServer_Management.Forms
             //panel2.Controls.Clear();
             panel1.Visible = false;
             panel3.Visible = false;
+            searchtxtbox.Visible = false;
+            pictureBox1.Visible = false;
+            searchtxtbox.Clear();
+            this.ActiveControl = pictureBox1;
+            ResetSearchTextBox();
+            
+            
             loadingtimer.Start();
             listPanel.Controls.Clear();
             await Task.Delay(1000);
@@ -229,6 +236,8 @@ namespace GameServer_Management.Forms
             AddCat();
             panel1.Visible = true;
             panel3.Visible = true;
+            pictureBox1.Visible = true;
+            searchtxtbox.Visible = true;
         }
 
         private void AdminHome_Load(object sender, EventArgs e)
@@ -271,6 +280,28 @@ namespace GameServer_Management.Forms
         private void kryptonLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchtxtbox_Enter(object sender, EventArgs e)
+        {
+            if (searchtxtbox.Text == "Search Here...")
+            {
+                searchtxtbox.StateActive.Content.Color1 = Color.White;
+                searchtxtbox.Text = String.Empty;
+            }
+        }
+
+        private void searchtxtbox_Leave(object sender, EventArgs e)
+        {
+            ResetSearchTextBox();
+        }
+        private void ResetSearchTextBox()
+        {
+            if (searchtxtbox.Text == "")
+            {
+                searchtxtbox.Text = "Search Here...";
+                searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
+            }
         }
     }
 }
