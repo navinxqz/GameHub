@@ -39,9 +39,11 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            cb = btnHome;
+            cb.Checked = true;
 
             this.isAdmin = isAdmin;
-            userbtn.Text = username;
+            usertxt.Text = username;
         }
 
         static AdminPanel obj;
@@ -158,7 +160,7 @@ namespace GameServer_Management.Forms
             faddingTimer.Start();
             obj = this;
             downloadbtn.Visible = false;
-            userbtn.Visible = false;
+            userpanel.Visible = false;
 
             if (!isAdmin)
             {
@@ -166,7 +168,7 @@ namespace GameServer_Management.Forms
                 GameDBbtn.Visible = false;
                 adminDBbtn.Visible = false;
                 userDBbtn.Visible = false;
-                userbtn.Visible = true;
+                userpanel.Visible = true;
                 downloadbtn.Visible = true;
                 kryptonPanel1.Location = new Point(0, 318);
                 downloadbtn.Location = new Point(3, 62);
@@ -274,13 +276,13 @@ namespace GameServer_Management.Forms
 
         private void userbtn_Click(object sender, EventArgs e)
         {
-            if (!userbtn.Checked)
+            /*if (!userbtn.Checked)
             {
                 userbtn.Checked = true;
                 return;
             }
             LoadForm(signUp);
-            Button(userbtn);
+            Button(userbtn);    */
         }
     }
 }
