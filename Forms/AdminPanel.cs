@@ -23,6 +23,7 @@ namespace GameServer_Management.Forms
         private SignUp signUp = new SignUp();
 
         private bool isAdmin;
+        //private string username;
 
         public AdminPanel(bool isAdmin)
         {
@@ -32,6 +33,15 @@ namespace GameServer_Management.Forms
             cb = btnHome;
             cb.Checked = true;
             this.isAdmin = isAdmin;
+        }
+        public AdminPanel(bool isAdmin, string username)
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            this.isAdmin = isAdmin;
+            userbtn.Text = username;
         }
 
         static AdminPanel obj;

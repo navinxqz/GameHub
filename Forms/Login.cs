@@ -14,6 +14,8 @@ namespace GameServer_Management.Forms
 {
     public partial class Login : Form
     {
+        public static string username { get; private set; }
+
         public Login()
         {
             InitializeComponent();
@@ -70,7 +72,8 @@ namespace GameServer_Management.Forms
             else
             {
                 //MessageBox.Show("Login Successful");
-                AdminPanel ap = new AdminPanel(false);
+                username = txtUsername.Text;
+                AdminPanel ap = new AdminPanel(false,username);
                 ap.Show();
                 this.Hide();
             }
