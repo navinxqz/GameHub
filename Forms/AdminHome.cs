@@ -303,5 +303,10 @@ namespace GameServer_Management.Forms
                 searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

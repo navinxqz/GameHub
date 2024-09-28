@@ -57,6 +57,11 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,6 +73,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -172,6 +179,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.cuiLabel1);
@@ -179,6 +188,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.listPanel);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Location = new System.Drawing.Point(54, 66);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1316, 734);
@@ -355,6 +365,48 @@
             this.bunifuElipse5.ElipseRadius = 50;
             this.bunifuElipse5.TargetControl = this.panel4;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1019, 30);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(169, 145);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 24;
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(172)))), ((int)(((byte)(214)))));
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(1117, 16);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(90, 42);
+            this.panel5.TabIndex = 25;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(22, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "FAQ ?";
+            // 
+            // bunifuElipse6
+            // 
+            this.bunifuElipse6.ElipseRadius = 50;
+            this.bunifuElipse6.TargetControl = this.panel5;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(172)))), ((int)(((byte)(214)))));
+            this.panel6.Location = new System.Drawing.Point(1120, 27);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(57, 31);
+            this.panel6.TabIndex = 26;
+            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -394,6 +446,9 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,5 +483,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
     }
 }
