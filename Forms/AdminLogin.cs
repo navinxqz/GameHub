@@ -33,13 +33,16 @@ namespace GameServer_Management.Forms
             Application.Exit();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             if (DBconnect.IsValidAdmin(txtUsername.Text,txtpass.Text) == false)
             {
                 MessageBox.Show("Invalid Username or password");
             }
-            else { 
+            else {
+                loading.Visible = true;
+                await Task.Delay(1000);
+
                 //MessageBox.Show("Login Successful");
                 AdminPanel adminPanel = new AdminPanel(true);
                 adminPanel.Show();
@@ -61,10 +64,12 @@ namespace GameServer_Management.Forms
             txtpass.PasswordChar = '\0';
         }
 
-        private void Enter_Key(object sender, KeyPressEventArgs e)
+        private async void Enter_Key(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)     //Enter key press in action
             {
+                loading.Visible = true;
+                await Task.Delay(1000);
                 btnLogin_Click(sender, e);
             }
         }
@@ -89,6 +94,11 @@ namespace GameServer_Management.Forms
             string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
             exitbtn.Image = Image.FromFile(imgPath); 
             //exitbtn.Image = Image.FromFile("img\\x.png");
+        }
+
+        private void AdminLogin_Load(object sender, EventArgs e)
+        {
+            loading.Visible = false;
         }
     }
 }
