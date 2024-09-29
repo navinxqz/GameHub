@@ -62,6 +62,9 @@
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.usericonbtn = new CuoreUI.Controls.cuiButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -75,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +100,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 441);
+            this.listPanel.Size = new System.Drawing.Size(1106, 515);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -407,6 +411,57 @@
             this.bunifuElipse6.ElipseRadius = 50;
             this.bunifuElipse6.TargetControl = this.panel5;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label5);
+            this.panel7.Controls.Add(this.usericonbtn);
+            this.panel7.Location = new System.Drawing.Point(93, 12);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 39);
+            this.panel7.TabIndex = 23;
+            // 
+            // usericonbtn
+            // 
+            this.usericonbtn.CheckButton = false;
+            this.usericonbtn.Checked = false;
+            this.usericonbtn.CheckedBackground = System.Drawing.Color.Coral;
+            this.usericonbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.usericonbtn.CheckedOutline = System.Drawing.Color.Silver;
+            this.usericonbtn.Content = "";
+            this.usericonbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.usericonbtn.ForeColor = System.Drawing.Color.White;
+            this.usericonbtn.HoverBackground = System.Drawing.Color.White;
+            this.usericonbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.usericonbtn.HoverOutline = System.Drawing.Color.White;
+            this.usericonbtn.Image = ((System.Drawing.Image)(resources.GetObject("usericonbtn.Image")));
+            this.usericonbtn.ImageAutoCenter = true;
+            this.usericonbtn.ImageExpand = new System.Drawing.Point(15, 15);
+            this.usericonbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.usericonbtn.ImageTint = System.Drawing.Color.White;
+            this.usericonbtn.Location = new System.Drawing.Point(3, -1);
+            this.usericonbtn.Name = "usericonbtn";
+            this.usericonbtn.NormalBackground = System.Drawing.Color.SlateGray;
+            this.usericonbtn.NormalOutline = System.Drawing.Color.Empty;
+            this.usericonbtn.OutlineThickness = 3F;
+            this.usericonbtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.usericonbtn.PressedImageTint = System.Drawing.Color.White;
+            this.usericonbtn.PressedOutline = System.Drawing.Color.Empty;
+            this.usericonbtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.usericonbtn.Size = new System.Drawing.Size(40, 38);
+            this.usericonbtn.TabIndex = 24;
+            this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(49, 7);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 24);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "GameHub";
+            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -421,6 +476,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.loading);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchtxtbox);
@@ -449,6 +505,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,5 +546,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private System.Windows.Forms.Panel panel7;
+        private CuoreUI.Controls.cuiButton usericonbtn;
+        private System.Windows.Forms.Label label5;
     }
 }

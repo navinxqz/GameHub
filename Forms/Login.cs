@@ -49,7 +49,7 @@ namespace GameServer_Management.Forms
             exitbtn.Image = Image.FromFile(imgPath);
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             if (DBconnect.IsValidUser(txtUsername.Text, txtpass.Text) == false)
             {
@@ -57,6 +57,9 @@ namespace GameServer_Management.Forms
             }
             else
             {
+                loading.Visible = true;
+                await Task.Delay(1000);
+
                 //MessageBox.Show("Login Successful");
                 username = txtUsername.Text;
                 AdminPanel ap = new AdminPanel(false,username);
@@ -91,12 +94,20 @@ namespace GameServer_Management.Forms
             txtpass.PasswordChar = '*';
         }
 
-        private void Enter_Key(object sender, KeyPressEventArgs e)
+        private async void Enter_Key(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
             {
+                loading.Visible = true;
+                await Task.Delay(1000);
+
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            loading.Visible = false;
         }
     }
 }

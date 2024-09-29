@@ -44,6 +44,7 @@
             this.showPassBtn = new CuoreUI.Controls.cuiButton();
             this.HidePassBtn = new CuoreUI.Controls.cuiButton();
             this.txtpass = new Krypton.Toolkit.KryptonTextBox();
+            this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -317,12 +318,21 @@
             this.txtpass.TabIndex = 28;
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Enter_Key);
             // 
+            // loading
+            // 
+            this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.loading.Location = new System.Drawing.Point(516, 264);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(221, 144);
+            this.loading.TabIndex = 31;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1181, 665);
+            this.Controls.Add(this.loading);
             this.Controls.Add(this.showPassBtn);
             this.Controls.Add(this.HidePassBtn);
             this.Controls.Add(this.txtpass);
@@ -341,6 +351,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -363,5 +374,6 @@
         private CuoreUI.Controls.cuiButton showPassBtn;
         private CuoreUI.Controls.cuiButton HidePassBtn;
         private Krypton.Toolkit.KryptonTextBox txtpass;
+        private Controller.Loading loading;
     }
 }

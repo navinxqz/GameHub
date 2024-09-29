@@ -44,7 +44,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.exitbtn = new CuoreUI.Controls.cuiButton();
             this.loading = new GameServer_Management.Controller.Loading();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,6 +355,5 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CuoreUI.Controls.cuiButton exitbtn;
         private Controller.Loading loading;
-        private System.Windows.Forms.Timer timer1;
     }
 }
