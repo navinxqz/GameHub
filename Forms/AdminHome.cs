@@ -145,6 +145,14 @@ namespace GameServer_Management.Forms
                 g.Visible = g.Category.ToLower().Contains(b.Text.Trim().ToLower());
             }Button(b);
         }
+        private void Game_Click(object sender, EventArgs e)
+        {
+            GameDesc gameDesc = (GameDesc)sender;
+            //GetGame g = new GetGame();
+            //g.Show();
+            //this.Hide();
+            MessageBox.Show($"You clicked on: {gameDesc.GName} - {gameDesc.desc}");
+        }
 
         private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
         {
@@ -157,9 +165,12 @@ namespace GameServer_Management.Forms
                 id = Convert.ToInt32(id),
                 desc = gameDescription
             };
+
+            v.onSelect += new EventHandler(Game_Click);
             listPanel.Controls.Add(v);
+            v.BringToFront();
         }
-        private void LoadItems()
+        private async void LoadItems()
         {
             string query = "select * from gamestbl t1 inner join categorytbl t2 on t2.catID = t1.categoryID";
             using (SqlConnection con = DBconnect.GetConnection())
@@ -171,7 +182,7 @@ namespace GameServer_Management.Forms
                 }
                 try
                 {
-                    con.Open();
+                    await con.OpenAsync();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -192,11 +203,6 @@ namespace GameServer_Management.Forms
                             //imageData.Add((imgBase64, item["gameName"].ToString()));  // Store image and description
                             Image img = Image.FromStream(new MemoryStream(imgAry)); //
                             AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, gamedescription);
-
-                            /*byte[] imgbyte = imgAry;
-                            imageAddress.Add(Convert.ToBase64String(imgAry)); //
-                            Image img = Image.FromStream(new MemoryStream(imgAry)); //
-                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img);  //Image.FromStream(new MemoryStream(imgAry)));    */
                         }
                         countDown = 0; // Reset counter
                         slideImgTimer.Start(); // Start the timer after images are loaded

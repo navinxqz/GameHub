@@ -15,8 +15,16 @@ namespace GameServer_Management.Controller
         public GameDesc()
         {
             InitializeComponent();
+            //this.Click += GameDesc_Click;
+            this.MouseClick += GameDesc_MouseClick;
+
+            foreach (Control c in this.Controls)
+            {
+                c.MouseClick += GameDesc_MouseClick;
+            }
+            
         }
-        public event EventHandler onSelect = null;
+        public event EventHandler onSelect; // = null
 
         public int id { get;set; }
         public string desc 
@@ -44,8 +52,14 @@ namespace GameServer_Management.Controller
             get { return catName.Text; }
             set { catName.Text = value; }
         }
+  
+        private void GameDesc_Click(object sender, EventArgs e)
+        {
+            //onSelect?.Invoke(this, e);
+            //this.OnClick(e);
+        }
 
-        private void GameImg_Click(object sender, EventArgs e)
+        private void GameDesc_MouseClick(object sender, MouseEventArgs e)
         {
             onSelect?.Invoke(this, e);
         }
