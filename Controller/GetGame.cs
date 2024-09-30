@@ -16,5 +16,10 @@ namespace GameServer_Management.Controller
         {
             InitializeComponent();
         }
+
+        private void cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

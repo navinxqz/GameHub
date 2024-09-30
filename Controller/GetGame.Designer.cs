@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GetGame));
-            this.usericonbtn = new CuoreUI.Controls.cuiButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.gameImg = new System.Windows.Forms.PictureBox();
             this.gameName = new CuoreUI.Controls.cuiLabel();
             this.gameDesc = new CuoreUI.Controls.cuiLabel();
             this.gamecat = new CuoreUI.Controls.cuiLabel();
@@ -39,60 +39,31 @@
             this.gameprice = new CuoreUI.Controls.cuiLabel();
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.getbtn = new CuoreUI.Controls.cuiButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameImg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // usericonbtn
-            // 
-            this.usericonbtn.CheckButton = false;
-            this.usericonbtn.Checked = false;
-            this.usericonbtn.CheckedBackground = System.Drawing.Color.Coral;
-            this.usericonbtn.CheckedImageTint = System.Drawing.Color.White;
-            this.usericonbtn.CheckedOutline = System.Drawing.Color.Silver;
-            this.usericonbtn.Content = "";
-            this.usericonbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.usericonbtn.ForeColor = System.Drawing.Color.White;
-            this.usericonbtn.HoverBackground = System.Drawing.SystemColors.ControlText;
-            this.usericonbtn.HoveredImageTint = System.Drawing.Color.White;
-            this.usericonbtn.HoverOutline = System.Drawing.Color.White;
-            this.usericonbtn.Image = ((System.Drawing.Image)(resources.GetObject("usericonbtn.Image")));
-            this.usericonbtn.ImageAutoCenter = true;
-            this.usericonbtn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.usericonbtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.usericonbtn.ImageTint = System.Drawing.Color.White;
-            this.usericonbtn.Location = new System.Drawing.Point(-3, -1);
-            this.usericonbtn.Name = "usericonbtn";
-            this.usericonbtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.usericonbtn.NormalOutline = System.Drawing.Color.Empty;
-            this.usericonbtn.OutlineThickness = 3F;
-            this.usericonbtn.PressedBackground = System.Drawing.Color.MediumPurple;
-            this.usericonbtn.PressedImageTint = System.Drawing.Color.White;
-            this.usericonbtn.PressedOutline = System.Drawing.Color.Empty;
-            this.usericonbtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.usericonbtn.Size = new System.Drawing.Size(39, 40);
-            this.usericonbtn.TabIndex = 10;
-            this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -34);
+            this.pictureBox1.Location = new System.Drawing.Point(-39, -40);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(609, 299);
+            this.pictureBox1.Size = new System.Drawing.Size(648, 329);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // gameImg
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 184);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(151, 222);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
+            this.gameImg.Image = ((System.Drawing.Image)(resources.GetObject("gameImg.Image")));
+            this.gameImg.Location = new System.Drawing.Point(3, 184);
+            this.gameImg.Name = "gameImg";
+            this.gameImg.Size = new System.Drawing.Size(151, 222);
+            this.gameImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.gameImg.TabIndex = 12;
+            this.gameImg.TabStop = false;
             // 
             // gameName
             // 
@@ -122,7 +93,7 @@
             this.gamecat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamecat.ForeColor = System.Drawing.Color.White;
             this.gamecat.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.gamecat.Location = new System.Drawing.Point(3, 412);
+            this.gamecat.Location = new System.Drawing.Point(8, 412);
             this.gamecat.Name = "gamecat";
             this.gamecat.Size = new System.Drawing.Size(151, 25);
             this.gamecat.TabIndex = 16;
@@ -133,7 +104,7 @@
             this.gameRelDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameRelDate.ForeColor = System.Drawing.Color.White;
             this.gameRelDate.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.gameRelDate.Location = new System.Drawing.Point(3, 434);
+            this.gameRelDate.Location = new System.Drawing.Point(8, 434);
             this.gameRelDate.Name = "gameRelDate";
             this.gameRelDate.Size = new System.Drawing.Size(151, 25);
             this.gameRelDate.TabIndex = 17;
@@ -144,7 +115,7 @@
             this.gameprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameprice.ForeColor = System.Drawing.Color.White;
             this.gameprice.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.gameprice.Location = new System.Drawing.Point(3, 455);
+            this.gameprice.Location = new System.Drawing.Point(8, 455);
             this.gameprice.Name = "gameprice";
             this.gameprice.Size = new System.Drawing.Size(151, 25);
             this.gameprice.TabIndex = 18;
@@ -179,6 +150,7 @@
             this.cancelbtn.Size = new System.Drawing.Size(147, 54);
             this.cancelbtn.TabIndex = 63;
             this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
             // 
             // getbtn
             // 
@@ -211,6 +183,16 @@
             this.getbtn.TabIndex = 62;
             this.getbtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.TargetControl = this.gameImg;
+            // 
             // GetGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,22 +205,19 @@
             this.Controls.Add(this.gamecat);
             this.Controls.Add(this.gameDesc);
             this.Controls.Add(this.gameName);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.usericonbtn);
+            this.Controls.Add(this.gameImg);
             this.Controls.Add(this.pictureBox1);
             this.Name = "GetGame";
             this.Size = new System.Drawing.Size(569, 692);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gameImg)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private CuoreUI.Controls.cuiButton usericonbtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox gameImg;
         private CuoreUI.Controls.cuiLabel gameName;
         private CuoreUI.Controls.cuiLabel gameDesc;
         private CuoreUI.Controls.cuiLabel gamecat;
@@ -246,5 +225,7 @@
         private CuoreUI.Controls.cuiLabel gameprice;
         private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton getbtn;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }

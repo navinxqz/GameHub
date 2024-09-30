@@ -157,12 +157,13 @@ namespace GameServer_Management.Forms
 
         private void Game_Click(object sender, EventArgs e)
         {
-            GameDesc gameDesc = (GameDesc)sender;
+            //GameDesc gameDesc = (GameDesc)sender;
 
             //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");
-            string code = "ok";
+            //string code = "ok";
             //this.Hide();
-            AdminPanel ap = new AdminPanel(code);      
+            //AdminPanel ap = new AdminPanel(code);      
+            getGame1.Visible = true;
         }
 
         private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
@@ -261,6 +262,7 @@ namespace GameServer_Management.Forms
         {
             //laodingpanel.Visible = false;
             loading.Visible = true;
+            getGame1.Visible = false;
             loadingtimer.Start();
             AddCat();
             listPanel.Controls.Clear();

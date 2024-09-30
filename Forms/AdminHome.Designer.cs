@@ -64,6 +64,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.usericonbtn = new CuoreUI.Controls.cuiButton();
+            this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -458,6 +459,15 @@
             this.usericonbtn.TabIndex = 24;
             this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // getGame1
+            // 
+            this.getGame1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.getGame1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.getGame1.Location = new System.Drawing.Point(757, 29);
+            this.getGame1.Name = "getGame1";
+            this.getGame1.Size = new System.Drawing.Size(569, 692);
+            this.getGame1.TabIndex = 24;
+            // 
             // loading
             // 
             this.loading.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -472,6 +482,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.getGame1);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.loading);
             this.Controls.Add(this.pictureBox1);
@@ -544,5 +555,6 @@
         private System.Windows.Forms.Panel panel7;
         private CuoreUI.Controls.cuiButton usericonbtn;
         private System.Windows.Forms.Label label5;
+        private Controller.GetGame getGame1;
     }
 }
