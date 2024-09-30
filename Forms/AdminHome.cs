@@ -18,6 +18,9 @@ namespace GameServer_Management.Forms
 {
     public partial class AdminHome : Form
     {
+        //AdminPanel p = new AdminPanel(false);
+        GetGame getGame = new GetGame();
+
         private KryptonCheckButton cb = new KryptonCheckButton();
         List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
         int countDown = 0;
@@ -145,13 +148,13 @@ namespace GameServer_Management.Forms
                 g.Visible = g.Category.ToLower().Contains(b.Text.Trim().ToLower());
             }Button(b);
         }
+
         private void Game_Click(object sender, EventArgs e)
         {
             GameDesc gameDesc = (GameDesc)sender;
-            //GetGame g = new GetGame();
-            //g.Show();
-            //this.Hide();
-            MessageBox.Show($"You clicked on: {gameDesc.GName} - {gameDesc.desc}");
+            MessageBox.Show($"{gameDesc.GName}\n\n{gameDesc.desc}");
+
+            //LoadForm(getGame);
         }
 
         private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
