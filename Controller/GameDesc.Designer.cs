@@ -60,6 +60,7 @@
             this.GameImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.GameImg.TabIndex = 0;
             this.GameImg.TabStop = false;
+            this.GameImg.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameImg_MouseClick);
             // 
             // panel1
             // 
@@ -184,8 +185,6 @@
             this.Margin = new System.Windows.Forms.Padding(0, 0, 20, 10);
             this.Name = "GameDesc";
             this.Size = new System.Drawing.Size(211, 366);
-            this.Click += new System.EventHandler(this.GameDesc_Click);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameDesc_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelcat.ResumeLayout(false);

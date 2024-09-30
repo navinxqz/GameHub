@@ -15,12 +15,11 @@ namespace GameServer_Management.Controller
         public GameDesc()
         {
             InitializeComponent();
-            //this.Click += GameDesc_Click;
-            this.MouseClick += GameDesc_MouseClick;
+            this.MouseClick += GameImg_MouseClick;
 
             foreach (Control c in this.Controls)
             {
-                c.MouseClick += GameDesc_MouseClick;
+                c.MouseClick += GameImg_MouseClick;
             }
             
         }
@@ -52,14 +51,8 @@ namespace GameServer_Management.Controller
             get { return catName.Text; }
             set { catName.Text = value; }
         }
-  
-        private void GameDesc_Click(object sender, EventArgs e)
-        {
-            //onSelect?.Invoke(this, e);
-            //this.OnClick(e);
-        }
 
-        private void GameDesc_MouseClick(object sender, MouseEventArgs e)
+        private void GameImg_MouseClick(object sender, MouseEventArgs e)
         {
             onSelect?.Invoke(this, e);
         }
