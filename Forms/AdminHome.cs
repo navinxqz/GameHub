@@ -2,6 +2,7 @@
 using GameServer_Management.Controller;
 using Krypton.Toolkit;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +19,7 @@ namespace GameServer_Management.Forms
 {
     public partial class AdminHome : Form
     {
-        //AdminPanel p = new AdminPanel(false);
-        GetGame getGame = new GetGame();
+        private AdminPanel adminPanel;
 
         private KryptonCheckButton cb = new KryptonCheckButton();
         List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
@@ -30,6 +30,12 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             loading.Visible = true;
         }
+
+        public AdminHome(AdminPanel adminPanel)
+        {
+            InitializeComponent();
+            this.adminPanel = adminPanel;
+        }   
 
         private void Button(KryptonCheckButton button)
         {
@@ -152,9 +158,11 @@ namespace GameServer_Management.Forms
         private void Game_Click(object sender, EventArgs e)
         {
             GameDesc gameDesc = (GameDesc)sender;
-            MessageBox.Show($"{gameDesc.GName}\n\n{gameDesc.desc}");
 
-            //LoadForm(getGame);
+            //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");
+            string code = "ok";
+            this.Hide();
+            AdminPanel ap = new AdminPanel(code);      
         }
 
         private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
@@ -311,11 +319,6 @@ namespace GameServer_Management.Forms
                 searchtxtbox.Text = "Search Here...";
                 searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
             }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

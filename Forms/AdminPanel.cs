@@ -20,10 +20,12 @@ namespace GameServer_Management.Forms
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
-        private SignUp signUp = new SignUp();
-
+        private GetGame getGame = new GetGame();
+        //private SignUp signUp = new SignUp();
+        
+        private AdminHome adminhome;
         private bool isAdmin;
-        //private string username;
+        private string code;
 
         public AdminPanel(bool isAdmin)
         {
@@ -32,7 +34,10 @@ namespace GameServer_Management.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
             cb = btnHome;
             cb.Checked = true;
+
             this.isAdmin = isAdmin;
+            adminhome = new AdminHome(this);
+            //getGame = new GetGame();
         }
         public AdminPanel(bool isAdmin, string username)
         {
@@ -44,6 +49,31 @@ namespace GameServer_Management.Forms
 
             this.isAdmin = isAdmin;
             usertxt.Text = username;
+            adminhome = new AdminHome(this);
+            //getGame = new GetGame();
+        }
+        public AdminPanel(string code)
+        {
+            InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+            //cb = btnHome;
+            //cb.Checked = true;
+            this.code = code;
+            getGame = new GetGame();
+            next();
+        }
+
+        public void next()
+        {
+            MessageBox.Show("Hello");            
+            LoadForm(getGame);
+            if (!btnHome.Checked)
+            {
+                btnHome.Checked = true;
+            }
+
+            Button(btnHome);
         }
 
         static AdminPanel obj;

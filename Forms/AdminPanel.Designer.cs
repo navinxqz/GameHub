@@ -936,12 +936,12 @@
         private Krypton.Toolkit.KryptonCheckButton categoryBtn;
         private Krypton.Toolkit.KryptonCheckButton logout;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private System.Windows.Forms.Panel mainpanel;
         private Krypton.Toolkit.KryptonCheckButton btnHome;
         private Krypton.Toolkit.KryptonCheckButton downloadbtn;
         private System.Windows.Forms.Panel userpanel;
         private System.Windows.Forms.Label usertxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private CuoreUI.Controls.cuiButton usericonbtn;
+        public System.Windows.Forms.Panel mainpanel;
     }
 }
