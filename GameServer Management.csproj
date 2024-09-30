@@ -63,6 +63,12 @@
     <Compile Include="Controller\GameDesc.Designer.cs">
       <DependentUpon>GameDesc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controller\GetGame.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controller\GetGame.Designer.cs">
+      <DependentUpon>GetGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Loading.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,12 +141,6 @@
     <Compile Include="Forms\GameView.Designer.cs">
       <DependentUpon>GameView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\GetGame.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\GetGame.Designer.cs">
-      <DependentUpon>GetGame.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +163,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controller\GameDesc.resx">
       <DependentUpon>GameDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\GetGame.resx">
+      <DependentUpon>GetGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controller\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -199,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameView.resx">
       <DependentUpon>GameView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GetGame.resx">
-      <DependentUpon>GetGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

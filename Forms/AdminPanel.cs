@@ -1,4 +1,5 @@
-﻿using Krypton.Toolkit;
+﻿using GameServer_Management.Controller;
+using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,6 @@ namespace GameServer_Management.Forms
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
-        private GetGame getGame = new GetGame();
         //private SignUp signUp = new SignUp();
         
         private AdminHome adminhome;
@@ -37,7 +37,6 @@ namespace GameServer_Management.Forms
 
             this.isAdmin = isAdmin;
             adminhome = new AdminHome(this);
-            //getGame = new GetGame();
         }
         public AdminPanel(bool isAdmin, string username)
         {
@@ -50,30 +49,30 @@ namespace GameServer_Management.Forms
             this.isAdmin = isAdmin;
             usertxt.Text = username;
             adminhome = new AdminHome(this);
-            //getGame = new GetGame();
         }
         public AdminPanel(string code)
         {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            //cb = btnHome;
-            //cb.Checked = true;
+            
             this.code = code;
-            getGame = new GetGame();
             next();
         }
 
-        public void next()
+        private void next()
         {
-            MessageBox.Show("Hello");            
-            LoadForm(getGame);
-            if (!btnHome.Checked)
-            {
-                btnHome.Checked = true;
-            }
-
-            Button(btnHome);
+            //this.Close();
+            //getGame.Show();
+            //MessageBox.Show("Hello");
+            //LoadForm(getGame);
+            //getGame.BringToFront();
+            //Button(btnHome);
+            GetGame getGame = new GetGame();
+            mainpanel.Controls.Clear();
+            getGame.Dock = DockStyle.Fill;  // Make it fill the panel
+            mainpanel.Controls.Add(getGame);
+            mainpanel.Refresh();
         }
 
         static AdminPanel obj;
@@ -93,15 +92,17 @@ namespace GameServer_Management.Forms
                 return;
             }
 
-            if (this.mainpanel.Controls.Count > 0)
+            if (mainpanel.Controls.Count > 0)
             {
-                this.mainpanel.Controls.RemoveAt(0);
+                mainpanel.Controls.RemoveAt(0);
             }
 
             f.TopLevel = false;
             f.Dock = DockStyle.Fill;
+            //f.Parent = this;
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
+            //f.Show();
             f.Visible = true;
         }
 

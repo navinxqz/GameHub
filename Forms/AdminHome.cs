@@ -161,7 +161,7 @@ namespace GameServer_Management.Forms
 
             //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");
             string code = "ok";
-            this.Hide();
+            //this.Hide();
             AdminPanel ap = new AdminPanel(code);      
         }
 
@@ -179,7 +179,7 @@ namespace GameServer_Management.Forms
 
             v.onSelect += new EventHandler(Game_Click);
             listPanel.Controls.Add(v);
-            v.BringToFront();
+            v.BringToFront();   //loading data backward as well
         }
         private async void LoadItems()
         {

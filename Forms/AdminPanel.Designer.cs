@@ -942,6 +942,6 @@
         private System.Windows.Forms.Label usertxt;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private CuoreUI.Controls.cuiButton usericonbtn;
-        public System.Windows.Forms.Panel mainpanel;
+        private System.Windows.Forms.Panel mainpanel;
     }
 }
