@@ -29,18 +29,18 @@ namespace GameServer_Management.Controller
         public int id { get; set; }
         public string desc
         {
-            get { return gameDesc.Text; }
-            set { gameDesc.Text = value; }
+            get { return gameDesc.Content; }
+            set { gameDesc.Content = value; }
         }
         public string GName
         {
-            get { return gameName.Text; }
-            set { gameName.Text = value; }
+            get { return gameName.Content; }
+            set { gameName.Content = value; }
         }
         public string Price
         {
             get { return gameprice.Text; }
-            set { gameprice.Text = value; }
+            set { gameprice.Content = value; }
         }
         public Image Pic
         {
@@ -49,8 +49,8 @@ namespace GameServer_Management.Controller
         }
         public string Category
         {
-            get { return gamecat.Text; }
-            set { gamecat.Text = value; }
+            get { return gamecat.Content; }
+            set { gamecat.Content = value; }
         }
     }
 }

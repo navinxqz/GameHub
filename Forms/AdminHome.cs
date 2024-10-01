@@ -166,10 +166,10 @@ namespace GameServer_Management.Forms
                 getGame1.Visible = true;
                 getGame1.Pic = clicked.Pic;
 
-                /*getGame1.GName = clicked.GName;
+                getGame1.GName = clicked.GName;
                 getGame1.desc = clicked.desc;
                 getGame1.Price = clicked.Price;
-                getGame1.Category = clicked.Category;   */
+                getGame1.Category = clicked.Category;
             }
         }
 
