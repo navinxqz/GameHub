@@ -52,6 +52,11 @@ namespace GameServer_Management.Controller
             get { return catName.Text; }
             set { catName.Text = value; }
         }
+        public string Date
+        {
+            get { return gameRelease.Text; }
+            set { gameRelease.Text = value; }
+        }
 
         private void GameImg_MouseClick(object sender, MouseEventArgs e)
         {

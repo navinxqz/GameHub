@@ -44,6 +44,7 @@
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.gameRelease = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelcat.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             this.panel2.Controls.Add(this.GameImg);
             this.panel2.Controls.Add(this.desclbl);
+            this.panel2.Controls.Add(this.gameRelease);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -177,6 +179,15 @@
             this.bunifuElipse4.ElipseRadius = 20;
             this.bunifuElipse4.TargetControl = this.panelcat;
             // 
+            // gameRelease
+            // 
+            this.gameRelease.AutoSize = true;
+            this.gameRelease.Location = new System.Drawing.Point(79, 76);
+            this.gameRelease.Name = "gameRelease";
+            this.gameRelease.Size = new System.Drawing.Size(35, 13);
+            this.gameRelease.TabIndex = 2;
+            this.gameRelease.Text = "label2";
+            // 
             // GameDesc
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -190,6 +201,7 @@
             this.panel1.ResumeLayout(false);
             this.panelcat.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +222,6 @@
         private System.Windows.Forms.Label catName;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private CuoreUI.Controls.cuiLabel desclbl;
+        private System.Windows.Forms.Label gameRelease;
     }
 }

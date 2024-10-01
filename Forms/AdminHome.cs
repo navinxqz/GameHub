@@ -156,13 +156,14 @@ namespace GameServer_Management.Forms
             }Button(b);
         }
 
-        private void Game_Click(object sender, EventArgs e)
+        private async void Game_Click(object sender, EventArgs e)
         {
             //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");     
             GameDesc clicked = sender as GameDesc;
 
             if (clicked != null)
             {
+                await Task.Delay(100);
                 getGame1.Visible = true;
                 getGame1.Pic = clicked.Pic;
 
@@ -182,7 +183,8 @@ namespace GameServer_Management.Forms
                 Category = cat,
                 Pic = img,
                 id = Convert.ToInt32(id),
-                desc = gameDescription
+                desc = gameDescription,
+                //Date = date
             };
 
             v.onSelect += new EventHandler(Game_Click);
