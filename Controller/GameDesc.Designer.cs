@@ -185,6 +185,7 @@
             this.Margin = new System.Windows.Forms.Padding(0, 0, 20, 10);
             this.Name = "GameDesc";
             this.Size = new System.Drawing.Size(211, 366);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.GameDesc_MouseClick);
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panelcat.ResumeLayout(false);

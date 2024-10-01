@@ -22,6 +22,7 @@ namespace GameServer_Management.Forms
         private AdminPanel adminPanel;
 
         private KryptonCheckButton cb = new KryptonCheckButton();
+        List<GameDesc> gameDescList = new List<GameDesc>();
         List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
         int countDown = 0;
 
@@ -157,13 +158,19 @@ namespace GameServer_Management.Forms
 
         private void Game_Click(object sender, EventArgs e)
         {
-            //GameDesc gameDesc = (GameDesc)sender;
+            //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");     
+            GameDesc clicked = sender as GameDesc;
 
-            //MessageBox.Show($"Game Title: {gameDesc.GName}\n\n{gameDesc.desc}");
-            //string code = "ok";
-            //this.Hide();
-            //AdminPanel ap = new AdminPanel(code);      
-            getGame1.Visible = true;
+            if (clicked != null)
+            {
+                getGame1.Visible = true;
+                getGame1.Pic = clicked.Pic;
+
+                /*getGame1.GName = clicked.GName;
+                getGame1.desc = clicked.desc;
+                getGame1.Price = clicked.Price;
+                getGame1.Category = clicked.Category;   */
+            }
         }
 
         private void AddItems(string id, string name, string cat,string price, Image img, string gameDescription)
@@ -181,6 +188,7 @@ namespace GameServer_Management.Forms
             v.onSelect += new EventHandler(Game_Click);
             listPanel.Controls.Add(v);
             v.BringToFront();   //loading data backward as well
+            //gameDescList.Add(v);
         }
         private async void LoadItems()
         {

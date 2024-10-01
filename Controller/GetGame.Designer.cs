@@ -67,29 +67,29 @@
             // 
             // gameName
             // 
-            this.gameName.Content = "Assassin\'s\\ Creed\\ 3";
+            this.gameName.Content = "Assassin’s\\ Creed\\ IV\\ Black\\ Flag";
             this.gameName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameName.ForeColor = System.Drawing.Color.White;
             this.gameName.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.gameName.Location = new System.Drawing.Point(177, 264);
+            this.gameName.Location = new System.Drawing.Point(177, 293);
             this.gameName.Name = "gameName";
             this.gameName.Size = new System.Drawing.Size(365, 62);
             this.gameName.TabIndex = 14;
             // 
             // gameDesc
             // 
-            this.gameDesc.Content = "Assassin\'s\\ Creed\\ 3\\ Description";
+            this.gameDesc.Content = resources.GetString("gameDesc.Content");
             this.gameDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameDesc.ForeColor = System.Drawing.Color.White;
             this.gameDesc.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.gameDesc.Location = new System.Drawing.Point(177, 332);
+            this.gameDesc.Location = new System.Drawing.Point(225, 350);
             this.gameDesc.Name = "gameDesc";
-            this.gameDesc.Size = new System.Drawing.Size(365, 185);
+            this.gameDesc.Size = new System.Drawing.Size(290, 220);
             this.gameDesc.TabIndex = 15;
             // 
             // gamecat
             // 
-            this.gamecat.Content = "category";
+            this.gamecat.Content = "Action";
             this.gamecat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamecat.ForeColor = System.Drawing.Color.White;
             this.gamecat.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
@@ -111,7 +111,7 @@
             // 
             // gameprice
             // 
-            this.gameprice.Content = "Pricing";
+            this.gameprice.Content = "38\\.99\\ \\$";
             this.gameprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gameprice.ForeColor = System.Drawing.Color.White;
             this.gameprice.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
@@ -182,10 +182,11 @@
             this.getbtn.Size = new System.Drawing.Size(137, 54);
             this.getbtn.TabIndex = 62;
             this.getbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.getbtn.Click += new System.EventHandler(this.getbtn_Click);
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this;
             // 
             // bunifuElipse2
