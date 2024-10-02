@@ -468,11 +468,11 @@
             this.getGame1.desc = resources.GetString("getGame1.desc");
             this.getGame1.GName = "Assassin’s\\ Creed\\ IV\\ Black\\ Flag";
             this.getGame1.id = 0;
-            this.getGame1.Location = new System.Drawing.Point(744, 16);
+            this.getGame1.Location = new System.Drawing.Point(775, 16);
             this.getGame1.Name = "getGame1";
             this.getGame1.Pic = ((System.Drawing.Image)(resources.GetObject("getGame1.Pic")));
             this.getGame1.Price = "";
-            this.getGame1.Size = new System.Drawing.Size(583, 675);
+            this.getGame1.Size = new System.Drawing.Size(552, 675);
             this.getGame1.TabIndex = 24;
             // 
             // loading

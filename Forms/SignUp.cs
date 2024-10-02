@@ -16,6 +16,7 @@ namespace GameServer_Management.Forms
     public partial class SignUp : Form
     {
         public string Gender;
+        //public string email;
         public int id = 0;
 
         public SignUp()
@@ -29,11 +30,11 @@ namespace GameServer_Management.Forms
             if (maleRB.Checked) { Gender = "Male"; }
             else if (femaleRB.Checked) { Gender = "Female"; }
         }
-        /*private bool EmailValid(string email)
+        private bool EmailValid(string email)
         {
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
-        }   */
+        } 
 
         private void femaleRB_CheckedChanged(object sender, EventArgs e)
         {
@@ -42,6 +43,11 @@ namespace GameServer_Management.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (!EmailValid(txtEmail.Text))
+            {
+                MessageBox.Show("Invalid email format! Please enter a valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Exit if email is invalid
+            }
             string query = "";
             if (id == 0) { query = "AddUser"; }
 
