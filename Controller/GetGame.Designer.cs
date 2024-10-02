@@ -168,7 +168,7 @@
             this.getbtn.Image = ((System.Drawing.Image)(resources.GetObject("getbtn.Image")));
             this.getbtn.ImageAutoCenter = true;
             this.getbtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.getbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.getbtn.ImageOffset = new System.Drawing.Point(-5, 0);
             this.getbtn.ImageTint = System.Drawing.Color.White;
             this.getbtn.Location = new System.Drawing.Point(110, 583);
             this.getbtn.Name = "getbtn";
