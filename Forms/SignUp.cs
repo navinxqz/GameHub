@@ -16,7 +16,6 @@ namespace GameServer_Management.Forms
     public partial class SignUp : Form
     {
         public string Gender;
-        //public string email;
         public int id = 0;
 
         public SignUp()
@@ -64,7 +63,7 @@ namespace GameServer_Management.Forms
             DateTime birthday;
             if (DateTime.TryParseExact(txtDob.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out birthday))
             {
-                h.Add("@dob", birthday.ToString("yyyy-MM-dd")); // sql recognized format
+                h.Add("@dob", birthday.ToString("yyyy-MM-dd"));
             }
             else
             {
@@ -74,7 +73,7 @@ namespace GameServer_Management.Forms
 
             if (DBconnect.SQL(query, h) > 0)
             {
-                MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Saved Successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else

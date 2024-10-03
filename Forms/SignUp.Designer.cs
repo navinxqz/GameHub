@@ -73,12 +73,12 @@
             // 
             // mainpanel
             // 
-            this.mainpanel.Controls.Add(this.showpassbtn);
-            this.mainpanel.Controls.Add(this.show_pass_btn);
-            this.mainpanel.Controls.Add(this.genderpanel);
             this.mainpanel.Controls.Add(this.hidepassbtn);
-            this.mainpanel.Controls.Add(this.txtconpass);
             this.mainpanel.Controls.Add(this.hide_pass_btn);
+            this.mainpanel.Controls.Add(this.show_pass_btn);
+            this.mainpanel.Controls.Add(this.showpassbtn);
+            this.mainpanel.Controls.Add(this.genderpanel);
+            this.mainpanel.Controls.Add(this.txtconpass);
             this.mainpanel.Controls.Add(this.label7);
             this.mainpanel.Controls.Add(this.label6);
             this.mainpanel.Controls.Add(this.txtpass);
@@ -104,7 +104,7 @@
             this.showpassbtn.BackColor = System.Drawing.Color.Transparent;
             this.showpassbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.showpassbtn.Image = ((System.Drawing.Image)(resources.GetObject("showpassbtn.Image")));
-            this.showpassbtn.Location = new System.Drawing.Point(808, 348);
+            this.showpassbtn.Location = new System.Drawing.Point(806, 348);
             this.showpassbtn.Margin = new System.Windows.Forms.Padding(2);
             this.showpassbtn.Name = "showpassbtn";
             this.showpassbtn.Size = new System.Drawing.Size(45, 28);
@@ -176,7 +176,7 @@
             this.hidepassbtn.BackColor = System.Drawing.Color.Transparent;
             this.hidepassbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hidepassbtn.Image = ((System.Drawing.Image)(resources.GetObject("hidepassbtn.Image")));
-            this.hidepassbtn.Location = new System.Drawing.Point(808, 348);
+            this.hidepassbtn.Location = new System.Drawing.Point(806, 348);
             this.hidepassbtn.Margin = new System.Windows.Forms.Padding(2);
             this.hidepassbtn.Name = "hidepassbtn";
             this.hidepassbtn.Size = new System.Drawing.Size(45, 28);

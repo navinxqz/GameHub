@@ -16,7 +16,7 @@ namespace GameServer_Management
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            LoadPanel.Width += 2;
+            LoadPanel.Width += 3;
             if(LoadPanel.Width >= 870)
             {
                 timer1.Stop();

@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="showpassbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWhJREFUOE/t
-        k70rhVEcxx83FC6LDKJkc1clg7xMpGsjWQzKYLRYsdkoqRuDySqDRXfztsqilAF5GZQsXvL6+PzO+Z3r
-        HD1e/oD7qU+d8/v+fufpee65UZECcRxX4QjO4Rqu4jT2YErb/obmGpzHe/yJCxzH3w+moROv0XGJs5jF
-        QVzGR3TsYr2OhxDI671Il5LHtMYFqGVQHuS4whaNLRT60T9Mmqo1lrwCS3Ur+w78QMc5NrqwFR+k6jFj
-        QmA9he94h11alvo++hxhWoIbsw0Z0KFKfDMVy7Y5DVgv2lJAXoIDuw4Y0qEyvDUVy7o5DViv2FLAkgRN
-        6A8JOZ2TvBt3cAMbtJbCE/SRHvudWfSi/6M8YcaECZBNmK4vzjC8PhSGUQ5yyOVt09jAvgTlQj+j4xTD
-        a+MgaMdj6VLkauzhAubw+2tuYp2OJ0NDOU7iISbxiluY1ZH/w1Az9uEYjqL8NWs1LiJE0SdyX6HHWCuN
-        CwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="show_pass_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWhJREFUOE/t
-        k70rhVEcxx83FC6LDKJkc1clg7xMpGsjWQzKYLRYsdkoqRuDySqDRXfztsqilAF5GZQsXvL6+PzO+Z3r
-        HD1e/oD7qU+d8/v+fufpee65UZECcRxX4QjO4Rqu4jT2YErb/obmGpzHe/yJCxzH3w+moROv0XGJs5jF
-        QVzGR3TsYr2OhxDI671Il5LHtMYFqGVQHuS4whaNLRT60T9Mmqo1lrwCS3Ur+w78QMc5NrqwFR+k6jFj
-        QmA9he94h11alvo++hxhWoIbsw0Z0KFKfDMVy7Y5DVgv2lJAXoIDuw4Y0qEyvDUVy7o5DViv2FLAkgRN
-        6A8JOZ2TvBt3cAMbtJbCE/SRHvudWfSi/6M8YcaECZBNmK4vzjC8PhSGUQ5yyOVt09jAvgTlQj+j4xTD
-        a+MgaMdj6VLkauzhAubw+2tuYp2OJ0NDOU7iISbxiluY1ZH/w1Az9uEYjqL8NWs1LiJE0SdyX6HHWCuN
-        CwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="hidepassbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAaJJREFUOE+t
@@ -166,6 +142,30 @@
         07unobsYRMPDrw9BF2qQj17eWiunIBt1q2muscLKYSjU4aV2GfqGj3Aet1E/wUJcR3GGJdb+M2wowASe
         4k/sYT6OoQ6csNbMsLkKm1H/RrINS62s+gD+bWgmAkPHLcoeho3Y0GaLsodh7Y7jRL4BQe70AcaUZA4A
         AAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="show_pass_btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWhJREFUOE/t
+        k70rhVEcxx83FC6LDKJkc1clg7xMpGsjWQzKYLRYsdkoqRuDySqDRXfztsqilAF5GZQsXvL6+PzO+Z3r
+        HD1e/oD7qU+d8/v+fufpee65UZECcRxX4QjO4Rqu4jT2YErb/obmGpzHe/yJCxzH3w+moROv0XGJs5jF
+        QVzGR3TsYr2OhxDI671Il5LHtMYFqGVQHuS4whaNLRT60T9Mmqo1lrwCS3Ur+w78QMc5NrqwFR+k6jFj
+        QmA9he94h11alvo++hxhWoIbsw0Z0KFKfDMVy7Y5DVgv2lJAXoIDuw4Y0qEyvDUVy7o5DViv2FLAkgRN
+        6A8JOZ2TvBt3cAMbtJbCE/SRHvudWfSi/6M8YcaECZBNmK4vzjC8PhSGUQ5yyOVt09jAvgTlQj+j4xTD
+        a+MgaMdj6VLkauzhAubw+2tuYp2OJ0NDOU7iISbxiluY1ZH/w1Az9uEYjqL8NWs1LiJE0SdyX6HHWCuN
+        CwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="showpassbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAWhJREFUOE/t
+        k70rhVEcxx83FC6LDKJkc1clg7xMpGsjWQzKYLRYsdkoqRuDySqDRXfztsqilAF5GZQsXvL6+PzO+Z3r
+        HD1e/oD7qU+d8/v+fufpee65UZECcRxX4QjO4Rqu4jT2YErb/obmGpzHe/yJCxzH3w+moROv0XGJs5jF
+        QVzGR3TsYr2OhxDI671Il5LHtMYFqGVQHuS4whaNLRT60T9Mmqo1lrwCS3Ur+w78QMc5NrqwFR+k6jFj
+        QmA9he94h11alvo++hxhWoIbsw0Z0KFKfDMVy7Y5DVgv2lJAXoIDuw4Y0qEyvDUVy7o5DViv2FLAkgRN
+        6A8JOZ2TvBt3cAMbtJbCE/SRHvudWfSi/6M8YcaECZBNmK4vzjC8PhSGUQ5yyOVt09jAvgTlQj+j4xTD
+        a+MgaMdj6VLkauzhAubw+2tuYp2OJ0NDOU7iISbxiluY1ZH/w1Az9uEYjqL8NWs1LiJE0SdyX6HHWCuN
+        CwAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
