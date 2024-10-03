@@ -12,12 +12,11 @@ namespace GameServer_Management
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
-            //label1.BackColor = Color.FromArgb(100,0,0,0);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            LoadPanel.Width += 3;
+            LoadPanel.Width += 2;
             if(LoadPanel.Width >= 870)
             {
                 timer1.Stop();
