@@ -155,6 +155,7 @@
             this.txtconpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtconpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtconpass.TabIndex = 83;
+            this.txtconpass.TextChanged += new System.EventHandler(this.txtconpass_TextChanged);
             // 
             // label7
             // 
@@ -196,6 +197,7 @@
             this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.TabIndex = 77;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
             // label1
             // 
@@ -504,6 +506,7 @@
             this.hide_pass_btn.Size = new System.Drawing.Size(39, 36);
             this.hide_pass_btn.TabIndex = 90;
             this.hide_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.hide_pass_btn.Visible = false;
             this.hide_pass_btn.Click += new System.EventHandler(this.hide_pass_btn_Click_1);
             // 
             // show_pass_btn
@@ -537,6 +540,7 @@
             this.show_pass_btn.Size = new System.Drawing.Size(39, 36);
             this.show_pass_btn.TabIndex = 91;
             this.show_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.show_pass_btn.Visible = false;
             this.show_pass_btn.Click += new System.EventHandler(this.show_pass_btn_Click_1);
             // 
             // showpassbtn
@@ -570,6 +574,7 @@
             this.showpassbtn.Size = new System.Drawing.Size(39, 36);
             this.showpassbtn.TabIndex = 92;
             this.showpassbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.showpassbtn.Visible = false;
             this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click_1);
             // 
             // hidepassbtn
@@ -603,6 +608,7 @@
             this.hidepassbtn.Size = new System.Drawing.Size(39, 36);
             this.hidepassbtn.TabIndex = 93;
             this.hidepassbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.hidepassbtn.Visible = false;
             this.hidepassbtn.Click += new System.EventHandler(this.hidepassbtn_Click_1);
             // 
             // SignUp

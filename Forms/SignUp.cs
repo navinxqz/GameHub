@@ -47,6 +47,11 @@ namespace GameServer_Management.Forms
                 MessageBox.Show("Invalid email format! Please enter a valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; // Exit if email is invalid
             }
+            if (!PassMatch())
+            {
+                return; // Exit if passwords don't match
+            }
+
             string query = "";
             if (id == 0) { query = "AddUser"; }
 
@@ -73,7 +78,7 @@ namespace GameServer_Management.Forms
 
             if (DBconnect.SQL(query, h) > 0)
             {
-                MessageBox.Show("Saved Successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sign up Successfull", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -123,6 +128,31 @@ namespace GameServer_Management.Forms
             hidepassbtn.Visible = false;
             showpassbtn.Visible = true;
             txtconpass.PasswordChar = '\0';
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = true;
+        }
+
+        private void txtconpass_TextChanged(object sender, EventArgs e)
+        {
+            hidepassbtn.Visible = true;
+        }
+
+        private bool PassMatch()
+        {
+            if (txtpass.Text != txtconpass.Text)
+            {
+                MessageBox.Show("Passwords do not match!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if(txtpass.Text == string.Empty && txtconpass.Text == string.Empty)
+            {
+                MessageBox.Show("Passwords can't be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }
