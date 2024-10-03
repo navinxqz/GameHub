@@ -82,20 +82,6 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void show_pass_btn_Click(object sender, EventArgs e)
-        {
-            hide_pass_btn.Visible = true;
-            show_pass_btn.Visible = false;
-            txtpass.PasswordChar = '*';
-        }
-
-        private void hide_pass_btn_Click(object sender, EventArgs e)
-        {
-            hide_pass_btn.Visible = false;
-            show_pass_btn.Visible = true;
-            txtpass.PasswordChar = '\0';
-        }
-
         private void maleRB_CheckedChanged(object sender, EventArgs e)
         {
             GetGender();
@@ -106,23 +92,37 @@ namespace GameServer_Management.Forms
             this.Close();
         }
 
-        private void showpassbtn_Click(object sender, EventArgs e)
+        private void DateSelect_ValueChanged(object sender, EventArgs e)
+        {
+            txtDob.Text = DateSelect.Value.ToString("dd-MM-yyyy");
+        }
+
+        private void hide_pass_btn_Click_1(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = false;
+            show_pass_btn.Visible = true;
+            txtpass.PasswordChar = '\0';
+        }
+
+        private void show_pass_btn_Click_1(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = true;
+            show_pass_btn.Visible = false;
+            txtpass.PasswordChar = '*';
+        }
+
+        private void showpassbtn_Click_1(object sender, EventArgs e)
         {
             hidepassbtn.Visible = true;
             showpassbtn.Visible = false;
             txtconpass.PasswordChar = '*';
         }
 
-        private void hidepassbtn_Click(object sender, EventArgs e)
+        private void hidepassbtn_Click_1(object sender, EventArgs e)
         {
             hidepassbtn.Visible = false;
             showpassbtn.Visible = true;
             txtconpass.PasswordChar = '\0';
-        }
-
-        private void DateSelect_ValueChanged(object sender, EventArgs e)
-        {
-            txtDob.Text = DateSelect.Value.ToString("dd-MM-yyyy");
         }
     }
 }
