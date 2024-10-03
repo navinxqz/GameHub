@@ -31,13 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.hidepassbtn = new CuoreUI.Controls.cuiButton();
+            this.showpassbtn = new CuoreUI.Controls.cuiButton();
+            this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
+            this.show_pass_btn = new CuoreUI.Controls.cuiButton();
             this.genderpanel = new System.Windows.Forms.Panel();
             this.maleRB = new System.Windows.Forms.RadioButton();
             this.femaleRB = new System.Windows.Forms.RadioButton();
             this.txtconpass = new Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DateSelect = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,6 +53,7 @@
             this.txtFirstName = new Krypton.Toolkit.KryptonTextBox();
             this.emillbl = new System.Windows.Forms.Label();
             this.txtEmail = new Krypton.Toolkit.KryptonTextBox();
+            this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
@@ -57,10 +61,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
-            this.show_pass_btn = new CuoreUI.Controls.cuiButton();
-            this.showpassbtn = new CuoreUI.Controls.cuiButton();
-            this.hidepassbtn = new CuoreUI.Controls.cuiButton();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +70,7 @@
             // 
             // mainpanel
             // 
+            this.mainpanel.Controls.Add(this.signupmsg);
             this.mainpanel.Controls.Add(this.hidepassbtn);
             this.mainpanel.Controls.Add(this.showpassbtn);
             this.mainpanel.Controls.Add(this.hide_pass_btn);
@@ -94,6 +96,142 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(891, 459);
             this.mainpanel.TabIndex = 0;
+            // 
+            // hidepassbtn
+            // 
+            this.hidepassbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.hidepassbtn.CheckButton = false;
+            this.hidepassbtn.Checked = false;
+            this.hidepassbtn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.hidepassbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.hidepassbtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.hidepassbtn.Content = "";
+            this.hidepassbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.hidepassbtn.ForeColor = System.Drawing.Color.White;
+            this.hidepassbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.hidepassbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.hidepassbtn.HoverOutline = System.Drawing.Color.White;
+            this.hidepassbtn.Image = ((System.Drawing.Image)(resources.GetObject("hidepassbtn.Image")));
+            this.hidepassbtn.ImageAutoCenter = true;
+            this.hidepassbtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.hidepassbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.hidepassbtn.ImageTint = System.Drawing.Color.White;
+            this.hidepassbtn.Location = new System.Drawing.Point(817, 343);
+            this.hidepassbtn.Name = "hidepassbtn";
+            this.hidepassbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.hidepassbtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.hidepassbtn.OutlineThickness = 1.6F;
+            this.hidepassbtn.PressedBackground = System.Drawing.Color.Coral;
+            this.hidepassbtn.PressedImageTint = System.Drawing.Color.White;
+            this.hidepassbtn.PressedOutline = System.Drawing.Color.White;
+            this.hidepassbtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.hidepassbtn.Size = new System.Drawing.Size(39, 36);
+            this.hidepassbtn.TabIndex = 93;
+            this.hidepassbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.hidepassbtn.Visible = false;
+            this.hidepassbtn.Click += new System.EventHandler(this.hidepassbtn_Click_1);
+            // 
+            // showpassbtn
+            // 
+            this.showpassbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.showpassbtn.CheckButton = false;
+            this.showpassbtn.Checked = false;
+            this.showpassbtn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.showpassbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.showpassbtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.showpassbtn.Content = "";
+            this.showpassbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.showpassbtn.ForeColor = System.Drawing.Color.White;
+            this.showpassbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.showpassbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.showpassbtn.HoverOutline = System.Drawing.Color.White;
+            this.showpassbtn.Image = ((System.Drawing.Image)(resources.GetObject("showpassbtn.Image")));
+            this.showpassbtn.ImageAutoCenter = true;
+            this.showpassbtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.showpassbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.showpassbtn.ImageTint = System.Drawing.Color.White;
+            this.showpassbtn.Location = new System.Drawing.Point(817, 343);
+            this.showpassbtn.Name = "showpassbtn";
+            this.showpassbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.showpassbtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.showpassbtn.OutlineThickness = 1.6F;
+            this.showpassbtn.PressedBackground = System.Drawing.Color.Coral;
+            this.showpassbtn.PressedImageTint = System.Drawing.Color.White;
+            this.showpassbtn.PressedOutline = System.Drawing.Color.White;
+            this.showpassbtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.showpassbtn.Size = new System.Drawing.Size(39, 36);
+            this.showpassbtn.TabIndex = 92;
+            this.showpassbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.showpassbtn.Visible = false;
+            this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click_1);
+            // 
+            // hide_pass_btn
+            // 
+            this.hide_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.hide_pass_btn.CheckButton = false;
+            this.hide_pass_btn.Checked = false;
+            this.hide_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.CheckedImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.Content = "";
+            this.hide_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.hide_pass_btn.ForeColor = System.Drawing.Color.White;
+            this.hide_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.hide_pass_btn.HoveredImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.HoverOutline = System.Drawing.Color.White;
+            this.hide_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("hide_pass_btn.Image")));
+            this.hide_pass_btn.ImageAutoCenter = true;
+            this.hide_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.hide_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.hide_pass_btn.ImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.Location = new System.Drawing.Point(308, 343);
+            this.hide_pass_btn.Name = "hide_pass_btn";
+            this.hide_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.OutlineThickness = 1.6F;
+            this.hide_pass_btn.PressedBackground = System.Drawing.Color.Coral;
+            this.hide_pass_btn.PressedImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.PressedOutline = System.Drawing.Color.White;
+            this.hide_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
+            this.hide_pass_btn.Size = new System.Drawing.Size(39, 36);
+            this.hide_pass_btn.TabIndex = 90;
+            this.hide_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.hide_pass_btn.Visible = false;
+            this.hide_pass_btn.Click += new System.EventHandler(this.hide_pass_btn_Click_1);
+            // 
+            // show_pass_btn
+            // 
+            this.show_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.show_pass_btn.CheckButton = false;
+            this.show_pass_btn.Checked = false;
+            this.show_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.show_pass_btn.CheckedImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.show_pass_btn.Content = "";
+            this.show_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.show_pass_btn.ForeColor = System.Drawing.Color.White;
+            this.show_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.show_pass_btn.HoveredImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.HoverOutline = System.Drawing.Color.White;
+            this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
+            this.show_pass_btn.ImageAutoCenter = true;
+            this.show_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.show_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.show_pass_btn.ImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.Location = new System.Drawing.Point(308, 343);
+            this.show_pass_btn.Name = "show_pass_btn";
+            this.show_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
+            this.show_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
+            this.show_pass_btn.OutlineThickness = 1.6F;
+            this.show_pass_btn.PressedBackground = System.Drawing.Color.Coral;
+            this.show_pass_btn.PressedImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.PressedOutline = System.Drawing.Color.White;
+            this.show_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
+            this.show_pass_btn.Size = new System.Drawing.Size(39, 36);
+            this.show_pass_btn.TabIndex = 91;
+            this.show_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.show_pass_btn.Visible = false;
+            this.show_pass_btn.Click += new System.EventHandler(this.show_pass_btn_Click_1);
             // 
             // genderpanel
             // 
@@ -178,26 +316,6 @@
             this.label6.Size = new System.Drawing.Size(96, 23);
             this.label6.TabIndex = 78;
             this.label6.Text = "Password";
-            // 
-            // txtpass
-            // 
-            this.txtpass.CornerRoundingRadius = 30F;
-            this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtpass.Location = new System.Drawing.Point(24, 337);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(337, 51);
-            this.txtpass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.txtpass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.txtpass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtpass.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtpass.StateCommon.Border.Rounding = 30F;
-            this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.TabIndex = 77;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
             // label1
             // 
@@ -376,6 +494,26 @@
             this.txtEmail.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.TabIndex = 64;
             // 
+            // txtpass
+            // 
+            this.txtpass.CornerRoundingRadius = 30F;
+            this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtpass.Location = new System.Drawing.Point(24, 337);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
+            this.txtpass.Size = new System.Drawing.Size(337, 51);
+            this.txtpass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtpass.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtpass.StateCommon.Border.Rounding = 30F;
+            this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.TabIndex = 77;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 50;
@@ -475,141 +613,14 @@
             this.bunifuElipse3.ElipseRadius = 50;
             this.bunifuElipse3.TargetControl = this;
             // 
-            // hide_pass_btn
+            // signupmsg
             // 
-            this.hide_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.hide_pass_btn.CheckButton = false;
-            this.hide_pass_btn.Checked = false;
-            this.hide_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
-            this.hide_pass_btn.CheckedImageTint = System.Drawing.Color.White;
-            this.hide_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.hide_pass_btn.Content = "";
-            this.hide_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.hide_pass_btn.ForeColor = System.Drawing.Color.White;
-            this.hide_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.hide_pass_btn.HoveredImageTint = System.Drawing.Color.White;
-            this.hide_pass_btn.HoverOutline = System.Drawing.Color.White;
-            this.hide_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("hide_pass_btn.Image")));
-            this.hide_pass_btn.ImageAutoCenter = true;
-            this.hide_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.hide_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.hide_pass_btn.ImageTint = System.Drawing.Color.White;
-            this.hide_pass_btn.Location = new System.Drawing.Point(308, 343);
-            this.hide_pass_btn.Name = "hide_pass_btn";
-            this.hide_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
-            this.hide_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
-            this.hide_pass_btn.OutlineThickness = 1.6F;
-            this.hide_pass_btn.PressedBackground = System.Drawing.Color.Coral;
-            this.hide_pass_btn.PressedImageTint = System.Drawing.Color.White;
-            this.hide_pass_btn.PressedOutline = System.Drawing.Color.White;
-            this.hide_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
-            this.hide_pass_btn.Size = new System.Drawing.Size(39, 36);
-            this.hide_pass_btn.TabIndex = 90;
-            this.hide_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
-            this.hide_pass_btn.Visible = false;
-            this.hide_pass_btn.Click += new System.EventHandler(this.hide_pass_btn_Click_1);
-            // 
-            // show_pass_btn
-            // 
-            this.show_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.show_pass_btn.CheckButton = false;
-            this.show_pass_btn.Checked = false;
-            this.show_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
-            this.show_pass_btn.CheckedImageTint = System.Drawing.Color.White;
-            this.show_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.show_pass_btn.Content = "";
-            this.show_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.show_pass_btn.ForeColor = System.Drawing.Color.White;
-            this.show_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.show_pass_btn.HoveredImageTint = System.Drawing.Color.White;
-            this.show_pass_btn.HoverOutline = System.Drawing.Color.White;
-            this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
-            this.show_pass_btn.ImageAutoCenter = true;
-            this.show_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.show_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.show_pass_btn.ImageTint = System.Drawing.Color.White;
-            this.show_pass_btn.Location = new System.Drawing.Point(308, 343);
-            this.show_pass_btn.Name = "show_pass_btn";
-            this.show_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
-            this.show_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
-            this.show_pass_btn.OutlineThickness = 1.6F;
-            this.show_pass_btn.PressedBackground = System.Drawing.Color.Coral;
-            this.show_pass_btn.PressedImageTint = System.Drawing.Color.White;
-            this.show_pass_btn.PressedOutline = System.Drawing.Color.White;
-            this.show_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
-            this.show_pass_btn.Size = new System.Drawing.Size(39, 36);
-            this.show_pass_btn.TabIndex = 91;
-            this.show_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
-            this.show_pass_btn.Visible = false;
-            this.show_pass_btn.Click += new System.EventHandler(this.show_pass_btn_Click_1);
-            // 
-            // showpassbtn
-            // 
-            this.showpassbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.showpassbtn.CheckButton = false;
-            this.showpassbtn.Checked = false;
-            this.showpassbtn.CheckedBackground = System.Drawing.Color.Transparent;
-            this.showpassbtn.CheckedImageTint = System.Drawing.Color.White;
-            this.showpassbtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.showpassbtn.Content = "";
-            this.showpassbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.showpassbtn.ForeColor = System.Drawing.Color.White;
-            this.showpassbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.showpassbtn.HoveredImageTint = System.Drawing.Color.White;
-            this.showpassbtn.HoverOutline = System.Drawing.Color.White;
-            this.showpassbtn.Image = ((System.Drawing.Image)(resources.GetObject("showpassbtn.Image")));
-            this.showpassbtn.ImageAutoCenter = true;
-            this.showpassbtn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.showpassbtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.showpassbtn.ImageTint = System.Drawing.Color.White;
-            this.showpassbtn.Location = new System.Drawing.Point(817, 343);
-            this.showpassbtn.Name = "showpassbtn";
-            this.showpassbtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.showpassbtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.showpassbtn.OutlineThickness = 1.6F;
-            this.showpassbtn.PressedBackground = System.Drawing.Color.Coral;
-            this.showpassbtn.PressedImageTint = System.Drawing.Color.White;
-            this.showpassbtn.PressedOutline = System.Drawing.Color.White;
-            this.showpassbtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.showpassbtn.Size = new System.Drawing.Size(39, 36);
-            this.showpassbtn.TabIndex = 92;
-            this.showpassbtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.showpassbtn.Visible = false;
-            this.showpassbtn.Click += new System.EventHandler(this.showpassbtn_Click_1);
-            // 
-            // hidepassbtn
-            // 
-            this.hidepassbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.hidepassbtn.CheckButton = false;
-            this.hidepassbtn.Checked = false;
-            this.hidepassbtn.CheckedBackground = System.Drawing.Color.Transparent;
-            this.hidepassbtn.CheckedImageTint = System.Drawing.Color.White;
-            this.hidepassbtn.CheckedOutline = System.Drawing.Color.Transparent;
-            this.hidepassbtn.Content = "";
-            this.hidepassbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.hidepassbtn.ForeColor = System.Drawing.Color.White;
-            this.hidepassbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.hidepassbtn.HoveredImageTint = System.Drawing.Color.White;
-            this.hidepassbtn.HoverOutline = System.Drawing.Color.White;
-            this.hidepassbtn.Image = ((System.Drawing.Image)(resources.GetObject("hidepassbtn.Image")));
-            this.hidepassbtn.ImageAutoCenter = true;
-            this.hidepassbtn.ImageExpand = new System.Drawing.Point(5, 5);
-            this.hidepassbtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.hidepassbtn.ImageTint = System.Drawing.Color.White;
-            this.hidepassbtn.Location = new System.Drawing.Point(817, 343);
-            this.hidepassbtn.Name = "hidepassbtn";
-            this.hidepassbtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.hidepassbtn.NormalOutline = System.Drawing.Color.Transparent;
-            this.hidepassbtn.OutlineThickness = 1.6F;
-            this.hidepassbtn.PressedBackground = System.Drawing.Color.Coral;
-            this.hidepassbtn.PressedImageTint = System.Drawing.Color.White;
-            this.hidepassbtn.PressedOutline = System.Drawing.Color.White;
-            this.hidepassbtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.hidepassbtn.Size = new System.Drawing.Size(39, 36);
-            this.hidepassbtn.TabIndex = 93;
-            this.hidepassbtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.hidepassbtn.Visible = false;
-            this.hidepassbtn.Click += new System.EventHandler(this.hidepassbtn_Click_1);
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(233, 203);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.Visible = false;
             // 
             // SignUp
             // 
@@ -669,5 +680,6 @@
         private CuoreUI.Controls.cuiButton hide_pass_btn;
         private CuoreUI.Controls.cuiButton hidepassbtn;
         private CuoreUI.Controls.cuiButton showpassbtn;
+        private Controller.signupcomplete signupmsg;
     }
 }

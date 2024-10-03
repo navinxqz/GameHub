@@ -40,7 +40,7 @@ namespace GameServer_Management.Forms
             GetGender();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private async void btnAdd_Click(object sender, EventArgs e)
         {
             if (!EmailValid(txtEmail.Text))
             {
@@ -78,7 +78,9 @@ namespace GameServer_Management.Forms
 
             if (DBconnect.SQL(query, h) > 0)
             {
-                MessageBox.Show("Sign up Successfull", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Sign up Successfull", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                signupmsg.Visible = true;
+                await Task.Delay(3000);
                 this.Close();
             }
             else
