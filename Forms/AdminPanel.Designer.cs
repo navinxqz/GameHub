@@ -114,6 +114,7 @@
             this.userpanel.Name = "userpanel";
             this.userpanel.Size = new System.Drawing.Size(230, 53);
             this.userpanel.TabIndex = 8;
+            this.userpanel.Click += new System.EventHandler(this.userpanel_Click);
             // 
             // usericonbtn
             // 

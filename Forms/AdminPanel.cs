@@ -307,13 +307,13 @@ namespace GameServer_Management.Forms
 
         private void userbtn_Click(object sender, EventArgs e)
         {
-            /*if (!userbtn.Checked)
-            {
-                userbtn.Checked = true;
-                return;
-            }
-            LoadForm(signUp);
-            Button(userbtn);    */
+            
+        }
+
+        private void userpanel_Click(object sender, EventArgs e)
+        {
+            string user = usertxt.Text;
+            string query = "select * from usertbl";
         }
     }
 }
