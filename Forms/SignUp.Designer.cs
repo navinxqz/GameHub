@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.hidepassbtn = new CuoreUI.Controls.cuiButton();
             this.showpassbtn = new CuoreUI.Controls.cuiButton();
             this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
@@ -61,7 +62,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,6 +96,15 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(891, 459);
             this.mainpanel.TabIndex = 0;
+            // 
+            // signupmsg
+            // 
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(233, 203);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.Visible = false;
             // 
             // hidepassbtn
             // 
@@ -613,15 +622,6 @@
             this.bunifuElipse3.ElipseRadius = 50;
             this.bunifuElipse3.TargetControl = this;
             // 
-            // signupmsg
-            // 
-            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signupmsg.Location = new System.Drawing.Point(233, 203);
-            this.signupmsg.Name = "signupmsg";
-            this.signupmsg.Size = new System.Drawing.Size(402, 112);
-            this.signupmsg.TabIndex = 94;
-            this.signupmsg.Visible = false;
-            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,8 +666,6 @@
         private System.Windows.Forms.Label label6;
         public Krypton.Toolkit.KryptonTextBox txtpass;
         public Krypton.Toolkit.KryptonTextBox txtconpass;
-        private System.Windows.Forms.RadioButton maleRB;
-        private System.Windows.Forms.RadioButton femaleRB;
         private System.Windows.Forms.Panel genderpanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CuoreUI.Controls.cuiButton cancelbtn;
@@ -681,5 +679,7 @@
         private CuoreUI.Controls.cuiButton hidepassbtn;
         private CuoreUI.Controls.cuiButton showpassbtn;
         private Controller.signupcomplete signupmsg;
+        public System.Windows.Forms.RadioButton maleRB;
+        public System.Windows.Forms.RadioButton femaleRB;
     }
 }

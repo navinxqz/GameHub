@@ -332,6 +332,42 @@ namespace GameServer_Management.Forms
                             adapter.Fill(dt);
                         }
                     }
+                    if (dt.Rows.Count > 0)
+                    {
+                        // Populate the SignUp form fields with the data
+                        DataRow row = dt.Rows[0];
+
+                        s.txtFirstName.Text = row["firstname"].ToString();
+                        s.txtLastName.Text = row["lastname"].ToString();
+
+                        string gender = row["gender"].ToString().ToLower();
+                        if (gender == "Male")
+                        {
+                            s.maleRB.Checked = true;
+                        }
+                        else
+                        {
+                            s.femaleRB.Checked = true;
+                        }
+
+                        s.txtEmail.Text = row["email"].ToString();
+                        s.txtUsername.Text = row["username"].ToString();
+                        s.txtpass.Text = row["upass"].ToString();
+                        //s.txtDob.Text = row["dob"].ToString();
+                        DateTime dob;
+                        if (DateTime.TryParse(row["dob"].ToString(), out dob))
+                        {
+                            s.txtDob.Text = dob.ToString("dd-MM-yyyy"); // Convert the date to "dd-MM-yyyy" format
+                        }
+                        else
+                        {
+                            s.txtDob.Text = row["dob"].ToString(); // If parsing fails, just use the original string
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -339,7 +375,6 @@ namespace GameServer_Management.Forms
                     return;
                 }
             }s.Show();
-
         }
     }
 }
