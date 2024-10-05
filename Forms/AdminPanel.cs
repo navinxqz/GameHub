@@ -334,13 +334,12 @@ namespace GameServer_Management.Forms
                     }
                     if (dt.Rows.Count > 0)
                     {
-                        // Populate the SignUp form fields with the data
                         DataRow row = dt.Rows[0];
 
                         s.txtFirstName.Text = row["firstname"].ToString();
                         s.txtLastName.Text = row["lastname"].ToString();
 
-                        string gender = row["gender"].ToString().ToLower();
+                        string gender = row["gender"].ToString();
                         if (gender == "Male")
                         {
                             s.maleRB.Checked = true;
@@ -354,14 +353,15 @@ namespace GameServer_Management.Forms
                         s.txtUsername.Text = row["username"].ToString();
                         s.txtpass.Text = row["upass"].ToString();
                         //s.txtDob.Text = row["dob"].ToString();
+
                         DateTime dob;
                         if (DateTime.TryParse(row["dob"].ToString(), out dob))
                         {
-                            s.txtDob.Text = dob.ToString("dd-MM-yyyy"); // Convert the date to "dd-MM-yyyy" format
+                            s.txtDob.Text = dob.ToString("dd-MM-yyyy");
                         }
                         else
                         {
-                            s.txtDob.Text = row["dob"].ToString(); // If parsing fails, just use the original string
+                            s.txtDob.Text = row["dob"].ToString(); // If parsing fails, use the original
                         }
                     }
                     else
