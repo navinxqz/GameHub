@@ -167,6 +167,7 @@ select * from usertbl
 insert into usertbl (firstname, lastname, gender, email, username, upass, dob)
 values ('Hero', 'Alom', 'Male', 'hero.alom@example.com', 'admin', '123', '1999-07-23')
 
+select u.firstname, u.lastname, u.gender,u.email,u.username, u.upass, u.dob from usertbl u where u.username = 'admin'
 
 create procedure sp_DeleteUser
 (

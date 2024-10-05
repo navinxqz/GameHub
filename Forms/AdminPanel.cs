@@ -1,9 +1,11 @@
-﻿using GameServer_Management.Controller;
+﻿using GameServer_Management.Class;
+using GameServer_Management.Controller;
 using Krypton.Toolkit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -312,8 +314,32 @@ namespace GameServer_Management.Forms
 
         private void userpanel_Click(object sender, EventArgs e)
         {
+            SignUp s = new SignUp();
             string user = usertxt.Text;
-            string query = "select * from usertbl";
+            string query = @"select u.firstname, u.lastname, u.gender,u.email,u.username, u.upass, u.dob from usertbl u where u.username = @username";
+
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(DBconnect.cs))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@username", user);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dt);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error! {ex.Message}");
+                    return;
+                }
+            }s.Show();
+
         }
     }
 }
