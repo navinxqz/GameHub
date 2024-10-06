@@ -150,36 +150,6 @@ Select * from gamestbl
 
 ------------------------------------------
 
-create table usertbl
-(
-userid int identity(1,1) primary key,
-firstname varchar(50),
-lastname varchar(50),
-gender varchar(50),
-email varchar(50),
-username varchar(50),
-upass varchar(50),
-dob date
-)
-
-select * from usertbl
----------------------------------------------
-insert into usertbl (firstname, lastname, gender, email, username, upass, dob)
-values ('Hero', 'Alom', 'Male', 'hero.alom@example.com', 'admin', '123', '1999-07-23')
-
-select u.firstname, u.lastname, u.gender,u.email,u.username, u.upass, u.dob from usertbl u where u.username = 'admin'
-
-create procedure sp_DeleteUser
-(
-@userid int
-)
-as
-begin
-delete from usertbl where userid = @userid
-end
-go
--------------------------------------------------
-
 create procedure sp_DeleteAdmin
 (
 @userid int
@@ -202,6 +172,34 @@ BEGIN
 END
 GO
 --------------------------------------------
+create table usertbl
+(
+userid int identity(1,1) primary key,
+firstname varchar(50),
+lastname varchar(50),
+gender varchar(50),
+email varchar(50),
+username varchar(50),
+upass varchar(50),
+dob date
+)
+
+---------------------------------------------
+insert into usertbl (firstname, lastname, gender, email, username, upass, dob)
+values ('Hero', 'Alom', 'Male', 'hero.alom@example.com', 'admin', '123', '1999-07-23')
+
+select u.firstname, u.lastname, u.gender,u.email,u.username, u.upass, u.dob from usertbl u where u.username = 'admin'
+
+create procedure sp_DeleteUser
+(
+@userid int
+)
+as
+begin
+delete from usertbl where userid = @userid
+end
+go
+-------------------------------------------------
 
 CREATE PROCEDURE AddUser
 (
@@ -220,3 +218,21 @@ END
 GO
 
 select * from usertbl
+--------------------------------------------------
+create procedure UpdateUser
+(
+@userid int = 0,
+@firstname varchar(50) = null,
+@lastname varchar(50) = null,
+@gender varchar(50) = null,
+@email varchar(50) = null,
+@username varchar(50) = null,
+@upass varchar(50) = null,
+@dob date = null
+)
+as
+begin
+update usertbl set firstname = @firstname, lastname = @lastname, gender = @gender, email = @email, username = @username, upass = @upass, dob = @dob where userid = @userid
+end
+go
+

@@ -1,4 +1,5 @@
-﻿using GameServer_Management.Class;
+﻿using CuoreUI.Components.Forms.cuiFormRounderV2Resources;
+using GameServer_Management.Class;
 using GameServer_Management.Controller;
 using Krypton.Toolkit;
 using System;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace GameServer_Management.Forms
 {
@@ -316,7 +318,7 @@ namespace GameServer_Management.Forms
         {
             SignUp s = new SignUp();
             string user = usertxt.Text;
-            string query = @"select u.firstname, u.lastname, u.gender,u.email,u.username, u.upass, u.dob from usertbl u where u.username = @username";
+            string query = @"select userid, firstname, lastname, gender, email, username, upass, dob from usertbl where username = @username";
 
             DataTable dt = new DataTable();
             using (SqlConnection con = new SqlConnection(DBconnect.cs))
@@ -352,7 +354,6 @@ namespace GameServer_Management.Forms
                         s.txtEmail.Text = row["email"].ToString();
                         s.txtUsername.Text = row["username"].ToString();
                         s.txtpass.Text = row["upass"].ToString();
-                        //s.txtDob.Text = row["dob"].ToString();
 
                         DateTime dob;
                         if (DateTime.TryParse(row["dob"].ToString(), out dob))
@@ -363,6 +364,16 @@ namespace GameServer_Management.Forms
                         {
                             s.txtDob.Text = row["dob"].ToString(); // If parsing fails, use the original
                         }
+                        UpdateUserDetails(
+                            (int)row["userid"],  // Passing userID
+                            s.txtFirstName.Text,
+                            s.txtLastName.Text,
+                            gender,
+                            s.txtEmail.Text,
+                            s.txtUsername.Text,
+                            s.txtpass.Text,
+                            DateTime.Parse(s.txtDob.Text)
+                        );
                     }
                     else
                     {
@@ -375,6 +386,36 @@ namespace GameServer_Management.Forms
                     return;
                 }
             }s.Show();
+        }
+        private void UpdateUserDetails(int userId, string firstName, string lastName, string gender, string email, string username, string password, DateTime dob)
+        {
+            string updateQuery = "UpdateUser"; // Name of your stored procedure
+            using (SqlConnection con = new SqlConnection(DBconnect.cs))
+            {
+                try
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand(updateQuery, con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@userid", userId);
+                        cmd.Parameters.AddWithValue("@firstname", firstName);
+                        cmd.Parameters.AddWithValue("@lastname", lastName);
+                        cmd.Parameters.AddWithValue("@gender", gender);
+                        cmd.Parameters.AddWithValue("@email", email);
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@upass", password);
+                        cmd.Parameters.AddWithValue("@dob", dob);
+
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Your details are successfully updated.", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error while updating your details! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

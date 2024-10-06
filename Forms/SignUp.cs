@@ -45,15 +45,13 @@ namespace GameServer_Management.Forms
             if (!EmailValid(txtEmail.Text))
             {
                 MessageBox.Show("Invalid email format! Please enter a valid email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Exit if email is invalid
+                return;
             }
             if (!PassMatch())
             {
-                return; // Exit if passwords don't match
+                return;
             }
-
-            string query = "";
-            if (id == 0) { query = "AddUser"; }
+            string query = id == 0 ? "AddUser" : "UpdateUser";
 
             Hashtable h = new Hashtable();
             if (id != 0) { h.Add("@userid", id); }
