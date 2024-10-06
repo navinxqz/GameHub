@@ -51,16 +51,6 @@ namespace GameServer_Management.Forms
                 }
             } else { imgByte = null; }
 
-            //Image temp = new Bitmap(pictureBox1.Image);
-            //using (MemoryStream ms = new MemoryStream())
-            //{
-            //    temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            //    imgByte = ms.ToArray();
-            //}
-            //MemoryStream ms = new MemoryStream();
-            //temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            //imgByte = ms.ToArray();
-
             Hashtable h = new Hashtable();
             if (id != 0) { h.Add("@gameID", id); }
 

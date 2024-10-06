@@ -334,7 +334,14 @@ namespace GameServer_Management.Forms
                             adapter.Fill(dt);
                         }
                     }
-                    if (dt.Rows.Count > 0)
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error! {ex.Message}");
+                    return;
+                }
+            }
+            if (dt.Rows.Count > 0)
                     {
                         DataRow row = dt.Rows[0];
 
@@ -364,58 +371,12 @@ namespace GameServer_Management.Forms
                         {
                             s.txtDob.Text = row["dob"].ToString(); // If parsing fails, use the original
                         }
-                        /*UpdateUserDetails(
-                            (int)row["userid"],  // Passing userID
-                            s.txtFirstName.Text,
-                            s.txtLastName.Text,
-                            gender,
-                            s.txtEmail.Text,
-                            s.txtUsername.Text,
-                            s.txtpass.Text,
-                            DateTime.Parse(s.txtDob.Text)
-                        );  */
                     }
                     else
                     {
                         MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error! {ex.Message}");
-                    return;
-                }
-            }s.Show();
+            s.Show();
         }
-        /*private void UpdateUserDetails(int userId, string firstName, string lastName, string gender, string email, string username, string password, DateTime dob)
-        {
-            string updateQuery = "UpdateUser"; // Name of your stored procedure
-            using (SqlConnection con = new SqlConnection(DBconnect.cs))
-            {
-                try
-                {
-                    con.Open();
-                    using (SqlCommand cmd = new SqlCommand(updateQuery, con))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@userid", userId);
-                        cmd.Parameters.AddWithValue("@firstname", firstName);
-                        cmd.Parameters.AddWithValue("@lastname", lastName);
-                        cmd.Parameters.AddWithValue("@gender", gender);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@upass", password);
-                        cmd.Parameters.AddWithValue("@dob", dob);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Your details are successfully updated.", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error while updating your details! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }   
-        }   */
     }
 }
