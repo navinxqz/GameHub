@@ -364,7 +364,7 @@ namespace GameServer_Management.Forms
                         {
                             s.txtDob.Text = row["dob"].ToString(); // If parsing fails, use the original
                         }
-                        UpdateUserDetails(
+                        /*UpdateUserDetails(
                             (int)row["userid"],  // Passing userID
                             s.txtFirstName.Text,
                             s.txtLastName.Text,
@@ -373,7 +373,7 @@ namespace GameServer_Management.Forms
                             s.txtUsername.Text,
                             s.txtpass.Text,
                             DateTime.Parse(s.txtDob.Text)
-                        );
+                        );  */
                     }
                     else
                     {
@@ -387,7 +387,7 @@ namespace GameServer_Management.Forms
                 }
             }s.Show();
         }
-        private void UpdateUserDetails(int userId, string firstName, string lastName, string gender, string email, string username, string password, DateTime dob)
+        /*private void UpdateUserDetails(int userId, string firstName, string lastName, string gender, string email, string username, string password, DateTime dob)
         {
             string updateQuery = "UpdateUser"; // Name of your stored procedure
             using (SqlConnection con = new SqlConnection(DBconnect.cs))
@@ -415,7 +415,7 @@ namespace GameServer_Management.Forms
                 {
                     MessageBox.Show($"Error while updating your details! {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-        }
+            }   
+        }   */
     }
 }
