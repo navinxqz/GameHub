@@ -347,6 +347,7 @@ namespace GameServer_Management.Forms
 
                         s.txtFirstName.Text = row["firstname"].ToString();
                         s.txtLastName.Text = row["lastname"].ToString();
+                        s.id = Convert.ToInt32(row["userid"]);
 
                         string gender = row["gender"].ToString();
                         if (gender == "Male")
