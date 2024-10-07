@@ -77,7 +77,11 @@ namespace GameServer_Management.Forms
             if (DBconnect.SQL(query, h) > 0)
             {
                 //MessageBox.Show("Sign up Successfull", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                signupmsg.Visible = true;
+                if (id == 0)
+                {
+                    signupmsg.Visible = true;
+                }
+                
                 await Task.Delay(3000);
                 this.Close();
             }
