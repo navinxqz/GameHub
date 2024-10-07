@@ -1,18 +1,11 @@
-﻿using CuoreUI.Components.Forms.cuiFormRounderV2Resources;
-using GameServer_Management.Class;
+﻿using GameServer_Management.Class;
 using GameServer_Management.Controller;
 using Krypton.Toolkit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace GameServer_Management.Forms
 {
@@ -25,7 +18,6 @@ namespace GameServer_Management.Forms
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
-        //private SignUp signUp = new SignUp();
         
         private AdminHome adminhome;
         private bool isAdmin;
@@ -54,30 +46,6 @@ namespace GameServer_Management.Forms
             usertxt.Text = username;
             adminhome = new AdminHome(this);
         }
-        public AdminPanel(string code)
-        {
-            InitializeComponent();
-            this.AutoScaleDimensions = new SizeF(96F, 96F);
-            this.AutoScaleMode = AutoScaleMode.Dpi;
-            
-            this.code = code;
-            next();
-        }
-
-        private void next()
-        {
-            //this.Close();
-            //getGame.Show();
-            //MessageBox.Show("Hello");
-            //LoadForm(getGame);
-            //getGame.BringToFront();
-            //Button(btnHome);
-            GetGame getGame = new GetGame();
-            mainpanel.Controls.Clear();
-            getGame.Dock = DockStyle.Fill;  // Make it fill the panel
-            mainpanel.Controls.Add(getGame);
-            mainpanel.Refresh();
-        }
 
         static AdminPanel obj;
         public static AdminPanel Instance(bool isAdmin)
@@ -92,7 +60,7 @@ namespace GameServer_Management.Forms
         {
             if (f == null)
             {
-                MessageBox.Show("The form to load is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Form is null!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -106,7 +74,6 @@ namespace GameServer_Management.Forms
             //f.Parent = this;
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
-            //f.Show();
             f.Visible = true;
         }
 
@@ -342,42 +309,41 @@ namespace GameServer_Management.Forms
                 }
             }
             if (dt.Rows.Count > 0)
-                    {
-                        DataRow row = dt.Rows[0];
+            {
+                DataRow row = dt.Rows[0];
 
-                        s.txtFirstName.Text = row["firstname"].ToString();
-                        s.txtLastName.Text = row["lastname"].ToString();
-                        s.id = Convert.ToInt32(row["userid"]);
+                s.txtFirstName.Text = row["firstname"].ToString();
+                s.txtLastName.Text = row["lastname"].ToString();
+                s.id = Convert.ToInt32(row["userid"]);
 
-                        string gender = row["gender"].ToString();
-                        if (gender == "Male")
-                        {
-                            s.maleRB.Checked = true;
-                        }
-                        else
-                        {
-                            s.femaleRB.Checked = true;
-                        }
+                string gender = row["gender"].ToString();
+                if (gender == "Male")
+                {
+                    s.maleRB.Checked = true;
+                }
+                else
+                {
+                    s.femaleRB.Checked = true;
+                }
 
-                        s.txtEmail.Text = row["email"].ToString();
-                        s.txtUsername.Text = row["username"].ToString();
-                        s.txtpass.Text = row["upass"].ToString();
+                s.txtEmail.Text = row["email"].ToString();
+                s.txtUsername.Text = row["username"].ToString();
+                s.txtpass.Text = row["upass"].ToString();
 
-                        DateTime dob;
-                        if (DateTime.TryParse(row["dob"].ToString(), out dob))
-                        {
-                            s.txtDob.Text = dob.ToString("dd-MM-yyyy");
-                        }
-                        else
-                        {
-                            s.txtDob.Text = row["dob"].ToString(); // If parsing fails, use the original
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-            s.Show();
+                DateTime dob;
+                if (DateTime.TryParse(row["dob"].ToString(), out dob))
+                {
+                    s.txtDob.Text = dob.ToString("dd-MM-yyyy");
+                }
+                else
+                {
+                    s.txtDob.Text = row["dob"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }s.Show();
         }
     }
 }
