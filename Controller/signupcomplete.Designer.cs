@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(signupcomplete));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtlabel = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,16 +46,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // txtlabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label1.Location = new System.Drawing.Point(176, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Sign up successful";
+            this.txtlabel.AutoSize = true;
+            this.txtlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtlabel.ForeColor = System.Drawing.Color.MediumPurple;
+            this.txtlabel.Location = new System.Drawing.Point(176, 43);
+            this.txtlabel.Name = "txtlabel";
+            this.txtlabel.Size = new System.Drawing.Size(193, 25);
+            this.txtlabel.TabIndex = 1;
+            this.txtlabel.Text = "Sign up successful";
             // 
             // bunifuElipse1
             // 
@@ -67,7 +67,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtlabel);
             this.Controls.Add(this.pictureBox1);
             this.Name = "signupcomplete";
             this.Size = new System.Drawing.Size(402, 112);
@@ -80,7 +80,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtlabel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

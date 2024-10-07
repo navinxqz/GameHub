@@ -16,5 +16,10 @@ namespace GameServer_Management.Controller
         {
             InitializeComponent();
         }
+        public string txt
+        {
+            get { return txtlabel.Text; }
+            set { txtlabel.Text = value; }
+        }
     }
 }
