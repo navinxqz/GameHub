@@ -21,7 +21,6 @@ namespace GameServer_Management.Forms
         
         private AdminHome adminhome;
         private bool isAdmin;
-        private string code;
 
         public AdminPanel(bool isAdmin)
         {
@@ -45,6 +44,12 @@ namespace GameServer_Management.Forms
             this.isAdmin = isAdmin;
             usertxt.Text = username;
             adminhome = new AdminHome(this);
+            this.Click += usericonbtn_Click;
+            this.Click += usertxt_Click;
+            foreach (Control c in this.Controls)
+            {
+                c.MouseClick += usericonbtn_Click;
+            }
         }
 
         static AdminPanel obj;
@@ -276,12 +281,7 @@ namespace GameServer_Management.Forms
             Button(downloadbtn);
         }
 
-        private void userbtn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void userpanel_Click(object sender, EventArgs e)
+        private void LoadInfo()
         {
             SignUp s = new SignUp();
             string user = usertxt.Text;
@@ -343,7 +343,23 @@ namespace GameServer_Management.Forms
             else
             {
                 MessageBox.Show("User not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }s.Show();
+            }
+            s.Show();
+        }
+
+        private void userpanel_Click(object sender, EventArgs e)
+        {
+            LoadInfo();
+        }
+
+        private void usericonbtn_Click(object sender, EventArgs e)
+        {
+            LoadInfo();
+        }
+
+        private void usertxt_Click(object sender, EventArgs e)
+        {
+            LoadInfo();
         }
     }
 }

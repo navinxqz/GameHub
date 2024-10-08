@@ -110,7 +110,7 @@
             this.userpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.userpanel.Controls.Add(this.usericonbtn);
             this.userpanel.Controls.Add(this.usertxt);
-            this.userpanel.Location = new System.Drawing.Point(2, 662);
+            this.userpanel.Location = new System.Drawing.Point(1, 675);
             this.userpanel.Name = "userpanel";
             this.userpanel.Size = new System.Drawing.Size(230, 53);
             this.userpanel.TabIndex = 8;
@@ -146,6 +146,7 @@
             this.usericonbtn.Size = new System.Drawing.Size(46, 45);
             this.usericonbtn.TabIndex = 9;
             this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.usericonbtn.Click += new System.EventHandler(this.usericonbtn_Click);
             // 
             // usertxt
             // 
@@ -157,6 +158,7 @@
             this.usertxt.Size = new System.Drawing.Size(110, 25);
             this.usertxt.TabIndex = 1;
             this.usertxt.Text = "Username";
+            this.usertxt.Click += new System.EventHandler(this.usertxt_Click);
             // 
             // logout
             // 
