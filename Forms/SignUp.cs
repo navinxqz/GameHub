@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -165,6 +166,20 @@ namespace GameServer_Management.Forms
         private void exitbtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void exitbtn_MouseHover(object sender, EventArgs e)
+        {
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string imgPath = Path.Combine(projectDir, "asset", "x_red(39).png");
+            exitbtn.Image = Image.FromFile(imgPath);
+        }
+
+        private void SignUp_MouseHover(object sender, EventArgs e)
+        {
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
+            exitbtn.Image = Image.FromFile(imgPath);
         }
     }
 }

@@ -628,6 +628,7 @@
             this.exitbtn.TabIndex = 64;
             this.exitbtn.TextOffset = new System.Drawing.Point(0, 0);
             this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            this.exitbtn.MouseHover += new System.EventHandler(this.exitbtn_MouseHover);
             // 
             // pictureBox2
             // 
@@ -680,6 +681,7 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUp";
+            this.MouseHover += new System.EventHandler(this.SignUp_MouseHover);
             this.mainpanel.ResumeLayout(false);
             this.mainpanel.PerformLayout();
             this.genderpanel.ResumeLayout(false);
