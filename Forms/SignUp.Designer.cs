@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.hidepassbtn = new CuoreUI.Controls.cuiButton();
             this.showpassbtn = new CuoreUI.Controls.cuiButton();
             this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
@@ -56,16 +55,19 @@
             this.txtEmail = new Krypton.Toolkit.KryptonTextBox();
             this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.cancelbtn = new CuoreUI.Controls.cuiButton();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.usericonbtn = new CuoreUI.Controls.cuiButton();
+            this.exitbtn = new CuoreUI.Controls.cuiButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainpanel
@@ -92,19 +94,10 @@
             this.mainpanel.Controls.Add(this.emillbl);
             this.mainpanel.Controls.Add(this.txtEmail);
             this.mainpanel.Controls.Add(this.txtpass);
-            this.mainpanel.Location = new System.Drawing.Point(136, 53);
+            this.mainpanel.Location = new System.Drawing.Point(296, 83);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(891, 459);
+            this.mainpanel.Size = new System.Drawing.Size(768, 459);
             this.mainpanel.TabIndex = 0;
-            // 
-            // signupmsg
-            // 
-            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signupmsg.Location = new System.Drawing.Point(233, 203);
-            this.signupmsg.Name = "signupmsg";
-            this.signupmsg.Size = new System.Drawing.Size(402, 112);
-            this.signupmsg.TabIndex = 94;
-            this.signupmsg.Visible = false;
             // 
             // hidepassbtn
             // 
@@ -125,7 +118,7 @@
             this.hidepassbtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.hidepassbtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.hidepassbtn.ImageTint = System.Drawing.Color.White;
-            this.hidepassbtn.Location = new System.Drawing.Point(817, 343);
+            this.hidepassbtn.Location = new System.Drawing.Point(694, 343);
             this.hidepassbtn.Name = "hidepassbtn";
             this.hidepassbtn.NormalBackground = System.Drawing.Color.Transparent;
             this.hidepassbtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -159,7 +152,7 @@
             this.showpassbtn.ImageExpand = new System.Drawing.Point(5, 5);
             this.showpassbtn.ImageOffset = new System.Drawing.Point(0, 0);
             this.showpassbtn.ImageTint = System.Drawing.Color.White;
-            this.showpassbtn.Location = new System.Drawing.Point(817, 343);
+            this.showpassbtn.Location = new System.Drawing.Point(694, 343);
             this.showpassbtn.Name = "showpassbtn";
             this.showpassbtn.NormalBackground = System.Drawing.Color.Transparent;
             this.showpassbtn.NormalOutline = System.Drawing.Color.Transparent;
@@ -193,7 +186,7 @@
             this.hide_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
             this.hide_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
             this.hide_pass_btn.ImageTint = System.Drawing.Color.White;
-            this.hide_pass_btn.Location = new System.Drawing.Point(308, 343);
+            this.hide_pass_btn.Location = new System.Drawing.Point(315, 343);
             this.hide_pass_btn.Name = "hide_pass_btn";
             this.hide_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
             this.hide_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
@@ -227,7 +220,7 @@
             this.show_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
             this.show_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
             this.show_pass_btn.ImageTint = System.Drawing.Color.White;
-            this.show_pass_btn.Location = new System.Drawing.Point(308, 343);
+            this.show_pass_btn.Location = new System.Drawing.Point(315, 343);
             this.show_pass_btn.Name = "show_pass_btn";
             this.show_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
             this.show_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
@@ -247,7 +240,7 @@
             this.genderpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.genderpanel.Controls.Add(this.maleRB);
             this.genderpanel.Controls.Add(this.femaleRB);
-            this.genderpanel.Location = new System.Drawing.Point(527, 146);
+            this.genderpanel.Location = new System.Drawing.Point(404, 146);
             this.genderpanel.Name = "genderpanel";
             this.genderpanel.Size = new System.Drawing.Size(337, 51);
             this.genderpanel.TabIndex = 88;
@@ -288,7 +281,7 @@
             // 
             this.txtconpass.CornerRoundingRadius = 30F;
             this.txtconpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtconpass.Location = new System.Drawing.Point(527, 337);
+            this.txtconpass.Location = new System.Drawing.Point(404, 337);
             this.txtconpass.Name = "txtconpass";
             this.txtconpass.PasswordChar = '*';
             this.txtconpass.Size = new System.Drawing.Size(337, 51);
@@ -309,7 +302,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label7.Location = new System.Drawing.Point(545, 311);
+            this.label7.Location = new System.Drawing.Point(422, 311);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(173, 23);
             this.label7.TabIndex = 80;
@@ -320,7 +313,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label6.Location = new System.Drawing.Point(42, 311);
+            this.label6.Location = new System.Drawing.Point(49, 311);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 23);
             this.label6.TabIndex = 78;
@@ -331,7 +324,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label1.Location = new System.Drawing.Point(545, 119);
+            this.label1.Location = new System.Drawing.Point(422, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 23);
             this.label1.TabIndex = 76;
@@ -340,7 +333,7 @@
             // DateSelect
             // 
             this.DateSelect.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateSelect.Location = new System.Drawing.Point(329, 162);
+            this.DateSelect.Location = new System.Drawing.Point(336, 162);
             this.DateSelect.Margin = new System.Windows.Forms.Padding(2);
             this.DateSelect.MaxDate = new System.DateTime(3000, 12, 31, 0, 0, 0, 0);
             this.DateSelect.MinDate = new System.DateTime(1971, 12, 1, 0, 0, 0, 0);
@@ -354,7 +347,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label5.Location = new System.Drawing.Point(42, 119);
+            this.label5.Location = new System.Drawing.Point(49, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 23);
             this.label5.TabIndex = 71;
@@ -364,7 +357,7 @@
             // 
             this.txtDob.CornerRoundingRadius = 30F;
             this.txtDob.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtDob.Location = new System.Drawing.Point(24, 145);
+            this.txtDob.Location = new System.Drawing.Point(31, 145);
             this.txtDob.Name = "txtDob";
             this.txtDob.ReadOnly = true;
             this.txtDob.Size = new System.Drawing.Size(337, 51);
@@ -392,7 +385,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(545, 23);
+            this.label2.Location = new System.Drawing.Point(422, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 23);
             this.label2.TabIndex = 67;
@@ -402,7 +395,7 @@
             // 
             this.txtLastName.CornerRoundingRadius = 30F;
             this.txtLastName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtLastName.Location = new System.Drawing.Point(527, 49);
+            this.txtLastName.Location = new System.Drawing.Point(404, 49);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(337, 51);
             this.txtLastName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -421,7 +414,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label4.Location = new System.Drawing.Point(545, 213);
+            this.label4.Location = new System.Drawing.Point(422, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 23);
             this.label4.TabIndex = 69;
@@ -431,7 +424,7 @@
             // 
             this.txtUsername.CornerRoundingRadius = 30F;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtUsername.Location = new System.Drawing.Point(527, 239);
+            this.txtUsername.Location = new System.Drawing.Point(404, 239);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(337, 51);
             this.txtUsername.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -450,7 +443,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label3.Location = new System.Drawing.Point(42, 23);
+            this.label3.Location = new System.Drawing.Point(49, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 63;
@@ -460,7 +453,7 @@
             // 
             this.txtFirstName.CornerRoundingRadius = 30F;
             this.txtFirstName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtFirstName.Location = new System.Drawing.Point(24, 49);
+            this.txtFirstName.Location = new System.Drawing.Point(31, 49);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(337, 51);
             this.txtFirstName.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -479,7 +472,7 @@
             this.emillbl.AutoSize = true;
             this.emillbl.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emillbl.ForeColor = System.Drawing.Color.MediumPurple;
-            this.emillbl.Location = new System.Drawing.Point(42, 213);
+            this.emillbl.Location = new System.Drawing.Point(49, 213);
             this.emillbl.Name = "emillbl";
             this.emillbl.Size = new System.Drawing.Size(61, 23);
             this.emillbl.TabIndex = 65;
@@ -489,7 +482,7 @@
             // 
             this.txtEmail.CornerRoundingRadius = 30F;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtEmail.Location = new System.Drawing.Point(24, 239);
+            this.txtEmail.Location = new System.Drawing.Point(31, 239);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(337, 51);
             this.txtEmail.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
@@ -507,7 +500,7 @@
             // 
             this.txtpass.CornerRoundingRadius = 30F;
             this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtpass.Location = new System.Drawing.Point(24, 337);
+            this.txtpass.Location = new System.Drawing.Point(31, 337);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(337, 51);
@@ -528,38 +521,6 @@
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this.genderpanel;
             // 
-            // cancelbtn
-            // 
-            this.cancelbtn.CheckButton = false;
-            this.cancelbtn.Checked = false;
-            this.cancelbtn.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(134)))), ((int)(((byte)(106)))), ((int)(((byte)(163)))));
-            this.cancelbtn.CheckedImageTint = System.Drawing.Color.White;
-            this.cancelbtn.CheckedOutline = System.Drawing.Color.White;
-            this.cancelbtn.Content = "Cancel";
-            this.cancelbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.cancelbtn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.cancelbtn.HoveredImageTint = System.Drawing.Color.White;
-            this.cancelbtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cancelbtn.Image = null;
-            this.cancelbtn.ImageAutoCenter = true;
-            this.cancelbtn.ImageExpand = new System.Drawing.Point(0, 0);
-            this.cancelbtn.ImageOffset = new System.Drawing.Point(0, 0);
-            this.cancelbtn.ImageTint = System.Drawing.Color.White;
-            this.cancelbtn.Location = new System.Drawing.Point(573, 528);
-            this.cancelbtn.Name = "cancelbtn";
-            this.cancelbtn.NormalBackground = System.Drawing.Color.Transparent;
-            this.cancelbtn.NormalOutline = System.Drawing.Color.White;
-            this.cancelbtn.OutlineThickness = 1.6F;
-            this.cancelbtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
-            this.cancelbtn.PressedImageTint = System.Drawing.Color.White;
-            this.cancelbtn.PressedOutline = System.Drawing.Color.White;
-            this.cancelbtn.Rounding = new System.Windows.Forms.Padding(15);
-            this.cancelbtn.Size = new System.Drawing.Size(147, 54);
-            this.cancelbtn.TabIndex = 61;
-            this.cancelbtn.TextOffset = new System.Drawing.Point(0, 0);
-            this.cancelbtn.Click += new System.EventHandler(this.cancelbtn_Click);
-            // 
             // btnAdd
             // 
             this.btnAdd.CheckButton = false;
@@ -573,12 +534,12 @@
             this.btnAdd.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnAdd.HoveredImageTint = System.Drawing.Color.White;
             this.btnAdd.HoverOutline = System.Drawing.Color.Transparent;
-            this.btnAdd.Image = null;
-            this.btnAdd.ImageAutoCenter = true;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageAutoCenter = false;
             this.btnAdd.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnAdd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.ImageOffset = new System.Drawing.Point(120, 0);
             this.btnAdd.ImageTint = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(421, 528);
+            this.btnAdd.Location = new System.Drawing.Point(869, 527);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(48)))));
             this.btnAdd.NormalOutline = System.Drawing.Color.Transparent;
@@ -587,30 +548,10 @@
             this.btnAdd.PressedImageTint = System.Drawing.Color.White;
             this.btnAdd.PressedOutline = System.Drawing.Color.White;
             this.btnAdd.Rounding = new System.Windows.Forms.Padding(15);
-            this.btnAdd.Size = new System.Drawing.Size(137, 54);
+            this.btnAdd.Size = new System.Drawing.Size(160, 54);
             this.btnAdd.TabIndex = 60;
-            this.btnAdd.TextOffset = new System.Drawing.Point(0, 0);
+            this.btnAdd.TextOffset = new System.Drawing.Point(-20, 0);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-4, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 647);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(912, -2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 647);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 63;
-            this.pictureBox2.TabStop = false;
             // 
             // bunifuElipse2
             // 
@@ -622,17 +563,119 @@
             this.bunifuElipse3.ElipseRadius = 50;
             this.bunifuElipse3.TargetControl = this;
             // 
+            // usericonbtn
+            // 
+            this.usericonbtn.CheckButton = false;
+            this.usericonbtn.Checked = false;
+            this.usericonbtn.CheckedBackground = System.Drawing.Color.Coral;
+            this.usericonbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.usericonbtn.CheckedOutline = System.Drawing.Color.Silver;
+            this.usericonbtn.Content = "";
+            this.usericonbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.usericonbtn.ForeColor = System.Drawing.Color.White;
+            this.usericonbtn.HoverBackground = System.Drawing.Color.Transparent;
+            this.usericonbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.usericonbtn.HoverOutline = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.usericonbtn.Image = ((System.Drawing.Image)(resources.GetObject("usericonbtn.Image")));
+            this.usericonbtn.ImageAutoCenter = true;
+            this.usericonbtn.ImageExpand = new System.Drawing.Point(100, 100);
+            this.usericonbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.usericonbtn.ImageTint = System.Drawing.Color.White;
+            this.usericonbtn.Location = new System.Drawing.Point(40, 187);
+            this.usericonbtn.Name = "usericonbtn";
+            this.usericonbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.usericonbtn.NormalOutline = System.Drawing.Color.Black;
+            this.usericonbtn.OutlineThickness = 3F;
+            this.usericonbtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.usericonbtn.PressedImageTint = System.Drawing.Color.White;
+            this.usericonbtn.PressedOutline = System.Drawing.Color.White;
+            this.usericonbtn.Rounding = new System.Windows.Forms.Padding(100);
+            this.usericonbtn.Size = new System.Drawing.Size(215, 215);
+            this.usericonbtn.TabIndex = 62;
+            this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // exitbtn
+            // 
+            this.exitbtn.AutoSize = true;
+            this.exitbtn.BackColor = System.Drawing.Color.Transparent;
+            this.exitbtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitbtn.CheckButton = false;
+            this.exitbtn.Checked = false;
+            this.exitbtn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.CheckedImageTint = System.Drawing.Color.Transparent;
+            this.exitbtn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Content = "";
+            this.exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.exitbtn.ForeColor = System.Drawing.Color.Transparent;
+            this.exitbtn.HoverBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.exitbtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Image = ((System.Drawing.Image)(resources.GetObject("exitbtn.Image")));
+            this.exitbtn.ImageAutoCenter = true;
+            this.exitbtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.exitbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.exitbtn.ImageTint = System.Drawing.Color.White;
+            this.exitbtn.Location = new System.Drawing.Point(1072, 8);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.NormalOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.OutlineThickness = 0F;
+            this.exitbtn.PressedBackground = System.Drawing.Color.Transparent;
+            this.exitbtn.PressedImageTint = System.Drawing.Color.White;
+            this.exitbtn.PressedOutline = System.Drawing.Color.Transparent;
+            this.exitbtn.Rounding = new System.Windows.Forms.Padding(20);
+            this.exitbtn.Size = new System.Drawing.Size(40, 36);
+            this.exitbtn.TabIndex = 64;
+            this.exitbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(49, 193);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(198, 203);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 65;
+            this.pictureBox2.TabStop = false;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 200;
+            this.bunifuElipse4.TargetControl = this.pictureBox2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-6, 628);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1138, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 66;
+            this.pictureBox1.TabStop = false;
+            // 
+            // signupmsg
+            // 
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(63, 137);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.txt = "Sign up successful";
+            this.signupmsg.Visible = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1122, 644);
-            this.Controls.Add(this.mainpanel);
-            this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.exitbtn);
+            this.Controls.Add(this.usericonbtn);
+            this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -641,9 +684,10 @@
             this.mainpanel.PerformLayout();
             this.genderpanel.ResumeLayout(false);
             this.genderpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -668,10 +712,7 @@
         public Krypton.Toolkit.KryptonTextBox txtconpass;
         private System.Windows.Forms.Panel genderpanel;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private CuoreUI.Controls.cuiButton cancelbtn;
         private CuoreUI.Controls.cuiButton btnAdd;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private CuoreUI.Controls.cuiButton show_pass_btn;
@@ -681,5 +722,10 @@
         private Controller.signupcomplete signupmsg;
         public System.Windows.Forms.RadioButton maleRB;
         public System.Windows.Forms.RadioButton femaleRB;
+        private CuoreUI.Controls.cuiButton usericonbtn;
+        private CuoreUI.Controls.cuiButton exitbtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

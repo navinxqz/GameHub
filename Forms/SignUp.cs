@@ -102,10 +102,7 @@ namespace GameServer_Management.Forms
             GetGender();
         }
 
-        private void cancelbtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        
 
         private void DateSelect_ValueChanged(object sender, EventArgs e)
         {
@@ -163,6 +160,11 @@ namespace GameServer_Management.Forms
                 return false;
             }
             return true;
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
