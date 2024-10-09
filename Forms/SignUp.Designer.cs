@@ -65,10 +65,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toplabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,7 +79,7 @@
             // 
             // mainpanel
             // 
-            this.mainpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.mainpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.mainpanel.Controls.Add(this.signupmsg);
             this.mainpanel.Controls.Add(this.hidepassbtn);
             this.mainpanel.Controls.Add(this.showpassbtn);
@@ -684,16 +684,6 @@
             this.pictureBox3.TabIndex = 68;
             this.pictureBox3.TabStop = false;
             // 
-            // signupmsg
-            // 
-            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signupmsg.Location = new System.Drawing.Point(63, 137);
-            this.signupmsg.Name = "signupmsg";
-            this.signupmsg.Size = new System.Drawing.Size(402, 112);
-            this.signupmsg.TabIndex = 94;
-            this.signupmsg.txt = "Sign up successful";
-            this.signupmsg.Visible = false;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
@@ -745,6 +735,16 @@
             this.cuiButton1.Size = new System.Drawing.Size(40, 38);
             this.cuiButton1.TabIndex = 24;
             this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
+            // 
+            // signupmsg
+            // 
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(63, 137);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.txt = "Sign up successful";
+            this.signupmsg.Visible = false;
             // 
             // SignUp
             // 

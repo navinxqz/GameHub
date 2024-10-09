@@ -271,7 +271,7 @@
             this.kryptonPanel1.Controls.Add(this.btnHome);
             this.kryptonPanel1.Controls.Add(this.adminDBbtn);
             this.kryptonPanel1.Controls.Add(this.userDBbtn);
-            this.kryptonPanel1.Location = new System.Drawing.Point(2, 183);
+            this.kryptonPanel1.Location = new System.Drawing.Point(2, 190);
             this.kryptonPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.TabLowProfile;

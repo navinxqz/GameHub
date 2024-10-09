@@ -5,6 +5,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
@@ -152,10 +153,18 @@ namespace GameServer_Management.Forms
                 if (slidePanel.Size.Width == 230)
                 {
                     sliderHideTimer.Start();
+
+                    string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                    string imgPath = Path.Combine(projectDir, "asset", "menu-4-32.png");
+                    menubtn.Image = Image.FromFile(imgPath);
                 }
                 else if (slidePanel.Size.Width == 70)
                 {
                     sliderShowTimer.Start();
+
+                    string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                    string imgPath = Path.Combine(projectDir, "asset", "menu-96.png");
+                    menubtn.Image = Image.FromFile(imgPath);
                 }
             }
         }
