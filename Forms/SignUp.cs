@@ -24,6 +24,8 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            //if(id != 0) { toplabel.Text = $"{txtLastName.Text}'s Profile"; }
         }
         private void GetGender()
         {

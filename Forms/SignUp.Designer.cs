@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.hidepassbtn = new CuoreUI.Controls.cuiButton();
             this.showpassbtn = new CuoreUI.Controls.cuiButton();
             this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
@@ -64,13 +63,18 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.toplabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cuiButton1 = new CuoreUI.Controls.cuiButton();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainpanel
@@ -102,16 +106,6 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(768, 415);
             this.mainpanel.TabIndex = 0;
-            // 
-            // signupmsg
-            // 
-            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signupmsg.Location = new System.Drawing.Point(63, 137);
-            this.signupmsg.Name = "signupmsg";
-            this.signupmsg.Size = new System.Drawing.Size(402, 112);
-            this.signupmsg.TabIndex = 94;
-            this.signupmsg.txt = "Sign up successful";
-            this.signupmsg.Visible = false;
             // 
             // hidepassbtn
             // 
@@ -669,16 +663,16 @@
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
+            // toplabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Lavender;
-            this.label8.Location = new System.Drawing.Point(320, 29);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(279, 37);
-            this.label8.TabIndex = 67;
-            this.label8.Text = "Create an account";
+            this.toplabel.AutoSize = true;
+            this.toplabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toplabel.ForeColor = System.Drawing.Color.Lavender;
+            this.toplabel.Location = new System.Drawing.Point(320, 29);
+            this.toplabel.Name = "toplabel";
+            this.toplabel.Size = new System.Drawing.Size(279, 37);
+            this.toplabel.TabIndex = 67;
+            this.toplabel.Text = "Create an account";
             // 
             // pictureBox3
             // 
@@ -690,13 +684,76 @@
             this.pictureBox3.TabIndex = 68;
             this.pictureBox3.TabStop = false;
             // 
+            // signupmsg
+            // 
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(63, 137);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.txt = "Sign up successful";
+            this.signupmsg.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Controls.Add(this.cuiButton1);
+            this.panel7.Location = new System.Drawing.Point(19, 13);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 39);
+            this.panel7.TabIndex = 69;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.label8.Location = new System.Drawing.Point(49, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(97, 24);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "GameHub";
+            // 
+            // cuiButton1
+            // 
+            this.cuiButton1.CheckButton = false;
+            this.cuiButton1.Checked = false;
+            this.cuiButton1.CheckedBackground = System.Drawing.Color.Coral;
+            this.cuiButton1.CheckedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.CheckedOutline = System.Drawing.Color.Silver;
+            this.cuiButton1.Content = "";
+            this.cuiButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.cuiButton1.ForeColor = System.Drawing.Color.White;
+            this.cuiButton1.HoverBackground = System.Drawing.Color.White;
+            this.cuiButton1.HoveredImageTint = System.Drawing.Color.White;
+            this.cuiButton1.HoverOutline = System.Drawing.Color.White;
+            this.cuiButton1.Image = ((System.Drawing.Image)(resources.GetObject("cuiButton1.Image")));
+            this.cuiButton1.ImageAutoCenter = true;
+            this.cuiButton1.ImageExpand = new System.Drawing.Point(15, 15);
+            this.cuiButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.cuiButton1.ImageTint = System.Drawing.Color.White;
+            this.cuiButton1.Location = new System.Drawing.Point(3, 0);
+            this.cuiButton1.Name = "cuiButton1";
+            this.cuiButton1.NormalBackground = System.Drawing.Color.SlateGray;
+            this.cuiButton1.NormalOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.OutlineThickness = 3F;
+            this.cuiButton1.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.cuiButton1.PressedImageTint = System.Drawing.Color.White;
+            this.cuiButton1.PressedOutline = System.Drawing.Color.Empty;
+            this.cuiButton1.Rounding = new System.Windows.Forms.Padding(15);
+            this.cuiButton1.Size = new System.Drawing.Size(40, 38);
+            this.cuiButton1.TabIndex = 24;
+            this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1122, 644);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.toplabel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -716,6 +773,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -757,7 +816,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox3;
+        public System.Windows.Forms.Label toplabel;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label8;
+        private CuoreUI.Controls.cuiButton cuiButton1;
     }
 }

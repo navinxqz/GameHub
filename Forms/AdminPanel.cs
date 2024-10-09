@@ -315,6 +315,7 @@ namespace GameServer_Management.Forms
                 s.txtFirstName.Text = row["firstname"].ToString();
                 s.txtLastName.Text = row["lastname"].ToString();
                 s.id = Convert.ToInt32(row["userid"]);
+                s.toplabel.Text = $"{s.txtLastName.Text}'s Profile";
 
                 string gender = row["gender"].ToString();
                 if (gender == "Male")
