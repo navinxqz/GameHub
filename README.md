@@ -16,8 +16,8 @@ The **GameHub Management System** is a C# Windows Forms application, a comprehen
 This a university-level project and a practical exercise in database management, form-based user interfaces. It is built with user-friendly controls and provides a smooth UI experience for both users and administrators.
 
 ---
-
-## Features
+<details>
+   <summary><h2>Features</h2></summary>
 
 ### **Admin Panel**
 - **Add, Update and Delete Games**: Administrators can manage games in the system database by CRUD operations.
@@ -37,10 +37,11 @@ This a university-level project and a practical exercise in database management,
 ### **User Account Management**
 - **Sign Up & Login**: Users can create accounts and log in to manage their downloads and access exclusive games.
 - **Admin Login**: A separate log in form is added for the admins to manage the system database.
-
 ---
+</details>
 
-## Technologies Used
+<details>
+   <summary><h2>Technologies Used</h2></summary>
 
 - **Programming Language**: C# (.NET Framework v4.7.2)
 - **Database**: SQL Server management system
@@ -49,6 +50,7 @@ This a university-level project and a practical exercise in database management,
 - **Version Control**: GitHub
 
 ---
+</details>
 
 ## Setup and Installation
 
