@@ -150,7 +150,7 @@ namespace GameServer_Management.Forms
         {
             if (!sliderShowTimer.Enabled && !sliderHideTimer.Enabled)
             {
-                if (slidePanel.Size.Width == 230)
+                if (slidePanel.Size.Width == 230)   //for minimize
                 {
                     sliderHideTimer.Start();
 
@@ -158,7 +158,7 @@ namespace GameServer_Management.Forms
                     string imgPath = Path.Combine(projectDir, "asset", "menu-4-32.png");
                     menubtn.Image = Image.FromFile(imgPath);
                 }
-                else if (slidePanel.Size.Width == 70)
+                else if (slidePanel.Size.Width == 70)   //for expand
                 {
                     sliderShowTimer.Start();
 
