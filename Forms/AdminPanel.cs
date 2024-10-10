@@ -327,6 +327,7 @@ namespace GameServer_Management.Forms
                 s.toplabel.Text = $"{s.txtLastName.Text}'s Profile";
                 s.txtpass.ReadOnly = true;
                 s.hide_pass_btn.Enabled = false;
+                s.pictureBox2.Visible = true;
 
                 string gender = row["gender"].ToString();
                 if (gender == "Male")

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.hidepassbtn = new CuoreUI.Controls.cuiButton();
             this.showpassbtn = new CuoreUI.Controls.cuiButton();
             this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
@@ -61,20 +60,21 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.usericonbtn = new CuoreUI.Controls.cuiButton();
             this.exitbtn = new CuoreUI.Controls.cuiButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toplabel = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cuiButton1 = new CuoreUI.Controls.cuiButton();
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.signupmsg = new GameServer_Management.Controller.signupcomplete();
             this.mainpanel.SuspendLayout();
             this.genderpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // mainpanel
@@ -106,16 +106,6 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(768, 415);
             this.mainpanel.TabIndex = 0;
-            // 
-            // signupmsg
-            // 
-            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.signupmsg.Location = new System.Drawing.Point(63, 137);
-            this.signupmsg.Name = "signupmsg";
-            this.signupmsg.Size = new System.Drawing.Size(402, 112);
-            this.signupmsg.TabIndex = 94;
-            this.signupmsg.txt = "Sign up successful";
-            this.signupmsg.Visible = false;
             // 
             // hidepassbtn
             // 
@@ -604,7 +594,7 @@
             this.usericonbtn.NormalBackground = System.Drawing.Color.Transparent;
             this.usericonbtn.NormalOutline = System.Drawing.Color.Black;
             this.usericonbtn.OutlineThickness = 3F;
-            this.usericonbtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.usericonbtn.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
             this.usericonbtn.PressedImageTint = System.Drawing.Color.White;
             this.usericonbtn.PressedOutline = System.Drawing.Color.White;
             this.usericonbtn.Rounding = new System.Windows.Forms.Padding(100);
@@ -647,21 +637,6 @@
             this.exitbtn.TextOffset = new System.Drawing.Point(0, 0);
             this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             this.exitbtn.MouseHover += new System.EventHandler(this.exitbtn_MouseHover);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(49, 193);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(198, 203);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 65;
-            this.pictureBox2.TabStop = false;
-            // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 200;
-            this.bunifuElipse4.TargetControl = this.pictureBox2;
             // 
             // pictureBox1
             // 
@@ -746,17 +721,43 @@
             this.cuiButton1.TabIndex = 24;
             this.cuiButton1.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 200;
+            this.bunifuElipse4.TargetControl = this.pictureBox2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(53, 181);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(189, 218);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 70;
+            this.pictureBox2.TabStop = false;
+            // 
+            // signupmsg
+            // 
+            this.signupmsg.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.signupmsg.Location = new System.Drawing.Point(63, 137);
+            this.signupmsg.Name = "signupmsg";
+            this.signupmsg.Size = new System.Drawing.Size(402, 112);
+            this.signupmsg.TabIndex = 94;
+            this.signupmsg.txt = "Sign up successful";
+            this.signupmsg.Visible = false;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(1122, 644);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.toplabel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.usericonbtn);
             this.Controls.Add(this.mainpanel);
@@ -770,11 +771,11 @@
             this.mainpanel.PerformLayout();
             this.genderpanel.ResumeLayout(false);
             this.genderpanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -812,8 +813,6 @@
         public System.Windows.Forms.RadioButton femaleRB;
         private CuoreUI.Controls.cuiButton usericonbtn;
         private CuoreUI.Controls.cuiButton exitbtn;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.Label toplabel;
@@ -821,5 +820,7 @@
         private System.Windows.Forms.Label label8;
         private CuoreUI.Controls.cuiButton cuiButton1;
         public CuoreUI.Controls.cuiButton hide_pass_btn;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        public System.Windows.Forms.PictureBox pictureBox2;
     }
 }

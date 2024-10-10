@@ -19,6 +19,7 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            pictureBox2.Visible = false;
 
             //if(id != 0) { toplabel.Text = $"{txtLastName.Text}'s Profile"; }
         }
