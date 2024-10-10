@@ -66,7 +66,6 @@
             this.txtCat.StateCommon.Content.Color1 = System.Drawing.Color.White;
             this.txtCat.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCat.TabIndex = 18;
-            this.txtCat.TextChanged += new System.EventHandler(this.txtCat_TextChanged);
             // 
             // label3
             // 

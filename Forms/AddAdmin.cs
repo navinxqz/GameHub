@@ -35,12 +35,12 @@ namespace GameServer_Management.Forms
 
             if (DBconnect.SQL(query, h) > 0)
             {
-                MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Admin saved successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
             }
             else
             {
-                MessageBox.Show("Error while adding the admin. Please check your inputs and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error! Please check your inputs and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void ClearForm()

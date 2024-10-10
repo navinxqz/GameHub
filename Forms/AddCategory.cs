@@ -1,13 +1,8 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
@@ -21,11 +16,6 @@ namespace GameServer_Management.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
         }
         public int id = 0;
-
-        private void txtCat_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -44,7 +34,7 @@ namespace GameServer_Management.Forms
 
             if(DBconnect.SQL(query,h) > 0)
             {
-                MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Saved Successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 id = 0;
                 txtCat.Clear();
                 txtCat.Focus();
