@@ -1,14 +1,14 @@
 # GameHub Management System
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ### **Table of Contents**
 1. [Project Overview](#project-overview)
 2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Setup and Installation](#setup-and-installation)
-5. [Contributing](#contributing)
-6. [License](#license)
+3. [Project Demo](#project-demo)
+4. [Technologies Used](#technologies-used)
+5. [Setup and Installation](#setup-and-installation)
+6. [Contributing](#contributing)
 
 ---
-
 ## Project Overview
 
 The **GameHub Management System** is a C# Windows Forms application, a comprehensive digital distribution platform and game server management software. It provides administrators with an interface to add, edit and delete games from the system and offers users a platform to download and view game details. The system is built to be a centralized hub where multiple games can be managed, with features for categorization, user management and detailed tracking of download history.
@@ -37,6 +37,42 @@ This a university-level project and a practical exercise in database management,
 ### **User Account Management**
 - **Sign Up & Login**: Users can create accounts and log in to manage their downloads and access exclusive games.
 - **Admin Login**: A separate log in form is added for the admins to manage the system database.
+---
+</details>
+
+<details open> 
+   <summary><h2 align="left">Project Demo</h2></summary>
+
+<h3 align="center">Loading Form</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/loading.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">User Login</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_login.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">User Profile</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/Profile_info.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Admin Login</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_login.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Home Screen</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_home.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Game Click</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_click.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Game Database</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_DB.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Adding New Game</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_game.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Game Category Database</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/category_DB.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">User Database</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_DB.png" width=650 title= "project interface" /></p><br>
+
 ---
 </details>
 
@@ -93,10 +129,3 @@ If you encounter any bugs or have feature requests, feel free to create an issue
             <td align = "center" width = "200"><a href="https://www.instagram.com/podder_durjoy" target="_blank" alt="durjoy insta acc">Durjoy Podder</td>
             <td align = "center" width = "200"><a href="https://www.facebook.com/siftialmahmud.sifti" alt="Sifti fb acc" target="_blank">Sifti Al Mahmud</td>
          </tr></table>
-
----
-## License
-
-This project is licensed under the MIT License.
-
-
