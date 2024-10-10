@@ -25,7 +25,7 @@ namespace GameServer_Management.Class
         {
             bool isValid = false;
             string query = @"select username, upass from admintbl where username = @username and upass = @password";
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection con = GetConnection())
             {
                 try
                 {
@@ -103,7 +103,7 @@ namespace GameServer_Management.Class
         public static int SQL(string query, Hashtable h)
         {
             int result = 0;
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection con = GetConnection())
             {
                 try
                 {
@@ -117,7 +117,6 @@ namespace GameServer_Management.Class
                         }
                         //if(con.State == ConnectionState.Closed) { con.Open(); }
                         result = cmd.ExecuteNonQuery();
-                        //if (con.State == ConnectionState.Open) { con.Close(); }
                     }
                 }
                 catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
@@ -133,14 +132,13 @@ namespace GameServer_Management.Class
         public static void LoadData(string query, DataGridView g,ListBox l)
         {
             g.CellFormatting += new DataGridViewCellFormattingEventHandler(g_CellFormatting);
-            using (SqlConnection con = new SqlConnection(cs)) 
+            using (SqlConnection con = GetConnection()) 
             {
                 try
                 {
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        //cmd.CommandType = CommandType.Text;
                         using(SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
                             DataTable dt = new DataTable();
@@ -169,10 +167,6 @@ namespace GameServer_Management.Class
                     }
                 }
                 catch (Exception ex) { MessageBox.Show($"Error loading data! {ex.Message}"); }
-                finally
-                {
-                    if (con.State == ConnectionState.Open) { con.Close(); }
-                }
             }
         }
         private static void g_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -193,28 +187,28 @@ namespace GameServer_Management.Class
             {
                 Bg.StartPosition = FormStartPosition.Manual;
                 Bg.FormBorderStyle = FormBorderStyle.None;
-                Bg.Opacity = 0.5d;
+                Bg.Opacity = 0.5;
                 Bg.BackColor = Color.Black;
                 Bg.Size = AdminPanel.Instance(true).Size;
                 Bg.Location = AdminPanel.Instance(true).Location;
                 Bg.ShowInTaskbar = false;
+
                 Bg.Show();
                 f.Owner = Bg;
                 f.ShowDialog(Bg);
                 Bg.Dispose();
             }
         }
+
         public static void CBFill(string query,Krypton.Toolkit.KryptonComboBox cb) 
         {
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection con = GetConnection())
             {
                 try
                 {
                     con.Open();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        //cmd.CommandType = CommandType.Text;
-
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {
                             DataTable dt = new DataTable();
