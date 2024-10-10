@@ -21,11 +21,6 @@ namespace GameServer_Management.Forms
         public int id = 0;
         public int catID = 0;
 
-        private void labelName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cancelbtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -162,8 +157,8 @@ namespace GameServer_Management.Forms
         {
             string query = "SELECT * FROM gamestbl WHERE gameID = @gameID";
             Hashtable parameters = new Hashtable{ { "@gameID", id } };
-
             DataTable dt = new DataTable();
+
             using (SqlConnection con = new SqlConnection(DBconnect.cs))
             {
                 try
@@ -183,22 +178,19 @@ namespace GameServer_Management.Forms
                     MessageBox.Show($"Error! {ex.Message}");
                     return;
                 }
-                /*finally
-                {
-                    if (con.State == ConnectionState.Open) { con.Close(); }
-                }   */
             }
                 
             if(dt.Rows.Count > 0)
             {
-                txtName.Text = dt.Rows[0]["gameName"].ToString();
-                txtDesc.Text = dt.Rows[0]["gameDesc"].ToString();
-                txtPrice.Text = dt.Rows[0]["gamePrice"].ToString();
-                txtRelDate.Text = Convert.ToDateTime(dt.Rows[0]["releaseDate"]).ToString("dd-MM-yyyy");
+                DataRow r = dt.Rows[0];
+                txtName.Text = r["gameName"].ToString();
+                txtDesc.Text = r["gameDesc"].ToString();
+                txtPrice.Text = r["gamePrice"].ToString();
+                txtRelDate.Text = Convert.ToDateTime(r["releaseDate"]).ToString("dd-MM-yyyy");
 
-                if (dt.Rows[0]["gameImage"] != DBNull.Value)
+                if (r["gameImage"] != DBNull.Value)
                 {
-                    Byte[] imgArray = (byte[])dt.Rows[0]["gameImage"];
+                    Byte[] imgArray = (byte[])r["gameImage"];
 
                     using (MemoryStream ms = new MemoryStream(imgArray))
                     {

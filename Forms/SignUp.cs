@@ -1,13 +1,8 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,7 +31,22 @@ namespace GameServer_Management.Forms
         {
             string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
             return Regex.IsMatch(email, pattern);
-        } 
+        }
+
+        private bool PassMatch()
+        {
+            if (txtpass.Text != txtconpass.Text)
+            {
+                MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtpass.Text == string.Empty && txtconpass.Text == string.Empty)
+            {
+                MessageBox.Show("Passwords can't be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
 
         private void femaleRB_CheckedChanged(object sender, EventArgs e)
         {
@@ -81,16 +91,8 @@ namespace GameServer_Management.Forms
             {
                 //MessageBox.Show("Sign up Successfull", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 signupmsg.Visible = true;
-                
-                if (id != 0)
-                {
-                    signupmsg.txt = "User info updated";
-                }
-                else
-                {
-                    signupmsg.txt = "Sign up successful";
-                }
-                
+                signupmsg.txt = id != 0 ? "User info updated" : "Sign up successful";
+
                 await Task.Delay(3000);
                 this.Close();
             }
@@ -104,8 +106,6 @@ namespace GameServer_Management.Forms
         {
             GetGender();
         }
-
-        
 
         private void DateSelect_ValueChanged(object sender, EventArgs e)
         {
@@ -148,21 +148,6 @@ namespace GameServer_Management.Forms
         private void txtconpass_TextChanged(object sender, EventArgs e)
         {
             hidepassbtn.Visible = true;
-        }
-
-        private bool PassMatch()
-        {
-            if (txtpass.Text != txtconpass.Text)
-            {
-                MessageBox.Show("Passwords do not match!","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            else if(txtpass.Text == string.Empty && txtconpass.Text == string.Empty)
-            {
-                MessageBox.Show("Passwords can't be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            return true;
         }
 
         private void exitbtn_Click(object sender, EventArgs e)
