@@ -1,12 +1,7 @@
 ﻿using GameServer_Management.Class;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,12 +10,19 @@ namespace GameServer_Management.Forms
     public partial class Login : Form
     {
         public static string username { get; private set; }
+        private string redExitImgPath;
+        private string exitImgPath;
 
         public Login()
         {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            //img paths preloaded
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            redExitImgPath = Path.Combine(projectDir, "asset", "x_red(39).png");
+            exitImgPath = Path.Combine(projectDir, "asset", "x(39).png");
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -35,25 +37,29 @@ namespace GameServer_Management.Forms
             Application.Exit();
         }
 
+        private void ExitBtnImg(string imgPath)
+        {
+            if (File.Exists(imgPath))
+            {
+                exitbtn.Image = Image.FromFile(imgPath);
+            }
+        }
+
         private void exitbtn_MouseHover(object sender, EventArgs e)
         {
-            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string imgPath = Path.Combine(projectDir, "asset", "x_red(39).png");
-            exitbtn.Image = Image.FromFile(imgPath);
+            ExitBtnImg(redExitImgPath);
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            string imgPath = Path.Combine(projectDir, "asset", "x(39).png");
-            exitbtn.Image = Image.FromFile(imgPath);
+            ExitBtnImg(exitImgPath);
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             if (DBconnect.IsValidUser(txtUsername.Text, txtpass.Text) == false)
             {
-                MessageBox.Show("Invalid Username or password");
+                MessageBox.Show("Invalid Username or password","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
