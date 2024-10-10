@@ -9,9 +9,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,7 +17,6 @@ namespace GameServer_Management.Forms
     public partial class AdminHome : Form
     {
         private AdminPanel adminPanel;
-
         private KryptonCheckButton cb = new KryptonCheckButton();
         List<GameDesc> gameDescList = new List<GameDesc>();
         List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
@@ -50,7 +46,7 @@ namespace GameServer_Management.Forms
             {
                 if (con == null)
                 {
-                    MessageBox.Show("Database connection is not established.");
+                    MessageBox.Show("Database connection is not established.","GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 try
@@ -184,12 +180,11 @@ namespace GameServer_Management.Forms
                 Pic = img,
                 id = Convert.ToInt32(id),
                 desc = gameDescription,
-                //Date = date
             };
 
             v.onSelect += new EventHandler(Game_Click);
             listPanel.Controls.Add(v);
-            v.BringToFront();   //loading data backward as well
+            v.BringToFront();   //loading data backward
             //gameDescList.Add(v);
         }
         private async void LoadItems()
@@ -199,7 +194,7 @@ namespace GameServer_Management.Forms
             {
                 if (con == null)
                 {
-                    MessageBox.Show("Database connection is not established.");
+                    MessageBox.Show("Database connection is not established.", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 try
@@ -306,17 +301,12 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void kryptonLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchtxtbox_Enter(object sender, EventArgs e)
         {
             if (searchtxtbox.Text == "Search Here...")
             {
-                searchtxtbox.StateActive.Content.Color1 = Color.White;
                 searchtxtbox.Text = String.Empty;
+                searchtxtbox.StateActive.Content.Color1 = Color.White;
             }
         }
 
@@ -324,9 +314,10 @@ namespace GameServer_Management.Forms
         {
             ResetSearchTextBox();
         }
+
         private void ResetSearchTextBox()
         {
-            if (searchtxtbox.Text == "")
+            if (string.IsNullOrEmpty(searchtxtbox.Text))
             {
                 searchtxtbox.Text = "Search Here...";
                 searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
