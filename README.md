@@ -1,13 +1,15 @@
 <p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/title_logo.png" width=550 title= "project interface" /><h2 align="center"></h2></p>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/navinxqz/GameHub)
+[![made-with-dotnet](https://img.shields.io/badge/Made%20with-.netv4.7.2-purple)](https://dotnet.microsoft.com/)
 ### **Table of Contents**
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Project Demo](#project-demo)
-4. [Technologies Used](#technologies-used)
-5. [Setup and Installation](#setup-and-installation)
-6. [Contributing](#contributing)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Project Demo](#project-demo)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [Contributing](#contributing)
 
 ---
 ## Project Overview
@@ -58,6 +60,9 @@ This a university-level project and a practical exercise in database management,
 
 <h3 align="center">Home Screen</h3>
 <p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_home.png" width=650 title= "project interface" /></p><br>
+
+<h3 align="center">Add New Admin</h3>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_admin.png" width=650 title= "project interface" /></p><br>
 
 <h3 align="center">User Profile</h3>
 <p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/Profile_info.png" width=650 title= "project interface" /></p><br>
