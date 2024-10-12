@@ -61,7 +61,7 @@ namespace GameServer_Management.Class
         {
             bool isValid = false;
             string query = @"select username, upass from usertbl where username = @username and upass = @password";
-            using (SqlConnection con = new SqlConnection(cs))
+            using (SqlConnection con = GetConnection())
             {
                 try
                 {
