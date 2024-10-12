@@ -36,10 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPass = new Krypton.Toolkit.KryptonTextBox();
             this.txtUsername = new Krypton.Toolkit.KryptonTextBox();
             this.txtFullName = new Krypton.Toolkit.KryptonTextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.hide_pass_btn = new CuoreUI.Controls.cuiButton();
+            this.show_pass_btn = new CuoreUI.Controls.cuiButton();
+            this.txtpass = new Krypton.Toolkit.KryptonTextBox();
             this.SuspendLayout();
             // 
             // cancelbtn
@@ -151,24 +153,6 @@
             this.label3.TabIndex = 69;
             this.label3.Text = "Full Name";
             // 
-            // txtPass
-            // 
-            this.txtPass.CornerRoundingRadius = 30F;
-            this.txtPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtPass.Location = new System.Drawing.Point(102, 348);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(337, 51);
-            this.txtPass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.txtPass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
-            this.txtPass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtPass.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txtPass.StateCommon.Border.Rounding = 30F;
-            this.txtPass.StateCommon.Content.Color1 = System.Drawing.Color.White;
-            this.txtPass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.TabIndex = 68;
-            // 
             // txtUsername
             // 
             this.txtUsername.CornerRoundingRadius = 30F;
@@ -210,19 +194,109 @@
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // hide_pass_btn
+            // 
+            this.hide_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.hide_pass_btn.CheckButton = false;
+            this.hide_pass_btn.Checked = false;
+            this.hide_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.CheckedImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.Content = "";
+            this.hide_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.hide_pass_btn.ForeColor = System.Drawing.Color.White;
+            this.hide_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.hide_pass_btn.HoveredImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.HoverOutline = System.Drawing.Color.White;
+            this.hide_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("hide_pass_btn.Image")));
+            this.hide_pass_btn.ImageAutoCenter = true;
+            this.hide_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.hide_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.hide_pass_btn.ImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.Location = new System.Drawing.Point(386, 365);
+            this.hide_pass_btn.Name = "hide_pass_btn";
+            this.hide_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
+            this.hide_pass_btn.OutlineThickness = 1.6F;
+            this.hide_pass_btn.PressedBackground = System.Drawing.Color.Coral;
+            this.hide_pass_btn.PressedImageTint = System.Drawing.Color.White;
+            this.hide_pass_btn.PressedOutline = System.Drawing.Color.White;
+            this.hide_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
+            this.hide_pass_btn.Size = new System.Drawing.Size(39, 36);
+            this.hide_pass_btn.TabIndex = 93;
+            this.hide_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.hide_pass_btn.Visible = false;
+            this.hide_pass_btn.Click += new System.EventHandler(this.hide_pass_btn_Click);
+            // 
+            // show_pass_btn
+            // 
+            this.show_pass_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.show_pass_btn.CheckButton = false;
+            this.show_pass_btn.Checked = false;
+            this.show_pass_btn.CheckedBackground = System.Drawing.Color.Transparent;
+            this.show_pass_btn.CheckedImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.CheckedOutline = System.Drawing.Color.Transparent;
+            this.show_pass_btn.Content = "";
+            this.show_pass_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.show_pass_btn.ForeColor = System.Drawing.Color.White;
+            this.show_pass_btn.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.show_pass_btn.HoveredImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.HoverOutline = System.Drawing.Color.White;
+            this.show_pass_btn.Image = ((System.Drawing.Image)(resources.GetObject("show_pass_btn.Image")));
+            this.show_pass_btn.ImageAutoCenter = true;
+            this.show_pass_btn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.show_pass_btn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.show_pass_btn.ImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.Location = new System.Drawing.Point(386, 365);
+            this.show_pass_btn.Name = "show_pass_btn";
+            this.show_pass_btn.NormalBackground = System.Drawing.Color.Transparent;
+            this.show_pass_btn.NormalOutline = System.Drawing.Color.Transparent;
+            this.show_pass_btn.OutlineThickness = 1.6F;
+            this.show_pass_btn.PressedBackground = System.Drawing.Color.Coral;
+            this.show_pass_btn.PressedImageTint = System.Drawing.Color.White;
+            this.show_pass_btn.PressedOutline = System.Drawing.Color.White;
+            this.show_pass_btn.Rounding = new System.Windows.Forms.Padding(15);
+            this.show_pass_btn.Size = new System.Drawing.Size(39, 36);
+            this.show_pass_btn.TabIndex = 94;
+            this.show_pass_btn.TextOffset = new System.Drawing.Point(0, 0);
+            this.show_pass_btn.Visible = false;
+            this.show_pass_btn.Click += new System.EventHandler(this.show_pass_btn_Click);
+            // 
+            // txtpass
+            // 
+            this.txtpass.CornerRoundingRadius = 30F;
+            this.txtpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtpass.Location = new System.Drawing.Point(102, 359);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
+            this.txtpass.Size = new System.Drawing.Size(337, 51);
+            this.txtpass.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(53)))), ((int)(((byte)(58)))));
+            this.txtpass.StateCommon.Border.DrawBorders = ((Krypton.Toolkit.PaletteDrawBorders)((((Krypton.Toolkit.PaletteDrawBorders.Top | Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtpass.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.txtpass.StateCommon.Border.Rounding = 30F;
+            this.txtpass.StateCommon.Content.Color1 = System.Drawing.Color.White;
+            this.txtpass.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.TabIndex = 92;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            // 
             // AddAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(541, 523);
+            this.Controls.Add(this.hide_pass_btn);
+            this.Controls.Add(this.show_pass_btn);
+            this.Controls.Add(this.txtpass);
             this.Controls.Add(this.cancelbtn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtFullName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -243,9 +317,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        public Krypton.Toolkit.KryptonTextBox txtPass;
         public Krypton.Toolkit.KryptonTextBox txtUsername;
         public Krypton.Toolkit.KryptonTextBox txtFullName;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        public CuoreUI.Controls.cuiButton hide_pass_btn;
+        private CuoreUI.Controls.cuiButton show_pass_btn;
+        public Krypton.Toolkit.KryptonTextBox txtpass;
     }
 }

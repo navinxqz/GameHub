@@ -31,7 +31,7 @@ namespace GameServer_Management.Forms
 
             h.Add("@fullname", txtFullName.Text);
             h.Add("@username", txtUsername.Text);
-            h.Add("@upass", txtPass.Text);
+            h.Add("@upass", txtpass.Text);
 
             if (DBconnect.SQL(query, h) > 0)
             {
@@ -48,8 +48,27 @@ namespace GameServer_Management.Forms
             id = 0;
             txtFullName.Clear();
             txtUsername.Clear();
-            txtPass.Clear();
+            txtpass.Clear();
             txtFullName.Focus();
+        }
+
+        private void show_pass_btn_Click(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = true;
+            show_pass_btn.Visible = false;
+            txtpass.PasswordChar = '*';
+        }
+
+        private void hide_pass_btn_Click(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = false;
+            show_pass_btn.Visible = true;
+            txtpass.PasswordChar = '\0';
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+            hide_pass_btn.Visible = true;
         }
     }
 }
