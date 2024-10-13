@@ -5,9 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GameServer_Management.Forms
@@ -19,6 +16,7 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            infoPanel.Visible = false;
         }
         public void GetData()
         {
@@ -36,6 +34,8 @@ namespace GameServer_Management.Forms
                 l.Items.Add(dgvRelDate);
 
                 DBconnect.LoadData(query, dataGridView1, l);
+                
+                games.Text = dataGridView1.Rows.Count.ToString();
             }
             catch (Exception ex)
             {
@@ -107,6 +107,16 @@ namespace GameServer_Management.Forms
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             GetData();
+        }
+
+        private void infobtn_Click(object sender, EventArgs e)
+        {
+            infoPanel.Visible = true;
+        }
+        //make a click method whenever the infoPanel apper, the form can be clickable from anywhere and the infoPanel will be hidden
+        private void infoPanel_Click(object sender, EventArgs e)
+        {
+            infoPanel.Visible = false;
         }
     }
 }

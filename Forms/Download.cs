@@ -16,5 +16,7 @@ namespace GameServer_Management.Forms
         {
             InitializeComponent();
         }
+        public int gameid = 0;
+
     }
 }

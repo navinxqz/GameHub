@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDB));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,9 +49,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBox = new Krypton.Toolkit.KryptonTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.games = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.infobtn = new CuoreUI.Controls.cuiButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.infoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -78,14 +86,14 @@
             this.dgvRelDate,
             this.dgvEdit,
             this.dgvDelete});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(26)))));
             this.dataGridView1.Location = new System.Drawing.Point(27, 100);
             this.dataGridView1.Name = "dataGridView1";
@@ -94,7 +102,7 @@
             this.dataGridView1.RowHeadersWidth = 80;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1237, 603);
+            this.dataGridView1.Size = new System.Drawing.Size(1237, 625);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -144,9 +152,9 @@
             // 
             // dgvRelDate
             // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvRelDate.HeaderText = "Release Date";
             this.dgvRelDate.Name = "dgvRelDate";
             this.dgvRelDate.ReadOnly = true;
@@ -225,7 +233,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1191, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(1197, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -237,7 +245,7 @@
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBox.CornerRoundingRadius = 20F;
             this.searchBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBox.Location = new System.Drawing.Point(939, 23);
+            this.searchBox.Location = new System.Drawing.Point(945, 23);
             this.searchBox.Name = "searchBox";
             this.searchBox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.searchBox.Size = new System.Drawing.Size(291, 47);
@@ -281,12 +289,110 @@
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
+            // infoPanel
+            // 
+            this.infoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.infoPanel.Controls.Add(this.label5);
+            this.infoPanel.Controls.Add(this.games);
+            this.infoPanel.Controls.Add(this.label3);
+            this.infoPanel.Controls.Add(this.label2);
+            this.infoPanel.Location = new System.Drawing.Point(505, 318);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(457, 153);
+            this.infoPanel.TabIndex = 23;
+            this.infoPanel.Click += new System.EventHandler(this.infoPanel_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(50, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(262, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Total Games Added:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.label3.Location = new System.Drawing.Point(50, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(258, 31);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Games Unavailable:";
+            // 
+            // games
+            // 
+            this.games.AutoSize = true;
+            this.games.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.games.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.games.Location = new System.Drawing.Point(318, 39);
+            this.games.Name = "games";
+            this.games.Size = new System.Drawing.Size(79, 31);
+            this.games.TabIndex = 2;
+            this.games.Text = "value";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.label5.Location = new System.Drawing.Point(318, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 31);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "value";
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 60;
+            this.bunifuElipse2.TargetControl = this.infoPanel;
+            // 
+            // infobtn
+            // 
+            this.infobtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.infobtn.CheckButton = false;
+            this.infobtn.Checked = false;
+            this.infobtn.CheckedBackground = System.Drawing.Color.Coral;
+            this.infobtn.CheckedImageTint = System.Drawing.Color.White;
+            this.infobtn.CheckedOutline = System.Drawing.Color.Silver;
+            this.infobtn.Content = "";
+            this.infobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.infobtn.ForeColor = System.Drawing.Color.White;
+            this.infobtn.HoverBackground = System.Drawing.Color.DimGray;
+            this.infobtn.HoveredImageTint = System.Drawing.Color.White;
+            this.infobtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
+            this.infobtn.ImageAutoCenter = true;
+            this.infobtn.ImageExpand = new System.Drawing.Point(7, 7);
+            this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.ImageTint = System.Drawing.Color.White;
+            this.infobtn.Location = new System.Drawing.Point(897, 28);
+            this.infobtn.Name = "infobtn";
+            this.infobtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.infobtn.NormalOutline = System.Drawing.Color.Empty;
+            this.infobtn.OutlineThickness = 3F;
+            this.infobtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.infobtn.PressedImageTint = System.Drawing.Color.White;
+            this.infobtn.PressedOutline = System.Drawing.Color.Transparent;
+            this.infobtn.Rounding = new System.Windows.Forms.Padding(20);
+            this.infobtn.Size = new System.Drawing.Size(40, 40);
+            this.infobtn.TabIndex = 25;
+            this.infobtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
+            // 
             // GameDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.infobtn);
+            this.Controls.Add(this.infoPanel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchBox);
@@ -301,6 +407,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.infoPanel.ResumeLayout(false);
+            this.infoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +432,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public Krypton.Toolkit.KryptonTextBox searchBox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label games;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private CuoreUI.Controls.cuiButton infobtn;
     }
 }
