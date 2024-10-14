@@ -45,12 +45,6 @@ namespace GameServer_Management.Forms
             this.isAdmin = isAdmin;
             usertxt.Text = username;
             adminhome = new AdminHome(this);
-            this.Click += usericonbtn_Click;
-            this.Click += usertxt_Click;
-            foreach (Control c in this.Controls)
-            {
-                c.MouseClick += usericonbtn_Click;
-            }
         }
 
         static AdminPanel obj;
