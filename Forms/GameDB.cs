@@ -1,9 +1,6 @@
 ﻿using GameServer_Management.Class;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -60,11 +57,6 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void searchtxtbox_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridView1.CurrentCell.OwningColumn.Name == "dgvEdit")
@@ -87,14 +79,12 @@ namespace GameServer_Management.Forms
                     {
                          { "@gameID", id }
                     };
-                    //Hashtable h = new Hashtable();
-                    //h.Add("@gameID", id);
-
-                    //DBconnect.SQL(query, h);
                     if (DBconnect.SQL(query, h) > 0)
                     {
                         MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetData();
+                        
+                        //gamesDelete.Text = DBconnect.SQL("select count(*) from gamestbl where gameID = @gameID", h).ToString();
                     }
                     else
                     {
@@ -113,7 +103,7 @@ namespace GameServer_Management.Forms
         {
             infoPanel.Visible = true;
         }
-        //make a click method whenever the infoPanel apper, the form can be clickable from anywhere and the infoPanel will be hidden
+
         private void infoPanel_Click(object sender, EventArgs e)
         {
             infoPanel.Visible = false;

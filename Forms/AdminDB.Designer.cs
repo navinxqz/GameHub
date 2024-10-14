@@ -34,15 +34,15 @@
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchBox = new Krypton.Toolkit.KryptonTextBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchBox = new Krypton.Toolkit.KryptonTextBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,44 +127,9 @@
             this.dataGridView1.RowHeadersWidth = 80;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1237, 603);
+            this.dataGridView1.Size = new System.Drawing.Size(1319, 588);
             this.dataGridView1.TabIndex = 23;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // dgvSerial
-            // 
-            this.dgvSerial.HeaderText = "Serial";
-            this.dgvSerial.Name = "dgvSerial";
-            this.dgvSerial.ReadOnly = true;
-            // 
-            // dgvId
-            // 
-            this.dgvId.HeaderText = "Admin ID";
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
-            // 
-            // dgvName
-            // 
-            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvName.HeaderText = "Full Name";
-            this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
-            // 
-            // dgvusername
-            // 
-            this.dgvusername.HeaderText = "Username";
-            this.dgvusername.Name = "dgvusername";
-            this.dgvusername.ReadOnly = true;
-            // 
-            // dgvDelete
-            // 
-            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvDelete.HeaderText = "";
-            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
-            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.Name = "dgvDelete";
-            this.dgvDelete.ReadOnly = true;
-            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // pictureBox2
             // 
@@ -232,6 +197,41 @@
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this.dataGridView1;
             // 
+            // dgvSerial
+            // 
+            this.dgvSerial.HeaderText = "Serial";
+            this.dgvSerial.Name = "dgvSerial";
+            this.dgvSerial.ReadOnly = true;
+            // 
+            // dgvId
+            // 
+            this.dgvId.HeaderText = "Admin ID";
+            this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
+            // 
+            // dgvName
+            // 
+            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvName.HeaderText = "Full Name";
+            this.dgvName.Name = "dgvName";
+            this.dgvName.ReadOnly = true;
+            // 
+            // dgvusername
+            // 
+            this.dgvusername.HeaderText = "Username";
+            this.dgvusername.Name = "dgvusername";
+            this.dgvusername.ReadOnly = true;
+            // 
+            // dgvDelete
+            // 
+            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDelete.HeaderText = "";
+            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
+            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
+            this.dgvDelete.ToolTipText = "Click to delete";
+            // 
             // AdminDB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -261,14 +261,14 @@
         private CuoreUI.Controls.cuiButton btnAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public Krypton.Toolkit.KryptonTextBox searchBox;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSerial;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvId;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvusername;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        public Krypton.Toolkit.KryptonTextBox searchBox;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDB));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.searchBox = new Krypton.Toolkit.KryptonTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,11 +46,6 @@
             this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.searchBox = new Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -89,65 +89,9 @@
             this.dataGridView1.RowHeadersWidth = 80;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1237, 603);
+            this.dataGridView1.Size = new System.Drawing.Size(1319, 588);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // dgvSerial
-            // 
-            this.dgvSerial.HeaderText = "Serial";
-            this.dgvSerial.Name = "dgvSerial";
-            this.dgvSerial.ReadOnly = true;
-            // 
-            // dgvId
-            // 
-            this.dgvId.HeaderText = "User ID";
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
-            // 
-            // dgvName
-            // 
-            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvName.HeaderText = "Full Name";
-            this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
-            // 
-            // dgvGender
-            // 
-            this.dgvGender.HeaderText = "Gender";
-            this.dgvGender.Name = "dgvGender";
-            this.dgvGender.ReadOnly = true;
-            // 
-            // dgvEmail
-            // 
-            this.dgvEmail.HeaderText = "Email";
-            this.dgvEmail.Name = "dgvEmail";
-            this.dgvEmail.ReadOnly = true;
-            // 
-            // dgvusername
-            // 
-            this.dgvusername.HeaderText = "Username";
-            this.dgvusername.Name = "dgvusername";
-            this.dgvusername.ReadOnly = true;
-            // 
-            // dgvDOB
-            // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvDOB.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDOB.HeaderText = "Date of Birth";
-            this.dgvDOB.Name = "dgvDOB";
-            this.dgvDOB.ReadOnly = true;
-            // 
-            // dgvDelete
-            // 
-            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvDelete.HeaderText = "";
-            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
-            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.Name = "dgvDelete";
-            this.dgvDelete.ReadOnly = true;
-            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // label1
             // 
@@ -225,6 +169,62 @@
             // 
             this.bunifuElipse1.ElipseRadius = 40;
             this.bunifuElipse1.TargetControl = this.dataGridView1;
+            // 
+            // dgvSerial
+            // 
+            this.dgvSerial.HeaderText = "Serial";
+            this.dgvSerial.Name = "dgvSerial";
+            this.dgvSerial.ReadOnly = true;
+            // 
+            // dgvId
+            // 
+            this.dgvId.HeaderText = "User ID";
+            this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
+            // 
+            // dgvName
+            // 
+            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvName.HeaderText = "Full Name";
+            this.dgvName.Name = "dgvName";
+            this.dgvName.ReadOnly = true;
+            // 
+            // dgvGender
+            // 
+            this.dgvGender.HeaderText = "Gender";
+            this.dgvGender.Name = "dgvGender";
+            this.dgvGender.ReadOnly = true;
+            // 
+            // dgvEmail
+            // 
+            this.dgvEmail.HeaderText = "Email";
+            this.dgvEmail.Name = "dgvEmail";
+            this.dgvEmail.ReadOnly = true;
+            // 
+            // dgvusername
+            // 
+            this.dgvusername.HeaderText = "Username";
+            this.dgvusername.Name = "dgvusername";
+            this.dgvusername.ReadOnly = true;
+            // 
+            // dgvDOB
+            // 
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dgvDOB.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDOB.HeaderText = "Date of Birth";
+            this.dgvDOB.Name = "dgvDOB";
+            this.dgvDOB.ReadOnly = true;
+            // 
+            // dgvDelete
+            // 
+            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDelete.HeaderText = "";
+            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
+            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
+            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // UserDB
             // 
