@@ -36,6 +36,7 @@ namespace GameServer_Management.Forms
             string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
             bell = Path.Combine(projectDir, "asset", "notification1.png");
             dotbell = Path.Combine(projectDir, "asset", "notification2.png");
+            notificationpanel.Visible = false;
         }
 
         public AdminHome(AdminPanel adminPanel)
@@ -253,12 +254,12 @@ namespace GameServer_Management.Forms
             //panel2.Controls.Clear();
             panel1.Visible = false;
             panel3.Visible = false;
+            bellbtn.Visible = false;
             searchtxtbox.Visible = false;
             pictureBox1.Visible = false;
             searchtxtbox.Clear();
             this.ActiveControl = pictureBox1;
             ResetSearchTextBox();
-            
             
             loadingtimer.Start();
             listPanel.Controls.Clear();
@@ -271,6 +272,7 @@ namespace GameServer_Management.Forms
             panel3.Visible = true;
             pictureBox1.Visible = true;
             searchtxtbox.Visible = true;
+            bellbtn.Visible = true;
         }
 
         private void AdminHome_Load(object sender, EventArgs e)
@@ -338,11 +340,18 @@ namespace GameServer_Management.Forms
             if(bellbtn.Image == Image.FromFile(dotbell))
             {
                 bellbtn.Image = Image.FromFile(bell);
+                notificationpanel.Visible = true;
             }
             else
             {
                 bellbtn.Image = Image.FromFile(bell);
+                notificationpanel.Visible = true;
             }
+        }
+
+        private void notificationpanel_Click(object sender, EventArgs e)
+        {
+            notificationpanel.Visible = false;
         }
     }
 }

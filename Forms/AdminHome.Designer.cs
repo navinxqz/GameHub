@@ -65,8 +65,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.usericonbtn = new CuoreUI.Controls.cuiButton();
             this.bellbtn = new CuoreUI.Controls.cuiButton();
+            this.notificationpanel = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.cuiLabel2 = new CuoreUI.Controls.cuiLabel();
             this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
+            this.label6 = new System.Windows.Forms.Label();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -80,6 +85,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.slideImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel7.SuspendLayout();
+            this.notificationpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -494,6 +501,40 @@
             this.bellbtn.TextOffset = new System.Drawing.Point(0, 0);
             this.bellbtn.Click += new System.EventHandler(this.bellbtn_Click);
             // 
+            // notificationpanel
+            // 
+            this.notificationpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.notificationpanel.BackColor = System.Drawing.Color.Black;
+            this.notificationpanel.Controls.Add(this.label6);
+            this.notificationpanel.Controls.Add(this.cuiLabel2);
+            this.notificationpanel.Controls.Add(this.pictureBox7);
+            this.notificationpanel.Location = new System.Drawing.Point(966, 62);
+            this.notificationpanel.Name = "notificationpanel";
+            this.notificationpanel.Size = new System.Drawing.Size(310, 187);
+            this.notificationpanel.TabIndex = 27;
+            this.notificationpanel.Click += new System.EventHandler(this.notificationpanel_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(9, 13);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // cuiLabel2
+            // 
+            this.cuiLabel2.Content = "New\\ game\\ launched!";
+            this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuiLabel2.ForeColor = System.Drawing.Color.White;
+            this.cuiLabel2.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
+            this.cuiLabel2.Location = new System.Drawing.Point(75, 13);
+            this.cuiLabel2.Name = "cuiLabel2";
+            this.cuiLabel2.Size = new System.Drawing.Size(208, 121);
+            this.cuiLabel2.TabIndex = 13;
+            // 
             // getGame1
             // 
             this.getGame1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -503,7 +544,7 @@
             this.getGame1.desc = resources.GetString("getGame1.desc");
             this.getGame1.GName = "Assassin’s\\ Creed\\ IV\\ Black\\ Flag";
             this.getGame1.id = 0;
-            this.getGame1.Location = new System.Drawing.Point(772, 26);
+            this.getGame1.Location = new System.Drawing.Point(772, 45);
             this.getGame1.Name = "getGame1";
             this.getGame1.Pic = ((System.Drawing.Image)(resources.GetObject("getGame1.Pic")));
             this.getGame1.Price = "";
@@ -518,12 +559,29 @@
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(119, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Messages";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this.notificationpanel;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.notificationpanel);
             this.Controls.Add(this.getGame1);
             this.Controls.Add(this.bellbtn);
             this.Controls.Add(this.panel7);
@@ -557,6 +615,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.notificationpanel.ResumeLayout(false);
+            this.notificationpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +661,10 @@
         private System.Windows.Forms.Label label5;
         private Controller.GetGame getGame1;
         public CuoreUI.Controls.cuiButton bellbtn;
+        private System.Windows.Forms.Panel notificationpanel;
+        public CuoreUI.Controls.cuiLabel cuiLabel2;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
