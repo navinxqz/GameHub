@@ -469,6 +469,7 @@
             this.bellbtn.CheckedImageTint = System.Drawing.Color.White;
             this.bellbtn.CheckedOutline = System.Drawing.Color.Silver;
             this.bellbtn.Content = "";
+            this.bellbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bellbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.bellbtn.ForeColor = System.Drawing.Color.White;
             this.bellbtn.HoverBackground = System.Drawing.Color.SlateGray;
@@ -491,6 +492,7 @@
             this.bellbtn.Size = new System.Drawing.Size(40, 38);
             this.bellbtn.TabIndex = 25;
             this.bellbtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.bellbtn.Click += new System.EventHandler(this.bellbtn_Click);
             // 
             // getGame1
             // 

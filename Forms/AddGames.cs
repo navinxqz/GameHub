@@ -12,12 +12,18 @@ namespace GameServer_Management.Forms
 {
     public partial class AddGames : Form
     {
+        private string dotbell;
+
         public AddGames()
         {
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            dotbell = Path.Combine(projectDir, "asset", "notification2.png");
         }
+
         public int id = 0;
         public int catID = 0;
 
@@ -73,9 +79,8 @@ namespace GameServer_Management.Forms
             {
                 MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
-                //bellbtn image of AdminHome form will be switched to the new imagepath
-                AdminHome a = new AdminHome();
-                a.bellbtn.Image = Image.FromFile(Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "asset", "notification2.png"));
+
+                AdminHome.Instance.bellbtn.Image = Image.FromFile(dotbell);
             }
             else
             {

@@ -20,12 +20,22 @@ namespace GameServer_Management.Forms
         private KryptonCheckButton cb = new KryptonCheckButton();
         List<GameDesc> gameDescList = new List<GameDesc>();
         List<(string imageAddress, string gameName, string gameDescription)> imageData = new List<(string, string, string)>();
+        
         int countDown = 0;
+        private string bell;
+        private string dotbell;
+
+        public static AdminHome Instance { get; private set; }
 
         public AdminHome()
         {
             InitializeComponent();
             loading.Visible = true;
+            Instance = this;
+
+            string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+            bell = Path.Combine(projectDir, "asset", "notification1.png");
+            dotbell = Path.Combine(projectDir, "asset", "notification2.png");
         }
 
         public AdminHome(AdminPanel adminPanel)
@@ -320,6 +330,18 @@ namespace GameServer_Management.Forms
             {
                 searchtxtbox.Text = "Search Here...";
                 searchtxtbox.StateActive.Content.Color1 = Color.FromArgb(70, 71, 78);
+            }
+        }
+
+        private void bellbtn_Click(object sender, EventArgs e)
+        {
+            if(bellbtn.Image == Image.FromFile(dotbell))
+            {
+                bellbtn.Image = Image.FromFile(bell);
+            }
+            else
+            {
+                bellbtn.Image = Image.FromFile(bell);
             }
         }
     }
