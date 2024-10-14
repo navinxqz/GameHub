@@ -285,7 +285,6 @@ namespace GameServer_Management.Forms
         {
             if (countDown < imageData.Count)
             {
-                //byte[] imgBytes = Convert.FromBase64String(imageData[countDown]);
                 byte[] imgBytes = Convert.FromBase64String(imageData[countDown].imageAddress);
                 using (MemoryStream ms = new MemoryStream(imgBytes))
                 {
