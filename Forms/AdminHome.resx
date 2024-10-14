@@ -22691,6 +22691,18 @@
         AAAAAAAA0EbwIxsAAAAAAMA55pj/D6WLCySGtATBAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="bellbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFBSURBVEhLzZRL
+        SsRAFEXjFhQ/+FmCuAVxC6IrcOISxJGfVehId6IzByKOFXTqRM1/0Eo8BVcSi0qqKt0DLxzo5L17kg7d
+        SWJSVdWNQYezD/LGoMPZpCiK5bIszxDf/17AfObciZlpbVwQ7cNHR2xjZrtajwvFPfiWaIgviLsIX32F
+        R5Baol7quv7M83xJdX+Qn7tEQ9A5Vd0fCo+2IIAH1f1hubTKIRSq++MoB6G6P65yCKoPp2maOVc5BNOV
+        pj/83BZd5RCyLFuQpj/8pndc5RDobkvTH5YuXeUQ6F5I4w7/4C0WJ3YxggmOTen+huEGvHaWx/IC69K2
+        4eRdZ2labqVtE/NyC+Bd2jZc4JBBZi1GY96suA6k/Qfhjo5dd2pgdqS18UnTdB7Zsy2HJzPT2nRBtgbX
+        8GbgGV/BqsYDSZIfArZ4MNVzDJQAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="getGame1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAYGBgYGBgcICAcKCgkKCg4NDAwNDhUPEA8QDxUgFBgUFBgU

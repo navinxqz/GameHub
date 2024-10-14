@@ -83,8 +83,6 @@ namespace GameServer_Management.Forms
                     {
                         MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetData();
-                        
-                        //gamesDelete.Text = DBconnect.SQL("select count(*) from gamestbl where gameID = @gameID", h).ToString();
                     }
                     else
                     {

@@ -73,6 +73,9 @@ namespace GameServer_Management.Forms
             {
                 MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
+                //bellbtn image of AdminHome form will be switched to the new imagepath
+                AdminHome a = new AdminHome();
+                a.bellbtn.Image = Image.FromFile(Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "asset", "notification2.png"));
             }
             else
             {

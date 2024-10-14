@@ -64,6 +64,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.usericonbtn = new CuoreUI.Controls.cuiButton();
+            this.bellbtn = new CuoreUI.Controls.cuiButton();
             this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -100,7 +101,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 400);
+            this.listPanel.Size = new System.Drawing.Size(1106, 392);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -117,7 +118,7 @@
             this.searchtxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchtxtbox.CornerRoundingRadius = 20F;
             this.searchtxtbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchtxtbox.Location = new System.Drawing.Point(976, 13);
+            this.searchtxtbox.Location = new System.Drawing.Point(935, 13);
             this.searchtxtbox.Margin = new System.Windows.Forms.Padding(2);
             this.searchtxtbox.Name = "searchtxtbox";
             this.searchtxtbox.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
@@ -160,7 +161,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.MediumPurple;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1224, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(1183, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(35, 34);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -459,6 +460,38 @@
             this.usericonbtn.TabIndex = 24;
             this.usericonbtn.TextOffset = new System.Drawing.Point(0, 0);
             // 
+            // bellbtn
+            // 
+            this.bellbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bellbtn.CheckButton = false;
+            this.bellbtn.Checked = false;
+            this.bellbtn.CheckedBackground = System.Drawing.Color.Coral;
+            this.bellbtn.CheckedImageTint = System.Drawing.Color.White;
+            this.bellbtn.CheckedOutline = System.Drawing.Color.Silver;
+            this.bellbtn.Content = "";
+            this.bellbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.bellbtn.ForeColor = System.Drawing.Color.White;
+            this.bellbtn.HoverBackground = System.Drawing.Color.SlateGray;
+            this.bellbtn.HoveredImageTint = System.Drawing.Color.White;
+            this.bellbtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.bellbtn.Image = ((System.Drawing.Image)(resources.GetObject("bellbtn.Image")));
+            this.bellbtn.ImageAutoCenter = true;
+            this.bellbtn.ImageExpand = new System.Drawing.Point(5, 5);
+            this.bellbtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.bellbtn.ImageTint = System.Drawing.Color.White;
+            this.bellbtn.Location = new System.Drawing.Point(1230, 17);
+            this.bellbtn.Name = "bellbtn";
+            this.bellbtn.NormalBackground = System.Drawing.Color.SlateGray;
+            this.bellbtn.NormalOutline = System.Drawing.Color.Empty;
+            this.bellbtn.OutlineThickness = 3F;
+            this.bellbtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.bellbtn.PressedImageTint = System.Drawing.Color.White;
+            this.bellbtn.PressedOutline = System.Drawing.Color.SlateGray;
+            this.bellbtn.Rounding = new System.Windows.Forms.Padding(15);
+            this.bellbtn.Size = new System.Drawing.Size(40, 38);
+            this.bellbtn.TabIndex = 25;
+            this.bellbtn.TextOffset = new System.Drawing.Point(0, 0);
+            // 
             // getGame1
             // 
             this.getGame1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -468,12 +501,12 @@
             this.getGame1.desc = resources.GetString("getGame1.desc");
             this.getGame1.GName = "Assassin’s\\ Creed\\ IV\\ Black\\ Flag";
             this.getGame1.id = 0;
-            this.getGame1.Location = new System.Drawing.Point(775, 16);
+            this.getGame1.Location = new System.Drawing.Point(772, 26);
             this.getGame1.Name = "getGame1";
             this.getGame1.Pic = ((System.Drawing.Image)(resources.GetObject("getGame1.Pic")));
             this.getGame1.Price = "";
-            this.getGame1.Size = new System.Drawing.Size(552, 675);
-            this.getGame1.TabIndex = 24;
+            this.getGame1.Size = new System.Drawing.Size(569, 670);
+            this.getGame1.TabIndex = 26;
             // 
             // loading
             // 
@@ -490,6 +523,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
             this.Controls.Add(this.getGame1);
+            this.Controls.Add(this.bellbtn);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.loading);
             this.Controls.Add(this.pictureBox1);
@@ -563,5 +597,6 @@
         private CuoreUI.Controls.cuiButton usericonbtn;
         private System.Windows.Forms.Label label5;
         private Controller.GetGame getGame1;
+        public CuoreUI.Controls.cuiButton bellbtn;
     }
 }
