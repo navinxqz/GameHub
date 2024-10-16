@@ -21,7 +21,7 @@ namespace GameServer_Management.Forms
             this.AutoScaleMode = AutoScaleMode.Dpi;
 
             string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            dotbell = Path.Combine(projectDir, "asset", "notification2.png");
+            dotbell = Path.Combine(projectDir, "asset", "bellred.png");
         }
 
         public int id = 0;

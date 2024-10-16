@@ -34,8 +34,8 @@ namespace GameServer_Management.Forms
             Instance = this;
 
             string projectDir = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-            bell = Path.Combine(projectDir, "asset", "notification1.png");
-            dotbell = Path.Combine(projectDir, "asset", "notification2.png");
+            bell = Path.Combine(projectDir, "asset", "bell.png");
+            dotbell = Path.Combine(projectDir, "asset", "bellred.png");
             notificationpanel.Visible = false;
         }
 
