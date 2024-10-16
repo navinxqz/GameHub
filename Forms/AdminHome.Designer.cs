@@ -66,12 +66,12 @@
             this.usericonbtn = new CuoreUI.Controls.cuiButton();
             this.bellbtn = new CuoreUI.Controls.cuiButton();
             this.notificationpanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.msglbl = new CuoreUI.Controls.cuiLabel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.cuiLabel2 = new CuoreUI.Controls.cuiLabel();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
-            this.label6 = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -108,7 +108,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 392);
+            this.listPanel.Size = new System.Drawing.Size(1106, 446);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -506,13 +506,35 @@
             this.notificationpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.notificationpanel.BackColor = System.Drawing.Color.Black;
             this.notificationpanel.Controls.Add(this.label6);
-            this.notificationpanel.Controls.Add(this.cuiLabel2);
+            this.notificationpanel.Controls.Add(this.msglbl);
             this.notificationpanel.Controls.Add(this.pictureBox7);
             this.notificationpanel.Location = new System.Drawing.Point(966, 62);
             this.notificationpanel.Name = "notificationpanel";
             this.notificationpanel.Size = new System.Drawing.Size(310, 187);
             this.notificationpanel.TabIndex = 27;
             this.notificationpanel.Click += new System.EventHandler(this.notificationpanel_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(119, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 20);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Messages";
+            // 
+            // msglbl
+            // 
+            this.msglbl.Content = "New\\ game\\ launched!";
+            this.msglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msglbl.ForeColor = System.Drawing.Color.White;
+            this.msglbl.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
+            this.msglbl.Location = new System.Drawing.Point(75, 13);
+            this.msglbl.Name = "msglbl";
+            this.msglbl.Size = new System.Drawing.Size(208, 114);
+            this.msglbl.TabIndex = 13;
             // 
             // pictureBox7
             // 
@@ -524,16 +546,10 @@
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
             // 
-            // cuiLabel2
+            // bunifuElipse1
             // 
-            this.cuiLabel2.Content = "New\\ game\\ launched!";
-            this.cuiLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuiLabel2.ForeColor = System.Drawing.Color.White;
-            this.cuiLabel2.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.cuiLabel2.Location = new System.Drawing.Point(75, 13);
-            this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(208, 121);
-            this.cuiLabel2.TabIndex = 13;
+            this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this.notificationpanel;
             // 
             // getGame1
             // 
@@ -558,22 +574,6 @@
             this.loading.Name = "loading";
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(119, 160);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 20);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Messages";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this.notificationpanel;
             // 
             // AdminHome
             // 
@@ -662,7 +662,7 @@
         private Controller.GetGame getGame1;
         public CuoreUI.Controls.cuiButton bellbtn;
         private System.Windows.Forms.Panel notificationpanel;
-        public CuoreUI.Controls.cuiLabel cuiLabel2;
+        public CuoreUI.Controls.cuiLabel msglbl;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

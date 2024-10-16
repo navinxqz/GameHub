@@ -81,6 +81,16 @@ namespace GameServer_Management.Forms
                 ClearForm();
 
                 AdminHome.Instance.bellbtn.Image = Image.FromFile(dotbell);
+                string g = txtName.Text;
+                if (AdminHome.Instance.bellbtn.Image != Image.FromFile(dotbell))
+                {
+                    AdminHome.Instance.msglbl.Content = $"{g} now available!";
+                }
+                else
+                {
+                    AdminHome.Instance.msglbl.Content = "You are up to date!";
+                }
+
             }
             else
             {

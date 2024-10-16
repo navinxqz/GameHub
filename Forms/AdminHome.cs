@@ -257,6 +257,7 @@ namespace GameServer_Management.Forms
             bellbtn.Visible = false;
             searchtxtbox.Visible = false;
             pictureBox1.Visible = false;
+            notificationpanel.Visible = false;
             searchtxtbox.Clear();
             this.ActiveControl = pictureBox1;
             ResetSearchTextBox();

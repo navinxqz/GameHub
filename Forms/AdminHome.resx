@@ -22706,7 +22706,7 @@
   <data name="pictureBox7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAACL1JREFUaEPtWdlTW9cZd9c/oH2J0+duL22S6UO3pLHZbMBgCwOSQGLXCgaEAQnZ
+        DAAACwwBP0AiyAAACL1JREFUaEPtWdlTW9cZd9c/oH2J0+duL22S6UO3pLHZbMBgCwOSQGLXCgaEAQnZ
         YAmzb2YNZjXggCEGjA0S2HjINLVxE1xn6i11bTemCMYgIEyXGSDNr+ccrq4lpLhCCE8f+M38Bt2zfMv9
         vvOdcy57drGLXezi/wLL43vfWrn2mmb52utvck2vBkDeNy0Loz+xWE1HLNbRZMuiKZuR/qZtpI+O4YZ/
         Lb64tneEOkH+rq+M7wX5u7Y89vobXPfOAJj6jmXBHGpZNPfNWk3W2UUzXkoyhjjVO7NgDqFzOTFOWBl/
@@ -22746,6 +22746,9 @@
         /qb3Cdq35VOst0EjUdzvm7Y5IrvYxS528YqwZ89/AXK6bpFD7OWTAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1019, 22</value>
+  </metadata>
   <data name="getGame1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAYGBgYGBgcICAcKCgkKCg4NDAwNDhUPEA8QDxUgFBgUFBgU
@@ -24401,9 +24404,6 @@
         ZDsbHmG5jhko9RZe2tUa+xlnNyZpd+As3UF0GTNkstMICCTQF1Lt81dnWpvkdhY4Lif/2Q==
 </value>
   </data>
-  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1019, 22</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>68</value>
   </metadata>
