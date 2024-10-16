@@ -81,10 +81,9 @@ namespace GameServer_Management.Forms
                 ClearForm();
 
                 AdminHome.Instance.bellbtn.Image = Image.FromFile(dotbell);
-                string g = txtName.Text;
                 if (AdminHome.Instance.bellbtn.Image != Image.FromFile(dotbell))
                 {
-                    AdminHome.Instance.msglbl.Content = $"{g} now available!";
+                    AdminHome.Instance.msglbl.Content = "New game launched!";
                 }
                 else
                 {

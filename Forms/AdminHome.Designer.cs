@@ -527,19 +527,19 @@
             // 
             // msglbl
             // 
-            this.msglbl.Content = "New\\ game\\ launched!";
+            this.msglbl.Content = "You\\ are\\ up\\ to\\ date!";
             this.msglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msglbl.ForeColor = System.Drawing.Color.White;
             this.msglbl.HorizontalAlignment = CuoreUI.Controls.cuiLabel.HorizontalAlignments.Left;
-            this.msglbl.Location = new System.Drawing.Point(75, 13);
+            this.msglbl.Location = new System.Drawing.Point(86, 13);
             this.msglbl.Name = "msglbl";
-            this.msglbl.Size = new System.Drawing.Size(208, 114);
+            this.msglbl.Size = new System.Drawing.Size(208, 70);
             this.msglbl.TabIndex = 13;
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(9, 13);
+            this.pictureBox7.Location = new System.Drawing.Point(13, 13);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(60, 60);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
