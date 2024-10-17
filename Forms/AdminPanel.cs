@@ -45,6 +45,8 @@ namespace GameServer_Management.Forms
             this.isAdmin = isAdmin;
             usertxt.Text = username;
             adminhome = new AdminHome(this);
+
+            //Utility.ClickEvent(userpanel, userpanel_Click);
         }
 
         static AdminPanel obj;

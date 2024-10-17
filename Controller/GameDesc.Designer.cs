@@ -40,11 +40,11 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.desclbl = new CuoreUI.Controls.cuiLabel();
+            this.gameRelease = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.gameRelease = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GameImg)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelcat.SuspendLayout();
@@ -54,6 +54,7 @@
             // GameImg
             // 
             this.GameImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GameImg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GameImg.Image = ((System.Drawing.Image)(resources.GetObject("GameImg.Image")));
             this.GameImg.Location = new System.Drawing.Point(-22, -8);
             this.GameImg.Name = "GameImg";
@@ -70,11 +71,13 @@
             this.panel1.Controls.Add(this.pricelbl);
             this.panel1.Controls.Add(this.gameName);
             this.panel1.Controls.Add(this.panel3);
+            this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 261);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 105);
             this.panel1.TabIndex = 3;
+            this.panel1.Click += new System.EventHandler(this.Panel1_Click);
             // 
             // panelcat
             // 
@@ -128,7 +131,6 @@
             this.gameName.Size = new System.Drawing.Size(205, 58);
             this.gameName.TabIndex = 0;
             this.gameName.Text = "Game Name";
-            this.gameName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gameName_MouseClick);
             // 
             // panel3
             // 
@@ -159,6 +161,15 @@
             this.desclbl.Size = new System.Drawing.Size(32, 19);
             this.desclbl.TabIndex = 1;
             // 
+            // gameRelease
+            // 
+            this.gameRelease.AutoSize = true;
+            this.gameRelease.Location = new System.Drawing.Point(79, 76);
+            this.gameRelease.Name = "gameRelease";
+            this.gameRelease.Size = new System.Drawing.Size(35, 13);
+            this.gameRelease.TabIndex = 2;
+            this.gameRelease.Text = "label2";
+            // 
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 40;
@@ -178,15 +189,6 @@
             // 
             this.bunifuElipse4.ElipseRadius = 20;
             this.bunifuElipse4.TargetControl = this.panelcat;
-            // 
-            // gameRelease
-            // 
-            this.gameRelease.AutoSize = true;
-            this.gameRelease.Location = new System.Drawing.Point(79, 76);
-            this.gameRelease.Name = "gameRelease";
-            this.gameRelease.Size = new System.Drawing.Size(35, 13);
-            this.gameRelease.TabIndex = 2;
-            this.gameRelease.Text = "label2";
             // 
             // GameDesc
             // 

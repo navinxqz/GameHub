@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameServer_Management.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,14 +16,8 @@ namespace GameServer_Management.Controller
         public GameDesc()
         {
             InitializeComponent();
-            this.MouseClick += GameImg_MouseClick;
-            this.MouseClick += gameName_MouseClick;
-            //this.MouseClick += GameDesc_MouseClick;
-
-            foreach (Control c in this.Controls)
-            {
-                c.MouseClick += GameImg_MouseClick;
-            } 
+            Utility.ClickEvent(panel1, Panel1_Click);
+            this.MouseClick += GameImg_MouseClick;  
         }
         public event EventHandler onSelect; // = null
 
@@ -63,7 +58,7 @@ namespace GameServer_Management.Controller
             onSelect?.Invoke(this, e);
         }
 
-        private void gameName_MouseClick(object sender, MouseEventArgs e)
+        private void Panel1_Click(object sender, EventArgs e)
         {
             onSelect?.Invoke(this, e);
         }

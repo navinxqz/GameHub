@@ -20,6 +20,8 @@ namespace GameServer_Management.Forms
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
             infoPanel.Visible = false;
+
+            Utility.ClickEvent(infoPanel, infoPanel_Click);
         }
         public void GetData() 
         {
@@ -30,16 +32,6 @@ namespace GameServer_Management.Forms
 
             DBconnect.LoadData(query, dataGridView1, l);
             catSum.Text = dataGridView1.Rows.Count.ToString();
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void catbtn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void GameCatView_Load(object sender, EventArgs e)
