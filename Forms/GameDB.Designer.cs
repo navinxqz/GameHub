@@ -33,6 +33,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameDB));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRelDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -46,16 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.infobtn = new CuoreUI.Controls.cuiButton();
-            this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDesc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCatID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvCat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvRelDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -105,6 +105,79 @@
             this.dataGridView1.Size = new System.Drawing.Size(1319, 588);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // dgvSerial
+            // 
+            this.dgvSerial.HeaderText = "Serial";
+            this.dgvSerial.Name = "dgvSerial";
+            this.dgvSerial.ReadOnly = true;
+            // 
+            // dgvId
+            // 
+            this.dgvId.HeaderText = "ID";
+            this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
+            // 
+            // dgvName
+            // 
+            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvName.HeaderText = "Name";
+            this.dgvName.Name = "dgvName";
+            this.dgvName.ReadOnly = true;
+            // 
+            // dgvDesc
+            // 
+            this.dgvDesc.HeaderText = "Desc";
+            this.dgvDesc.Name = "dgvDesc";
+            this.dgvDesc.ReadOnly = true;
+            // 
+            // dgvPrice
+            // 
+            this.dgvPrice.HeaderText = "Price";
+            this.dgvPrice.Name = "dgvPrice";
+            this.dgvPrice.ReadOnly = true;
+            // 
+            // dgvCatID
+            // 
+            this.dgvCatID.HeaderText = "CatID";
+            this.dgvCatID.Name = "dgvCatID";
+            this.dgvCatID.ReadOnly = true;
+            this.dgvCatID.Visible = false;
+            // 
+            // dgvCat
+            // 
+            this.dgvCat.HeaderText = "Catagory";
+            this.dgvCat.Name = "dgvCat";
+            this.dgvCat.ReadOnly = true;
+            // 
+            // dgvRelDate
+            // 
+            dataGridViewCellStyle1.Format = "d";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvRelDate.HeaderText = "Release Date";
+            this.dgvRelDate.Name = "dgvRelDate";
+            this.dgvRelDate.ReadOnly = true;
+            // 
+            // dgvEdit
+            // 
+            this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvEdit.HeaderText = "";
+            this.dgvEdit.Image = ((System.Drawing.Image)(resources.GetObject("dgvEdit.Image")));
+            this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvEdit.Name = "dgvEdit";
+            this.dgvEdit.ReadOnly = true;
+            this.dgvEdit.ToolTipText = "Click to edit";
+            // 
+            // dgvDelete
+            // 
+            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDelete.HeaderText = "";
+            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
+            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
+            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // btnAdd
             // 
@@ -310,79 +383,6 @@
             this.infobtn.TabIndex = 25;
             this.infobtn.TextOffset = new System.Drawing.Point(0, 0);
             this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
-            // 
-            // dgvSerial
-            // 
-            this.dgvSerial.HeaderText = "Serial";
-            this.dgvSerial.Name = "dgvSerial";
-            this.dgvSerial.ReadOnly = true;
-            // 
-            // dgvId
-            // 
-            this.dgvId.HeaderText = "ID";
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
-            // 
-            // dgvName
-            // 
-            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvName.HeaderText = "Name";
-            this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
-            // 
-            // dgvDesc
-            // 
-            this.dgvDesc.HeaderText = "Desc";
-            this.dgvDesc.Name = "dgvDesc";
-            this.dgvDesc.ReadOnly = true;
-            // 
-            // dgvPrice
-            // 
-            this.dgvPrice.HeaderText = "Price";
-            this.dgvPrice.Name = "dgvPrice";
-            this.dgvPrice.ReadOnly = true;
-            // 
-            // dgvCatID
-            // 
-            this.dgvCatID.HeaderText = "CatID";
-            this.dgvCatID.Name = "dgvCatID";
-            this.dgvCatID.ReadOnly = true;
-            this.dgvCatID.Visible = false;
-            // 
-            // dgvCat
-            // 
-            this.dgvCat.HeaderText = "Catagory";
-            this.dgvCat.Name = "dgvCat";
-            this.dgvCat.ReadOnly = true;
-            // 
-            // dgvRelDate
-            // 
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dgvRelDate.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRelDate.HeaderText = "Release Date";
-            this.dgvRelDate.Name = "dgvRelDate";
-            this.dgvRelDate.ReadOnly = true;
-            // 
-            // dgvEdit
-            // 
-            this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvEdit.HeaderText = "";
-            this.dgvEdit.Image = ((System.Drawing.Image)(resources.GetObject("dgvEdit.Image")));
-            this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvEdit.Name = "dgvEdit";
-            this.dgvEdit.ReadOnly = true;
-            this.dgvEdit.ToolTipText = "Click to edit";
-            // 
-            // dgvDelete
-            // 
-            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvDelete.HeaderText = "";
-            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
-            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.Name = "dgvDelete";
-            this.dgvDelete.ReadOnly = true;
-            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // GameDB
             // 

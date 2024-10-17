@@ -34,16 +34,22 @@
             this.btnAdd = new CuoreUI.Controls.cuiButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
             this.dgvSerial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.dgvDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchtxtbox = new Krypton.Toolkit.KryptonTextBox();
+            this.infobtn = new CuoreUI.Controls.cuiButton();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.catSum = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.infoPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -128,7 +134,45 @@
             this.dataGridView1.Size = new System.Drawing.Size(1319, 588);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dgvSerial
+            // 
+            this.dgvSerial.HeaderText = "Serial";
+            this.dgvSerial.Name = "dgvSerial";
+            this.dgvSerial.ReadOnly = true;
+            // 
+            // dgvId
+            // 
+            this.dgvId.HeaderText = "ID";
+            this.dgvId.Name = "dgvId";
+            this.dgvId.ReadOnly = true;
+            // 
+            // dgvName
+            // 
+            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvName.HeaderText = "Name";
+            this.dgvName.Name = "dgvName";
+            this.dgvName.ReadOnly = true;
+            // 
+            // dgvEdit
+            // 
+            this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvEdit.HeaderText = "";
+            this.dgvEdit.Image = ((System.Drawing.Image)(resources.GetObject("dgvEdit.Image")));
+            this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvEdit.Name = "dgvEdit";
+            this.dgvEdit.ReadOnly = true;
+            this.dgvEdit.ToolTipText = "Click to edit";
+            // 
+            // dgvDelete
+            // 
+            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dgvDelete.HeaderText = "";
+            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
+            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dgvDelete.Name = "dgvDelete";
+            this.dgvDelete.ReadOnly = true;
+            this.dgvDelete.ToolTipText = "Click to delete";
             // 
             // bunifuElipse1
             // 
@@ -186,44 +230,77 @@
             this.searchtxtbox.TabIndex = 20;
             this.searchtxtbox.TextChanged += new System.EventHandler(this.searchtxtbox_TextChanged_1);
             // 
-            // dgvSerial
+            // infobtn
             // 
-            this.dgvSerial.HeaderText = "Serial";
-            this.dgvSerial.Name = "dgvSerial";
-            this.dgvSerial.ReadOnly = true;
+            this.infobtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.infobtn.CheckButton = false;
+            this.infobtn.Checked = false;
+            this.infobtn.CheckedBackground = System.Drawing.Color.Coral;
+            this.infobtn.CheckedImageTint = System.Drawing.Color.White;
+            this.infobtn.CheckedOutline = System.Drawing.Color.Silver;
+            this.infobtn.Content = "";
+            this.infobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.infobtn.ForeColor = System.Drawing.Color.White;
+            this.infobtn.HoverBackground = System.Drawing.Color.DimGray;
+            this.infobtn.HoveredImageTint = System.Drawing.Color.White;
+            this.infobtn.HoverOutline = System.Drawing.Color.Transparent;
+            this.infobtn.Image = ((System.Drawing.Image)(resources.GetObject("infobtn.Image")));
+            this.infobtn.ImageAutoCenter = true;
+            this.infobtn.ImageExpand = new System.Drawing.Point(7, 7);
+            this.infobtn.ImageOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.ImageTint = System.Drawing.Color.White;
+            this.infobtn.Location = new System.Drawing.Point(897, 28);
+            this.infobtn.Name = "infobtn";
+            this.infobtn.NormalBackground = System.Drawing.Color.Transparent;
+            this.infobtn.NormalOutline = System.Drawing.Color.Empty;
+            this.infobtn.OutlineThickness = 3F;
+            this.infobtn.PressedBackground = System.Drawing.Color.MediumPurple;
+            this.infobtn.PressedImageTint = System.Drawing.Color.White;
+            this.infobtn.PressedOutline = System.Drawing.Color.Transparent;
+            this.infobtn.Rounding = new System.Windows.Forms.Padding(20);
+            this.infobtn.Size = new System.Drawing.Size(40, 40);
+            this.infobtn.TabIndex = 26;
+            this.infobtn.TextOffset = new System.Drawing.Point(0, 0);
+            this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
             // 
-            // dgvId
+            // infoPanel
             // 
-            this.dgvId.HeaderText = "ID";
-            this.dgvId.Name = "dgvId";
-            this.dgvId.ReadOnly = true;
+            this.infoPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.infoPanel.Controls.Add(this.catSum);
+            this.infoPanel.Controls.Add(this.label2);
+            this.infoPanel.Location = new System.Drawing.Point(447, 302);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(424, 105);
+            this.infoPanel.TabIndex = 27;
+            this.infoPanel.Click += new System.EventHandler(this.infoPanel_Click);
             // 
-            // dgvName
+            // catSum
             // 
-            this.dgvName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvName.HeaderText = "Name";
-            this.dgvName.Name = "dgvName";
-            this.dgvName.ReadOnly = true;
+            this.catSum.AutoSize = true;
+            this.catSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.catSum.Location = new System.Drawing.Point(302, 42);
+            this.catSum.Name = "catSum";
+            this.catSum.Size = new System.Drawing.Size(79, 31);
+            this.catSum.TabIndex = 2;
+            this.catSum.Text = "value";
             // 
-            // dgvEdit
+            // label2
             // 
-            this.dgvEdit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvEdit.HeaderText = "";
-            this.dgvEdit.Image = ((System.Drawing.Image)(resources.GetObject("dgvEdit.Image")));
-            this.dgvEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvEdit.Name = "dgvEdit";
-            this.dgvEdit.ReadOnly = true;
-            this.dgvEdit.ToolTipText = "Click to edit";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
+            this.label2.Location = new System.Drawing.Point(50, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Available Category:";
             // 
-            // dgvDelete
+            // bunifuElipse2
             // 
-            this.dgvDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dgvDelete.HeaderText = "";
-            this.dgvDelete.Image = ((System.Drawing.Image)(resources.GetObject("dgvDelete.Image")));
-            this.dgvDelete.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dgvDelete.Name = "dgvDelete";
-            this.dgvDelete.ReadOnly = true;
-            this.dgvDelete.ToolTipText = "Click to delete";
+            this.bunifuElipse2.ElipseRadius = 50;
+            this.bunifuElipse2.TargetControl = this.infoPanel;
             // 
             // GameCatView
             // 
@@ -231,6 +308,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1322, 715);
+            this.Controls.Add(this.infoPanel);
+            this.Controls.Add(this.infobtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.searchtxtbox);
             this.Controls.Add(this.dataGridView1);
@@ -243,6 +322,8 @@
             this.Load += new System.EventHandler(this.GameCatView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.infoPanel.ResumeLayout(false);
+            this.infoPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +341,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvName;
         private System.Windows.Forms.DataGridViewImageColumn dgvEdit;
         private System.Windows.Forms.DataGridViewImageColumn dgvDelete;
+        private CuoreUI.Controls.cuiButton infobtn;
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label catSum;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
     }
 }

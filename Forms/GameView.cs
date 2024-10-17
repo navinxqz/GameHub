@@ -28,6 +28,7 @@ namespace GameServer_Management.Forms
             l.Items.Add(dgvName);
 
             DBconnect.LoadData(query, dataGridView1, l);
+            catSum.Text = dataGridView1.Rows.Count.ToString();
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -47,15 +48,8 @@ namespace GameServer_Management.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //AddCategory c = new AddCategory();
-            //c.ShowDialog();
             DBconnect.BlurBg(new AddCategory());
             GetData();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void searchtxtbox_TextChanged(object sender, EventArgs e)
@@ -100,6 +94,16 @@ namespace GameServer_Management.Forms
         private void searchtxtbox_TextChanged_1(object sender, EventArgs e)
         {
             GetData();
+        }
+
+        private void infobtn_Click(object sender, EventArgs e)
+        {
+            infoPanel.Visible = true;
+        }
+
+        private void infoPanel_Click(object sender, EventArgs e)
+        {
+            infoPanel.Visible = false;
         }
     }
 }
