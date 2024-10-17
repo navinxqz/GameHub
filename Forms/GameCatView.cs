@@ -41,7 +41,7 @@ namespace GameServer_Management.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            DBconnect.BlurBg(new AddCategory());
+            Utility.BlurBg(new AddCategory());
             GetData();
         }
 
@@ -58,7 +58,7 @@ namespace GameServer_Management.Forms
                 c.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
                 c.txtCat.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["dgvName"].Value);
                 
-                DBconnect.BlurBg(c);
+                Utility.BlurBg(c);
                 GetData();
             }
             if (dataGridView1.CurrentCell?.OwningColumn?.Name == "dgvDelete") 

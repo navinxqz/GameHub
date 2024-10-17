@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GameServer_Management.Forms;
+using System;
+using System.Drawing;
 using System.Reflection;    //for using protedted method: OnClick
 using System.Windows.Forms;
 
@@ -21,6 +23,26 @@ namespace GameServer_Management.Class
                     MethodInfo onclick = typeof(Control).GetMethod("OnClick", BindingFlags.Instance | BindingFlags.NonPublic);
                     onclick?.Invoke(parent, new object[] { e });
                 };
+            }
+        }
+
+        public static void BlurBg(Form f)
+        {
+            Form Bg = new Form();
+            using (f)
+            {
+                Bg.StartPosition = FormStartPosition.Manual;
+                Bg.FormBorderStyle = FormBorderStyle.None;
+                Bg.Opacity = 0.5;
+                Bg.BackColor = Color.Black;
+                Bg.Size = AdminPanel.Instance(true).Size;
+                Bg.Location = AdminPanel.Instance(true).Location;
+                Bg.ShowInTaskbar = false;
+
+                Bg.Show();
+                f.Owner = Bg;
+                f.ShowDialog(Bg);
+                Bg.Dispose();
             }
         }
     }

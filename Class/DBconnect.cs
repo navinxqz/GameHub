@@ -176,26 +176,6 @@ namespace GameServer_Management.Class
             }
         }
 
-        public static void BlurBg(Form f)
-        {
-            Form Bg = new Form();
-            using (f)
-            {
-                Bg.StartPosition = FormStartPosition.Manual;
-                Bg.FormBorderStyle = FormBorderStyle.None;
-                Bg.Opacity = 0.5;
-                Bg.BackColor = Color.Black;
-                Bg.Size = AdminPanel.Instance(true).Size;
-                Bg.Location = AdminPanel.Instance(true).Location;
-                Bg.ShowInTaskbar = false;
-
-                Bg.Show();
-                f.Owner = Bg;
-                f.ShowDialog(Bg);
-                Bg.Dispose();
-            }
-        }
-
         public static void CBFill(string query,Krypton.Toolkit.KryptonComboBox cb) 
         {
             using (SqlConnection con = GetConnection())

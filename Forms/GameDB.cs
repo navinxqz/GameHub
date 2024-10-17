@@ -50,7 +50,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                DBconnect.BlurBg(new AddGames());
+                Utility.BlurBg(new AddGames());
                 GetData();
             }
             catch (Exception ex)
@@ -67,7 +67,7 @@ namespace GameServer_Management.Forms
                 c.id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvId"].Value);
                 c.catID = Convert.ToInt32(dataGridView1.CurrentRow.Cells["dgvCatID"].Value);
 
-                DBconnect.BlurBg(c);
+                Utility.BlurBg(c);
                 GetData();
             }
             if (dataGridView1.CurrentCell?.OwningColumn?.Name == "dgvDelete")

@@ -77,7 +77,7 @@ namespace GameServer_Management.Forms
         {
             try
             {
-                DBconnect.BlurBg(new AddAdmin());
+                Utility.BlurBg(new AddAdmin());
                 GetData();
             }
             catch (Exception ex)
