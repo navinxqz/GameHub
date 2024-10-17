@@ -280,7 +280,7 @@
             this.catSum.AutoSize = true;
             this.catSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catSum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(48)))), ((int)(((byte)(77)))));
-            this.catSum.Location = new System.Drawing.Point(302, 42);
+            this.catSum.Location = new System.Drawing.Point(298, 40);
             this.catSum.Name = "catSum";
             this.catSum.Size = new System.Drawing.Size(79, 31);
             this.catSum.TabIndex = 2;

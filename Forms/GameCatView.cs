@@ -19,6 +19,7 @@ namespace GameServer_Management.Forms
             InitializeComponent();
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
+            infoPanel.Visible = false;
         }
         public void GetData() 
         {
@@ -77,7 +78,6 @@ namespace GameServer_Management.Forms
                     Hashtable h = new Hashtable();
                     h.Add("@catID", id);
 
-                    //DBconnect.SQL(query, h);
                     if (DBconnect.SQL(query, h) > 0)
                     {
                         MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -98,7 +98,7 @@ namespace GameServer_Management.Forms
 
         private void infobtn_Click(object sender, EventArgs e)
         {
-            infoPanel.Visible = true;
+            infoPanel.Visible = !infoPanel.Visible; //vice versa
         }
 
         private void infoPanel_Click(object sender, EventArgs e)

@@ -14,6 +14,8 @@ namespace GameServer_Management.Forms
             this.AutoScaleDimensions = new SizeF(96F, 96F);
             this.AutoScaleMode = AutoScaleMode.Dpi;
             infoPanel.Visible = false;
+
+            Utility.ClickEvent(infoPanel, infoPanel_Click);
         }
         public void GetData()
         {
@@ -99,7 +101,7 @@ namespace GameServer_Management.Forms
 
         private void infobtn_Click(object sender, EventArgs e)
         {
-            infoPanel.Visible = true;
+            infoPanel.Visible = !infoPanel.Visible;
         }
 
         private void infoPanel_Click(object sender, EventArgs e)

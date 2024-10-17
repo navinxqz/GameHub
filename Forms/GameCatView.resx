@@ -133,7 +133,7 @@
   <data name="dgvEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABVpJREFUaEPtmd1PXEUYxrkxJl76ERPv9MIb/wFNmpgYTbxo7S6V2KoxbWpq/dYm
+        EAAACxABrSO9dQAABVpJREFUaEPtmd1PXEUYxrkxJl76ERPv9MIb/wFNmpgYTbxo7S6V2KoxbWpq/dYm
         cmIvXJYF2kpt+SpllVpoqE3FFJCPyoItFkor0lJaKLbVCkXbItJS+k058/gOzO55z2EXZuEIa8KTvCHZ
         mXfO8zvvzJnhnKQFLWhBC0psZabgEb/HLEr3mP30d4z+3k734EPVPC7Zh37vTPcKzDbkNfxe80K61wwG
         luBxdYmZKeDFc2RswHmRrOXmYHMzjKYDMA40wij24xtnHzeCQEYCyXhe2YlP6q5OMp/xskB5AdB6GGg5
@@ -165,7 +165,7 @@
   <data name="dgvDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAvxJREFUaEPtmVtvEkEUx1E/hF/FJ+ODH8BrYqKfQBbsm4kPYpSgFZZSJTQF2QEs
+        EAAACxABrSO9dQAAAvxJREFUaEPtmVtvEkEUx1E/hF/FJ+ODH8BrYqKfQBbsm4kPYpSgFZZSJTQF2QEs
         FxG5JrWWQGptsdaYtGlMWmoTLw/6YJ/0yRjHc4YB1+nSboUVttl/8svuzszOOf/Zw+wm2CxZGhLJDnJM
         tpM1n6T8kiVCtWB9MAbH8tuGQ9nz2SM+iWwCW7JdGYXjHS143xawiffw2wcvryN6DlfYKylneFNXwRM4
         y54IHHnT4AWl0cCV1bOqLpfrMCTfBBPLvMkYURs9JNtjp+GxX90Nv52EWisaLWr1awNj4R52r2b/H2Bh
@@ -187,7 +187,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAAj9JREFUSEutla9LBEEYhuWCiPHCBbPhgkFMhkPMpsNkFP8Ek4hYDWIwmUwGg1w+
+        vAAADrwBlbxySQAAAj9JREFUSEutla9LBEEYhuWCiPHCBbPhgkFMhkPMpsNkFP8Ek4hYDWIwmUwGg1w+
         RMRoMJhNJpPIISYRb33e2XfuZr2980594OVbvl8zOzszO1VGlmWVbrfbwB6hW56fsW/YJ+wV2kF1p48P
         RdIiaqN3NIo3dILmXP4zJG8wyxdVY2UC6XMJD2jJLcohITb/VIUa+vke7aM1tILW8R9jH53DY8jXpBbc
         bhCCWpYwc9NBW2jWKT3wTdGwhj1EHyiiyVSd1gdnBbWTGan5qsNDIUcDbWM/Yi3ac7gPCdot707Qsmw5
@@ -203,7 +203,7 @@
   <data name="infobtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAABapJREFUaEPNmlGEHVcYx9eqtSoi1loREVUVsWJV9CkPUbEP1Yeq1YeIiIqoqIpV
+        vgAADr4B6kKxwAAABapJREFUaEPNmlGEHVcYx9eqtSoi1loREVUVsWJV9CkPUbEP1Yeq1YeIiIqoqIpV
         0acqURVVkYeKioo+RFVVRERUVVVUxYqIiIhYURErIiIiKiKy29/v3DNj5t6Ze2fuzK7++Tv/PXPOd76Z
         OXPO+b67I02wsrIyCtfDrXAWHoan4O/wOvwH3oFXl5eXf6M8SfkJpW3ts56/R6O5tQWDb4QfwlM4cYXy
         GSwE16NKtW3t8z08SN1mymh5lcFAPrVDlJcoH8GX6CZ4Av+G83AiDtMuMCwn4BwO34HIDqroqqDPPYq9

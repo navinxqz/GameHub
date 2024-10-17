@@ -115,5 +115,6 @@ namespace GameServer_Management.Forms
         {
             loading.Visible = false;
         }
+        //e.Graphics.DrawString("Click to close", new Font("Arial", 10, FontStyle.Underline), Brushes.Blue, new Point(10, 10));
     }
 }
