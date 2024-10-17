@@ -59,7 +59,7 @@ namespace GameServer_Management.Forms
 
                     if (DBconnect.SQL(query, h) > 0)
                     {
-                        MessageBox.Show("Deleted Successfully", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Deleted Successfully", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GetData();
                     }
                     else

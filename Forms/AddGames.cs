@@ -61,7 +61,7 @@ namespace GameServer_Management.Forms
             h.Add("@gameprice", Convert.ToDouble(txtPrice.Text));
             //h.Add("@releaseDate", txtRelDate.Text);
 
-            DateTime releaseDate;   //issue here!!!
+            DateTime releaseDate;
             if (DateTime.TryParseExact(txtRelDate.Text, "dd-MM-yyyy", null, System.Globalization.DateTimeStyles.None, out releaseDate))
             {
                 h.Add("@releaseDate", releaseDate.ToString("yyyy-MM-dd")); // converted to sql recognized format
@@ -77,7 +77,7 @@ namespace GameServer_Management.Forms
 
             if (DBconnect.SQL(query, h) > 0)
             {
-                MessageBox.Show("Saved Successfully!", "GameServer Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Saved Successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
 
                 AdminHome.Instance.bellbtn.Image = Image.FromFile(dotbell);
@@ -216,7 +216,7 @@ namespace GameServer_Management.Forms
                 }
                 else
                 {
-                    pictureBox1.Image = null;   // set to null for no img
+                    pictureBox1.Image = null;
                 }
             }
         }

@@ -278,7 +278,7 @@ namespace GameServer_Management.Forms
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-            //laodingpanel.Visible = false;
+
             loading.Visible = true;
             getGame1.Visible = false;
             loadingtimer.Start();
