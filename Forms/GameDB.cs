@@ -33,7 +33,6 @@ namespace GameServer_Management.Forms
                 l.Items.Add(dgvRelDate);
 
                 DBconnect.LoadData(query, dataGridView1, l);
-                
                 games.Text = dataGridView1.Rows.Count.ToString();
             }
             catch (Exception ex)

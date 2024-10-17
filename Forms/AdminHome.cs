@@ -341,12 +341,12 @@ namespace GameServer_Management.Forms
             if(bellbtn.Image == Image.FromFile(dotbell))
             {
                 bellbtn.Image = Image.FromFile(bell);
-                notificationpanel.Visible = true;
+                notificationpanel.Visible = !notificationpanel.Visible;
             }
             else
             {
                 bellbtn.Image = Image.FromFile(bell);
-                notificationpanel.Visible = true;
+                notificationpanel.Visible = !notificationpanel.Visible; ;
             }
         }
 
