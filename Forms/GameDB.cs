@@ -94,11 +94,6 @@ namespace GameServer_Management.Forms
             }
         }
 
-        private void searchBox_TextChanged(object sender, EventArgs e)
-        {
-            GetData();
-        }
-
         private void infobtn_Click(object sender, EventArgs e)
         {
             infoPanel.Visible = !infoPanel.Visible;
@@ -107,6 +102,11 @@ namespace GameServer_Management.Forms
         private void infoPanel_Click(object sender, EventArgs e)
         {
             infoPanel.Visible = false;
+        }
+
+        private void searchBox_TextChanged_1(object sender, EventArgs e)
+        {
+            GetData();
         }
     }
 }
