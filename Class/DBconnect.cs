@@ -3,9 +3,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Collections;
 using System.Windows.Forms;
-using System.Drawing;
 using GameServer_Management.Forms;
-using System.IO;
 
 namespace GameServer_Management.Class
 {
@@ -17,8 +15,6 @@ namespace GameServer_Management.Class
         public static readonly string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= " + path + @"\" + database + ";Integrated Security=True;";    */
 
         //public static readonly string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GameHub_DB.mdf;Integrated Security=True;";
-
-
 
         public static SqlConnection GetConnection()
         {

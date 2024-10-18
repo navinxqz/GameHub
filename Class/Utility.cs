@@ -1,7 +1,7 @@
 ﻿using GameServer_Management.Forms;
 using System;
 using System.Drawing;
-using System.Reflection;    //for using protedted method: OnClick
+using System.Reflection;    //for using OnClick (protected access modifier)
 using System.Windows.Forms;
 
 namespace GameServer_Management.Class
