@@ -15,12 +15,12 @@ namespace GameServer_Management.Forms
         private KryptonCheckButton cb = new KryptonCheckButton();
         private GameCatView catView = new GameCatView();
         private GameDB gameDB = new GameDB();
-        private AdminHome home = new AdminHome();
+        private Home home = new Home();
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
         
-        private AdminHome adminhome;
+        private Home adminhome;
         private bool isAdmin;
 
         public AdminPanel(bool isAdmin)
@@ -32,7 +32,7 @@ namespace GameServer_Management.Forms
             cb.Checked = true;
 
             this.isAdmin = isAdmin;
-            adminhome = new AdminHome(this);
+            adminhome = new Home(this);
         }
         public AdminPanel(bool isAdmin, string username)
         {
@@ -44,7 +44,7 @@ namespace GameServer_Management.Forms
 
             this.isAdmin = isAdmin;
             usertxt.Text = username;
-            adminhome = new AdminHome(this);
+            adminhome = new Home(this);
 
             //Utility.ClickEvent(userpanel, userpanel_Click);
         }

@@ -80,14 +80,14 @@ namespace GameServer_Management.Forms
                 MessageBox.Show("Saved Successfully!", "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ClearForm();
 
-                AdminHome.Instance.bellbtn.Image = Image.FromFile(dotbell);
-                if (AdminHome.Instance.bellbtn.Image != Image.FromFile(dotbell))
+                Home.Instance.bellbtn.Image = Image.FromFile(dotbell);
+                if (Home.Instance.bellbtn.Image != Image.FromFile(dotbell))
                 {
-                    AdminHome.Instance.msglbl.Content = "New game launched!";
+                    Home.Instance.msglbl.Content = "New game launched!";
                 }
                 else
                 {
-                    AdminHome.Instance.msglbl.Content = "You are up to date!";
+                    Home.Instance.msglbl.Content = "You are up to date!";
                 }
 
             }
