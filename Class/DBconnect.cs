@@ -5,12 +5,20 @@ using System.Collections;
 using System.Windows.Forms;
 using System.Drawing;
 using GameServer_Management.Forms;
+using System.IO;
 
 namespace GameServer_Management.Class
 {
     public class DBconnect
     {
         public static readonly string cs = @"Data Source=NAVINNAWSHIN\SQLEXPRESS;Initial Catalog=GameServerDB;Integrated Security=True";
+        /*private static string path = Path.GetFullPath(Environment.CurrentDirectory);
+        private static string database = "GameServerDB.mdf";
+        public static readonly string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename= " + path + @"\" + database + ";Integrated Security=True;";    */
+
+        //public static readonly string cs = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\GameHub_DB.mdf;Integrated Security=True;";
+
+
 
         public static SqlConnection GetConnection()
         {

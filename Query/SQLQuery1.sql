@@ -1,6 +1,6 @@
-create database GameServerDB
+/*create database GameServerDB*/
 
-use GameServerDB
+use GameHub_DB
 go
 
 create table admintbl
@@ -44,8 +44,6 @@ begin
 insert into gamestbl(gameName,gameDesc,gameprice,categoryID,gameImage,releaseDate) values(@gameName,@gameDesc,@gameprice,@categoryID,@gameImage,@releaseDate)
 end
 go
-
-select g.gameID, g.gameName, g.gameDesc, g.gameprice, g.categoryID, g.gameImage, g.releaseDate from gamestbl g inner join categorytbl c on c.catID = g.categoryID where g.gameName
 -----------------------------------------------------
 
 create proc sp_updateGame
@@ -128,7 +126,7 @@ select catID as id, catName as name from categorytbl where catName like '%' + @c
 end
 go
 ---------------------------------------------------------
-INSERT INTO gamestbl
+/*INSERT INTO gamestbl
 (
     gameName,
     gameDesc,
@@ -145,7 +143,7 @@ VALUES
     3,
     NULL,
     '2021-06-2'
-);
+);	*/
 Select * from gamestbl
 
 ------------------------------------------
@@ -217,7 +215,6 @@ BEGIN
 END
 GO
 
-select * from usertbl
 --------------------------------------------------
 create procedure UpdateUser
 (
@@ -236,3 +233,4 @@ update usertbl set firstname = @firstname, lastname = @lastname, gender = @gende
 end
 go
 
+----------------------------------------------------
