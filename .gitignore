@@ -348,6 +348,18 @@ Icon
 # Thumbnails
 ._*
 
+#bin folder
+bin/Debug/*
+bin/Debug/*.dll
+bin/Debug/*.exe
+bin/Debug/*.pdb
+bin/Debug/*.cache
+bin/Debug/*.config
+bin/Debug/*.log
+bin/Debug/*.tmp
+!bin/Debug/*.mdf
+!bin/Debug/*.ldf
+
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
