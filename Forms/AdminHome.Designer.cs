@@ -51,13 +51,14 @@
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 50;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // cuiBorder1
             // 
             this.cuiBorder1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cuiBorder1.BackgroundImage")));
             this.cuiBorder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.cuiBorder1.Controls.Add(this.label1);
-            this.cuiBorder1.Location = new System.Drawing.Point(183, 76);
+            this.cuiBorder1.Location = new System.Drawing.Point(28, 12);
             this.cuiBorder1.Name = "cuiBorder1";
             this.cuiBorder1.OutlineThickness = 1F;
             this.cuiBorder1.PanelColor = System.Drawing.Color.Transparent;

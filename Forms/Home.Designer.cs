@@ -73,6 +73,7 @@
             this.cuiControlBlur1 = new CuoreUI.Components.cuiControlBlur(this.components);
             this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
+            this.notificationBlur = new CuoreUI.Components.cuiControlBlur(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -109,7 +110,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 447);
+            this.listPanel.Size = new System.Drawing.Size(1106, 400);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -511,6 +512,7 @@
             // 
             this.notificationpanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.notificationpanel.BackColor = System.Drawing.Color.Black;
+            this.notificationpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("notificationpanel.BackgroundImage")));
             this.notificationpanel.Controls.Add(this.label6);
             this.notificationpanel.Controls.Add(this.msglbl);
             this.notificationpanel.Controls.Add(this.pictureBox7);
@@ -523,6 +525,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.LightGray;
             this.label6.Location = new System.Drawing.Point(119, 160);
@@ -533,6 +536,7 @@
             // 
             // msglbl
             // 
+            this.msglbl.BackColor = System.Drawing.Color.Transparent;
             this.msglbl.Content = "You\\ are\\ up\\ to\\ date!";
             this.msglbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msglbl.ForeColor = System.Drawing.Color.White;
@@ -544,6 +548,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
             this.pictureBox7.Location = new System.Drawing.Point(13, 13);
             this.pictureBox7.Name = "pictureBox7";
@@ -585,6 +590,11 @@
             this.loading.Name = "loading";
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
+            // 
+            // notificationBlur
+            // 
+            this.notificationBlur.BlurAmount = 10F;
+            this.notificationBlur.TargetControl = this.notificationpanel;
             // 
             // Home
             // 
@@ -678,5 +688,6 @@
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CuoreUI.Components.cuiControlBlur cuiControlBlur1;
+        private CuoreUI.Components.cuiControlBlur notificationBlur;
     }
 }

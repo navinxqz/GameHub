@@ -228,7 +228,6 @@ namespace GameServer_Management.Forms
                             string gamedescription = item["gameDesc"].ToString();
                             imageData.Add((imgBase64, gamename, gamedescription));
 
-                            //imageData.Add((imgBase64, item["gameName"].ToString()));  // Store image and description
                             Image img = Image.FromStream(new MemoryStream(imgAry)); //
                             AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, gamedescription);
                         }

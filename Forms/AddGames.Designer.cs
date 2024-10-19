@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtDesc = new Krypton.Toolkit.KryptonTextBox();
             this.cbCat = new Krypton.Toolkit.KryptonComboBox();
+            this.cuiControlBlur1 = new CuoreUI.Components.cuiControlBlur(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbCat)).BeginInit();
             this.SuspendLayout();
@@ -315,6 +316,11 @@
             this.cbCat.TabIndex = 70;
             this.cbCat.SelectedIndexChanged += new System.EventHandler(this.cbCat_SelectedIndexChanged);
             // 
+            // cuiControlBlur1
+            // 
+            this.cuiControlBlur1.BlurAmount = 1.5F;
+            this.cuiControlBlur1.TargetControl = this.pictureBox1;
+            // 
             // AddGames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,5 +372,6 @@
         public Krypton.Toolkit.KryptonTextBox txtDesc;
         public Krypton.Toolkit.KryptonComboBox cbCat;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private CuoreUI.Components.cuiControlBlur cuiControlBlur1;
     }
 }
