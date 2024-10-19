@@ -16,6 +16,7 @@ namespace GameServer_Management.Forms
         private GameCatView catView = new GameCatView();
         private GameDB gameDB = new GameDB();
         private Home home = new Home();
+        private AdminHome adminHome = new AdminHome();
         private UserDB userDB = new UserDB();
         private AdminDB adminDB = new AdminDB();
         private Download download = new Download();
@@ -167,7 +168,14 @@ namespace GameServer_Management.Forms
 
         private void AdminPanel_Load(object sender, EventArgs e)
         {
-            LoadForm(home);
+            if(isAdmin)
+            {
+                LoadForm(adminHome);
+            }
+            else
+            {
+                LoadForm(home);
+            }
             this.Opacity = 0;
             faddingTimer.Start();
             obj = this;
@@ -211,7 +219,15 @@ namespace GameServer_Management.Forms
                 btnHome.Checked = true;
                 return;
             }
-            LoadForm(home);
+            if (isAdmin)
+            {
+                LoadForm(adminHome);
+            }
+            else
+            {
+                LoadForm(home);
+            }
+            //LoadForm(home);
             Button(btnHome);
         }
 
