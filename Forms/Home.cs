@@ -301,10 +301,15 @@ namespace GameServer_Management.Forms
                 byte[] imgBytes = Convert.FromBase64String(imageData[countDown].imageAddress);
                 using (MemoryStream ms = new MemoryStream(imgBytes))
                 {
+                    nameLabel.BringToFront();
+                    gameDesc.BringToFront();
+                    nameLabel.Text = imageData[countDown].gameName;
+                    gameDesc.Content = imageData[countDown].gameDescription;
+
                     slideImageBox.Image = Image.FromStream(ms);
+                    cuiControlBlur1.TargetControl = panel2;
+                    cuiControlBlur1.BlurAmount = 250;
                 }
-                nameLabel.Text = imageData[countDown].gameName;
-                gameDesc.Content = imageData[countDown].gameDescription;
                 countDown++;
             }
             else
