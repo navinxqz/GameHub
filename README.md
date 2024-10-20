@@ -2,7 +2,7 @@
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/navinxqz/GameHub)
-[![made-with-dotnet](https://img.shields.io/badge/Made%20with-.netv4.7.2-purple)](https://dotnet.microsoft.com/)
+[![made-with-dotnet](https://img.shields.io/badge/Made%20with-.net_8-purple)](https://dotnet.microsoft.com/)
 ### **Table of Contents**
 - [Project Overview](#project-overview)
 - [Features](#features)
