@@ -42,25 +42,26 @@
             // 
             // panelTop
             // 
+            this.panelTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTop.Controls.Add(this.gamePanel);
-            this.panelTop.Location = new System.Drawing.Point(34, 34);
+            this.panelTop.Location = new System.Drawing.Point(40, 31);
             this.panelTop.Name = "panelTop";
             this.panelTop.OutlineThickness = 1F;
             this.panelTop.PanelColor = System.Drawing.Color.Transparent;
             this.panelTop.PanelOutlineColor = System.Drawing.Color.Coral;
             this.panelTop.Rounding = new System.Windows.Forms.Padding(8);
-            this.panelTop.Size = new System.Drawing.Size(1223, 240);
+            this.panelTop.Size = new System.Drawing.Size(1195, 245);
             this.panelTop.TabIndex = 0;
             // 
             // gamePanel
             // 
-            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gamePanel.AutoScroll = true;
-            this.gamePanel.Location = new System.Drawing.Point(19, 15);
+            this.gamePanel.Location = new System.Drawing.Point(15, 7);
             this.gamePanel.Name = "gamePanel";
-            this.gamePanel.Size = new System.Drawing.Size(1187, 207);
+            this.gamePanel.Size = new System.Drawing.Size(1166, 446);
             this.gamePanel.TabIndex = 0;
             // 
             // AdminHome
