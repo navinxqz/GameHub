@@ -30,6 +30,8 @@ namespace GameServer_Management.Forms
         public Home()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
             loading.Visible = true;
             Instance = this;
 
@@ -42,6 +44,8 @@ namespace GameServer_Management.Forms
         public Home(AdminPanel adminPanel)
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
             this.adminPanel = adminPanel;
         }   
 

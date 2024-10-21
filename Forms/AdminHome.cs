@@ -19,6 +19,8 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
+            this.AutoScaleDimensions = new SizeF(96F, 96F);
+            this.AutoScaleMode = AutoScaleMode.Dpi;
             gamePanel.WrapContents = false;
         }
         private async void LoadItems()
