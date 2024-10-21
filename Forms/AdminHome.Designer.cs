@@ -28,21 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHome));
             this.panelTop = new CuoreUI.Controls.cuiBorder();
             this.gamePanel = new System.Windows.Forms.FlowLayoutPanel();
             this.cuiBorder1 = new CuoreUI.Controls.cuiBorder();
             this.cuiBorder2 = new CuoreUI.Controls.cuiBorder();
             this.cuiBorder3 = new CuoreUI.Controls.cuiBorder();
             this.cuiBorder4 = new CuoreUI.Controls.cuiBorder();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTop.SuspendLayout();
+            this.cuiBorder3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this;
             // 
             // panelTop
             // 
@@ -98,6 +95,7 @@
             // cuiBorder3
             // 
             this.cuiBorder3.BackColor = System.Drawing.Color.Transparent;
+            this.cuiBorder3.Controls.Add(this.pictureBox1);
             this.cuiBorder3.Location = new System.Drawing.Point(303, 511);
             this.cuiBorder3.Name = "cuiBorder3";
             this.cuiBorder3.OutlineThickness = 1F;
@@ -119,11 +117,21 @@
             this.cuiBorder4.Size = new System.Drawing.Size(455, 411);
             this.cuiBorder4.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-16, -66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(357, 371);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
             this.ClientSize = new System.Drawing.Size(1286, 760);
             this.Controls.Add(this.cuiBorder4);
             this.Controls.Add(this.cuiBorder3);
@@ -136,17 +144,19 @@
             this.Text = "AdminHome";
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.panelTop.ResumeLayout(false);
+            this.cuiBorder3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private CuoreUI.Controls.cuiBorder panelTop;
         private System.Windows.Forms.FlowLayoutPanel gamePanel;
         private CuoreUI.Controls.cuiBorder cuiBorder4;
         private CuoreUI.Controls.cuiBorder cuiBorder3;
         private CuoreUI.Controls.cuiBorder cuiBorder2;
         private CuoreUI.Controls.cuiBorder cuiBorder1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
