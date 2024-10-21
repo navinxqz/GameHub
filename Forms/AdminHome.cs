@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,11 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
+            gamePanel.VerticalScroll.Enabled = false;
+            gamePanel.WrapContents = false;
         }
-        //async LoadItems function
+        private int currentX = 0;
+
         private async void LoadItems()
         {
             string query = "select * from gamestbl t1 inner join categorytbl t2 on t2.catID = t1.categoryID";
@@ -35,28 +39,19 @@ namespace GameServer_Management.Forms
                     await con.OpenAsync();
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+
+                        foreach (DataRow item in dt.Rows)
                         {
-                            if (reader.HasRows)
-                            {
-                                while (await reader.ReadAsync())
-                                {
-                                    ListViewItem item = new ListViewItem(reader["gameID"].ToString());
-                                    item.SubItems.Add(reader["gameName"].ToString());
-                                    item.SubItems.Add(reader["gamePrice"].ToString());
-                                    item.SubItems.Add(reader["gameDescription"].ToString());
-                                    item.SubItems.Add(reader["gameImage"].ToString());
-                                    item.SubItems.Add(reader["catName"].ToString());
-                                    //listView1.Items.Add(item);
-                                }
-                            }
+                            Byte[] imgAry = (byte[])item["gameImage"];
+                            Image img = Image.FromStream(new MemoryStream(imgAry)); //
+                            AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, item["gameDesc"].ToString());
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "GameHub", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                catch (Exception ex) { MessageBox.Show($"Error! {ex.Message}"); }
             }
         }
 
@@ -70,12 +65,28 @@ namespace GameServer_Management.Forms
                 Pic = img,
                 id = Convert.ToInt32(id),
                 desc = gameDescription,
-            };
 
-            //v.onSelect += new EventHandler(Game_Click);
+                //Width = 200,
+                //Height = gamePanel.Height - 10,
+            };
+            v.Location = new Point(currentX, 0);
+            currentX += v.Width + 10;
+
             gamePanel.Controls.Add(v);
-            v.BringToFront();   //loading data backward
-            //gameDescList.Add(v);
+            v.BringToFront();
+
+            gamePanel.AutoScrollMinSize = new Size(currentX, 0);
+
+            // Ensure only horizontal scrolling is enabled
+            gamePanel.HorizontalScroll.Enabled = true;
+            gamePanel.VerticalScroll.Enabled = false;
+        }
+
+        private void AdminHome_Load(object sender, EventArgs e)
+        {
+            gamePanel.Controls.Clear();
+            currentX = 0;
+            LoadItems();
         }
     }
 }

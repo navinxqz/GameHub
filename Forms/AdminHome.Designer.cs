@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.gamePanel = new CuoreUI.Controls.cuiBorder();
+            this.panelTop = new CuoreUI.Controls.cuiBorder();
+            this.gamePanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -38,18 +40,27 @@
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
             // 
+            // panelTop
+            // 
+            this.panelTop.Controls.Add(this.gamePanel);
+            this.panelTop.Location = new System.Drawing.Point(34, 34);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.OutlineThickness = 1F;
+            this.panelTop.PanelColor = System.Drawing.Color.Transparent;
+            this.panelTop.PanelOutlineColor = System.Drawing.Color.Coral;
+            this.panelTop.Rounding = new System.Windows.Forms.Padding(8);
+            this.panelTop.Size = new System.Drawing.Size(1223, 240);
+            this.panelTop.TabIndex = 0;
+            // 
             // gamePanel
             // 
-            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gamePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gamePanel.AutoScroll = true;
-            this.gamePanel.Location = new System.Drawing.Point(29, 68);
+            this.gamePanel.Location = new System.Drawing.Point(19, 15);
             this.gamePanel.Name = "gamePanel";
-            this.gamePanel.OutlineThickness = 1F;
-            this.gamePanel.PanelColor = System.Drawing.Color.Transparent;
-            this.gamePanel.PanelOutlineColor = System.Drawing.Color.Coral;
-            this.gamePanel.Rounding = new System.Windows.Forms.Padding(8);
-            this.gamePanel.Size = new System.Drawing.Size(1229, 215);
+            this.gamePanel.Size = new System.Drawing.Size(1187, 207);
             this.gamePanel.TabIndex = 0;
             // 
             // AdminHome
@@ -58,17 +69,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(40)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1286, 760);
-            this.Controls.Add(this.gamePanel);
+            this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminHome";
+            this.Load += new System.EventHandler(this.AdminHome_Load);
+            this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private CuoreUI.Controls.cuiBorder gamePanel;
+        private CuoreUI.Controls.cuiBorder panelTop;
+        private System.Windows.Forms.FlowLayoutPanel gamePanel;
     }
 }
