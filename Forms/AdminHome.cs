@@ -19,11 +19,8 @@ namespace GameServer_Management.Forms
         public AdminHome()
         {
             InitializeComponent();
-            gamePanel.VerticalScroll.Enabled = false;
             gamePanel.WrapContents = false;
         }
-        private int currentX = 0;
-
         private async void LoadItems()
         {
             string query = "select * from gamestbl t1 inner join categorytbl t2 on t2.catID = t1.categoryID";
@@ -46,7 +43,7 @@ namespace GameServer_Management.Forms
                         foreach (DataRow item in dt.Rows)
                         {
                             Byte[] imgAry = (byte[])item["gameImage"];
-                            Image img = Image.FromStream(new MemoryStream(imgAry)); //
+                            Image img = Image.FromStream(new MemoryStream(imgAry));
                             AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, item["gameDesc"].ToString());
                         }
                     }
@@ -65,27 +62,14 @@ namespace GameServer_Management.Forms
                 Pic = img,
                 id = Convert.ToInt32(id),
                 desc = gameDescription,
-
-                //Width = 200,
-                //Height = gamePanel.Height - 10,
             };
-            v.Location = new Point(currentX, 0);
-            currentX += v.Width + 10;
-
             gamePanel.Controls.Add(v);
             v.BringToFront();
-
-            gamePanel.AutoScrollMinSize = new Size(currentX, 0);
-
-            // Ensure only horizontal scrolling is enabled
-            gamePanel.HorizontalScroll.Enabled = true;
-            gamePanel.VerticalScroll.Enabled = false;
         }
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
             gamePanel.Controls.Clear();
-            currentX = 0;
             LoadItems();
         }
     }
