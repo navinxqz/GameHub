@@ -74,5 +74,16 @@ namespace GameServer_Management.Forms
             gamePanel.Controls.Clear();
             LoadItems();
         }
+
+        private void panelTop_MouseHover(object sender, EventArgs e)
+        {
+            panelTop.PanelOutlineColor = Color.MediumPurple;
+
+        }
+
+        private void panelTop_MouseLeave(object sender, EventArgs e)
+        {
+            panelTop.PanelOutlineColor = Color.Silver;
+        }
     }
 }
