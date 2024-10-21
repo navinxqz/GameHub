@@ -71,9 +71,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.cuiControlBlur1 = new CuoreUI.Components.cuiControlBlur(this.components);
+            this.notificationBlur = new CuoreUI.Components.cuiControlBlur(this.components);
             this.getGame1 = new GameServer_Management.Controller.GetGame();
             this.loading = new GameServer_Management.Controller.Loading();
-            this.notificationBlur = new CuoreUI.Components.cuiControlBlur(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -110,7 +110,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 400);
+            this.listPanel.Size = new System.Drawing.Size(1106, 474);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -564,8 +564,13 @@
             // 
             // cuiControlBlur1
             // 
-            this.cuiControlBlur1.BlurAmount = 250F;
+            this.cuiControlBlur1.BlurAmount = 50F;
             this.cuiControlBlur1.TargetControl = this.panel2;
+            // 
+            // notificationBlur
+            // 
+            this.notificationBlur.BlurAmount = 10F;
+            this.notificationBlur.TargetControl = this.notificationpanel;
             // 
             // getGame1
             // 
@@ -590,11 +595,6 @@
             this.loading.Name = "loading";
             this.loading.Size = new System.Drawing.Size(221, 140);
             this.loading.TabIndex = 21;
-            // 
-            // notificationBlur
-            // 
-            this.notificationBlur.BlurAmount = 10F;
-            this.notificationBlur.TargetControl = this.notificationpanel;
             // 
             // Home
             // 
