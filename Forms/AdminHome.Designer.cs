@@ -34,9 +34,19 @@
             this.cuiBorder1 = new CuoreUI.Controls.cuiBorder();
             this.cuiBorder2 = new CuoreUI.Controls.cuiBorder();
             this.cuiBorder3 = new CuoreUI.Controls.cuiBorder();
-            this.cuiBorder4 = new CuoreUI.Controls.cuiBorder();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cuiBorder4 = new CuoreUI.Controls.cuiBorder();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.progressBar = new CuoreUI.Controls.cuiCircleProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
+            this.cuiBorder1.SuspendLayout();
+            this.cuiBorder2.SuspendLayout();
             this.cuiBorder3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +81,10 @@
             // cuiBorder1
             // 
             this.cuiBorder1.BackColor = System.Drawing.Color.Transparent;
-            this.cuiBorder1.Location = new System.Drawing.Point(43, 292);
+            this.cuiBorder1.Controls.Add(this.label4);
+            this.cuiBorder1.Controls.Add(this.label3);
+            this.cuiBorder1.Controls.Add(this.progressBar);
+            this.cuiBorder1.Location = new System.Drawing.Point(121, 292);
             this.cuiBorder1.Name = "cuiBorder1";
             this.cuiBorder1.OutlineThickness = 1F;
             this.cuiBorder1.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(222)))), ((int)(((byte)(103)))));
@@ -83,7 +96,10 @@
             // cuiBorder2
             // 
             this.cuiBorder2.BackColor = System.Drawing.Color.Transparent;
-            this.cuiBorder2.Location = new System.Drawing.Point(43, 511);
+            this.cuiBorder2.Controls.Add(this.label7);
+            this.cuiBorder2.Controls.Add(this.label6);
+            this.cuiBorder2.Controls.Add(this.label5);
+            this.cuiBorder2.Location = new System.Drawing.Point(121, 511);
             this.cuiBorder2.Name = "cuiBorder2";
             this.cuiBorder2.OutlineThickness = 1F;
             this.cuiBorder2.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -95,8 +111,10 @@
             // cuiBorder3
             // 
             this.cuiBorder3.BackColor = System.Drawing.Color.Transparent;
+            this.cuiBorder3.Controls.Add(this.label2);
+            this.cuiBorder3.Controls.Add(this.label1);
             this.cuiBorder3.Controls.Add(this.pictureBox1);
-            this.cuiBorder3.Location = new System.Drawing.Point(303, 511);
+            this.cuiBorder3.Location = new System.Drawing.Point(381, 511);
             this.cuiBorder3.Name = "cuiBorder3";
             this.cuiBorder3.OutlineThickness = 1F;
             this.cuiBorder3.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(243)))), ((int)(((byte)(106)))));
@@ -104,18 +122,6 @@
             this.cuiBorder3.Rounding = new System.Windows.Forms.Padding(18);
             this.cuiBorder3.Size = new System.Drawing.Size(226, 192);
             this.cuiBorder3.TabIndex = 3;
-            // 
-            // cuiBorder4
-            // 
-            this.cuiBorder4.BackColor = System.Drawing.Color.Transparent;
-            this.cuiBorder4.Location = new System.Drawing.Point(556, 292);
-            this.cuiBorder4.Name = "cuiBorder4";
-            this.cuiBorder4.OutlineThickness = 1F;
-            this.cuiBorder4.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(219)))), ((int)(((byte)(252)))));
-            this.cuiBorder4.PanelOutlineColor = System.Drawing.Color.Snow;
-            this.cuiBorder4.Rounding = new System.Windows.Forms.Padding(18);
-            this.cuiBorder4.Size = new System.Drawing.Size(455, 411);
-            this.cuiBorder4.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -126,6 +132,110 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // cuiBorder4
+            // 
+            this.cuiBorder4.BackColor = System.Drawing.Color.Transparent;
+            this.cuiBorder4.Location = new System.Drawing.Point(646, 292);
+            this.cuiBorder4.Name = "cuiBorder4";
+            this.cuiBorder4.OutlineThickness = 1F;
+            this.cuiBorder4.PanelColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(219)))), ((int)(((byte)(252)))));
+            this.cuiBorder4.PanelOutlineColor = System.Drawing.Color.Snow;
+            this.cuiBorder4.Rounding = new System.Windows.Forms.Padding(18);
+            this.cuiBorder4.Size = new System.Drawing.Size(455, 411);
+            this.cuiBorder4.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label1.Location = new System.Drawing.Point(17, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 33);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total User";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label2.Location = new System.Drawing.Point(28, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 42);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "12+";
+            // 
+            // progressBar
+            // 
+            this.progressBar.BorderWidth = 12;
+            this.progressBar.Location = new System.Drawing.Point(295, 19);
+            this.progressBar.MaximumValue = 100;
+            this.progressBar.MinimumSize = new System.Drawing.Size(24, 24);
+            this.progressBar.MinimumValue = 0;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.progressBar.ProgressValue = 50;
+            this.progressBar.RoundedEnds = true;
+            this.progressBar.Size = new System.Drawing.Size(150, 150);
+            this.progressBar.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label3.Location = new System.Drawing.Point(40, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(183, 33);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Total Games";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label4.Location = new System.Drawing.Point(120, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 42);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "12+";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label5.Location = new System.Drawing.Point(19, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 33);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Total";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label6.Location = new System.Drawing.Point(19, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 33);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Category";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
+            this.label7.Location = new System.Drawing.Point(18, 110);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(82, 42);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "12+";
             // 
             // AdminHome
             // 
@@ -144,7 +254,12 @@
             this.Text = "AdminHome";
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.panelTop.ResumeLayout(false);
+            this.cuiBorder1.ResumeLayout(false);
+            this.cuiBorder1.PerformLayout();
+            this.cuiBorder2.ResumeLayout(false);
+            this.cuiBorder2.PerformLayout();
             this.cuiBorder3.ResumeLayout(false);
+            this.cuiBorder3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -158,5 +273,13 @@
         private CuoreUI.Controls.cuiBorder cuiBorder2;
         private CuoreUI.Controls.cuiBorder cuiBorder1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private CuoreUI.Controls.cuiCircleProgressBar progressBar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
