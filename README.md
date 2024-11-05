@@ -1,4 +1,4 @@
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/title_logo.png" width=550 title= "project interface" /><h2 align="center"></h2></p>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/title_logo.png" width=650 title= "project interface" /><h2 align="center"></h2></p>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/navinxqz/GameHub)
@@ -135,6 +135,6 @@ If you encounter any bugs or have feature requests, feel free to create an issue
          </tr><tr>
             <td align = "center" width = "200"><a href="https://github.com/navinxqz" target="_blank">Navin, Md Nawshin</td>
             <td align = "center" width = "200"><a href="https://github.com/SADMANTANZIM" target="_blank">Sadman Shabab</td>
-            <td align = "center" width = "200"><a href="https://github.com/S0MS0MM1dA?tab=following" target="_blank" alt="durjoy acc">Durjoy Podder</td>
+            <td align = "center" width = "200"><a href="https://github.com/S0MS0MM1dA" target="_blank" alt="durjoy acc">Durjoy Podder</td>
             <td align = "center" width = "200"><a href="https://www.facebook.com/siftialmahmud.sifti" alt="Sifti fb acc" target="_blank">Sifti Al Mahmud</td>
          </tr></table>
