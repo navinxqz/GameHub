@@ -109,10 +109,12 @@ This a university-level project and a practical exercise in database management,
    ```bash
    git clone https://github.com/navinxqz/GameHub.git
 2. Open the solution file in Visual Studio.
-3. Configure the SQL database connection in the `DBconnect.cs` file:
+3. Open SSMS and import the database logs from `bin\Debug\GameServerDB.mdf` along with the log file `GameServerDB_log.ldf`
+4. Configure the SQL database connection in the `DBconnect.cs` project file:
    ```bash
    public static readonly string cs = @"Data Source=your_server_name;Initial Catalog=GameServerDB;Integrated Security=True";
-4. Build the solution and run the project.
+
+5. Build the solution and run the project.
 
 ---
 
