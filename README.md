@@ -1,4 +1,4 @@
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/title_logo.png" width=550 title= "project interface" /><h2 align="center"></h2></p>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/title_logo.png" width=600 title= "project interface" /><h2 align="center"></h2></p>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/navinxqz/GameHub)
@@ -47,40 +47,40 @@ This a university-level project and a practical exercise in database management,
    <summary><h2 align="left">Project Demo</h2></summary>
 
 <h3 align="center">Loading Form</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/loading.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/loading.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">User Login</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_login.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_login.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Sign Up</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/sign_up.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/sign_up.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Admin Login</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_login.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_login.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Home Screen</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_home.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/admin_home.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Add New Admin</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_admin.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_admin.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">User Profile</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/Profile_info.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/Profile_info.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Game Click</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_click.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_click.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Game Database</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_DB.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/game_DB.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Adding New Game</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_game.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/add_game.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">Game Category Database</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/category_DB.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/category_DB.png" width=750 title= "project interface" /></p><br>
 
 <h3 align="center">User Database</h3>
-<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_DB.png" width=650 title= "project interface" /></p><br>
+<p align="center"><img src= "https://github.com/navinxqz/GameHub/blob/main/asset/project_ss/user_DB.png" width=750 title= "project interface" /></p><br>
 
 ---
 </details>
@@ -109,10 +109,12 @@ This a university-level project and a practical exercise in database management,
    ```bash
    git clone https://github.com/navinxqz/GameHub.git
 2. Open the solution file in Visual Studio.
-3. Configure the SQL database connection in the `DBconnect.cs` file:
+3. Open SSMS and import the database logs from `bin\Debug\GameServerDB.mdf` along with the log file `GameServerDB_log.ldf`
+4. Configure the SQL database connection in the `DBconnect.cs` project file:
    ```bash
    public static readonly string cs = @"Data Source=your_server_name;Initial Catalog=GameServerDB;Integrated Security=True";
-4. Build the solution and run the project.
+
+5. Build the solution and run the project.
 
 ---
 
@@ -135,6 +137,6 @@ If you encounter any bugs or have feature requests, feel free to create an issue
          </tr><tr>
             <td align = "center" width = "200"><a href="https://github.com/navinxqz" target="_blank">Navin, Md Nawshin</td>
             <td align = "center" width = "200"><a href="https://github.com/SADMANTANZIM" target="_blank">Sadman Shabab</td>
-            <td align = "center" width = "200"><a href="https://github.com/S0MS0MM1dA?tab=following" target="_blank" alt="durjoy acc">Durjoy Podder</td>
+            <td align = "center" width = "200"><a href="https://github.com/S0MS0MM1dA" target="_blank" alt="durjoy acc">Durjoy Podder</td>
             <td align = "center" width = "200"><a href="https://www.facebook.com/siftialmahmud.sifti" alt="Sifti fb acc" target="_blank">Sifti Al Mahmud</td>
          </tr></table>
