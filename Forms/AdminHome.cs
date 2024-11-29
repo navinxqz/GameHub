@@ -85,5 +85,10 @@ namespace GameServer_Management.Forms
         {
             panelTop.PanelOutlineColor = Color.Silver;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

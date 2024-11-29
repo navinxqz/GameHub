@@ -107,7 +107,8 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 42);
             this.label4.TabIndex = 3;
-            this.label4.Text = "12+";
+            this.label4.Text = "20+";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -130,7 +131,7 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
             this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.progressBar.ProgressValue = 50;
+            this.progressBar.ProgressValue = 30;
             this.progressBar.RoundedEnds = true;
             this.progressBar.Size = new System.Drawing.Size(150, 150);
             this.progressBar.TabIndex = 0;
@@ -159,7 +160,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 42);
             this.label7.TabIndex = 5;
-            this.label7.Text = "12+";
+            this.label7.Text = "10+";
             // 
             // label6
             // 
@@ -207,7 +208,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 42);
             this.label2.TabIndex = 2;
-            this.label2.Text = "12+";
+            this.label2.Text = "20+";
             // 
             // label1
             // 
