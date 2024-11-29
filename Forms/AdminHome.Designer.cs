@@ -131,7 +131,7 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(26)))), ((int)(((byte)(36)))));
             this.progressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.progressBar.ProgressValue = 30;
+            this.progressBar.ProgressValue = 0;
             this.progressBar.RoundedEnds = true;
             this.progressBar.Size = new System.Drawing.Size(150, 150);
             this.progressBar.TabIndex = 0;

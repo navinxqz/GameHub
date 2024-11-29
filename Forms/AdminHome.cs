@@ -47,6 +47,9 @@ namespace GameServer_Management.Forms
                             Byte[] imgAry = (byte[])item["gameImage"];
                             Image img = Image.FromStream(new MemoryStream(imgAry));
                             AddItems(item["gameID"].ToString(), item["gameName"].ToString(), item["catName"].ToString(), item["gamePrice"].ToString(), img, item["gameDesc"].ToString());
+                            
+                            progressBar.ProgressValue += 1;
+                            label4.Text = progressBar.ProgressValue.ToString() + " / " + dt.Rows.Count.ToString();
                         }
                     }
                 }
