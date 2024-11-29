@@ -110,7 +110,7 @@
             this.listPanel.AutoScroll = true;
             this.listPanel.Location = new System.Drawing.Point(24, 238);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(1106, 474);
+            this.listPanel.Size = new System.Drawing.Size(1106, 400);
             this.listPanel.TabIndex = 9;
             // 
             // CategoryPanel
@@ -201,7 +201,7 @@
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Location = new System.Drawing.Point(54, 66);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1316, 734);
+            this.panel1.Size = new System.Drawing.Size(1316, 720);
             this.panel1.TabIndex = 22;
             // 
             // panel5
